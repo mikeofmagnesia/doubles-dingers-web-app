@@ -61,6 +61,7 @@ def scrape_letter(letter: str) -> list[dict]:
     url = f"https://www.baseball-reference.com/players/{letter}/"
     resp = requests.get(url, headers=HEADERS, timeout=30)
     resp.raise_for_status()
+    resp.encoding = "utf-8"
 
     soup = BeautifulSoup(resp.text, "html.parser")
     players = []
