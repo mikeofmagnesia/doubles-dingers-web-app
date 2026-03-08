@@ -3,7 +3,8 @@ Doubles and Dingers - build comprehensive MLB player list.
 
 Scrapes Baseball Reference's player index (26 letter pages) to collect all
 currently active MLB players with their BBref IDs. Overlays group assignments
-(A/B/C) from data/teams.json. Writes to docs/data/players_list.json.
+(A/B/C) from data/teams.json. Fetches team and position from the MLB Stats API
+(single request, no scraping). Writes to docs/data/players_list.json.
 
 Run this once before the season starts (and again if active rosters change):
     python scripts/build_players.py
@@ -13,8 +14,8 @@ The crawl delay is respected between each letter page (~91 seconds total).
 """
 
 import json
-import sys
 import time
+import unicodedata
 from pathlib import Path
 
 import requests
@@ -25,6 +26,7 @@ DATA_DIR   = BASE_DIR / "docs" / "data"
 TEAMS_JSON = BASE_DIR / "data" / "teams.json"
 
 CRAWL_DELAY = 3.5
+MLB_SEASON  = 2026
 
 HEADERS = {
     "User-Agent": (
@@ -32,6 +34,43 @@ HEADERS = {
         "non-commercial use; respects crawl-delay)"
     )
 }
+
+
+def normalize(name: str) -> str:
+    """Lowercase, strip accents, collapse whitespace for fuzzy matching."""
+    nfkd = unicodedata.normalize("NFKD", name)
+    ascii_name = nfkd.encode("ascii", "ignore").decode("ascii")
+    return " ".join(ascii_name.lower().split())
+
+
+def fetch_team_map() -> dict[int, str]:
+    """Return {team_id: abbreviation} for all MLB teams."""
+    url = f"https://statsapi.mlb.com/api/v1/teams?sportId=1&season={MLB_SEASON}"
+    resp = requests.get(url, timeout=30)
+    resp.raise_for_status()
+    return {t["id"]: t.get("abbreviation", "") for t in resp.json().get("teams", [])}
+
+
+def fetch_mlb_roster() -> dict[str, dict]:
+    """
+    Fetch all active MLB players from the MLB Stats API.
+    Returns {normalized_name: {team, position}} lookup.
+    """
+    team_map = fetch_team_map()
+    url = f"https://statsapi.mlb.com/api/v1/sports/1/players?season={MLB_SEASON}"
+    resp = requests.get(url, timeout=30)
+    resp.raise_for_status()
+    data = resp.json()
+
+    lookup: dict[str, dict] = {}
+    for p in data.get("people", []):
+        name    = p.get("fullName", "")
+        team_id = p.get("currentTeam", {}).get("id", 0)
+        team    = team_map.get(team_id, "")
+        pos     = p.get("primaryPosition", {}).get("abbreviation", "")
+        if name:
+            lookup[normalize(name)] = {"team": team, "pos": pos}
+    return lookup
 
 
 def load_group_assignments() -> dict[str, str]:
@@ -84,6 +123,14 @@ def scrape_letter(letter: str) -> list[dict]:
 
 
 def main() -> None:
+    print("Fetching team/position data from MLB Stats API...")
+    try:
+        mlb_lookup = fetch_mlb_roster()
+        print(f"Loaded {len(mlb_lookup)} players from MLB Stats API.\n")
+    except Exception as e:
+        print(f"WARNING: Could not fetch MLB roster ({e}). Team/position will be empty.\n")
+        mlb_lookup = {}
+
     print("Building comprehensive MLB player list from Baseball Reference...")
     print(
         f"Scraping 26 letter pages with {CRAWL_DELAY}s delay "
@@ -110,9 +157,15 @@ def main() -> None:
         if i < len(letters):
             time.sleep(CRAWL_DELAY)
 
-    # Apply group assignments
+    # Apply group assignments and MLB team/position
+    no_match = 0
     for p in all_players:
         p["group"] = group_assignments.get(p["br_id"], "Wildcard")
+        mlb = mlb_lookup.get(normalize(p["name"]), {})
+        p["team"] = mlb.get("team", "")
+        p["pos"]  = mlb.get("pos", "")
+        if not mlb:
+            no_match += 1
 
     # Deduplicate (shouldn't be needed but guard against it)
     seen: set[str] = set()
@@ -122,14 +175,13 @@ def main() -> None:
             seen.add(p["br_id"])
             unique.append(p)
 
-    # Sort alphabetically by last name (BBref index is already per-letter,
-    # so sort the full list by name for the autocomplete)
+    # Sort alphabetically by last name
     unique.sort(key=lambda p: p["name"].split()[-1] + p["name"])
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     out_path = DATA_DIR / "players_list.json"
-    with open(out_path, "w") as f:
-        json.dump({"players": unique}, f, indent=2)
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump({"players": unique}, f, indent=2, ensure_ascii=False)
 
     group_counts = {}
     for p in unique:
@@ -139,6 +191,7 @@ def main() -> None:
     print(f"\nWrote {len(unique)} players to {out_path}")
     for g, count in sorted(group_counts.items()):
         print(f"  {g}: {count}")
+    print(f"  ({no_match} players had no MLB Stats API match for team/position)")
     print("\nDone. Commit docs/data/players_list.json to the repo.")
 
 

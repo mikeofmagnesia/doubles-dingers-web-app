@@ -60,6 +60,7 @@
     }
     .ac-item { padding: 6px 10px; cursor: pointer; font-size: 0.85rem; }
     .ac-item:hover { background: #e9f0fb; }
+    .ac-meta { font-size: 0.75rem; color: #6c757d; margin-left: 6px; }
     .ac-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
       cursor: pointer; color: #6c757d; font-size: 1rem; line-height: 1; }
 
@@ -637,9 +638,11 @@ async function loadEntry() {
           );
           const hits = wcPlayerPool.filter(p => p.name.toLowerCase().includes(q) && !selectedInOtherSlots.has(p.br_id)).slice(0, 15);
           if (!hits.length) { drop.style.display = 'none'; return; }
-          drop.innerHTML = hits.map(p =>
-            `<div class="ac-item" data-id="${p.br_id}" data-name="${p.name}">${p.name}</div>`
-          ).join('');
+          drop.innerHTML = hits.map(p => {
+            const suffix = [p.team, p.pos].filter(Boolean).join(' · ');
+            const label  = suffix ? `${p.name} <span class="ac-meta">${suffix}</span>` : p.name;
+            return `<div class="ac-item" data-id="${p.br_id}" data-name="${p.name}">${label}</div>`;
+          }).join('');
           drop.style.display = 'block';
           drop.querySelectorAll('.ac-item').forEach(item => {
             item.addEventListener('mousedown', ev => {
