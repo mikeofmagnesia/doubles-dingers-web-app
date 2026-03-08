@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doubles &amp; Dingers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --brand-navy: #0d2240;
+      --brand-red:  #c8102e;
+    }
+    body { background: #f8f9fa; font-size: 0.875rem; }
+    .navbar { background: var(--brand-navy) !important; }
+    .navbar-brand { color: #fff !important; font-weight: 700; font-size: 1.1rem; letter-spacing: .02em; }
+    .nav-link { color: rgba(255,255,255,.75) !important; }
+    .nav-link.active, .nav-link:hover { color: #fff !important; }
+    .nav-link.active { border-bottom: 2px solid var(--brand-red); }
+    .btn-enter { background: var(--brand-red); color: #fff; border: none; }
+    .btn-enter:hover { background: #a50d26; color: #fff; }
+
+    .view { display: none; }
+    .view.active { display: block; }
+
+    .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    table { font-size: 0.82rem; white-space: nowrap; }
+    th { background: var(--brand-navy); color: #fff; font-weight: 600; position: sticky; top: 0; }
+    tbody tr:hover { background: #e9f0fb; }
+
+    .up   { color: #198754; font-weight: 600; }
+    .down { color: #dc3545; font-weight: 600; }
+    .neu  { color: #6c757d; }
+
+    .group-badge {
+      display: inline-block;
+      padding: 1px 7px;
+      border-radius: 10px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .group-A  { background: #cfe2ff; color: #052c65; }
+    .group-B  { background: #d1e7dd; color: #0a3622; }
+    .group-C  { background: #fff3cd; color: #664d03; }
+    .group-WC { background: #e2e3e5; color: #383d41; }
+
+    .team-header th {
+      background: #1c3f6e;
+      font-size: 0.85rem;
+      padding: 6px 10px;
+    }
+    .sum-row td { background: #f0f4fa; font-weight: 700; }
+
+    /* Autocomplete */
+    .ac-wrap { position: relative; }
+    .ac-dropdown {
+      position: absolute; z-index: 1000; width: 100%;
+      background: #fff; border: 1px solid #ced4da; border-top: none;
+      border-radius: 0 0 4px 4px; max-height: 200px; overflow-y: auto;
+      display: none;
+    }
+    .ac-item { padding: 6px 10px; cursor: pointer; font-size: 0.85rem; }
+    .ac-item:hover { background: #e9f0fb; }
+    .ac-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+      cursor: pointer; color: #6c757d; font-size: 1rem; line-height: 1; }
+
+    #loading { color: #6c757d; padding: 2rem 0; }
+    #no-data  { color: #6c757d; }
+    .updated-badge { font-size: 0.75rem; color: #6c757d; }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-xl">
+    <span class="navbar-brand">Doubles &amp; Dingers</span>
+    <button class="navbar-toggler border-secondary" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav me-auto gap-1" id="nav-tabs">
+        <li class="nav-item"><a class="nav-link" href="#" data-view="players">Player Stats</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" data-view="standings">Standings</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" data-view="rosters">Rosters</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" data-view="player-history">Player History</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" data-view="team-history">Team History</a></li>
+      </ul>
+      <a class="btn btn-enter btn-sm ms-2 mt-2 mt-lg-0" href="#" data-view="entry">Enter Your Team</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== MAIN ===== -->
+<div class="container-xl py-3">
+
+  <!-- VIEW 1: Player Stats -->
+  <div class="view" id="view-players">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <h5 class="mb-0">Player Stats</h5>
+      <span class="updated-badge" id="players-updated"></span>
+    </div>
+    <div class="table-wrap">
+      <table class="table table-bordered table-striped table-hover align-middle mb-0" id="tbl-players">
+        <thead>
+          <tr>
+            <th>Rank</th><th>Player</th><th>Group</th><th title="Fantasy teams that picked this player">Selected</th>
+            <th>2B</th><th>HR</th><th>2B+HR</th><th>GP</th><th>(2B+HR)/GP</th>
+            <th>Prev Rank</th><th>Prev 2B</th><th>Prev HR</th><th>Prev 2B+HR</th>
+            <th>Rank Chg</th><th>2B+HR Chg</th>
+          </tr>
+        </thead>
+        <tbody id="tbody-players"><tr><td colspan="15" class="text-center" id="loading">Loading...</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- VIEW 2: Team Standings -->
+  <div class="view" id="view-standings">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <h5 class="mb-0">Team Standings</h5>
+      <span class="updated-badge" id="standings-updated"></span>
+    </div>
+    <div class="table-wrap">
+      <table class="table table-bordered table-striped table-hover align-middle mb-0">
+        <thead>
+          <tr>
+            <th>Rank</th><th>Team</th><th>Owner</th>
+            <th>2B</th><th>HR</th><th>2B+HR</th>
+            <th>Rank Chg</th><th>Prev 2B</th><th>Prev HR</th><th>Prev 2B+HR</th><th>2B+HR Chg</th>
+          </tr>
+        </thead>
+        <tbody id="tbody-standings"><tr><td colspan="11" class="text-center">Loading...</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- VIEW 3: Team Rosters -->
+  <div class="view" id="view-rosters">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <h5 class="mb-0">Team Rosters</h5>
+      <span class="updated-badge" id="rosters-updated"></span>
+    </div>
+    <div id="rosters-container">
+      <p class="text-muted">Loading...</p>
+    </div>
+  </div>
+
+  <!-- VIEW 4: Player History -->
+  <div class="view" id="view-player-history">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <h5 class="mb-0">Player History</h5>
+      <select class="form-select form-select-sm w-auto" id="ph-filter">
+        <option value="">All Players</option>
+      </select>
+    </div>
+    <div class="table-wrap">
+      <table class="table table-bordered table-striped table-hover align-middle mb-0">
+        <thead>
+          <tr><th>Date</th><th>Player</th><th>Group</th><th>Rank</th><th>2B</th><th>HR</th><th>2B+HR</th></tr>
+        </thead>
+        <tbody id="tbody-ph"><tr><td colspan="7" class="text-center">Loading...</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- VIEW 5: Team History -->
+  <div class="view" id="view-team-history">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <h5 class="mb-0">Team History</h5>
+      <select class="form-select form-select-sm w-auto" id="th-filter">
+        <option value="">All Teams</option>
+      </select>
+    </div>
+    <div class="table-wrap">
+      <table class="table table-bordered table-striped table-hover align-middle mb-0">
+        <thead>
+          <tr><th>Date</th><th>Team</th><th>Owner</th><th>Rank</th><th>2B</th><th>HR</th><th>2B+HR</th></tr>
+        </thead>
+        <tbody id="tbody-th"><tr><td colspan="7" class="text-center">Loading...</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- VIEW: Entry Form -->
+  <div class="view" id="view-entry">
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <h5 class="mb-1">Enter Your Team</h5>
+        <p class="text-muted small mb-3">
+          Pick 1 player from each group (A, B, C) and 4 Wildcard players.
+          Your team is saved automatically when you submit.
+        </p>
+
+        <form id="entry-form" novalidate>
+          <!-- Owner & Team -->
+          <div class="row g-2 mb-3">
+            <div class="col-sm-6">
+              <label class="form-label fw-semibold">Your Name</label>
+              <input type="text" class="form-control" id="f-owner" placeholder="Jane Smith" required>
+            </div>
+            <div class="col-sm-6">
+              <label class="form-label fw-semibold">Team Name</label>
+              <input type="text" class="form-control" id="f-team" placeholder="The Sluggers" required>
+            </div>
+          </div>
+
+          <!-- Group selects (populated from groups.json) -->
+          <div class="row g-2 mb-3">
+            <div class="col-sm-4">
+              <label class="form-label fw-semibold">Group A Player</label>
+              <select class="form-select" id="f-group-a" required>
+                <option value="">Loading...</option>
+              </select>
+            </div>
+            <div class="col-sm-4">
+              <label class="form-label fw-semibold">Group B Player</label>
+              <select class="form-select" id="f-group-b" required>
+                <option value="">Loading...</option>
+              </select>
+            </div>
+            <div class="col-sm-4">
+              <label class="form-label fw-semibold">Group C Player</label>
+              <select class="form-select" id="f-group-c" required>
+                <option value="">Loading...</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Wildcard picks (autocomplete from players_list.json) -->
+          <label class="form-label fw-semibold">Wildcard Players (pick 4)</label>
+          <p class="text-muted small mb-2">Type a name to search. Group A/B/C players are excluded.</p>
+          <div class="row g-2 mb-3" id="wc-slots">
+            <!-- injected by loadEntry() -->
+          </div>
+
+          <div id="form-error" class="alert alert-danger d-none"></div>
+          <button type="submit" class="btn btn-primary px-4" id="btn-submit">Submit My Team</button>
+        </form>
+
+        <!-- Success state -->
+        <div id="entry-success" class="d-none mt-4">
+          <div class="alert alert-success mb-2" id="success-msg"></div>
+          <p class="text-muted small">Stats will appear after the next daily update (noon CDT).</p>
+          <button class="btn btn-outline-secondary btn-sm" id="btn-reset">Submit Another Team</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// ===================================================================
+// Data cache & helpers
+// ===================================================================
+const cache = {};
+
+async function fetchData(file) {
+  if (cache[file]) return cache[file];
+  const res = await fetch(`data/${file}?_=${Date.now()}`);
+  if (!res.ok) throw new Error(`Failed to load ${file}`);
+  cache[file] = await res.json();
+  return cache[file];
+}
+
+function em(v) {
+  return (v !== null && v !== undefined) ? v : '-';
+}
+
+function rankChgHtml(chg) {
+  if (chg === null || chg === undefined) return '<span class="neu">-</span>';
+  if (chg > 0)  return `<span class="up">&#9650; ${chg}</span>`;
+  if (chg < 0)  return `<span class="down">&#9660; ${Math.abs(chg)}</span>`;
+  return '<span class="neu">-</span>';
+}
+
+function statChgHtml(chg) {
+  if (chg === null || chg === undefined) return '<span class="neu">-</span>';
+  if (chg > 0)  return `<span class="up">+${chg}</span>`;
+  if (chg < 0)  return `<span class="down">${chg}</span>`;
+  return '<span class="neu">0</span>';
+}
+
+function groupBadge(g) {
+  const cls = g === 'A' ? 'group-A' : g === 'B' ? 'group-B' : g === 'C' ? 'group-C' : 'group-WC';
+  const label = g === 'Wildcard' ? 'WC' : g;
+  return `<span class="group-badge ${cls}">${label}</span>`;
+}
+
+// ===================================================================
+// Tab routing
+// ===================================================================
+const VIEWS = ['players','standings','rosters','player-history','team-history','entry'];
+const LOADERS = {
+  'players':        loadPlayers,
+  'standings':      loadStandings,
+  'rosters':        loadRosters,
+  'player-history': loadPlayerHistory,
+  'team-history':   loadTeamHistory,
+  'entry':          loadEntry,
+};
+const loaded = {};
+
+function showView(name) {
+  VIEWS.forEach(v => {
+    document.getElementById(`view-${v}`).classList.toggle('active', v === name);
+  });
+  document.querySelectorAll('[data-view]').forEach(el => {
+    el.classList.toggle('active', el.dataset.view === name);
+  });
+  if (!loaded[name]) {
+    loaded[name] = true;
+    LOADERS[name]();
+  }
+}
+
+document.querySelectorAll('[data-view]').forEach(el => {
+  el.addEventListener('click', e => {
+    e.preventDefault();
+    const v = el.dataset.view;
+    // collapse mobile menu
+    const menu = document.getElementById('navMenu');
+    if (menu.classList.contains('show')) {
+      bootstrap.Collapse.getOrCreateInstance(menu).hide();
+    }
+    showView(v);
+  });
+});
+
+// ===================================================================
+// VIEW 1: Player Stats
+// ===================================================================
+async function loadPlayers() {
+  const tbody = document.getElementById('tbody-players');
+  try {
+    const data = await fetchData('player_stats.json');
+    document.getElementById('players-updated').textContent =
+      data.updated ? `Updated ${data.updated}` : '';
+
+    if (!data.players || data.players.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="15" class="text-center text-muted">No data yet. Check back after the first update.</td></tr>';
+      return;
+    }
+
+    tbody.innerHTML = data.players.map(p => `
+      <tr>
+        <td class="text-center fw-bold">${p.rank}</td>
+        <td>${p.name}</td>
+        <td>${groupBadge(p.group)}</td>
+        <td class="text-center">${p.times_selected}</td>
+        <td class="text-center">${p.doubles}</td>
+        <td class="text-center">${p.homers}</td>
+        <td class="text-center fw-bold">${p.total}</td>
+        <td class="text-center">${p.games_played}</td>
+        <td class="text-center">${p.games_played > 0 ? p.per_game.toFixed(3) : '-'}</td>
+        <td class="text-center">${em(p.prev_rank)}</td>
+        <td class="text-center">${em(p.prev_doubles)}</td>
+        <td class="text-center">${em(p.prev_homers)}</td>
+        <td class="text-center">${em(p.prev_total)}</td>
+        <td class="text-center">${rankChgHtml(p.rank_change)}</td>
+        <td class="text-center">${statChgHtml(p.total_change)}</td>
+      </tr>`).join('');
+  } catch (err) {
+    tbody.innerHTML = `<tr><td colspan="15" class="text-center text-danger">${err.message}</td></tr>`;
+  }
+}
+
+// ===================================================================
+// VIEW 2: Team Standings
+// ===================================================================
+async function loadStandings() {
+  const tbody = document.getElementById('tbody-standings');
+  try {
+    const data = await fetchData('team_standings.json');
+    document.getElementById('standings-updated').textContent =
+      data.updated ? `Updated ${data.updated}` : '';
+
+    if (!data.teams || data.teams.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="11" class="text-center text-muted">No data yet.</td></tr>';
+      return;
+    }
+
+    tbody.innerHTML = data.teams.map(t => `
+      <tr>
+        <td class="text-center fw-bold">${t.rank}</td>
+        <td>${t.team_name}</td>
+        <td>${t.owner}</td>
+        <td class="text-center">${t.doubles}</td>
+        <td class="text-center">${t.homers}</td>
+        <td class="text-center fw-bold">${t.total}</td>
+        <td class="text-center">${rankChgHtml(t.rank_change)}</td>
+        <td class="text-center">${em(t.prev_doubles)}</td>
+        <td class="text-center">${em(t.prev_homers)}</td>
+        <td class="text-center">${em(t.prev_total)}</td>
+        <td class="text-center">${statChgHtml(t.total_change)}</td>
+      </tr>`).join('');
+  } catch (err) {
+    tbody.innerHTML = `<tr><td colspan="11" class="text-center text-danger">${err.message}</td></tr>`;
+  }
+}
+
+// ===================================================================
+// VIEW 3: Team Rosters
+// ===================================================================
+async function loadRosters() {
+  const container = document.getElementById('rosters-container');
+  try {
+    const data = await fetchData('team_rosters.json');
+    document.getElementById('rosters-updated').textContent =
+      data.updated ? `Updated ${data.updated}` : '';
+
+    if (!data.teams || data.teams.length === 0) {
+      container.innerHTML = '<p class="text-muted">No data yet.</p>';
+      return;
+    }
+
+    container.innerHTML = data.teams.map(t => {
+      const playerRows = t.players.map(p => `
+        <tr>
+          <td>${p.name}</td>
+          <td>${groupBadge(p.group)}</td>
+          <td class="text-center">${p.doubles}</td>
+          <td class="text-center">${p.homers}</td>
+          <td class="text-center fw-bold">${p.total}</td>
+          <td class="text-center">${em(p.prev_doubles)}</td>
+          <td class="text-center">${em(p.prev_homers)}</td>
+          <td class="text-center">${em(p.prev_total)}</td>
+          <td class="text-center">${statChgHtml(p.total_change)}</td>
+        </tr>`).join('');
+
+      const tot = t.totals;
+      const sumRow = `
+        <tr class="sum-row">
+          <td><em>Total</em></td><td></td>
+          <td class="text-center">${tot.doubles}</td>
+          <td class="text-center">${tot.homers}</td>
+          <td class="text-center">${tot.total}</td>
+          <td class="text-center">${em(tot.prev_doubles)}</td>
+          <td class="text-center">${em(tot.prev_homers)}</td>
+          <td class="text-center">${em(tot.prev_total)}</td>
+          <td class="text-center">${statChgHtml(tot.total_change)}</td>
+        </tr>`;
+
+      return `
+        <div class="table-wrap mb-4">
+          <table class="table table-bordered table-hover align-middle mb-0">
+            <thead class="team-header">
+              <tr>
+                <th colspan="5">${t.team_name} &mdash; ${t.owner}</th>
+                <th colspan="4" class="text-end">
+                  Rank ${t.rank}
+                  ${t.rank_change !== null ? rankChgHtml(t.rank_change) : ''}
+                </th>
+              </tr>
+              <tr>
+                <th>Player</th><th>Group</th>
+                <th>2B</th><th>HR</th><th>2B+HR</th>
+                <th>Prev 2B</th><th>Prev HR</th><th>Prev 2B+HR</th><th>2B+HR Chg</th>
+              </tr>
+            </thead>
+            <tbody>${playerRows}${sumRow}</tbody>
+          </table>
+        </div>`;
+    }).join('');
+  } catch (err) {
+    container.innerHTML = `<p class="text-danger">${err.message}</p>`;
+  }
+}
+
+// ===================================================================
+// VIEW 4: Player History
+// ===================================================================
+async function loadPlayerHistory() {
+  const tbody = document.getElementById('tbody-ph');
+  const filter = document.getElementById('ph-filter');
+  try {
+    const data = await fetchData('player_history.json');
+    const records = (data.records || []).slice().reverse(); // newest first
+
+    // Populate filter
+    const players = [...new Set(records.map(r => r.player))].sort();
+    filter.innerHTML = '<option value="">All Players</option>' +
+      players.map(n => `<option>${n}</option>`).join('');
+
+    function renderPH() {
+      const sel = filter.value;
+      const rows = sel ? records.filter(r => r.player === sel) : records;
+      if (rows.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="7" class="text-center text-muted">No history yet.</td></tr>';
+        return;
+      }
+      tbody.innerHTML = rows.map(r => `
+        <tr>
+          <td>${r.date}</td>
+          <td>${r.player}</td>
+          <td>${groupBadge(r.group)}</td>
+          <td class="text-center">${em(r.rank)}</td>
+          <td class="text-center">${r.doubles}</td>
+          <td class="text-center">${r.homers}</td>
+          <td class="text-center fw-bold">${r.total}</td>
+        </tr>`).join('');
+    }
+
+    filter.addEventListener('change', renderPH);
+    renderPH();
+  } catch (err) {
+    tbody.innerHTML = `<tr><td colspan="7" class="text-center text-danger">${err.message}</td></tr>`;
+  }
+}
+
+// ===================================================================
+// VIEW 5: Team History
+// ===================================================================
+async function loadTeamHistory() {
+  const tbody = document.getElementById('tbody-th');
+  const filter = document.getElementById('th-filter');
+  try {
+    const data = await fetchData('team_history.json');
+    const records = (data.records || []).slice().reverse(); // newest first
+
+    const teams = [...new Set(records.map(r => r.team))].sort();
+    filter.innerHTML = '<option value="">All Teams</option>' +
+      teams.map(n => `<option>${n}</option>`).join('');
+
+    function renderTH() {
+      const sel = filter.value;
+      const rows = sel ? records.filter(r => r.team === sel) : records;
+      if (rows.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="7" class="text-center text-muted">No history yet.</td></tr>';
+        return;
+      }
+      tbody.innerHTML = rows.map(r => `
+        <tr>
+          <td>${r.date}</td>
+          <td>${r.team}</td>
+          <td>${r.owner}</td>
+          <td class="text-center">${em(r.rank)}</td>
+          <td class="text-center">${r.doubles}</td>
+          <td class="text-center">${r.homers}</td>
+          <td class="text-center fw-bold">${r.total}</td>
+        </tr>`).join('');
+    }
+
+    filter.addEventListener('change', renderTH);
+    renderTH();
+  } catch (err) {
+    tbody.innerHTML = `<tr><td colspan="7" class="text-center text-danger">${err.message}</td></tr>`;
+  }
+}
+
+// ===================================================================
+// VIEW: Entry Form
+// ===================================================================
+
+// Lookup maps populated by loadEntry()
+let wcPlayerPool = [];       // all Wildcard-eligible players {br_id, name}
+let groupPlayerMap = {};     // {br_id: {br_id, name}} for all A/B/C players
+
+async function loadEntry() {
+  try {
+    // Fetch groups config and full player list in parallel
+    const [groupsData, playersData] = await Promise.all([
+      fetchData('groups.json'),
+      fetchData('players_list.json'),
+    ]);
+
+    const groups = groupsData || {};
+    const allPlayers = playersData.players || [];
+
+    if (!groups.A || !groups.B || !groups.C) {
+      document.getElementById('entry-form').insertAdjacentHTML('beforebegin',
+        '<div class="alert alert-warning">Group configuration not yet available. Run the daily update first.</div>');
+      return;
+    }
+
+    if (allPlayers.length === 0) {
+      document.getElementById('entry-form').insertAdjacentHTML('beforebegin',
+        '<div class="alert alert-warning">Player list not yet available. Run <code>python scripts/build_players.py</code> and commit the result.</div>');
+      return;
+    }
+
+    // Build set of all A/B/C br_ids so we can exclude them from wildcard
+    const groupIds = new Set([
+      ...groups.A.map(p => p.br_id),
+      ...groups.B.map(p => p.br_id),
+      ...groups.C.map(p => p.br_id),
+    ]);
+
+    // Build lookup map for resolving br_id -> name when submitting
+    [...(groups.A || []), ...(groups.B || []), ...(groups.C || [])].forEach(p => {
+      groupPlayerMap[p.br_id] = p;
+    });
+
+    // Wildcard pool = full player list minus A/B/C players
+    wcPlayerPool = allPlayers.filter(p => !groupIds.has(p.br_id));
+
+    // Populate group A/B/C dropdowns
+    [['a', groups.A], ['b', groups.B], ['c', groups.C]].forEach(([slot, players]) => {
+      const sel = document.getElementById(`f-group-${slot}`);
+      sel.innerHTML = '<option value="">Select...</option>' +
+        players.map(p => `<option value="${p.br_id}">${p.name}</option>`).join('');
+    });
+
+    // Build 4 wildcard autocomplete slots
+    document.getElementById('wc-slots').innerHTML = [1,2,3,4].map(n => `
+      <div class="col-sm-6">
+        <label class="form-label small text-muted">Wildcard ${n}</label>
+        <div class="ac-wrap">
+          <input type="text" class="form-control" id="wc-search-${n}"
+                 placeholder="Search by name..." autocomplete="off">
+          <span class="ac-clear d-none" id="wc-clear-${n}" title="Clear">&times;</span>
+          <div class="ac-dropdown" id="wc-drop-${n}"></div>
+        </div>
+        <input type="hidden" id="wc-id-${n}">
+        <input type="hidden" id="wc-name-${n}">
+      </div>`).join('');
+
+    // Wire autocomplete for each slot
+    [1,2,3,4].forEach(n => {
+      const input   = document.getElementById(`wc-search-${n}`);
+      const drop    = document.getElementById(`wc-drop-${n}`);
+      const hidId   = document.getElementById(`wc-id-${n}`);
+      const hidName = document.getElementById(`wc-name-${n}`);
+      const clear   = document.getElementById(`wc-clear-${n}`);
+      let timer;
+
+      input.addEventListener('input', () => {
+        clearTimeout(timer);
+        hidId.value = ''; hidName.value = '';
+        const q = input.value.trim().toLowerCase();
+        if (q.length < 2) { drop.style.display = 'none'; clear.classList.add('d-none'); return; }
+        timer = setTimeout(() => {
+          const hits = wcPlayerPool.filter(p => p.name.toLowerCase().includes(q)).slice(0, 15);
+          if (!hits.length) { drop.style.display = 'none'; return; }
+          drop.innerHTML = hits.map(p =>
+            `<div class="ac-item" data-id="${p.br_id}" data-name="${p.name}">${p.name}</div>`
+          ).join('');
+          drop.style.display = 'block';
+          drop.querySelectorAll('.ac-item').forEach(item => {
+            item.addEventListener('mousedown', ev => {
+              ev.preventDefault();
+              input.value   = item.dataset.name;
+              hidId.value   = item.dataset.id;
+              hidName.value = item.dataset.name;
+              drop.style.display = 'none';
+              clear.classList.remove('d-none');
+            });
+          });
+        }, 200);
+        clear.classList.toggle('d-none', !input.value);
+      });
+
+      input.addEventListener('blur', () => {
+        setTimeout(() => { drop.style.display = 'none'; }, 150);
+        if (!hidId.value) { input.value = ''; }  // clear partial text if no selection made
+      });
+
+      clear.addEventListener('click', () => {
+        input.value = ''; hidId.value = ''; hidName.value = '';
+        drop.style.display = 'none';
+        clear.classList.add('d-none');
+        input.focus();
+      });
+    });
+
+  } catch (e) {
+    document.getElementById('entry-form').insertAdjacentHTML('beforebegin',
+      `<div class="alert alert-danger">Could not load player data: ${e.message}</div>`);
+  }
+}
+
+// ===================================================================
+// Entry Form: submit -> POST to Netlify function
+// ===================================================================
+document.getElementById('entry-form').addEventListener('submit', async e => {
+  e.preventDefault();
+  const errDiv  = document.getElementById('form-error');
+  const btn     = document.getElementById('btn-submit');
+  errDiv.classList.add('d-none');
+
+  const owner = document.getElementById('f-owner').value.trim();
+  const team  = document.getElementById('f-team').value.trim();
+  const pAId  = document.getElementById('f-group-a').value;
+  const pBId  = document.getElementById('f-group-b').value;
+  const pCId  = document.getElementById('f-group-c').value;
+
+  // Gather wildcard picks (need both id and name for the function)
+  const wildcards = [1,2,3,4].map(n => ({
+    br_id: document.getElementById(`wc-id-${n}`).value,
+    name:  document.getElementById(`wc-name-${n}`).value,
+  }));
+
+  // Client-side validation
+  const errors = [];
+  if (!owner) errors.push('Your name is required.');
+  if (!team)  errors.push('Team name is required.');
+  if (!pAId)  errors.push('Select a Group A player.');
+  if (!pBId)  errors.push('Select a Group B player.');
+  if (!pCId)  errors.push('Select a Group C player.');
+
+  const filledWC = wildcards.filter(w => w.br_id);
+  if (filledWC.length !== 4) {
+    errors.push(`Select exactly 4 Wildcard players (you picked ${filledWC.length}).`);
+  }
+  const wcIds = filledWC.map(w => w.br_id);
+  if (new Set(wcIds).size !== wcIds.length) {
+    errors.push('Each Wildcard slot must be a different player.');
+  }
+  const allIds = [pAId, pBId, pCId, ...wcIds].filter(Boolean);
+  if (new Set(allIds).size !== allIds.length) {
+    errors.push('A player cannot appear more than once on your team.');
+  }
+
+  if (errors.length) {
+    errDiv.textContent = errors.join(' ');
+    errDiv.classList.remove('d-none');
+    return;
+  }
+
+  // Resolve names for group A/B/C (from the select option text)
+  const nameOf = (selectId) => {
+    const sel = document.getElementById(selectId);
+    return sel.options[sel.selectedIndex]?.text ?? '';
+  };
+
+  const payload = {
+    owner_name: owner,
+    team_name:  team,
+    group_a: { br_id: pAId, name: nameOf('f-group-a') },
+    group_b: { br_id: pBId, name: nameOf('f-group-b') },
+    group_c: { br_id: pCId, name: nameOf('f-group-c') },
+    wildcards: filledWC,
+  };
+
+  // Disable button and show loading state
+  btn.disabled = true;
+  btn.textContent = 'Submitting...';
+
+  try {
+    const res  = await fetch('/.netlify/functions/submit-team', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify(payload),
+    });
+    const data = await res.json();
+
+    if (!res.ok) {
+      throw new Error(data.error || `Server error (${res.status})`);
+    }
+
+    // Success
+    document.getElementById('entry-form').classList.add('d-none');
+    const successDiv = document.getElementById('entry-success');
+    document.getElementById('success-msg').textContent = data.message;
+    successDiv.classList.remove('d-none');
+
+  } catch (err) {
+    errDiv.textContent = err.message;
+    errDiv.classList.remove('d-none');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Submit My Team';
+  }
+});
+
+document.getElementById('btn-reset').addEventListener('click', () => {
+  document.getElementById('entry-success').classList.add('d-none');
+  document.getElementById('entry-form').classList.remove('d-none');
+  document.getElementById('form-error').classList.add('d-none');
+  document.getElementById('entry-form').reset();
+  [1,2,3,4].forEach(n => {
+    document.getElementById(`wc-id-${n}`).value   = '';
+    document.getElementById(`wc-name-${n}`).value = '';
+    const cl = document.getElementById(`wc-clear-${n}`);
+    if (cl) cl.classList.add('d-none');
+  });
+});
+
+// ===================================================================
+// Boot: show Player Stats on load
+// ===================================================================
+showView('players');
+</script>
+</body>
+</html>
