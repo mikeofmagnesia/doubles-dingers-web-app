@@ -1,5 +1,5 @@
 {
-  "_comment": "Doubles and Dingers 2026 configuration. Edit this file to add/update teams and players. Verify all br_url values at baseball-reference.com before the season starts.",
+  "_comment": "Doubles and Dingers 2026 configuration. Set groups before the season. Teams and wildcard players are appended automatically via the entry form.",
   "season": 2026,
 
   "groups": {
@@ -30,40 +30,8 @@
     "arenano01": { "name": "Nolan Arenado",    "group": "C",  "br_url": "https://www.baseball-reference.com/players/a/arenano01.shtml" },
     "tuckkyl01": { "name": "Kyle Tucker",      "group": "C",  "br_url": "https://www.baseball-reference.com/players/t/tuckkyl01.shtml" },
 
-    "_wildcard_comment": "Add Wildcard-eligible players below. Keep group set to Wildcard.",
-    "bettsmoo01": { "name": "Mookie Betts",       "group": "Wildcard", "br_url": "https://www.baseball-reference.com/players/b/bettsmo01.shtml" },
-    "troutmi01":  { "name": "Mike Trout",          "group": "Wildcard", "br_url": "https://www.baseball-reference.com/players/t/troutmi01.shtml" },
-    "goldspa01":  { "name": "Paul Goldschmidt",    "group": "Wildcard", "br_url": "https://www.baseball-reference.com/players/g/goldspa01.shtml" },
-    "cruzon01":   { "name": "Oneil Cruz",          "group": "Wildcard", "br_url": "https://www.baseball-reference.com/players/c/cruzoni01.shtml" },
-    "guerrvl02":  { "name": "Vladimir Guerrero Jr.","group": "Wildcard", "br_url": "https://www.baseball-reference.com/players/g/guerrvl02.shtml" },
-    "bichebo01":  { "name": "Bo Bichette",         "group": "Wildcard", "br_url": "https://www.baseball-reference.com/players/b/bichobo01.shtml" },
-    "olsonce01":  { "name": "Matt Olson",          "group": "Wildcard", "br_url": "https://www.baseball-reference.com/players/o/olsonma01.shtml" },
-    "sototer01":  { "name": "Marcus Semien",       "group": "Wildcard", "br_url": "https://www.baseball-reference.com/players/s/semienma01.shtml" },
-    "tatiefe02":  { "name": "Fernando Tatis Jr.",  "group": "Wildcard", "br_url": "https://www.baseball-reference.com/players/t/tatisfe02.shtml" },
-    "machama01":  { "name": "Manny Machado",       "group": "Wildcard", "br_url": "https://www.baseball-reference.com/players/m/machama01.shtml" },
-    "schmija01":  { "name": "J.T. Realmuto",       "group": "Wildcard", "br_url": "https://www.baseball-reference.com/players/r/realmjt01.shtml" },
-    "swarima01":  { "name": "Jose Ramirez",        "group": "Wildcard", "br_url": "https://www.baseball-reference.com/players/r/ramirjo04.shtml" },
-    "alonspe01":  { "name": "Pete Alonso",         "group": "Wildcard", "br_url": "https://www.baseball-reference.com/players/a/alonspe01.shtml" },
-    "rodrifr02":  { "name": "Julio Rodriguez",     "group": "Wildcard", "br_url": "https://www.baseball-reference.com/players/r/rodrifr03.shtml" },
-    "corbike01":  { "name": "Ke'Bryan Hayes",      "group": "Wildcard", "br_url": "https://www.baseball-reference.com/players/h/hayeske01.shtml" },
-    "strotko01":  { "name": "Kyle Schwarber",      "group": "Wildcard", "br_url": "https://www.baseball-reference.com/players/s/schwaky01.shtml" },
-    "turnejtr01": { "name": "Trea Turner",         "group": "Wildcard", "br_url": "https://www.baseball-reference.com/players/t/turnetr01.shtml" },
-    "gormaon01":  { "name": "Nolan Gorman",        "group": "Wildcard", "br_url": "https://www.baseball-reference.com/players/g/gormano01.shtml" },
-    "caroll01":   { "name": "Corbin Carroll",      "group": "Wildcard", "br_url": "https://www.baseball-reference.com/players/c/carroco02.shtml" },
-    "albieoz01":  { "name": "Ozzie Albies",        "group": "Wildcard", "br_url": "https://www.baseball-reference.com/players/a/albieoz01.shtml" }
+    "_wildcard_note": "Wildcard players are added here automatically when participants submit their teams via the entry form."
   },
 
-  "teams": [
-    {
-      "_comment": "Replace with actual participant teams before the season starts.",
-      "owner": "Jane Smith",
-      "team_name": "The Sluggers",
-      "players": ["judgear01", "sotoju01", "wittbo02", "bettsmoo01", "troutmi01", "goldspa01", "alonspe01"]
-    },
-    {
-      "owner": "John Doe",
-      "team_name": "Dinger Factory",
-      "players": ["ohtansh01", "freemfr01", "rileaus01", "tatiefe02", "machama01", "albieoz01", "caroll01"]
-    }
-  ]
+  "teams": []
 }
