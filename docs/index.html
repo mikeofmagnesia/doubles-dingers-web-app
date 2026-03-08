@@ -632,7 +632,10 @@ async function loadEntry() {
         const q = input.value.trim().toLowerCase();
         if (q.length < 2) { drop.style.display = 'none'; clear.classList.add('d-none'); return; }
         timer = setTimeout(() => {
-          const hits = wcPlayerPool.filter(p => p.name.toLowerCase().includes(q)).slice(0, 15);
+          const selectedInOtherSlots = new Set(
+            [1,2,3,4].filter(s => s !== n).map(s => document.getElementById(`wc-id-${s}`).value).filter(Boolean)
+          );
+          const hits = wcPlayerPool.filter(p => p.name.toLowerCase().includes(q) && !selectedInOtherSlots.has(p.br_id)).slice(0, 15);
           if (!hits.length) { drop.style.display = 'none'; return; }
           drop.innerHTML = hits.map(p =>
             `<div class="ac-item" data-id="${p.br_id}" data-name="${p.name}">${p.name}</div>`
