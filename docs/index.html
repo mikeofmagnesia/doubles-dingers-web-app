@@ -67,6 +67,22 @@
     #loading { color: #6c757d; padding: 2rem 0; }
     #no-data  { color: #6c757d; }
     .updated-badge { font-size: 0.75rem; color: #6c757d; }
+
+    /* Sortable headers */
+    th.sortable { cursor: pointer; user-select: none; }
+    th.sortable:hover { background: #1c3f6e; }
+    th.sortable::after { content: ' \2195'; opacity: 0.4; font-size: 0.7rem; }
+    th.sort-asc::after  { content: ' \25B2'; opacity: 1; }
+    th.sort-desc::after { content: ' \25BC'; opacity: 1; }
+
+    /* Team roster header white text */
+    .team-header th { color: #fff !important; }
+
+    /* Multiselect filter dropdown */
+    .filter-dropdown .dropdown-menu { min-width: 200px; padding: 8px 0; max-height: 260px; overflow-y: auto; }
+    .filter-dropdown .dropdown-item { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; }
+    .filter-dropdown .dropdown-item input[type="checkbox"] { flex-shrink: 0; }
+    .filter-btn-label { max-width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   </style>
 </head>
 <body>
@@ -84,8 +100,8 @@
         <li class="nav-item"><a class="nav-link" href="#" data-view="players">Player Stats</a></li>
         <li class="nav-item"><a class="nav-link" href="#" data-view="standings">Standings</a></li>
         <li class="nav-item"><a class="nav-link" href="#" data-view="rosters">Rosters</a></li>
-        <li class="nav-item"><a class="nav-link" href="#" data-view="player-history">Player History</a></li>
-        <li class="nav-item"><a class="nav-link" href="#" data-view="team-history">Team History</a></li>
+        <li class="nav-item d-none"><a class="nav-link" href="#" data-view="player-history">Player History</a></li>
+        <li class="nav-item d-none"><a class="nav-link" href="#" data-view="team-history">Team History</a></li>
       </ul>
       <a class="btn btn-enter btn-sm ms-2 mt-2 mt-lg-0" href="#" data-view="entry">Enter Your Team</a>
     </div>
@@ -101,14 +117,34 @@
       <h5 class="mb-0">Player Stats</h5>
       <span class="updated-badge" id="players-updated"></span>
     </div>
+    <div class="d-flex gap-2 mb-2 align-items-center flex-wrap">
+      <div class="dropdown filter-dropdown" id="group-filter-wrap" style="display:none!important">
+        <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button"
+                data-bs-toggle="dropdown" data-bs-auto-close="outside">
+          Group: <span class="filter-btn-label" id="group-filter-label">All</span>
+        </button>
+        <ul class="dropdown-menu" id="group-filter-menu"></ul>
+      </div>
+    </div>
     <div class="table-wrap">
       <table class="table table-bordered table-striped table-hover align-middle mb-0" id="tbl-players">
         <thead>
-          <tr>
-            <th>Rank</th><th>Player</th><th>Group</th><th title="Fantasy teams that picked this player">Selected</th>
-            <th>2B</th><th>HR</th><th>2B+HR</th><th>GP</th><th>(2B+HR)/GP</th>
-            <th>Prev Rank</th><th>Prev 2B</th><th>Prev HR</th><th>Prev 2B+HR</th>
-            <th>Rank Chg</th><th>2B+HR Chg</th>
+          <tr id="players-thead-row">
+            <th class="sortable" data-col="rank">Rank</th>
+            <th class="sortable" data-col="name">Player</th>
+            <th class="sortable" data-col="group">Group</th>
+            <th class="sortable" data-col="times_selected" title="Fantasy teams that picked this player">Selected</th>
+            <th class="sortable" data-col="doubles">2B</th>
+            <th class="sortable" data-col="homers">HR</th>
+            <th class="sortable" data-col="total">2B+HR</th>
+            <th class="sortable" data-col="games_played">GP</th>
+            <th class="sortable" data-col="per_game">(2B+HR)/GP</th>
+            <th class="sortable" data-col="prev_rank">Prev Rank</th>
+            <th class="sortable" data-col="prev_doubles">Prev 2B</th>
+            <th class="sortable" data-col="prev_homers">Prev HR</th>
+            <th class="sortable" data-col="prev_total">Prev 2B+HR</th>
+            <th class="sortable" data-col="rank_change">Rank Chg</th>
+            <th class="sortable" data-col="total_change">2B+HR Chg</th>
           </tr>
         </thead>
         <tbody id="tbody-players"><tr><td colspan="15" class="text-center" id="loading">Loading...</td></tr></tbody>
@@ -141,6 +177,22 @@
     <div class="d-flex justify-content-between align-items-center mb-2">
       <h5 class="mb-0">Team Rosters</h5>
       <span class="updated-badge" id="rosters-updated"></span>
+    </div>
+    <div class="d-flex gap-2 mb-3 align-items-center flex-wrap" id="rosters-filters" style="display:none!important">
+      <div class="dropdown filter-dropdown">
+        <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button"
+                data-bs-toggle="dropdown" data-bs-auto-close="outside">
+          Owner: <span class="filter-btn-label" id="owner-filter-label">All</span>
+        </button>
+        <ul class="dropdown-menu" id="owner-filter-menu"></ul>
+      </div>
+      <div class="dropdown filter-dropdown">
+        <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button"
+                data-bs-toggle="dropdown" data-bs-auto-close="outside">
+          Team: <span class="filter-btn-label" id="team-filter-label">All</span>
+        </button>
+        <ul class="dropdown-menu" id="team-filter-menu"></ul>
+      </div>
     </div>
     <div id="rosters-container">
       <p class="text-muted">Loading...</p>
@@ -331,21 +383,43 @@ document.querySelectorAll('[data-view]').forEach(el => {
 });
 
 // ===================================================================
-// VIEW 1: Player Stats
+// VIEW 1: Player Stats (with Group filter + sortable columns)
 // ===================================================================
-async function loadPlayers() {
+let _playersData = null;
+let _playerSort  = { col: 'rank', dir: 'asc' };
+let _playerGroupFilter = new Set(); // empty = show all groups
+
+function _sortVal(p, col) {
+  const v = p[col];
+  if (v === null || v === undefined) return col === 'name' ? '' : -Infinity;
+  return v;
+}
+
+function _renderPlayersTable() {
   const tbody = document.getElementById('tbody-players');
-  try {
-    const data = await fetchData('player_stats.json');
-    document.getElementById('players-updated').textContent =
-      data.updated ? `Updated ${data.updated}` : '';
+  if (!_playersData) return;
 
-    if (!data.players || data.players.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="15" class="text-center text-muted">No data yet. Check back after the first update.</td></tr>';
-      return;
-    }
+  let rows = _playersData.players || [];
 
-    tbody.innerHTML = data.players.map(p => `
+  // Apply group filter
+  if (_playerGroupFilter.size > 0) {
+    rows = rows.filter(p => _playerGroupFilter.has(p.group));
+  }
+
+  // Apply sort
+  const { col, dir } = _playerSort;
+  const mult = dir === 'asc' ? 1 : -1;
+  rows = [...rows].sort((a, b) => {
+    const av = _sortVal(a, col), bv = _sortVal(b, col);
+    if (av < bv) return -1 * mult;
+    if (av > bv) return  1 * mult;
+    return 0;
+  });
+
+  if (rows.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="15" class="text-center text-muted">No players match the selected filter.</td></tr>';
+  } else {
+    tbody.innerHTML = rows.map(p => `
       <tr>
         <td class="text-center fw-bold">${p.rank}</td>
         <td>${p.name}</td>
@@ -363,6 +437,68 @@ async function loadPlayers() {
         <td class="text-center">${rankChgHtml(p.rank_change)}</td>
         <td class="text-center">${statChgHtml(p.total_change)}</td>
       </tr>`).join('');
+  }
+
+  // Update sort indicators on headers
+  document.querySelectorAll('#players-thead-row th.sortable').forEach(th => {
+    th.classList.remove('sort-asc', 'sort-desc');
+    if (th.dataset.col === col) {
+      th.classList.add(dir === 'asc' ? 'sort-asc' : 'sort-desc');
+    }
+  });
+}
+
+async function loadPlayers() {
+  const tbody = document.getElementById('tbody-players');
+  try {
+    _playersData = await fetchData('player_stats.json');
+    document.getElementById('players-updated').textContent =
+      _playersData.updated ? `Updated ${_playersData.updated}` : '';
+
+    if (!_playersData.players || _playersData.players.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="15" class="text-center text-muted">No data yet. Check back after the first update.</td></tr>';
+      return;
+    }
+
+    // Build Group filter checkboxes
+    const groups = [...new Set(_playersData.players.map(p => p.group))].sort();
+    const menu = document.getElementById('group-filter-menu');
+    menu.innerHTML = groups.map(g => `
+      <li>
+        <label class="dropdown-item">
+          <input type="checkbox" value="${g}" class="group-filter-cb"> ${g === 'Wildcard' ? 'Wildcard' : `Group ${g}`}
+        </label>
+      </li>`).join('');
+
+    menu.querySelectorAll('.group-filter-cb').forEach(cb => {
+      cb.addEventListener('change', () => {
+        _playerGroupFilter = new Set(
+          [...menu.querySelectorAll('.group-filter-cb:checked')].map(c => c.value)
+        );
+        const label = _playerGroupFilter.size === 0 ? 'All'
+          : [..._playerGroupFilter].join(', ');
+        document.getElementById('group-filter-label').textContent = label;
+        _renderPlayersTable();
+      });
+    });
+
+    // Show filter bar
+    document.getElementById('group-filter-wrap').style.removeProperty('display');
+
+    // Wire sortable headers
+    document.querySelectorAll('#players-thead-row th.sortable').forEach(th => {
+      th.addEventListener('click', () => {
+        const col = th.dataset.col;
+        if (_playerSort.col === col) {
+          _playerSort.dir = _playerSort.dir === 'asc' ? 'desc' : 'asc';
+        } else {
+          _playerSort = { col, dir: 'asc' };
+        }
+        _renderPlayersTable();
+      });
+    });
+
+    _renderPlayersTable();
   } catch (err) {
     tbody.innerHTML = `<tr><td colspan="15" class="text-center text-danger">${err.message}</td></tr>`;
   }
@@ -386,7 +522,7 @@ async function loadStandings() {
     tbody.innerHTML = data.teams.map(t => `
       <tr>
         <td class="text-center fw-bold">${t.rank}</td>
-        <td>${t.team_name}</td>
+        <td><a href="#" class="text-decoration-none fw-semibold roster-link" data-team="${t.team_name.replace(/"/g,'&quot;')}">${t.team_name}</a></td>
         <td>${t.owner}</td>
         <td class="text-center">${t.doubles}</td>
         <td class="text-center">${t.homers}</td>
@@ -397,74 +533,146 @@ async function loadStandings() {
         <td class="text-center">${em(t.prev_total)}</td>
         <td class="text-center">${statChgHtml(t.total_change)}</td>
       </tr>`).join('');
+
+    // Wire team links to roster view
+    tbody.querySelectorAll('.roster-link').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        scrollToRoster(a.dataset.team);
+      });
+    });
   } catch (err) {
     tbody.innerHTML = `<tr><td colspan="11" class="text-center text-danger">${err.message}</td></tr>`;
   }
 }
 
 // ===================================================================
-// VIEW 3: Team Rosters
+// VIEW 3: Team Rosters (3-col layout, owner/team filters, anchors)
 // ===================================================================
+let _rostersData = null;
+let _rosterOwnerFilter = new Set();
+let _rosterTeamFilter  = new Set();
+
+function slugify(s) {
+  return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+function _buildRosterCard(t) {
+  const playerRows = t.players.map(p => `
+    <tr>
+      <td>${p.name}</td>
+      <td>${groupBadge(p.group)}</td>
+      <td class="text-center">${p.doubles}</td>
+      <td class="text-center">${p.homers}</td>
+      <td class="text-center fw-bold">${p.total}</td>
+      <td class="text-center">${em(p.prev_doubles)}</td>
+      <td class="text-center">${em(p.prev_homers)}</td>
+      <td class="text-center">${em(p.prev_total)}</td>
+      <td class="text-center">${statChgHtml(p.total_change)}</td>
+    </tr>`).join('');
+
+  const tot = t.totals;
+  const sumRow = `
+    <tr class="sum-row">
+      <td><em>Total</em></td><td></td>
+      <td class="text-center">${tot.doubles}</td>
+      <td class="text-center">${tot.homers}</td>
+      <td class="text-center">${tot.total}</td>
+      <td class="text-center">${em(tot.prev_doubles)}</td>
+      <td class="text-center">${em(tot.prev_homers)}</td>
+      <td class="text-center">${em(tot.prev_total)}</td>
+      <td class="text-center">${statChgHtml(tot.total_change)}</td>
+    </tr>`;
+
+  return `
+    <div class="col-md-6 col-xl-4 mb-3" id="roster-${slugify(t.team_name)}"
+         data-owner="${t.owner}" data-team="${t.team_name}">
+      <div class="table-wrap">
+        <table class="table table-bordered table-hover align-middle mb-0">
+          <thead class="team-header">
+            <tr>
+              <th colspan="5">${t.team_name} &mdash; ${t.owner}</th>
+              <th colspan="4" class="text-end">
+                Rank ${t.rank}
+                ${t.rank_change !== null ? rankChgHtml(t.rank_change) : ''}
+              </th>
+            </tr>
+            <tr>
+              <th>Player</th><th>Group</th>
+              <th>2B</th><th>HR</th><th>2B+HR</th>
+              <th>Prev 2B</th><th>Prev HR</th><th>Prev 2B+HR</th><th>2B+HR Chg</th>
+            </tr>
+          </thead>
+          <tbody>${playerRows}${sumRow}</tbody>
+        </table>
+      </div>
+    </div>`;
+}
+
+function _renderRosters() {
+  const container = document.getElementById('rosters-container');
+  if (!_rostersData) return;
+
+  let teams = _rostersData.teams || [];
+
+  if (_rosterOwnerFilter.size > 0) {
+    teams = teams.filter(t => _rosterOwnerFilter.has(t.owner));
+  }
+  if (_rosterTeamFilter.size > 0) {
+    teams = teams.filter(t => _rosterTeamFilter.has(t.team_name));
+  }
+
+  if (teams.length === 0) {
+    container.innerHTML = '<p class="text-muted">No teams match the selected filters.</p>';
+    return;
+  }
+
+  container.innerHTML = `<div class="row">${teams.map(_buildRosterCard).join('')}</div>`;
+}
+
+function _buildFilterMenu(menuId, labelId, items, filterSet, onChange) {
+  const menu = document.getElementById(menuId);
+  menu.innerHTML = items.map(v => `
+    <li>
+      <label class="dropdown-item">
+        <input type="checkbox" value="${v.replace(/"/g, '&quot;')}" class="roster-filter-cb"> ${v}
+      </label>
+    </li>`).join('');
+
+  menu.querySelectorAll('.roster-filter-cb').forEach(cb => {
+    cb.addEventListener('change', () => {
+      filterSet.clear();
+      menu.querySelectorAll('.roster-filter-cb:checked').forEach(c => filterSet.add(c.value));
+      document.getElementById(labelId).textContent =
+        filterSet.size === 0 ? 'All' : [...filterSet].join(', ');
+      onChange();
+    });
+  });
+}
+
 async function loadRosters() {
   const container = document.getElementById('rosters-container');
   try {
-    const data = await fetchData('team_rosters.json');
+    _rostersData = await fetchData('team_rosters.json');
     document.getElementById('rosters-updated').textContent =
-      data.updated ? `Updated ${data.updated}` : '';
+      _rostersData.updated ? `Updated ${_rostersData.updated}` : '';
 
-    if (!data.teams || data.teams.length === 0) {
+    if (!_rostersData.teams || _rostersData.teams.length === 0) {
       container.innerHTML = '<p class="text-muted">No data yet.</p>';
       return;
     }
 
-    container.innerHTML = data.teams.map(t => {
-      const playerRows = t.players.map(p => `
-        <tr>
-          <td>${p.name}</td>
-          <td>${groupBadge(p.group)}</td>
-          <td class="text-center">${p.doubles}</td>
-          <td class="text-center">${p.homers}</td>
-          <td class="text-center fw-bold">${p.total}</td>
-          <td class="text-center">${em(p.prev_doubles)}</td>
-          <td class="text-center">${em(p.prev_homers)}</td>
-          <td class="text-center">${em(p.prev_total)}</td>
-          <td class="text-center">${statChgHtml(p.total_change)}</td>
-        </tr>`).join('');
+    // Build filter options from data
+    const owners = [...new Set(_rostersData.teams.map(t => t.owner))].sort();
+    const teamNames = [...new Set(_rostersData.teams.map(t => t.team_name))].sort();
 
-      const tot = t.totals;
-      const sumRow = `
-        <tr class="sum-row">
-          <td><em>Total</em></td><td></td>
-          <td class="text-center">${tot.doubles}</td>
-          <td class="text-center">${tot.homers}</td>
-          <td class="text-center">${tot.total}</td>
-          <td class="text-center">${em(tot.prev_doubles)}</td>
-          <td class="text-center">${em(tot.prev_homers)}</td>
-          <td class="text-center">${em(tot.prev_total)}</td>
-          <td class="text-center">${statChgHtml(tot.total_change)}</td>
-        </tr>`;
+    _buildFilterMenu('owner-filter-menu', 'owner-filter-label', owners, _rosterOwnerFilter, _renderRosters);
+    _buildFilterMenu('team-filter-menu', 'team-filter-label', teamNames, _rosterTeamFilter, _renderRosters);
 
-      return `
-        <div class="table-wrap mb-4">
-          <table class="table table-bordered table-hover align-middle mb-0">
-            <thead class="team-header">
-              <tr>
-                <th colspan="5">${t.team_name} &mdash; ${t.owner}</th>
-                <th colspan="4" class="text-end">
-                  Rank ${t.rank}
-                  ${t.rank_change !== null ? rankChgHtml(t.rank_change) : ''}
-                </th>
-              </tr>
-              <tr>
-                <th>Player</th><th>Group</th>
-                <th>2B</th><th>HR</th><th>2B+HR</th>
-                <th>Prev 2B</th><th>Prev HR</th><th>Prev 2B+HR</th><th>2B+HR Chg</th>
-              </tr>
-            </thead>
-            <tbody>${playerRows}${sumRow}</tbody>
-          </table>
-        </div>`;
-    }).join('');
+    // Show filter bar
+    document.getElementById('rosters-filters').style.removeProperty('display');
+
+    _renderRosters();
   } catch (err) {
     container.innerHTML = `<p class="text-danger">${err.message}</p>`;
   }
@@ -786,6 +994,25 @@ document.getElementById('btn-reset').addEventListener('click', () => {
     if (cl) cl.classList.add('d-none');
   });
 });
+
+// ===================================================================
+// Helper: navigate to Rosters and scroll to a specific team
+// ===================================================================
+function scrollToRoster(teamName) {
+  showView('rosters');
+  // Wait for rosters to render, then scroll
+  const tryScroll = (attempts) => {
+    const el = document.getElementById(`roster-${slugify(teamName)}`);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      el.querySelector('.table-wrap').style.outline = '2px solid var(--brand-red)';
+      setTimeout(() => { el.querySelector('.table-wrap').style.outline = ''; }, 2000);
+    } else if (attempts > 0) {
+      setTimeout(() => tryScroll(attempts - 1), 150);
+    }
+  };
+  tryScroll(10);
+}
 
 // ===================================================================
 // Boot: show Player Stats on load
