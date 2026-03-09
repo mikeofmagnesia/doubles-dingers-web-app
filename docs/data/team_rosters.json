@@ -1,4 +1,99 @@
 {
   "updated": "2026-03-09",
-  "teams": []
+  "teams": [
+    {
+      "owner": "Mike's test",
+      "team_name": "teste",
+      "rank": 1,
+      "rank_change": null,
+      "players": [
+        {
+          "name": "Shohei Ohtani",
+          "group": "A",
+          "doubles": 0,
+          "homers": 0,
+          "total": 0,
+          "prev_doubles": null,
+          "prev_homers": null,
+          "prev_total": null,
+          "total_change": null
+        },
+        {
+          "name": "Freddie Freeman",
+          "group": "B",
+          "doubles": 0,
+          "homers": 0,
+          "total": 0,
+          "prev_doubles": null,
+          "prev_homers": null,
+          "prev_total": null,
+          "total_change": null
+        },
+        {
+          "name": "Bobby Witt Jr.",
+          "group": "C",
+          "doubles": 0,
+          "homers": 0,
+          "total": 0,
+          "prev_doubles": null,
+          "prev_homers": null,
+          "prev_total": null,
+          "total_change": null
+        },
+        {
+          "name": "Fernando Tatis Jr.",
+          "group": "Wildcard",
+          "doubles": 0,
+          "homers": 0,
+          "total": 0,
+          "prev_doubles": null,
+          "prev_homers": null,
+          "prev_total": null,
+          "total_change": null
+        },
+        {
+          "name": "Vladimir Guerrero Jr.",
+          "group": "Wildcard",
+          "doubles": 0,
+          "homers": 0,
+          "total": 0,
+          "prev_doubles": null,
+          "prev_homers": null,
+          "prev_total": null,
+          "total_change": null
+        },
+        {
+          "name": "Ozzie Albies",
+          "group": "Wildcard",
+          "doubles": 0,
+          "homers": 0,
+          "total": 0,
+          "prev_doubles": null,
+          "prev_homers": null,
+          "prev_total": null,
+          "total_change": null
+        },
+        {
+          "name": "Cal Raleigh",
+          "group": "Wildcard",
+          "doubles": 0,
+          "homers": 0,
+          "total": 0,
+          "prev_doubles": null,
+          "prev_homers": null,
+          "prev_total": null,
+          "total_change": null
+        }
+      ],
+      "totals": {
+        "doubles": 0,
+        "homers": 0,
+        "total": 0,
+        "prev_doubles": null,
+        "prev_homers": null,
+        "prev_total": null,
+        "total_change": null
+      }
+    }
+  ]
 }
