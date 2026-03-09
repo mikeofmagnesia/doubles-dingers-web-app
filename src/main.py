@@ -100,7 +100,7 @@ def main() -> None:
 
     # --- Step 2: Scrape today's stats ---
     print("\n--- Scraping Baseball Reference ---")
-    player_stats = scrape_all_players(config["players"])
+    player_stats = scrape_all_players(config["players"], season=season)
 
     # --- Step 3: Build teams, sort, assign ranks, attach prev data ---
     print("\n--- Building teams and assigning ranks ---")

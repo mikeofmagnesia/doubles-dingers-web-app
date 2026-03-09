@@ -16,8 +16,8 @@ HEADERS = {
 }
 
 
-def scrape_player(br_id: str, name: str, br_url: str, group: str = "Wildcard") -> PlayerStats:
-    """Scrape a single player's 2026 stats from Baseball Reference."""
+def scrape_player(br_id: str, name: str, br_url: str, group: str = "Wildcard", season: int = 2026) -> PlayerStats:
+    """Scrape a single player's stats from Baseball Reference for the given season."""
     try:
         response = requests.get(br_url, headers=HEADERS, timeout=30)
         response.raise_for_status()
@@ -36,20 +36,21 @@ def scrape_player(br_id: str, name: str, br_url: str, group: str = "Wildcard") -
     if not tbody:
         return PlayerStats(name=name, br_id=br_id, group=group)
 
-    rows_2026 = []
+    season_str = str(season)
+    rows_season = []
     for row in tbody.find_all("tr"):
         year_cell = row.find(["th", "td"], {"data-stat": "year_ID"})
-        if year_cell and year_cell.get_text(strip=True) == "2026":
-            rows_2026.append(row)
+        if year_cell and year_cell.get_text(strip=True) == season_str:
+            rows_season.append(row)
 
-    if not rows_2026:
-        print(f"  {name}: no 2026 stats yet (0 2B, 0 HR, 0 G)")
+    if not rows_season:
+        print(f"  {name}: no {season} stats yet (0 2B, 0 HR, 0 G)")
         return PlayerStats(name=name, br_id=br_id, group=group)
 
     # For players traded mid-season there will be a "TOT" row; prefer it.
-    target_row = rows_2026[0]
-    if len(rows_2026) > 1:
-        for row in rows_2026:
+    target_row = rows_season[0]
+    if len(rows_season) > 1:
+        for row in rows_season:
             team_cell = row.find("td", {"data-stat": "team_ID"})
             if team_cell and team_cell.get_text(strip=True) == "TOT":
                 target_row = row
@@ -70,21 +71,23 @@ def scrape_player(br_id: str, name: str, br_url: str, group: str = "Wildcard") -
     return PlayerStats(name=name, br_id=br_id, group=group, doubles=doubles, homers=homers, games_played=games)
 
 
-def scrape_all_players(players_config: dict) -> dict[str, PlayerStats]:
+def scrape_all_players(players_config: dict, season: int = 2026) -> dict[str, PlayerStats]:
     """
     Scrape stats for every player in the config, respecting Baseball Reference's
     3-second crawl delay between requests.
     """
     results: dict[str, PlayerStats] = {}
-    total = len(players_config)
+    players = [(k, v) for k, v in players_config.items() if not k.startswith("_") and isinstance(v, dict)]
+    total = len(players)
 
-    for i, (br_id, info) in enumerate(players_config.items(), 1):
+    for i, (br_id, info) in enumerate(players, 1):
         print(f"[{i}/{total}] Scraping {info['name']} ...")
         stats = scrape_player(
             br_id,
             info["name"],
             info["br_url"],
             info.get("group", "Wildcard"),
+            season=season,
         )
         results[br_id] = stats
 
