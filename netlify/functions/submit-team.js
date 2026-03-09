@@ -170,6 +170,7 @@ exports.handler = async function (event) {
       teamsData.players[p.br_id] = {
         name:   p.name,
         group:  p.group,
+        mlb_id: p.mlb_id || 0,
         br_url: `https://www.baseball-reference.com/players/${letter}/${p.br_id}.shtml`,
       };
     }

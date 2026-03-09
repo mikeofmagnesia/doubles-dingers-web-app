@@ -3,140 +3,41 @@
   "season": 2025,
   "groups": {
     "_comment": "Exactly 5 players per group. All other players are Wildcard.",
-    "A": [
-      "judgear01",
-      "ohtansh01",
-      "alvaryo01",
-      "harpebr03",
-      "acunaro01"
-    ],
-    "B": [
-      "sotoju01",
-      "freemfr01",
-      "hendegu01",
-      "seageco01",
-      "deverra01"
-    ],
-    "C": [
-      "wittbo02",
-      "rileaus01",
-      "rutscad01",
-      "arenano01",
-      "tuckkyl01"
-    ]
+    "A": ["judgear01", "ohtansh01", "alvaryo01", "harpebr03", "acunaro01"],
+    "B": ["sotoju01",  "freemfr01", "hendegu01", "seageco01", "deverra01"],
+    "C": ["wittbo02",  "rileaus01", "rutscad01", "arenano01", "tuckkyl01"]
   },
   "players": {
-    "_comment": "Add every player that any team might pick, grouped and wildcarded. Wildcard players must NOT appear in groups.A/B/C above.",
-    "judgear01": {
-      "name": "Aaron Judge",
-      "group": "A",
-      "br_url": "https://www.baseball-reference.com/players/j/judgear01.shtml"
-    },
-    "ohtansh01": {
-      "name": "Shohei Ohtani",
-      "group": "A",
-      "br_url": "https://www.baseball-reference.com/players/o/ohtansh01.shtml"
-    },
-    "alvaryo01": {
-      "name": "Yordan Alvarez",
-      "group": "A",
-      "br_url": "https://www.baseball-reference.com/players/a/alvaryo01.shtml"
-    },
-    "harpebr03": {
-      "name": "Bryce Harper",
-      "group": "A",
-      "br_url": "https://www.baseball-reference.com/players/h/harpebr03.shtml"
-    },
-    "acunaro01": {
-      "name": "Ronald Acuna Jr.",
-      "group": "A",
-      "br_url": "https://www.baseball-reference.com/players/a/acunaro01.shtml"
-    },
-    "sotoju01": {
-      "name": "Juan Soto",
-      "group": "B",
-      "br_url": "https://www.baseball-reference.com/players/s/sotoju01.shtml"
-    },
-    "freemfr01": {
-      "name": "Freddie Freeman",
-      "group": "B",
-      "br_url": "https://www.baseball-reference.com/players/f/freemfr01.shtml"
-    },
-    "hendegu01": {
-      "name": "Gunnar Henderson",
-      "group": "B",
-      "br_url": "https://www.baseball-reference.com/players/h/hendegu01.shtml"
-    },
-    "seageco01": {
-      "name": "Corey Seager",
-      "group": "B",
-      "br_url": "https://www.baseball-reference.com/players/s/seageco01.shtml"
-    },
-    "deverra01": {
-      "name": "Rafael Devers",
-      "group": "B",
-      "br_url": "https://www.baseball-reference.com/players/d/deverra01.shtml"
-    },
-    "wittbo02": {
-      "name": "Bobby Witt Jr.",
-      "group": "C",
-      "br_url": "https://www.baseball-reference.com/players/w/wittbo02.shtml"
-    },
-    "rileaus01": {
-      "name": "Austin Riley",
-      "group": "C",
-      "br_url": "https://www.baseball-reference.com/players/r/rileaus01.shtml"
-    },
-    "rutscad01": {
-      "name": "Adley Rutschman",
-      "group": "C",
-      "br_url": "https://www.baseball-reference.com/players/r/rutscad01.shtml"
-    },
-    "arenano01": {
-      "name": "Nolan Arenado",
-      "group": "C",
-      "br_url": "https://www.baseball-reference.com/players/a/arenano01.shtml"
-    },
-    "tuckkyl01": {
-      "name": "Kyle Tucker",
-      "group": "C",
-      "br_url": "https://www.baseball-reference.com/players/t/tuckkyl01.shtml"
-    },
+    "_comment": "Group players are set before the season. Wildcard players are appended automatically via the entry form.",
+    "judgear01": { "name": "Aaron Judge",       "group": "A", "mlb_id": 592450, "br_url": "https://www.baseball-reference.com/players/j/judgear01.shtml" },
+    "ohtansh01": { "name": "Shohei Ohtani",     "group": "A", "mlb_id": 660271, "br_url": "https://www.baseball-reference.com/players/o/ohtansh01.shtml" },
+    "alvaryo01": { "name": "Yordan Alvarez",    "group": "A", "mlb_id": 670541, "br_url": "https://www.baseball-reference.com/players/a/alvaryo01.shtml" },
+    "harpebr03": { "name": "Bryce Harper",      "group": "A", "mlb_id": 547180, "br_url": "https://www.baseball-reference.com/players/h/harpebr03.shtml" },
+    "acunaro01": { "name": "Ronald Acuna Jr.",  "group": "A", "mlb_id": 660670, "br_url": "https://www.baseball-reference.com/players/a/acunaro01.shtml" },
+
+    "sotoju01":  { "name": "Juan Soto",         "group": "B", "mlb_id": 665742, "br_url": "https://www.baseball-reference.com/players/s/sotoju01.shtml" },
+    "freemfr01": { "name": "Freddie Freeman",   "group": "B", "mlb_id": 518692, "br_url": "https://www.baseball-reference.com/players/f/freemfr01.shtml" },
+    "hendegu01": { "name": "Gunnar Henderson",  "group": "B", "mlb_id": 683002, "br_url": "https://www.baseball-reference.com/players/h/hendegu01.shtml" },
+    "seageco01": { "name": "Corey Seager",      "group": "B", "mlb_id": 608369, "br_url": "https://www.baseball-reference.com/players/s/seageco01.shtml" },
+    "deverra01": { "name": "Rafael Devers",     "group": "B", "mlb_id": 646240, "br_url": "https://www.baseball-reference.com/players/d/deverra01.shtml" },
+
+    "wittbo02":  { "name": "Bobby Witt Jr.",    "group": "C", "mlb_id": 677951, "br_url": "https://www.baseball-reference.com/players/w/wittbo02.shtml" },
+    "rileaus01": { "name": "Austin Riley",      "group": "C", "mlb_id": 663586, "br_url": "https://www.baseball-reference.com/players/r/rileaus01.shtml" },
+    "rutscad01": { "name": "Adley Rutschman",   "group": "C", "mlb_id": 668939, "br_url": "https://www.baseball-reference.com/players/r/rutscad01.shtml" },
+    "arenano01": { "name": "Nolan Arenado",     "group": "C", "mlb_id": 571448, "br_url": "https://www.baseball-reference.com/players/a/arenano01.shtml" },
+    "tuckkyl01": { "name": "Kyle Tucker",       "group": "C", "mlb_id": 663656, "br_url": "https://www.baseball-reference.com/players/t/tuckkyl01.shtml" },
+
     "_wildcard_note": "Wildcard players are added here automatically when participants submit their teams via the entry form.",
-    "tatisfe02": {
-      "name": "Fernando Tatis Jr.",
-      "group": "Wildcard",
-      "br_url": "https://www.baseball-reference.com/players/t/tatisfe02.shtml"
-    },
-    "guerrvl02": {
-      "name": "Vladimir Guerrero Jr.",
-      "group": "Wildcard",
-      "br_url": "https://www.baseball-reference.com/players/g/guerrvl02.shtml"
-    },
-    "albieoz01": {
-      "name": "Ozzie Albies",
-      "group": "Wildcard",
-      "br_url": "https://www.baseball-reference.com/players/a/albieoz01.shtml"
-    },
-    "raleica01": {
-      "name": "Cal Raleigh",
-      "group": "Wildcard",
-      "br_url": "https://www.baseball-reference.com/players/r/raleica01.shtml"
-    }
+    "tatisfe02": { "name": "Fernando Tatis Jr.",    "group": "Wildcard", "mlb_id": 665487, "br_url": "https://www.baseball-reference.com/players/t/tatisfe02.shtml" },
+    "guerrvl02": { "name": "Vladimir Guerrero Jr.", "group": "Wildcard", "mlb_id": 665489, "br_url": "https://www.baseball-reference.com/players/g/guerrvl02.shtml" },
+    "albieoz01": { "name": "Ozzie Albies",          "group": "Wildcard", "mlb_id": 645277, "br_url": "https://www.baseball-reference.com/players/a/albieoz01.shtml" },
+    "raleica01": { "name": "Cal Raleigh",           "group": "Wildcard", "mlb_id": 663728, "br_url": "https://www.baseball-reference.com/players/r/raleica01.shtml" }
   },
   "teams": [
     {
       "owner": "Mike's test",
       "team_name": "teste",
-      "players": [
-        "ohtansh01",
-        "freemfr01",
-        "wittbo02",
-        "tatisfe02",
-        "guerrvl02",
-        "albieoz01",
-        "raleica01"
-      ]
+      "players": ["ohtansh01", "freemfr01", "wittbo02", "tatisfe02", "guerrvl02", "albieoz01", "raleica01"]
     }
   ]
 }

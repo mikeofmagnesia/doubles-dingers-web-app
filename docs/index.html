@@ -616,6 +616,7 @@ async function loadEntry() {
         </div>
         <input type="hidden" id="wc-id-${n}">
         <input type="hidden" id="wc-name-${n}">
+        <input type="hidden" id="wc-mlb-id-${n}">
       </div>`).join('');
 
     // Wire autocomplete for each slot
@@ -641,7 +642,7 @@ async function loadEntry() {
           drop.innerHTML = hits.map(p => {
             const suffix = [p.team, p.pos].filter(Boolean).join(' · ');
             const label  = suffix ? `${p.name} <span class="ac-meta">${suffix}</span>` : p.name;
-            return `<div class="ac-item" data-id="${p.br_id}" data-name="${p.name}">${label}</div>`;
+            return `<div class="ac-item" data-id="${p.br_id}" data-name="${p.name}" data-mlb-id="${p.mlb_id || 0}">${label}</div>`;
           }).join('');
           drop.style.display = 'block';
           drop.querySelectorAll('.ac-item').forEach(item => {
@@ -650,6 +651,7 @@ async function loadEntry() {
               input.value   = item.dataset.name;
               hidId.value   = item.dataset.id;
               hidName.value = item.dataset.name;
+              document.getElementById(`wc-mlb-id-${n}`).value = item.dataset.mlbId || 0;
               drop.style.display = 'none';
               clear.classList.remove('d-none');
             });
@@ -694,8 +696,9 @@ document.getElementById('entry-form').addEventListener('submit', async e => {
 
   // Gather wildcard picks (need both id and name for the function)
   const wildcards = [1,2,3,4].map(n => ({
-    br_id: document.getElementById(`wc-id-${n}`).value,
-    name:  document.getElementById(`wc-name-${n}`).value,
+    br_id:  document.getElementById(`wc-id-${n}`).value,
+    name:   document.getElementById(`wc-name-${n}`).value,
+    mlb_id: parseInt(document.getElementById(`wc-mlb-id-${n}`).value) || 0,
   }));
 
   // Client-side validation

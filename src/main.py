@@ -99,7 +99,7 @@ def main() -> None:
     print(f"  Found history for {len(prev_players)} players, {len(prev_teams)} teams")
 
     # --- Step 2: Scrape today's stats ---
-    print("\n--- Scraping Baseball Reference ---")
+    print("\n--- Fetching stats from MLB Stats API ---")
     player_stats = scrape_all_players(config["players"], season=season)
 
     # --- Step 3: Build teams, sort, assign ranks, attach prev data ---

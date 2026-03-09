@@ -65,11 +65,12 @@ def fetch_mlb_roster() -> dict[str, dict]:
     lookup: dict[str, dict] = {}
     for p in data.get("people", []):
         name    = p.get("fullName", "")
+        mlb_id  = p.get("id", 0)
         team_id = p.get("currentTeam", {}).get("id", 0)
         team    = team_map.get(team_id, "")
         pos     = p.get("primaryPosition", {}).get("abbreviation", "")
         if name:
-            lookup[normalize(name)] = {"team": team, "pos": pos}
+            lookup[normalize(name)] = {"mlb_id": mlb_id, "team": team, "pos": pos}
     return lookup
 
 
@@ -162,8 +163,9 @@ def main() -> None:
     for p in all_players:
         p["group"] = group_assignments.get(p["br_id"], "Wildcard")
         mlb = mlb_lookup.get(normalize(p["name"]), {})
-        p["team"] = mlb.get("team", "")
-        p["pos"]  = mlb.get("pos", "")
+        p["mlb_id"] = mlb.get("mlb_id", 0)
+        p["team"]   = mlb.get("team", "")
+        p["pos"]    = mlb.get("pos", "")
         if not mlb:
             no_match += 1
 
