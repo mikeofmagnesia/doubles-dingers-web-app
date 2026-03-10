@@ -12,7 +12,7 @@
  */
 
 function createTeamEntryForm() {
-  const SEASON = 2025;
+  const SEASON = 2026;
 
   const form = FormApp.create(`Doubles and Dingers ${SEASON} — Team Entry`);
 
