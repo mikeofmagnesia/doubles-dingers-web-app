@@ -4,86 +4,160 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Doubles &amp; Dingers</title>
+  <!-- Set Bootstrap color mode before CSS loads to avoid flash -->
+  <script>
+    (function () {
+      const mq = window.matchMedia('(prefers-color-scheme: dark)');
+      document.documentElement.setAttribute('data-bs-theme', mq.matches ? 'dark' : 'light');
+      mq.addEventListener('change', e =>
+        document.documentElement.setAttribute('data-bs-theme', e.matches ? 'dark' : 'light'));
+    })();
+  </script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    /* ── Theme tokens ──────────────────────────────────────────────── */
     :root {
-      --brand-navy: #0d2240;
-      --brand-red:  #c8102e;
-    }
-    body { background: #f8f9fa; font-size: 0.875rem; }
-    .navbar { background: var(--brand-navy) !important; }
-    .navbar-brand { color: #fff !important; font-weight: 700; font-size: 1.1rem; letter-spacing: .02em; }
-    .nav-link { color: rgba(255,255,255,.75) !important; }
-    .nav-link.active, .nav-link:hover { color: #fff !important; }
-    .nav-link.active { border-bottom: 2px solid var(--brand-red); }
-    .btn-enter { background: var(--brand-red); color: #fff; border: none; }
-    .btn-enter:hover { background: #a50d26; color: #fff; }
+      --brand-nav:      #0f172a;   /* slate-900 */
+      --brand-accent:   #f59e0b;   /* amber-400 */
+      --brand-accent-h: #d97706;   /* amber-600 hover */
+      --brand-accent-text: #0f172a;
 
+      --th-bg:       #0f172a;
+      --th-color:    #ffffff;
+      --th-hover:    #1e293b;
+      --row-hover:   rgba(245,158,11,.08);
+      --sum-row:     #f1f5f9;
+      --team-hdr:    #1e293b;
+
+      --up:   #16a34a;
+      --down: #dc2626;
+      --neu:  #94a3b8;
+
+      --ba-bg: #fef3c7; --ba-fg: #92400e;
+      --bb-bg: #dbeafe; --bb-fg: #1e3a8a;
+      --bc-bg: #dcfce7; --bc-fg: #14532d;
+      --bw-bg: #f1f5f9; --bw-fg: #475569;
+
+      /* Bootstrap overrides (light) */
+      --bs-body-bg:              #f8fafc;
+      --bs-body-color:           #0f172a;
+      --bs-secondary-color:      #64748b;
+      --bs-border-color:         #e2e8f0;
+      --bs-table-hover-bg:       rgba(245,158,11,.06);
+      --bs-table-striped-bg:     rgba(0,0,0,.025);
+      --bs-dropdown-bg:          #ffffff;
+      --bs-dropdown-color:       #0f172a;
+      --bs-dropdown-border-color:#e2e8f0;
+      --bs-dropdown-link-color:  #0f172a;
+      --bs-dropdown-link-hover-bg: #f1f5f9;
+    }
+
+    [data-bs-theme="dark"] {
+      --brand-nav:      #020617;   /* slate-950 */
+
+      --th-bg:       #1e293b;
+      --th-color:    #94a3b8;
+      --th-hover:    #334155;
+      --row-hover:   rgba(251,191,36,.07);
+      --sum-row:     #1e293b;
+      --team-hdr:    #334155;
+
+      --up:   #4ade80;
+      --down: #f87171;
+      --neu:  #64748b;
+
+      --ba-bg: #78350f; --ba-fg: #fde68a;
+      --bb-bg: #1e3a8a; --bb-fg: #bfdbfe;
+      --bc-bg: #14532d; --bc-fg: #86efac;
+      --bw-bg: #334155; --bw-fg: #94a3b8;
+
+      /* Bootstrap overrides (dark) */
+      --bs-body-bg:              #0f172a;
+      --bs-body-color:           #e2e8f0;
+      --bs-secondary-color:      #94a3b8;
+      --bs-border-color:         #1e293b;
+      --bs-table-hover-bg:       rgba(251,191,36,.07);
+      --bs-table-striped-bg:     rgba(255,255,255,.03);
+      --bs-dropdown-bg:          #1e293b;
+      --bs-dropdown-color:       #e2e8f0;
+      --bs-dropdown-border-color:#334155;
+      --bs-dropdown-link-color:  #e2e8f0;
+      --bs-dropdown-link-hover-bg: #334155;
+    }
+
+    /* ── Layout ────────────────────────────────────────────────────── */
+    body { background: var(--bs-body-bg); font-size: 0.875rem; }
     .view { display: none; }
     .view.active { display: block; }
 
+    /* ── Navbar ────────────────────────────────────────────────────── */
+    .navbar { background: var(--brand-nav) !important; }
+    .navbar-brand { color: #fff !important; font-weight: 700; font-size: 1.1rem; letter-spacing: .02em; }
+    .nav-link { color: rgba(255,255,255,.65) !important; }
+    .nav-link.active, .nav-link:hover { color: #fff !important; }
+    .nav-link.active { border-bottom: 2px solid var(--brand-accent); }
+    .btn-enter { background: var(--brand-accent); color: var(--brand-accent-text); border: none; font-weight: 600; }
+    .btn-enter:hover { background: var(--brand-accent-h); color: var(--brand-accent-text); }
+
+    /* ── Tables ────────────────────────────────────────────────────── */
     .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     table { font-size: 0.82rem; white-space: nowrap; }
-    th { background: var(--brand-navy); color: #fff; font-weight: 600; position: sticky; top: 0; }
-    tbody tr:hover { background: #e9f0fb; }
+    th { background: var(--th-bg) !important; color: var(--th-color) !important;
+         font-weight: 600; position: sticky; top: 0; }
+    tbody tr:hover td { background: var(--row-hover) !important; }
+    .sum-row td { background: var(--sum-row) !important; font-weight: 700; }
 
-    .up   { color: #198754; font-weight: 600; }
-    .down { color: #dc3545; font-weight: 600; }
-    .neu  { color: #6c757d; }
+    /* ── Sortable headers ──────────────────────────────────────────── */
+    th.sortable, th.archive-sort { cursor: pointer; user-select: none; }
+    th.sortable:hover, th.archive-sort:hover { background: var(--th-hover) !important; }
+    th.sortable::after { content: ' \2195'; opacity: 0.4; font-size: 0.7rem; }
+    th.sort-asc::after, th.archive-sort.sort-asc::after  { content: ' \25B2'; opacity: 1; }
+    th.sort-desc::after, th.archive-sort.sort-desc::after { content: ' \25BC'; opacity: 1; }
 
-    #archive-subtabs .nav-link         { color: #333 !important; }
-    #archive-subtabs .nav-link.active  { color: #000 !important; border-bottom: 2px solid var(--brand-navy); }
-    #archive-subtabs .nav-link:hover   { color: #000 !important; }
-    th.archive-sort { cursor: pointer; user-select: none; }
+    /* ── Delta indicators ──────────────────────────────────────────── */
+    .up   { color: var(--up);   font-weight: 600; }
+    .down { color: var(--down); font-weight: 600; }
+    .neu  { color: var(--neu); }
 
+    /* ── Archive sub-tabs ──────────────────────────────────────────── */
+    #archive-subtabs .nav-link       { color: var(--bs-body-color) !important; }
+    #archive-subtabs .nav-link.active { color: var(--bs-body-color) !important;
+                                        border-bottom: 2px solid var(--brand-accent); }
+    #archive-subtabs .nav-link:hover  { color: var(--bs-body-color) !important; }
+
+    /* ── Group badges ──────────────────────────────────────────────── */
     .group-badge {
-      display: inline-block;
-      padding: 1px 7px;
-      border-radius: 10px;
-      font-size: 0.75rem;
-      font-weight: 600;
+      display: inline-block; padding: 1px 7px;
+      border-radius: 10px; font-size: 0.75rem; font-weight: 600;
     }
-    .group-A  { background: #cfe2ff; color: #052c65; }
-    .group-B  { background: #d1e7dd; color: #0a3622; }
-    .group-C  { background: #fff3cd; color: #664d03; }
-    .group-WC { background: #e2e3e5; color: #383d41; }
+    .group-A  { background: var(--ba-bg); color: var(--ba-fg); }
+    .group-B  { background: var(--bb-bg); color: var(--bb-fg); }
+    .group-C  { background: var(--bc-bg); color: var(--bc-fg); }
+    .group-WC { background: var(--bw-bg); color: var(--bw-fg); }
 
-    .team-header th {
-      background: #1c3f6e;
-      font-size: 0.85rem;
-      padding: 6px 10px;
-    }
-    .sum-row td { background: #f0f4fa; font-weight: 700; }
+    /* ── Team roster cards ─────────────────────────────────────────── */
+    .team-header th { background: var(--team-hdr) !important; color: #fff !important;
+                      font-size: 0.85rem; padding: 6px 10px; }
 
-    /* Autocomplete */
+    /* ── Misc ──────────────────────────────────────────────────────── */
+    .updated-badge { font-size: 0.75rem; color: var(--bs-secondary-color); }
+    #loading { color: var(--bs-secondary-color); padding: 2rem 0; }
+    #no-data  { color: var(--bs-secondary-color); }
+
+    /* ── Autocomplete ──────────────────────────────────────────────── */
     .ac-wrap { position: relative; }
     .ac-dropdown {
       position: absolute; z-index: 1000; width: 100%;
-      background: #fff; border: 1px solid #ced4da; border-top: none;
-      border-radius: 0 0 4px 4px; max-height: 200px; overflow-y: auto;
-      display: none;
+      background: var(--bs-dropdown-bg); border: 1px solid var(--bs-border-color); border-top: none;
+      border-radius: 0 0 4px 4px; max-height: 200px; overflow-y: auto; display: none;
     }
-    .ac-item { padding: 6px 10px; cursor: pointer; font-size: 0.85rem; }
-    .ac-item:hover { background: #e9f0fb; }
-    .ac-meta { font-size: 0.75rem; color: #6c757d; margin-left: 6px; }
+    .ac-item { padding: 6px 10px; cursor: pointer; font-size: 0.85rem; color: var(--bs-body-color); }
+    .ac-item:hover { background: var(--bs-dropdown-link-hover-bg); }
+    .ac-meta { font-size: 0.75rem; color: var(--bs-secondary-color); margin-left: 6px; }
     .ac-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
-      cursor: pointer; color: #6c757d; font-size: 1rem; line-height: 1; }
+      cursor: pointer; color: var(--bs-secondary-color); font-size: 1rem; line-height: 1; }
 
-    #loading { color: #6c757d; padding: 2rem 0; }
-    #no-data  { color: #6c757d; }
-    .updated-badge { font-size: 0.75rem; color: #6c757d; }
-
-    /* Sortable headers */
-    th.sortable { cursor: pointer; user-select: none; }
-    th.sortable:hover { background: #1c3f6e; }
-    th.sortable::after { content: ' \2195'; opacity: 0.4; font-size: 0.7rem; }
-    th.sort-asc::after  { content: ' \25B2'; opacity: 1; }
-    th.sort-desc::after { content: ' \25BC'; opacity: 1; }
-
-    /* Team roster header white text */
-    .team-header th { color: #fff !important; }
-
-    /* Multiselect filter dropdown */
+    /* ── Filter dropdowns ──────────────────────────────────────────── */
     .filter-dropdown .dropdown-menu { min-width: 200px; padding: 8px 0; max-height: 260px; overflow-y: auto; }
     .filter-dropdown .dropdown-item { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; }
     .filter-dropdown .dropdown-item input[type="checkbox"] { flex-shrink: 0; }
@@ -254,8 +328,9 @@
 
     <!-- Teams sub-view (default) -->
     <div id="archive-pane-teams">
+      <div class="table-wrap">
       <table class="table table-sm table-hover align-middle" id="archive-teams-table">
-        <thead class="table-light">
+        <thead>
           <tr>
             <th class="archive-sort" data-col="rank"    data-type="num">#</th>
             <th class="archive-sort" data-col="team_name" data-type="str">Team</th>
@@ -266,12 +341,14 @@
         </thead>
         <tbody id="archive-teams-body"></tbody>
       </table>
+      </div>
     </div>
 
     <!-- Players sub-view -->
     <div id="archive-pane-players" class="d-none">
+      <div class="table-wrap">
       <table class="table table-sm table-hover align-middle" id="archive-players-table">
-        <thead class="table-light">
+        <thead>
           <tr>
             <th class="archive-sort" data-col="rank"          data-type="num">#</th>
             <th class="archive-sort" data-col="name"          data-type="str">Player</th>
@@ -287,6 +364,7 @@
         </thead>
         <tbody id="archive-players-body"></tbody>
       </table>
+      </div>
     </div>
   </div>
 

@@ -1,5 +1,5 @@
 /**
- * Doubles and Dingers 2025 — Google Form Creator
+ * Doubles and Dingers 2026— Google Form Creator
  *
  * Instructions:
  *  1. Go to script.google.com and create a new project
