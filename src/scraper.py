@@ -20,7 +20,8 @@ def fetch_player_stats(mlb_id: int, name: str, br_id: str, group: str, season: i
         print(f"  ERROR fetching {name}: {e}")
         return PlayerStats(name=name, br_id=br_id, group=group)
 
-    splits = resp.json().get("stats", [{}])[0].get("splits", [])
+    stats_list = resp.json().get("stats", [])
+    splits = stats_list[0].get("splits", []) if stats_list else []
     if not splits:
         print(f"  {name}: no {season} stats yet (0 2B, 0 HR, 0 G)")
         return PlayerStats(name=name, br_id=br_id, group=group)
