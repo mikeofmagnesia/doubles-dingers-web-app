@@ -32,7 +32,7 @@ function createTeamEntryForm() {
   form.setShowLinkToRespondAgain(false);
   form.setConfirmationMessage(
     'Your team has been submitted! Stats will appear after the next daily update (noon CDT). ' +
-    'Head to the leaderboard to track your team.'
+    'Head to the leaderboard to track your team: https://dd.ericksonm.com'
   );
 
   // ── Identity ──────────────────────────────────────────────────────────────
@@ -117,5 +117,5 @@ function createTeamEntryForm() {
   console.log('Form (edit):                         ' + form.getEditUrl());
   console.log('Responses spreadsheet:               ' + sheet.getUrl());
   console.log('');
-  console.log('Next step: paste the form URL into docs/index.html (replace GOOGLE_FORM_URL_HERE)');
+  console.log('Next step: paste the form URL into docs/index.html (replace GOOGLE_FORM_URL_HERE), then commit and push.');
 }
