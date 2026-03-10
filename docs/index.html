@@ -103,6 +103,7 @@
         <li class="nav-item d-none"><a class="nav-link" href="#" data-view="player-history">Player History</a></li>
         <li class="nav-item d-none"><a class="nav-link" href="#" data-view="team-history">Team History</a></li>
       </ul>
+      <a class="btn btn-outline-secondary btn-sm ms-2 mt-2 mt-lg-0" href="#" data-view="archive">Past Seasons</a>
       <a class="btn btn-enter btn-sm ms-2 mt-2 mt-lg-0" href="#" data-view="entry">Enter Your Team</a>
     </div>
   </div>
@@ -235,6 +236,53 @@
     </div>
   </div>
 
+  <!-- VIEW: Past Seasons Archive -->
+  <div class="view" id="view-archive">
+    <div class="d-flex align-items-center gap-3 mb-3 flex-wrap">
+      <h5 class="mb-0">Past Seasons</h5>
+      <select class="form-select form-select-sm w-auto" id="archive-season-select"></select>
+    </div>
+    <ul class="nav nav-tabs mb-3" id="archive-subtabs">
+      <li class="nav-item"><a class="nav-link active" href="#" data-archive-tab="players">Players</a></li>
+      <li class="nav-item"><a class="nav-link"        href="#" data-archive-tab="teams">Teams</a></li>
+    </ul>
+
+    <!-- Players sub-view -->
+    <div id="archive-pane-players">
+      <table class="table table-sm table-hover align-middle" id="archive-players-table">
+        <thead class="table-light">
+          <tr>
+            <th>#</th>
+            <th>Player</th>
+            <th>Group</th>
+            <th class="text-end">2B</th>
+            <th class="text-end">HR</th>
+            <th class="text-end fw-bold">Total</th>
+            <th class="text-end text-muted small">G</th>
+            <th class="text-end text-muted small">Drafted</th>
+          </tr>
+        </thead>
+        <tbody id="archive-players-body"></tbody>
+      </table>
+    </div>
+
+    <!-- Teams sub-view -->
+    <div id="archive-pane-teams" class="d-none">
+      <table class="table table-sm table-hover align-middle" id="archive-teams-table">
+        <thead class="table-light">
+          <tr>
+            <th>#</th>
+            <th>Team</th>
+            <th class="text-end">2B</th>
+            <th class="text-end">HR</th>
+            <th class="text-end fw-bold">Total</th>
+          </tr>
+        </thead>
+        <tbody id="archive-teams-body"></tbody>
+      </table>
+    </div>
+  </div>
+
   <!-- VIEW: Entry Form -->
   <div class="view" id="view-entry">
     <div class="row justify-content-center">
@@ -299,11 +347,12 @@ function groupBadge(g) {
 // ===================================================================
 // Tab routing
 // ===================================================================
-const VIEWS = ['players','standings','rosters','player-history','team-history','entry'];
+const VIEWS = ['players','standings','rosters','player-history','team-history','archive','entry'];
 const LOADERS = {
   'players':        loadPlayers,
   'standings':      loadStandings,
   'rosters':        loadRosters,
+  'archive':        loadArchive,
   'player-history': loadPlayerHistory,
   'team-history':   loadTeamHistory,
   'entry':          loadEntry,
@@ -711,6 +760,84 @@ async function loadTeamHistory() {
   } catch (err) {
     tbody.innerHTML = `<tr><td colspan="7" class="text-center text-danger">${err.message}</td></tr>`;
   }
+}
+
+// ===================================================================
+// VIEW: Past Seasons Archive
+// ===================================================================
+let archiveSeasons = [];
+let archiveCurrentSeason = null;
+let archiveCurrentTab = 'players';
+
+const GROUP_BADGE = {
+  'A':        '<span class="badge bg-primary">A</span>',
+  'B':        '<span class="badge bg-success">B</span>',
+  'C':        '<span class="badge bg-warning text-dark">C</span>',
+  'Wildcard': '<span class="badge bg-secondary">WC</span>',
+};
+
+async function loadArchive() {
+  try {
+    const index = await fetchData('archive/index.json');
+    archiveSeasons = (index.seasons || []).slice().sort((a, b) => b - a);
+
+    const sel = document.getElementById('archive-season-select');
+    sel.innerHTML = archiveSeasons
+      .map(s => `<option value="${s}">${s}</option>`)
+      .join('');
+    sel.addEventListener('change', () => renderArchiveSeason(parseInt(sel.value)));
+
+    document.querySelectorAll('[data-archive-tab]').forEach(tab => {
+      tab.addEventListener('click', e => {
+        e.preventDefault();
+        archiveCurrentTab = tab.dataset.archiveTab;
+        document.querySelectorAll('[data-archive-tab]').forEach(t =>
+          t.classList.toggle('active', t.dataset.archiveTab === archiveCurrentTab)
+        );
+        document.getElementById('archive-pane-players').classList.toggle('d-none', archiveCurrentTab !== 'players');
+        document.getElementById('archive-pane-teams').classList.toggle('d-none', archiveCurrentTab !== 'teams');
+      });
+    });
+
+    if (archiveSeasons.length) renderArchiveSeason(archiveSeasons[0]);
+  } catch (e) {
+    console.error('Archive load error:', e);
+  }
+}
+
+async function renderArchiveSeason(season) {
+  archiveCurrentSeason = season;
+  document.getElementById('archive-season-select').value = season;
+
+  const [pd, td] = await Promise.all([
+    fetchData(`archive/${season}/players.json`),
+    fetchData(`archive/${season}/teams.json`),
+  ]);
+
+  // Players table
+  const pb = document.getElementById('archive-players-body');
+  pb.innerHTML = (pd.players || []).map(p => `
+    <tr>
+      <td class="text-muted">${p.rank}</td>
+      <td>${p.name}</td>
+      <td>${GROUP_BADGE[p.group] ?? p.group}</td>
+      <td class="text-end">${p.doubles}</td>
+      <td class="text-end">${p.homers}</td>
+      <td class="text-end fw-bold">${p.total}</td>
+      <td class="text-end text-muted small">${p.games}</td>
+      <td class="text-end text-muted small">${p.times_drafted}</td>
+    </tr>`).join('');
+
+  // Teams table
+  const tb = document.getElementById('archive-teams-body');
+  tb.innerHTML = (td.teams || []).map(t => `
+    <tr>
+      <td class="text-muted">${t.rank}</td>
+      <td>${t.team_name}</td>
+      <td class="text-end">${t.doubles}</td>
+      <td class="text-end">${t.homers}</td>
+      <td class="text-end fw-bold">${t.total}</td>
+    </tr>`).join('');
 }
 
 // ===================================================================
