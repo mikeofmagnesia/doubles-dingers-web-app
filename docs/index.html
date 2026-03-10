@@ -961,8 +961,8 @@ async function renderArchiveSeason(season) {
       <td data-col="total"         data-val="${p.total}"         class="text-end fw-bold">${p.total}</td>
       <td data-col="doubles"       data-val="${p.doubles}"       class="text-end">${p.doubles}</td>
       <td data-col="homers"        data-val="${p.homers}"        class="text-end">${p.homers}</td>
-      <td data-col="games"         data-val="${p.games}"         class="text-end text-muted small">${p.games}</td>
-      <td data-col="per_game"      data-val="${p.per_game}"      class="text-end text-muted small">${p.per_game.toFixed(3)}</td>
+      <td data-col="games"         data-val="${p.games ?? ''}"    class="text-end text-muted small">${p.games ?? '-'}</td>
+      <td data-col="per_game"      data-val="${p.per_game ?? ''}" class="text-end text-muted small">${p.per_game != null ? p.per_game.toFixed(3) : '-'}</td>
     </tr>`).join('');
   applyArchiveSort('archive-players-table');
 
