@@ -3,31 +3,265 @@
   "season": 2026,
   "groups": {
     "_comment": "Exactly 5 players per group. All other players are Wildcard.",
-    "A": ["ohtansh01", "judgear01", "alonspe01", "raleica01", "freemfr01"],
-    "B": ["olsonma02", "harpebr03", "tatisfe02", "guerrvl02", "schwaky01"],
-    "C": ["wittbo02",  "ramirjo01", "acunaro01", "sotoju01",  "deverra01"]
+    "A": [
+      "ohtansh01",
+      "judgear01",
+      "alonspe01",
+      "raleica01",
+      "freemfr01"
+    ],
+    "B": [
+      "olsonma02",
+      "harpebr03",
+      "tatisfe02",
+      "guerrvl02",
+      "schwaky01"
+    ],
+    "C": [
+      "wittbo02",
+      "ramirjo01",
+      "acunaro01",
+      "sotoju01",
+      "deverra01"
+    ]
   },
   "players": {
     "_comment": "Group players are set before the season. Wildcard players are appended automatically via the entry form.",
-    "ohtansh01": { "name": "Shohei Ohtani",         "group": "A",        "mlb_id": 660271, "br_url": "https://www.baseball-reference.com/players/o/ohtansh01.shtml" },
-    "judgear01": { "name": "Aaron Judge",            "group": "A",        "mlb_id": 592450, "br_url": "https://www.baseball-reference.com/players/j/judgear01.shtml" },
-    "alonspe01": { "name": "Pete Alonso",            "group": "A",        "mlb_id": 624413, "br_url": "https://www.baseball-reference.com/players/a/alonspe01.shtml" },
-    "raleica01": { "name": "Cal Raleigh",            "group": "A",        "mlb_id": 663728, "br_url": "https://www.baseball-reference.com/players/r/raleica01.shtml" },
-    "freemfr01": { "name": "Freddie Freeman",        "group": "A",        "mlb_id": 518692, "br_url": "https://www.baseball-reference.com/players/f/freemfr01.shtml" },
-
-    "olsonma02": { "name": "Matt Olson",             "group": "B",        "mlb_id": 621566, "br_url": "https://www.baseball-reference.com/players/o/olsonma02.shtml" },
-    "harpebr03": { "name": "Bryce Harper",           "group": "B",        "mlb_id": 547180, "br_url": "https://www.baseball-reference.com/players/h/harpebr03.shtml" },
-    "tatisfe02": { "name": "Fernando Tatis Jr.",     "group": "B",        "mlb_id": 665487, "br_url": "https://www.baseball-reference.com/players/t/tatisfe02.shtml" },
-    "guerrvl02": { "name": "Vladimir Guerrero Jr.",  "group": "B",        "mlb_id": 665489, "br_url": "https://www.baseball-reference.com/players/g/guerrvl02.shtml" },
-    "schwaky01": { "name": "Kyle Schwarber",         "group": "B",        "mlb_id": 656941, "br_url": "https://www.baseball-reference.com/players/s/schwaky01.shtml" },
-
-    "wittbo02":  { "name": "Bobby Witt Jr.",         "group": "C",        "mlb_id": 677951, "br_url": "https://www.baseball-reference.com/players/w/wittbo02.shtml" },
-    "ramirjo01": { "name": "José Ramírez",           "group": "C",        "mlb_id": 608070, "br_url": "https://www.baseball-reference.com/players/r/ramirjo01.shtml" },
-    "acunaro01": { "name": "Ronald Acuña Jr.",       "group": "C",        "mlb_id": 660670, "br_url": "https://www.baseball-reference.com/players/a/acunaro01.shtml" },
-    "sotoju01":  { "name": "Juan Soto",              "group": "C",        "mlb_id": 665742, "br_url": "https://www.baseball-reference.com/players/s/sotoju01.shtml" },
-    "deverra01": { "name": "Rafael Devers",          "group": "C",        "mlb_id": 646240, "br_url": "https://www.baseball-reference.com/players/d/deverra01.shtml" },
-
-    "_wildcard_note": "Wildcard players are added here automatically when participants submit their teams via the entry form."
+    "ohtansh01": {
+      "name": "Shohei Ohtani",
+      "group": "A",
+      "mlb_id": 660271,
+      "br_url": "https://www.baseball-reference.com/players/o/ohtansh01.shtml"
+    },
+    "judgear01": {
+      "name": "Aaron Judge",
+      "group": "A",
+      "mlb_id": 592450,
+      "br_url": "https://www.baseball-reference.com/players/j/judgear01.shtml"
+    },
+    "alonspe01": {
+      "name": "Pete Alonso",
+      "group": "A",
+      "mlb_id": 624413,
+      "br_url": "https://www.baseball-reference.com/players/a/alonspe01.shtml"
+    },
+    "raleica01": {
+      "name": "Cal Raleigh",
+      "group": "A",
+      "mlb_id": 663728,
+      "br_url": "https://www.baseball-reference.com/players/r/raleica01.shtml"
+    },
+    "freemfr01": {
+      "name": "Freddie Freeman",
+      "group": "A",
+      "mlb_id": 518692,
+      "br_url": "https://www.baseball-reference.com/players/f/freemfr01.shtml"
+    },
+    "olsonma02": {
+      "name": "Matt Olson",
+      "group": "B",
+      "mlb_id": 621566,
+      "br_url": "https://www.baseball-reference.com/players/o/olsonma02.shtml"
+    },
+    "harpebr03": {
+      "name": "Bryce Harper",
+      "group": "B",
+      "mlb_id": 547180,
+      "br_url": "https://www.baseball-reference.com/players/h/harpebr03.shtml"
+    },
+    "tatisfe02": {
+      "name": "Fernando Tatis Jr.",
+      "group": "B",
+      "mlb_id": 665487,
+      "br_url": "https://www.baseball-reference.com/players/t/tatisfe02.shtml"
+    },
+    "guerrvl02": {
+      "name": "Vladimir Guerrero Jr.",
+      "group": "B",
+      "mlb_id": 665489,
+      "br_url": "https://www.baseball-reference.com/players/g/guerrvl02.shtml"
+    },
+    "schwaky01": {
+      "name": "Kyle Schwarber",
+      "group": "B",
+      "mlb_id": 656941,
+      "br_url": "https://www.baseball-reference.com/players/s/schwaky01.shtml"
+    },
+    "wittbo02": {
+      "name": "Bobby Witt Jr.",
+      "group": "C",
+      "mlb_id": 677951,
+      "br_url": "https://www.baseball-reference.com/players/w/wittbo02.shtml"
+    },
+    "ramirjo01": {
+      "name": "Jos\u00e9 Ram\u00edrez",
+      "group": "C",
+      "mlb_id": 608070,
+      "br_url": "https://www.baseball-reference.com/players/r/ramirjo01.shtml"
+    },
+    "acunaro01": {
+      "name": "Ronald Acu\u00f1a Jr.",
+      "group": "C",
+      "mlb_id": 660670,
+      "br_url": "https://www.baseball-reference.com/players/a/acunaro01.shtml"
+    },
+    "sotoju01": {
+      "name": "Juan Soto",
+      "group": "C",
+      "mlb_id": 665742,
+      "br_url": "https://www.baseball-reference.com/players/s/sotoju01.shtml"
+    },
+    "deverra01": {
+      "name": "Rafael Devers",
+      "group": "C",
+      "mlb_id": 646240,
+      "br_url": "https://www.baseball-reference.com/players/d/deverra01.shtml"
+    },
+    "_wildcard_note": "Wildcard players are added here automatically when participants submit their teams via the entry form.",
+    "lindofr01": {
+      "name": "Francisco Lindor",
+      "group": "Wildcard",
+      "mlb_id": 596019,
+      "br_url": "https://www.baseball-reference.com/players/l/lindofr01.shtml"
+    },
+    "tuckeky01": {
+      "name": "Kyle Tucker",
+      "group": "Wildcard",
+      "mlb_id": 663656,
+      "br_url": "https://www.baseball-reference.com/players/t/tuckeky01.shtml"
+    },
+    "rileyau01": {
+      "name": "Austin Riley",
+      "group": "Wildcard",
+      "mlb_id": 663586,
+      "br_url": "https://www.baseball-reference.com/players/r/rileyau01.shtml"
+    },
+    "hendegu01": {
+      "name": "Gunnar Henderson",
+      "group": "Wildcard",
+      "mlb_id": 683002,
+      "br_url": "https://www.baseball-reference.com/players/h/hendegu01.shtml"
+    },
+    "alvaryo01": {
+      "name": "Yordan Alvarez",
+      "group": "Wildcard",
+      "mlb_id": 670541,
+      "br_url": "https://www.baseball-reference.com/players/a/alvaryo01.shtml"
+    },
+    "seageco01": {
+      "name": "Corey Seager",
+      "group": "Wildcard",
+      "mlb_id": 608369,
+      "br_url": "https://www.baseball-reference.com/players/s/seageco01.shtml"
+    },
+    "garciad02": {
+      "name": "Adolis Garc\u00eda",
+      "group": "Wildcard",
+      "mlb_id": 666969,
+      "br_url": "https://www.baseball-reference.com/players/g/garciad02.shtml"
+    },
+    "machama01": {
+      "name": "Manny Machado",
+      "group": "Wildcard",
+      "mlb_id": 592518,
+      "br_url": "https://www.baseball-reference.com/players/m/machama01.shtml"
+    },
+    "lewisro02": {
+      "name": "Royce Lewis",
+      "group": "Wildcard",
+      "mlb_id": 668904,
+      "br_url": "https://www.baseball-reference.com/players/l/lewisro02.shtml"
+    },
+    "steersp01": {
+      "name": "Spencer Steer",
+      "group": "Wildcard",
+      "mlb_id": 668715,
+      "br_url": "https://www.baseball-reference.com/players/s/steersp01.shtml"
+    },
+    "bregmal01": {
+      "name": "Alex Bregman",
+      "group": "Wildcard",
+      "mlb_id": 608324,
+      "br_url": "https://www.baseball-reference.com/players/b/bregmal01.shtml"
+    },
+    "crowape01": {
+      "name": "Pete Crow-Armstrong",
+      "group": "Wildcard",
+      "mlb_id": 691718,
+      "br_url": "https://www.baseball-reference.com/players/c/crowape01.shtml"
+    },
+    "woodja03": {
+      "name": "James Wood",
+      "group": "Wildcard",
+      "mlb_id": 695578,
+      "br_url": "https://www.baseball-reference.com/players/w/woodja03.shtml"
+    }
   },
-  "teams": []
+  "teams": [
+    {
+      "owner": "Jim Macdonald",
+      "team_name": "Jimmy Mac #1",
+      "players": [
+        "judgear01",
+        "schwaky01",
+        "deverra01",
+        "lindofr01",
+        "tuckeky01",
+        "rileyau01",
+        "hendegu01"
+      ]
+    },
+    {
+      "owner": "Jim Macdonald",
+      "team_name": "Jimmy Mac #2",
+      "players": [
+        "judgear01",
+        "olsonma02",
+        "deverra01",
+        "alvaryo01",
+        "rileyau01",
+        "seageco01",
+        "garciad02"
+      ]
+    },
+    {
+      "owner": "Jim Macdonald",
+      "team_name": "Jimmy Mac #3",
+      "players": [
+        "freemfr01",
+        "harpebr03",
+        "ramirjo01",
+        "tuckeky01",
+        "seageco01",
+        "hendegu01",
+        "machama01"
+      ]
+    },
+    {
+      "owner": "Jim Macdonald",
+      "team_name": "Jimmy Mac #4",
+      "players": [
+        "ohtansh01",
+        "tatisfe02",
+        "wittbo02",
+        "hendegu01",
+        "lewisro02",
+        "steersp01",
+        "bregmal01"
+      ]
+    },
+    {
+      "owner": "Jim Macdonald",
+      "team_name": "Jimmy Mac #5",
+      "players": [
+        "judgear01",
+        "olsonma02",
+        "deverra01",
+        "crowape01",
+        "tuckeky01",
+        "seageco01",
+        "woodja03"
+      ]
+    }
+  ]
 }
