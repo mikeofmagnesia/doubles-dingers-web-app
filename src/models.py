@@ -9,6 +9,7 @@ class PlayerStats:
     doubles: int = 0
     homers: int = 0
     games_played: int = 0
+    drafted: bool = True  # False for undrafted players shown in top-50
 
     # Set after sorting all players by total (descending)
     rank: int | None = None

@@ -13,7 +13,7 @@ import sys
 from datetime import date
 from pathlib import Path
 
-from scraper import scrape_all_players
+from scraper import scrape_all_players, fetch_undrafted_top_players
 from writer import (
     read_latest_player_history,
     read_latest_team_history,
@@ -102,10 +102,14 @@ def main() -> None:
     print("\n--- Fetching stats from MLB Stats API ---")
     player_stats = scrape_all_players(config["players"], season=season)
 
+    # --- Step 2b: Fetch top undrafted players ---
+    print("\n--- Fetching top undrafted players ---")
+    undrafted_players = fetch_undrafted_top_players(config["players"], season=season)
+
     # --- Step 3: Build teams, sort, assign ranks, attach prev data ---
     print("\n--- Building teams and assigning ranks ---")
     teams = build_teams(config, player_stats)
-    all_players = list(player_stats.values())
+    all_players = list(player_stats.values()) + undrafted_players
     sorted_players, sorted_teams = assign_ranks_and_history(
         all_players, teams, prev_players, prev_teams
     )

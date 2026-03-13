@@ -36,6 +36,99 @@ def fetch_player_stats(mlb_id: int, name: str, br_id: str, group: str, season: i
     return PlayerStats(name=name, br_id=br_id, group=group, doubles=doubles, homers=homers, games_played=games)
 
 
+def fetch_top_combined_leaders(season: int, limit: int = 100) -> dict[int, dict]:
+    """
+    Fetch HR and 2B leaders from the MLB Stats API.
+    Returns {mlb_id: {"name": str, "homers": int, "doubles": int}}.
+    Makes two separate calls (one per category) to ensure compatibility.
+    """
+    combined: dict[int, dict] = {}
+
+    for category in ("homeRuns", "doubles"):
+        url = f"{MLB_API}/stats/leaders"
+        params = {
+            "leaderCategories": category,
+            "season": season,
+            "limit": limit,
+            "sportId": 1,
+        }
+        try:
+            resp = requests.get(url, params=params, timeout=15)
+            resp.raise_for_status()
+        except requests.RequestException as e:
+            print(f"  ERROR fetching {category} leaders: {e}")
+            continue
+
+        for league_leader in resp.json().get("leagueLeaders", []):
+            for entry in league_leader.get("leaders", []):
+                person = entry.get("person", {})
+                mlb_id = person.get("id")
+                if not mlb_id:
+                    continue
+                if mlb_id not in combined:
+                    combined[mlb_id] = {
+                        "name": person.get("fullName", ""),
+                        "homers": 0,
+                        "doubles": 0,
+                    }
+                value = int(entry.get("value", 0) or 0)
+                if category == "homeRuns":
+                    combined[mlb_id]["homers"] = value
+                else:
+                    combined[mlb_id]["doubles"] = value
+
+    return combined
+
+
+def fetch_undrafted_top_players(
+    config_players: dict,
+    season: int,
+    top_n: int = 50,
+) -> list[PlayerStats]:
+    """
+    Fetch and return PlayerStats for the top N players by 2B+HR
+    who are NOT already in the drafted player config.
+    """
+    config_mlb_ids = {
+        v.get("mlb_id")
+        for v in config_players.values()
+        if isinstance(v, dict) and v.get("mlb_id")
+    }
+
+    print("Fetching MLB leaders to find undrafted top players...")
+    leaders = fetch_top_combined_leaders(season, limit=100)
+    print(f"  Got {len(leaders)} players from leaders endpoint")
+
+    # Sort by combined total, find top-N that aren't drafted
+    sorted_leaders = sorted(
+        leaders.items(),
+        key=lambda x: x[1]["homers"] + x[1]["doubles"],
+        reverse=True,
+    )
+    undrafted = [
+        (mlb_id, info)
+        for mlb_id, info in sorted_leaders
+        if mlb_id not in config_mlb_ids
+    ][:top_n]
+
+    print(f"  {len(undrafted)} undrafted players qualify for top-{top_n} display")
+
+    result = []
+    for i, (mlb_id, info) in enumerate(undrafted, 1):
+        print(f"  [{i}/{len(undrafted)}] {info['name']} (undrafted)...")
+        stats = fetch_player_stats(
+            mlb_id=mlb_id,
+            name=info["name"],
+            br_id=f"mlb_{mlb_id}",
+            group="Undrafted",
+            season=season,
+        )
+        stats.drafted = False
+        result.append(stats)
+
+    return result
+
+
 def scrape_all_players(players_config: dict, season: int = 2026) -> dict[str, PlayerStats]:
     """Fetch stats for every player in the config from the MLB Stats API."""
     results: dict[str, PlayerStats] = {}

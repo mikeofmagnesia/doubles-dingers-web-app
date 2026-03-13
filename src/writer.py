@@ -46,6 +46,10 @@ def _e(value):
     return value
 
 
+def _player_row(p: PlayerStats) -> dict:
+    return {"name": p.name, "doubles": p.doubles, "homers": p.homers, "total": p.total}
+
+
 # ---------------------------------------------------------------------------
 # History: read (called by main.py before scraping to get prev-day data)
 # ---------------------------------------------------------------------------
@@ -123,6 +127,7 @@ def write_player_stats(players: list[PlayerStats], teams_config: dict) -> None:
             "name": p.name,
             "br_id": p.br_id,
             "group": p.group,
+            "drafted": p.drafted,
             "times_selected": times_selected.get(p.br_id, 0),
             "doubles": p.doubles,
             "homers": p.homers,
@@ -165,6 +170,77 @@ def write_team_standings(teams: list[Team]) -> None:
     _write_json("team_standings.json", {
         "updated": date.today().isoformat(),
         "teams": rows,
+    })
+
+
+def write_perfect_team(players: list[PlayerStats]) -> None:
+    """
+    Write perfect_team.json — the best possible team picks.
+
+    Rules:
+    - For each lettered group (A, B, C): show the leader(s). If tied, show all
+      but exclude that group's total from the grand total.
+    - For Wildcard: show the top 4. If more than 4 players are tied at the 4th
+      cutoff total, show all of them but count only 4 toward the grand total.
+    """
+    # Only drafted players are eligible
+    drafted = [p for p in players if p.drafted]
+
+    by_group: dict[str, list[PlayerStats]] = {}
+    for p in drafted:
+        by_group.setdefault(p.group, []).append(p)
+
+    result_groups: dict[str, dict] = {}
+    grand_total = 0
+    has_tied_groups = False
+
+    for group in ("A", "B", "C"):
+        gp = sorted(by_group.get(group, []), key=lambda x: (x.total, x.doubles), reverse=True)
+        if not gp:
+            result_groups[group] = {"leaders": [], "is_tied": False}
+            continue
+        max_total = gp[0].total
+        leaders = [p for p in gp if p.total == max_total]
+        is_tied = len(leaders) > 1
+        result_groups[group] = {
+            "leaders": [_player_row(p) for p in leaders],
+            "is_tied": is_tied,
+        }
+        if not is_tied:
+            grand_total += max_total
+        else:
+            has_tied_groups = True
+
+    # Wildcard: top 4, with tie detection at the 4th-place cutoff
+    wc = sorted(by_group.get("Wildcard", []), key=lambda x: (x.total, x.doubles), reverse=True)
+    if not wc:
+        wildcard: dict = {"players": [], "is_tied": False, "counted_count": 0}
+    elif len(wc) <= 4:
+        wildcard = {
+            "players": [_player_row(p) for p in wc],
+            "is_tied": False,
+            "counted_count": len(wc),
+        }
+        grand_total += sum(p.total for p in wc)
+    else:
+        cutoff = wc[3].total  # 4th-highest total
+        definite = [p for p in wc if p.total > cutoff]
+        tied_at_cutoff = [p for p in wc if p.total == cutoff]
+        needed = 4 - len(definite)
+        is_tied = len(tied_at_cutoff) > needed
+        wildcard = {
+            "players": [_player_row(p) for p in definite + tied_at_cutoff],
+            "is_tied": is_tied,
+            "counted_count": 4,
+        }
+        grand_total += sum(p.total for p in wc[:4])
+
+    _write_json("perfect_team.json", {
+        "updated": date.today().isoformat(),
+        "groups": result_groups,
+        "wildcard": wildcard,
+        "grand_total": grand_total,
+        "has_tied_groups": has_tied_groups,
     })
 
 
@@ -225,12 +301,13 @@ def write_team_rosters(teams: list[Team]) -> None:
 # ---------------------------------------------------------------------------
 
 def append_player_history(players: list[PlayerStats], today: str) -> None:
-    """Append today's player stats to player_history.json (idempotent)."""
+    """Append today's player stats to player_history.json (idempotent).
+    Undrafted players are excluded from history."""
     records = _read_history("player_history.json")
     # Replace any records for today (makes the job safely re-runnable)
     records = [r for r in records if r.get("date") != today]
 
-    for p in players:
+    for p in [p for p in players if p.drafted]:
         records.append({
             "date": today,
             "player": p.name,
@@ -317,6 +394,7 @@ def write_all(
     write_player_stats(players, teams_config)
     write_team_standings(teams)
     write_team_rosters(teams)
+    write_perfect_team(players)
     append_player_history(players, today)
     append_team_history(teams, today)
     write_groups(teams_config)

@@ -134,6 +134,11 @@
     .group-B  { background: var(--bb-bg); color: var(--bb-fg); }
     .group-C  { background: var(--bc-bg); color: var(--bc-fg); }
     .group-WC { background: var(--bw-bg); color: var(--bw-fg); }
+    .group-UD { background: transparent; color: var(--bs-secondary-color);
+                border: 1px solid currentColor; }
+
+    /* ── Undrafted player rows ─────────────────────────────────────── */
+    tr.undrafted td { opacity: 0.55; font-style: italic; }
 
     /* ── Team roster cards ─────────────────────────────────────────── */
     .team-header th { background: var(--team-hdr) !important; color: #fff !important;
@@ -179,6 +184,7 @@
         <li class="nav-item"><a class="nav-link" href="#" data-view="players">Player Stats</a></li>
         <li class="nav-item"><a class="nav-link" href="#" data-view="standings">Standings</a></li>
         <li class="nav-item"><a class="nav-link" href="#" data-view="rosters">Rosters</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" data-view="perfect-team">Perfect Team</a></li>
         <li class="nav-item d-none"><a class="nav-link" href="#" data-view="player-history">Player History</a></li>
         <li class="nav-item d-none"><a class="nav-link" href="#" data-view="team-history">Team History</a></li>
       </ul>
@@ -213,21 +219,20 @@
             <th class="sortable" data-col="rank">Rank</th>
             <th class="sortable" data-col="name">Player</th>
             <th class="sortable" data-col="group">Group</th>
-            <th class="sortable" data-col="times_selected" title="Fantasy teams that picked this player">Selected</th>
+            <th class="sortable" data-col="times_selected" title="Fantasy teams that picked this player">Times Selected</th>
+            <th class="sortable" data-col="total">Total</th>
             <th class="sortable" data-col="doubles">2B</th>
             <th class="sortable" data-col="homers">HR</th>
-            <th class="sortable" data-col="total">2B+HR</th>
             <th class="sortable" data-col="games_played">GP</th>
-            <th class="sortable" data-col="per_game">(2B+HR)/GP</th>
+            <th class="sortable" data-col="per_game">2Bs &amp; HRs per Game</th>
             <th class="sortable" data-col="prev_rank">Prev Rank</th>
             <th class="sortable" data-col="prev_doubles">Prev 2B</th>
             <th class="sortable" data-col="prev_homers">Prev HR</th>
-            <th class="sortable" data-col="prev_total">Prev 2B+HR</th>
             <th class="sortable" data-col="rank_change">Rank Chg</th>
-            <th class="sortable" data-col="total_change">2B+HR Chg</th>
+            <th class="sortable" data-col="total_change">Total Chg</th>
           </tr>
         </thead>
-        <tbody id="tbody-players"><tr><td colspan="15" class="text-center" id="loading">Loading...</td></tr></tbody>
+        <tbody id="tbody-players"><tr><td colspan="14" class="text-center" id="loading">Loading...</td></tr></tbody>
       </table>
     </div>
   </div>
@@ -243,11 +248,11 @@
         <thead>
           <tr>
             <th>Rank</th><th>Team</th><th>Owner</th>
-            <th>2B</th><th>HR</th><th>2B+HR</th>
-            <th>Rank Chg</th><th>Prev 2B</th><th>Prev HR</th><th>Prev 2B+HR</th><th>2B+HR Chg</th>
+            <th>Total</th><th>2B</th><th>HR</th>
+            <th>Rank Chg</th><th>Prev 2B</th><th>Prev HR</th><th>Total Chg</th>
           </tr>
         </thead>
-        <tbody id="tbody-standings"><tr><td colspan="11" class="text-center">Loading...</td></tr></tbody>
+        <tbody id="tbody-standings"><tr><td colspan="10" class="text-center">Loading...</td></tr></tbody>
       </table>
     </div>
   </div>
@@ -276,6 +281,38 @@
     </div>
     <div id="rosters-container">
       <p class="text-muted">Loading...</p>
+    </div>
+  </div>
+
+  <!-- VIEW: Perfect Team -->
+  <div class="view" id="view-perfect-team">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <div>
+        <h5 class="mb-0">Perfect Team</h5>
+        <p class="text-muted small mb-0">The best possible picks from each tier and the top 4 Wildcards.</p>
+      </div>
+      <span class="updated-badge" id="perfect-team-updated"></span>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="table-wrap">
+          <table class="table table-bordered align-middle mb-0" id="tbl-perfect-team">
+            <thead>
+              <tr>
+                <th>Tier</th>
+                <th>Player</th>
+                <th class="text-center">2B</th>
+                <th class="text-center">HR</th>
+                <th class="text-center fw-bold">2B+HR</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-perfect-team">
+              <tr><td colspan="5" class="text-center">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-muted small mt-2" id="perfect-team-note" style="display:none"></p>
+      </div>
     </div>
   </div>
 
@@ -424,19 +461,24 @@ function statChgHtml(chg) {
 }
 
 function groupBadge(g) {
-  const cls = g === 'A' ? 'group-A' : g === 'B' ? 'group-B' : g === 'C' ? 'group-C' : 'group-WC';
-  const label = g === 'Wildcard' ? 'WC' : g;
+  const cls = g === 'A' ? 'group-A'
+            : g === 'B' ? 'group-B'
+            : g === 'C' ? 'group-C'
+            : g === 'Undrafted' ? 'group-UD'
+            : 'group-WC';
+  const label = g === 'Wildcard' ? 'WC' : g === 'Undrafted' ? 'UD' : g;
   return `<span class="group-badge ${cls}">${label}</span>`;
 }
 
 // ===================================================================
 // Tab routing
 // ===================================================================
-const VIEWS = ['players','standings','rosters','player-history','team-history','archive','entry'];
+const VIEWS = ['players','standings','rosters','perfect-team','player-history','team-history','archive','entry'];
 const LOADERS = {
   'players':        loadPlayers,
   'standings':      loadStandings,
   'rosters':        loadRosters,
+  'perfect-team':   loadPerfectTeam,
   'archive':        loadArchive,
   'player-history': loadPlayerHistory,
   'team-history':   loadTeamHistory,
@@ -505,24 +547,23 @@ function _renderPlayersTable() {
   });
 
   if (rows.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="15" class="text-center text-muted">No players match the selected filter.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="14" class="text-center text-muted">No players match the selected filter.</td></tr>';
   } else {
     tbody.innerHTML = rows.map(p => `
-      <tr>
+      <tr${p.drafted === false ? ' class="undrafted"' : ''}>
         <td class="text-center fw-bold">${p.rank}</td>
         <td>${p.name}</td>
         <td>${groupBadge(p.group)}</td>
-        <td class="text-center">${p.times_selected}</td>
+        <td class="text-center">${p.drafted === false ? '--' : p.times_selected}</td>
+        <td class="text-center fw-bold">${p.total}</td>
         <td class="text-center">${p.doubles}</td>
         <td class="text-center">${p.homers}</td>
-        <td class="text-center fw-bold">${p.total}</td>
-        <td class="text-center">${p.games_played}</td>
+        <td class="text-center">${statChgHtml(p.games_played)}</td>
         <td class="text-center">${p.games_played > 0 ? p.per_game.toFixed(3) : '-'}</td>
         <td class="text-center">${em(p.prev_rank)}</td>
-        <td class="text-center">${em(p.prev_doubles)}</td>
-        <td class="text-center">${em(p.prev_homers)}</td>
-        <td class="text-center">${em(p.prev_total)}</td>
-        <td class="text-center">${rankChgHtml(p.rank_change)}</td>
+        <td class="text-center">${statChgHtml(p.prev_doubles)}</td>
+        <td class="text-center">${statChgHtml(p.prev_homers)}</td>
+        <td class="text-center">${statChgHtml(p.rank_change)}</td>
         <td class="text-center">${statChgHtml(p.total_change)}</td>
       </tr>`).join('');
   }
@@ -544,7 +585,7 @@ async function loadPlayers() {
       _playersData.updated ? `Updated ${_playersData.updated}` : '';
 
     if (!_playersData.players || _playersData.players.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="15" class="text-center text-muted">No data yet. Check back after the first update.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="14" class="text-center text-muted">No data yet. Check back after the first update.</td></tr>';
       return;
     }
 
@@ -603,7 +644,7 @@ async function loadStandings() {
       data.updated ? `Updated ${data.updated}` : '';
 
     if (!data.teams || data.teams.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="11" class="text-center text-muted">No data yet.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="10" class="text-center text-muted">No data yet.</td></tr>';
       return;
     }
 
@@ -612,13 +653,12 @@ async function loadStandings() {
         <td class="text-center fw-bold">${t.rank}</td>
         <td><a href="#" class="text-decoration-none fw-semibold roster-link" data-team="${t.team_name.replace(/"/g,'&quot;')}">${t.team_name}</a></td>
         <td>${t.owner}</td>
+        <td class="text-center fw-bold">${t.total}</td>
         <td class="text-center">${t.doubles}</td>
         <td class="text-center">${t.homers}</td>
-        <td class="text-center fw-bold">${t.total}</td>
-        <td class="text-center">${rankChgHtml(t.rank_change)}</td>
-        <td class="text-center">${em(t.prev_doubles)}</td>
-        <td class="text-center">${em(t.prev_homers)}</td>
-        <td class="text-center">${em(t.prev_total)}</td>
+        <td class="text-center">${statChgHtml(t.rank_change)}</td>
+        <td class="text-center">${statChgHtml(t.prev_doubles)}</td>
+        <td class="text-center">${statChgHtml(t.prev_homers)}</td>
         <td class="text-center">${statChgHtml(t.total_change)}</td>
       </tr>`).join('');
 
@@ -630,7 +670,7 @@ async function loadStandings() {
       });
     });
   } catch (err) {
-    tbody.innerHTML = `<tr><td colspan="11" class="text-center text-danger">${err.message}</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="10" class="text-center text-danger">${err.message}</td></tr>`;
   }
 }
 
@@ -650,12 +690,11 @@ function _buildRosterCard(t) {
     <tr>
       <td>${p.name}</td>
       <td>${groupBadge(p.group)}</td>
+      <td class="text-center fw-bold">${p.total}</td>
       <td class="text-center">${p.doubles}</td>
       <td class="text-center">${p.homers}</td>
-      <td class="text-center fw-bold">${p.total}</td>
-      <td class="text-center">${em(p.prev_doubles)}</td>
-      <td class="text-center">${em(p.prev_homers)}</td>
-      <td class="text-center">${em(p.prev_total)}</td>
+      <td class="text-center">${statChgHtml(p.prev_doubles)}</td>
+      <td class="text-center">${statChgHtml(p.prev_homers)}</td>
       <td class="text-center">${statChgHtml(p.total_change)}</td>
     </tr>`).join('');
 
@@ -663,12 +702,11 @@ function _buildRosterCard(t) {
   const sumRow = `
     <tr class="sum-row">
       <td><em>Total</em></td><td></td>
+      <td class="text-center">${tot.total}</td>
       <td class="text-center">${tot.doubles}</td>
       <td class="text-center">${tot.homers}</td>
-      <td class="text-center">${tot.total}</td>
-      <td class="text-center">${em(tot.prev_doubles)}</td>
-      <td class="text-center">${em(tot.prev_homers)}</td>
-      <td class="text-center">${em(tot.prev_total)}</td>
+      <td class="text-center">${statChgHtml(tot.prev_doubles)}</td>
+      <td class="text-center">${statChgHtml(tot.prev_homers)}</td>
       <td class="text-center">${statChgHtml(tot.total_change)}</td>
     </tr>`;
 
@@ -680,15 +718,15 @@ function _buildRosterCard(t) {
           <thead class="team-header">
             <tr>
               <th colspan="5">${t.team_name} &mdash; ${t.owner}</th>
-              <th colspan="4" class="text-end">
+              <th colspan="3" class="text-end">
                 Rank ${t.rank}
-                ${t.rank_change !== null ? rankChgHtml(t.rank_change) : ''}
+                ${t.rank_change !== null ? statChgHtml(t.rank_change) : ''}
               </th>
             </tr>
             <tr>
               <th>Player</th><th>Group</th>
-              <th>2B</th><th>HR</th><th>2B+HR</th>
-              <th>Prev 2B</th><th>Prev HR</th><th>Prev 2B+HR</th><th>2B+HR Chg</th>
+              <th>Total</th><th>2B</th><th>HR</th>
+              <th>Prev 2B</th><th>Prev HR</th><th>Total Chg</th>
             </tr>
           </thead>
           <tbody>${playerRows}${sumRow}</tbody>
@@ -763,6 +801,75 @@ async function loadRosters() {
     _renderRosters();
   } catch (err) {
     container.innerHTML = `<p class="text-danger">${err.message}</p>`;
+  }
+}
+
+// ===================================================================
+// VIEW: Perfect Team
+// ===================================================================
+async function loadPerfectTeam() {
+  const tbody = document.getElementById('tbody-perfect-team');
+  const note  = document.getElementById('perfect-team-note');
+  try {
+    const data = await fetchData('perfect_team.json');
+    document.getElementById('perfect-team-updated').textContent =
+      data.updated ? `Updated ${data.updated}` : '';
+
+    const rows = [];
+    const notes = [];
+
+    // Lettered groups A, B, C
+    for (const group of ['A', 'B', 'C']) {
+      const g = data.groups?.[group];
+      if (!g || g.leaders.length === 0) {
+        rows.push(`<tr><td>${groupBadge(group)}</td><td colspan="4" class="text-muted">No data</td></tr>`);
+        continue;
+      }
+      if (g.is_tied) {
+        notes.push(`Group ${group} has a tie — not counted in grand total.`);
+      }
+      g.leaders.forEach((p, i) => {
+        const tierCell = i === 0
+          ? `<td rowspan="${g.leaders.length}">${groupBadge(group)}${g.is_tied ? ' <span class="text-muted small">tied</span>' : ''}</td>`
+          : '';
+        const rowCls = g.is_tied ? ' class="text-muted"' : '';
+        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td><td class="text-center fw-bold">${g.is_tied ? `<s>${p.total}</s>` : p.total}</td></tr>`);
+      });
+    }
+
+    // Wildcard
+    const wc = data.wildcard;
+    if (wc && wc.players.length > 0) {
+      if (wc.is_tied) {
+        notes.push(`Wildcard has ${wc.players.length} players tied — showing all, counting top ${wc.counted_count}.`);
+      }
+      wc.players.forEach((p, i) => {
+        const isCounted = i < wc.counted_count;
+        const tierCell = i === 0
+          ? `<td rowspan="${wc.players.length}">${groupBadge('Wildcard')}${wc.is_tied ? ' <span class="text-muted small">tied</span>' : ''}</td>`
+          : '';
+        const rowCls = !isCounted ? ' class="text-muted"' : '';
+        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td><td class="text-center fw-bold">${!isCounted ? `<s>${p.total}</s>` : p.total}</td></tr>`);
+      });
+    }
+
+    // Grand total row
+    rows.push(`
+      <tr class="sum-row">
+        <td colspan="4"><strong>Best Possible Total</strong>${data.has_tied_groups ? ' <span class="text-muted small">(tied groups excluded)</span>' : ''}</td>
+        <td class="text-center fw-bold">${data.grand_total}</td>
+      </tr>`);
+
+    tbody.innerHTML = rows.join('');
+
+    if (notes.length > 0) {
+      note.textContent = notes.join(' ');
+      note.style.display = '';
+    } else {
+      note.style.display = 'none';
+    }
+  } catch (err) {
+    tbody.innerHTML = `<tr><td colspan="5" class="text-center text-danger">${err.message}</td></tr>`;
   }
 }
 
