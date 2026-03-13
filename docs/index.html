@@ -451,7 +451,7 @@ function rankChgHtml(chg) {
   if (chg === null || chg === undefined) return '<span class="neu">-</span>';
   if (chg > 0)  return `<span class="up">&#9650; ${chg}</span>`;
   if (chg < 0)  return `<span class="down">&#9660; ${Math.abs(chg)}</span>`;
-  return '<span class="neu">-</span>';
+  return '<span class="neu">&mdash;</span>';
 }
 
 function statChgHtml(chg) {
