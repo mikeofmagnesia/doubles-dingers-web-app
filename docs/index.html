@@ -564,7 +564,7 @@ function _renderPlayersTable() {
         <td class="text-center">${em(p.prev_rank)}</td>
         <td class="text-center">${statChgHtml(p.prev_doubles)}</td>
         <td class="text-center">${statChgHtml(p.prev_homers)}</td>
-        <td class="text-center">${statChgHtml(p.rank_change)}</td>
+        <td class="text-center">${rankChgHtml(p.rank_change)}</td>
         <td class="text-center">${statChgHtml(p.total_change)}</td>
       </tr>`).join('');
   }
@@ -657,7 +657,7 @@ async function loadStandings() {
         <td class="text-center fw-bold">${t.total}</td>
         <td class="text-center">${t.doubles}</td>
         <td class="text-center">${t.homers}</td>
-        <td class="text-center">${statChgHtml(t.rank_change)}</td>
+        <td class="text-center">${rankChgHtml(t.rank_change)}</td>
         <td class="text-center">${statChgHtml(t.prev_doubles)}</td>
         <td class="text-center">${statChgHtml(t.prev_homers)}</td>
         <td class="text-center">${statChgHtml(t.total_change)}</td>
