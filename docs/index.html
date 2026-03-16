@@ -184,7 +184,7 @@
       <ul class="navbar-nav me-auto gap-1" id="nav-tabs">
         <li class="nav-item"><a class="nav-link" href="#" data-view="players">Player Stats</a></li>
         <li class="nav-item"><a class="nav-link" href="#" data-view="standings">Standings</a></li>
-        <li class="nav-item"><a class="nav-link" href="#" data-view="rosters">Rosters</a></li>
+        <li class="nav-item d-none"><a class="nav-link" href="#" data-view="rosters">Rosters</a></li>
         <li class="nav-item"><a class="nav-link" href="#" data-view="perfect-team">Perfect Team</a></li>
         <li class="nav-item d-none"><a class="nav-link" href="#" data-view="player-history">Player History</a></li>
         <li class="nav-item d-none"><a class="nav-link" href="#" data-view="team-history">Team History</a></li>
@@ -220,7 +220,7 @@
             <th class="sortable" data-col="rank">Rank</th>
             <th class="sortable" data-col="name">Player</th>
             <th class="sortable" data-col="group">Group</th>
-            <th class="sortable" data-col="times_selected" title="Fantasy teams that picked this player">Times Selected</th>
+            <th class="sortable d-none" data-col="times_selected" title="Fantasy teams that picked this player">Times Selected</th>
             <th class="sortable" data-col="total">Total</th>
             <th class="sortable" data-col="doubles">2B</th>
             <th class="sortable" data-col="homers">HR</th>
@@ -555,7 +555,7 @@ function _renderPlayersTable() {
         <td class="text-center fw-bold">${p.rank}</td>
         <td>${p.name}</td>
         <td>${groupBadge(p.group)}</td>
-        <td class="text-center">${p.drafted === false ? '--' : p.times_selected}</td>
+        <td class="text-center d-none">${p.drafted === false ? '--' : p.times_selected}</td>
         <td class="text-center fw-bold">${p.total}</td>
         <td class="text-center">${p.doubles}</td>
         <td class="text-center">${p.homers}</td>
