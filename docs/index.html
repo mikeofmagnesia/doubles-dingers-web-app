@@ -105,8 +105,6 @@
     table { font-size: 0.82rem; white-space: nowrap; }
     th { background: var(--th-bg) !important; color: var(--th-color) !important;
          font-weight: 600; }
-    #tbl-players thead th,
-    #view-standings table thead th { position: sticky; top: var(--nav-h, 57px); z-index: 10; }
 
     tbody tr:hover td { background: var(--row-hover) !important; }
     .sum-row td { background: var(--sum-row) !important; font-weight: 700; }
@@ -1190,15 +1188,6 @@ function scrollToRoster(teamName) {
 // ===================================================================
 showView('players');
 
-// Keep --nav-h in sync with actual navbar height for sticky header offset
-(function () {
-  function update() {
-    const h = document.querySelector('.navbar').offsetHeight;
-    document.documentElement.style.setProperty('--nav-h', h + 'px');
-  }
-  update();
-  window.addEventListener('resize', update);
-})();
 </script>
 </body>
 </html>
