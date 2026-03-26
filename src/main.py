@@ -59,8 +59,9 @@ def assign_ranks_and_history(
     previous-day data from history. Returns the sorted lists.
     """
     sorted_players = sorted(players, key=lambda p: (p.total, p.doubles), reverse=True)
-    for i, player in enumerate(sorted_players, 1):
-        player.rank = i
+    for i, player in enumerate(sorted_players):
+        key = (player.total, player.doubles)
+        player.rank = sorted_players[i - 1].rank if i > 0 and key == (sorted_players[i-1].total, sorted_players[i-1].doubles) else i + 1
         prev = prev_players.get(player.name)
         if prev:
             player.prev_rank = prev.get("rank")
@@ -68,8 +69,9 @@ def assign_ranks_and_history(
             player.prev_homers = prev.get("homers")
 
     sorted_teams = sorted(teams, key=lambda t: (t.total, t.doubles), reverse=True)
-    for i, team in enumerate(sorted_teams, 1):
-        team.rank = i
+    for i, team in enumerate(sorted_teams):
+        key = (team.total, team.doubles)
+        team.rank = sorted_teams[i - 1].rank if i > 0 and key == (sorted_teams[i-1].total, sorted_teams[i-1].doubles) else i + 1
         prev = prev_teams.get(team.team_name)
         if prev:
             team.prev_rank = prev.get("rank")

@@ -104,7 +104,7 @@
     .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     table { font-size: 0.82rem; white-space: nowrap; }
     th { background: var(--th-bg) !important; color: var(--th-color) !important;
-         font-weight: 600; position: sticky; top: 0; }
+         font-weight: 600; position: sticky; top: 56px; z-index: 2; }
     tbody tr:hover td { background: var(--row-hover) !important; }
     .sum-row td { background: var(--sum-row) !important; font-weight: 700; }
 
@@ -247,10 +247,17 @@
     <div class="table-wrap">
       <table class="table table-bordered table-striped table-hover align-middle mb-0">
         <thead>
-          <tr>
-            <th>Rank</th><th>Team</th><th>Owner</th>
-            <th>Total</th><th>2B</th><th>HR</th>
-            <th>Rank Chg</th><th>Prev 2B</th><th>Prev HR</th><th>Total Chg</th>
+          <tr id="standings-thead-row">
+            <th class="sortable" data-col="rank">Rank</th>
+            <th class="sortable" data-col="team_name">Team</th>
+            <th class="sortable" data-col="owner">Owner</th>
+            <th class="sortable" data-col="total">Total</th>
+            <th class="sortable" data-col="doubles">2B</th>
+            <th class="sortable" data-col="homers">HR</th>
+            <th class="sortable" data-col="rank_change">Rank Chg</th>
+            <th class="sortable" data-col="prev_doubles">Prev 2B</th>
+            <th class="sortable" data-col="prev_homers">Prev HR</th>
+            <th class="sortable" data-col="total_change">Total Chg</th>
           </tr>
         </thead>
         <tbody id="tbody-standings"><tr><td colspan="10" class="text-center">Loading...</td></tr></tbody>
@@ -637,6 +644,53 @@ async function loadPlayers() {
 // ===================================================================
 // VIEW 2: Team Standings
 // ===================================================================
+let _standingsData = null;
+let _standingsSort = { col: 'team_name', dir: 'asc' };
+
+function _standingsSortVal(t, col) {
+  const v = t[col];
+  if (v === null || v === undefined) return col === 'team_name' || col === 'owner' ? '' : -Infinity;
+  return v;
+}
+
+function _renderStandingsTable() {
+  const tbody = document.getElementById('tbody-standings');
+  if (!_standingsData) return;
+
+  const { col, dir } = _standingsSort;
+  const mult = dir === 'asc' ? 1 : -1;
+  const teams = [..._standingsData.teams].sort((a, b) => {
+    const av = _standingsSortVal(a, col), bv = _standingsSortVal(b, col);
+    if (typeof av === 'string') return av.localeCompare(bv) * mult;
+    if (av < bv) return -1 * mult;
+    if (av > bv) return  1 * mult;
+    return 0;
+  });
+
+  tbody.innerHTML = teams.map(t => `
+    <tr>
+      <td class="text-center fw-bold">${t.rank}</td>
+      <td><a href="#" class="text-decoration-none fw-semibold roster-link" data-team="${t.team_name.replace(/"/g,'&quot;')}">${t.team_name}</a></td>
+      <td>${t.owner}</td>
+      <td class="text-center fw-bold">${t.total}</td>
+      <td class="text-center">${t.doubles}</td>
+      <td class="text-center">${t.homers}</td>
+      <td class="text-center">${rankChgHtml(t.rank_change)}</td>
+      <td class="text-center">${statChgHtml(t.prev_doubles)}</td>
+      <td class="text-center">${statChgHtml(t.prev_homers)}</td>
+      <td class="text-center">${statChgHtml(t.total_change)}</td>
+    </tr>`).join('');
+
+  tbody.querySelectorAll('.roster-link').forEach(a => {
+    a.addEventListener('click', e => { e.preventDefault(); scrollToRoster(a.dataset.team); });
+  });
+
+  document.querySelectorAll('#standings-thead-row th.sortable').forEach(th => {
+    th.classList.remove('sort-asc', 'sort-desc');
+    if (th.dataset.col === col) th.classList.add(dir === 'asc' ? 'sort-asc' : 'sort-desc');
+  });
+}
+
 async function loadStandings() {
   const tbody = document.getElementById('tbody-standings');
   try {
@@ -649,28 +703,19 @@ async function loadStandings() {
       return;
     }
 
-    const teams = [...data.teams].sort((a, b) => a.team_name.localeCompare(b.team_name));
-    tbody.innerHTML = teams.map(t => `
-      <tr>
-        <td class="text-center fw-bold">${t.rank}</td>
-        <td><a href="#" class="text-decoration-none fw-semibold roster-link" data-team="${t.team_name.replace(/"/g,'&quot;')}">${t.team_name}</a></td>
-        <td>${t.owner}</td>
-        <td class="text-center fw-bold">${t.total}</td>
-        <td class="text-center">${t.doubles}</td>
-        <td class="text-center">${t.homers}</td>
-        <td class="text-center">${rankChgHtml(t.rank_change)}</td>
-        <td class="text-center">${statChgHtml(t.prev_doubles)}</td>
-        <td class="text-center">${statChgHtml(t.prev_homers)}</td>
-        <td class="text-center">${statChgHtml(t.total_change)}</td>
-      </tr>`).join('');
+    _standingsData = data;
 
-    // Wire team links to roster view
-    tbody.querySelectorAll('.roster-link').forEach(a => {
-      a.addEventListener('click', e => {
-        e.preventDefault();
-        scrollToRoster(a.dataset.team);
+    document.querySelectorAll('#standings-thead-row th.sortable').forEach(th => {
+      th.addEventListener('click', () => {
+        const c = th.dataset.col;
+        _standingsSort = _standingsSort.col === c
+          ? { col: c, dir: _standingsSort.dir === 'asc' ? 'desc' : 'asc' }
+          : { col: c, dir: 'asc' };
+        _renderStandingsTable();
       });
     });
+
+    _renderStandingsTable();
   } catch (err) {
     tbody.innerHTML = `<tr><td colspan="10" class="text-center text-danger">${err.message}</td></tr>`;
   }
