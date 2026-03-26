@@ -609,7 +609,7 @@ async function loadPlayers() {
     }
 
     // Build Group filter checkboxes
-    const groups = [...new Set(_playersData.players.map(p => p.group))].sort();
+    const groups = [...new Set(_playersData.players.map(p => p.group))].filter(g => g !== 'Undrafted').sort();
     const menu = document.getElementById('group-filter-menu');
     menu.innerHTML = groups.map(g => `
       <li>
