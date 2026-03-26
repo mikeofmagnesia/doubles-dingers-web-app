@@ -310,9 +310,9 @@
               <tr>
                 <th>Tier</th>
                 <th>Player</th>
+                <th class="text-center fw-bold">Total</th>
                 <th class="text-center">2B</th>
                 <th class="text-center">HR</th>
-                <th class="text-center fw-bold">2B+HR</th>
               </tr>
             </thead>
             <tbody id="tbody-perfect-team">
@@ -456,17 +456,15 @@ function em(v) {
 }
 
 function rankChgHtml(chg) {
-  if (chg === null || chg === undefined) return '<span class="neu">-</span>';
+  if (chg === null || chg === undefined || chg === 0) return '<span class="neu">-</span>';
   if (chg > 0)  return `<span class="up">&#9650; ${chg}</span>`;
   if (chg < 0)  return `<span class="down">&#9660; ${Math.abs(chg)}</span>`;
-  return '<span class="neu">&mdash;</span>';
 }
 
 function statChgHtml(chg) {
-  if (chg === null || chg === undefined) return '<span class="neu">-</span>';
+  if (chg === null || chg === undefined || chg === 0) return '<span class="neu">-</span>';
   if (chg > 0)  return `<span class="up">+${chg}</span>`;
   if (chg < 0)  return `<span class="down">${chg}</span>`;
-  return '<span class="neu">0</span>';
 }
 
 function groupBadge(g) {
@@ -919,7 +917,7 @@ async function loadPerfectTeam() {
           ? `<td rowspan="${g.leaders.length}">${groupBadge(group)}${g.is_tied ? ' <span class="text-muted small">tied</span>' : ''}</td>`
           : '';
         const rowCls = g.is_tied ? ' class="text-muted"' : '';
-        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td><td class="text-center fw-bold">${g.is_tied ? `<s>${p.total}</s>` : p.total}</td></tr>`);
+        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}</td><td class="text-center fw-bold">${g.is_tied ? `<s>${p.total}</s>` : p.total}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td></tr>`);
       });
     }
 
@@ -935,7 +933,7 @@ async function loadPerfectTeam() {
           ? `<td rowspan="${wc.players.length}">${groupBadge('Wildcard')}${wc.is_tied ? ' <span class="text-muted small">tied</span>' : ''}</td>`
           : '';
         const rowCls = !isCounted ? ' class="text-muted"' : '';
-        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td><td class="text-center fw-bold">${!isCounted ? `<s>${p.total}</s>` : p.total}</td></tr>`);
+        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}</td><td class="text-center fw-bold">${!isCounted ? `<s>${p.total}</s>` : p.total}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td></tr>`);
       });
     }
 
