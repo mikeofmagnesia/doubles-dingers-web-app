@@ -221,7 +221,6 @@
             <th class="sortable" data-col="rank">Rank</th>
             <th class="sortable" data-col="name">Player</th>
             <th class="sortable" data-col="group">Group</th>
-            <th class="sortable d-none" data-col="times_selected" title="Fantasy teams that picked this player">Times Selected</th>
             <th class="sortable" data-col="total">Total</th>
             <th class="sortable" data-col="doubles">2B</th>
             <th class="sortable" data-col="homers">HR</th>
@@ -232,6 +231,7 @@
             <th class="sortable" data-col="prev_homers">Prev HR</th>
             <th class="sortable" data-col="rank_change">Rank Chg</th>
             <th class="sortable" data-col="total_change">Total Chg</th>
+            <th class="sortable" data-col="times_selected" title="Number of fantasy teams that drafted this player">Times Selected</th>
           </tr>
         </thead>
         <tbody id="tbody-players"><tr><td colspan="14" class="text-center" id="loading">Loading...</td></tr></tbody>
@@ -573,7 +573,6 @@ function _renderPlayersTable() {
         <td class="text-center fw-bold">${compRankP[p.name] ?? p.rank}</td>
         <td>${p.name}</td>
         <td>${groupBadge(p.group)}</td>
-        <td class="text-center d-none">${p.drafted === false ? '--' : p.times_selected}</td>
         <td class="text-center fw-bold">${p.total}</td>
         <td class="text-center">${p.doubles}</td>
         <td class="text-center">${p.homers}</td>
@@ -584,6 +583,7 @@ function _renderPlayersTable() {
         <td class="text-center">${statChgHtml(p.prev_homers)}</td>
         <td class="text-center">${rankChgHtml(p.rank_change)}</td>
         <td class="text-center">${statChgHtml(p.total_change)}</td>
+        <td class="text-center">${p.times_selected ?? '--'}</td>
       </tr>`).join('');
   }
 
