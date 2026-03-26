@@ -104,7 +104,9 @@
     .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     table { font-size: 0.82rem; white-space: nowrap; }
     th { background: var(--th-bg) !important; color: var(--th-color) !important;
-         font-weight: 600; position: sticky; top: 56px; z-index: 2; }
+         font-weight: 600; }
+    #tbl-players thead th,
+    #view-standings table thead th { position: sticky; top: 56px; z-index: 10; }
     tbody tr:hover td { background: var(--row-hover) !important; }
     .sum-row td { background: var(--sum-row) !important; font-weight: 700; }
 
@@ -554,12 +556,24 @@ function _renderPlayersTable() {
     return 0;
   });
 
+  // Compute competition ranks from sorted data
+  const byScore = [...(_playersData.players || [])].sort((a, b) =>
+    b.total !== a.total ? b.total - a.total : b.doubles - a.doubles);
+  const compRankP = {};
+  byScore.forEach((p, i) => {
+    if (i > 0 && p.total === byScore[i-1].total && p.doubles === byScore[i-1].doubles) {
+      compRankP[p.name] = compRankP[byScore[i-1].name];
+    } else {
+      compRankP[p.name] = i + 1;
+    }
+  });
+
   if (rows.length === 0) {
     tbody.innerHTML = '<tr><td colspan="14" class="text-center text-muted">No players match the selected filter.</td></tr>';
   } else {
     tbody.innerHTML = rows.map(p => `
       <tr${p.drafted === false ? ' class="undrafted"' : ''}>
-        <td class="text-center fw-bold">${p.rank}</td>
+        <td class="text-center fw-bold">${compRankP[p.name] ?? p.rank}</td>
         <td>${p.name}</td>
         <td>${groupBadge(p.group)}</td>
         <td class="text-center d-none">${p.drafted === false ? '--' : p.times_selected}</td>
@@ -667,9 +681,21 @@ function _renderStandingsTable() {
     return 0;
   });
 
+  // Compute competition ranks from full dataset (before display sort)
+  const byScoreT = [..._standingsData.teams].sort((a, b) =>
+    b.total !== a.total ? b.total - a.total : b.doubles - a.doubles);
+  const compRankT = {};
+  byScoreT.forEach((t, i) => {
+    if (i > 0 && t.total === byScoreT[i-1].total && t.doubles === byScoreT[i-1].doubles) {
+      compRankT[t.team_name] = compRankT[byScoreT[i-1].team_name];
+    } else {
+      compRankT[t.team_name] = i + 1;
+    }
+  });
+
   tbody.innerHTML = teams.map(t => `
     <tr>
-      <td class="text-center fw-bold">${t.rank}</td>
+      <td class="text-center fw-bold">${compRankT[t.team_name] ?? t.rank}</td>
       <td><a href="#" class="text-decoration-none fw-semibold roster-link" data-team="${t.team_name.replace(/"/g,'&quot;')}">${t.team_name}</a></td>
       <td>${t.owner}</td>
       <td class="text-center fw-bold">${t.total}</td>
