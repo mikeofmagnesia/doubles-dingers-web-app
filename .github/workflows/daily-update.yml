@@ -2,8 +2,8 @@ name: Daily Stats Update
 
 on:
   schedule:
-    # Noon CDT = 17:00 UTC (CDT = UTC-5, in effect April-November during baseball season)
-    - cron: '0 17 * * *'
+    # 11:45 AM CDT = 16:45 UTC (CDT = UTC-5, in effect April-November during baseball season)
+    - cron: '45 16 * * *'
   workflow_dispatch: # Allow manual trigger from the Actions tab
 
 jobs:
