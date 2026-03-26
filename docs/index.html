@@ -758,7 +758,8 @@ function slugify(s) {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
-function _buildRosterCard(t) {
+function _buildRosterCard(t, compRank) {
+  const displayRank = compRank ?? t.rank;
   const playerRows = t.players.map(p => `
     <tr>
       <td>${p.name}</td>
@@ -792,7 +793,7 @@ function _buildRosterCard(t) {
             <tr>
               <th colspan="5">${t.team_name} &mdash; ${t.owner}</th>
               <th colspan="3" class="text-end">
-                Rank ${t.rank}
+                Rank ${displayRank}
                 ${t.rank_change !== null ? statChgHtml(t.rank_change) : ''}
               </th>
             </tr>
@@ -826,7 +827,19 @@ function _renderRosters() {
     return;
   }
 
-  container.innerHTML = `<div class="row">${teams.map(_buildRosterCard).join('')}</div>`;
+  // Compute competition ranks from full dataset
+  const byScore = [...(_rostersData.teams)].sort((a, b) =>
+    b.totals.total !== a.totals.total ? b.totals.total - a.totals.total : b.totals.doubles - a.totals.doubles);
+  const compRankR = {};
+  byScore.forEach((t, i) => {
+    if (i > 0 && t.totals.total === byScore[i-1].totals.total && t.totals.doubles === byScore[i-1].totals.doubles) {
+      compRankR[t.team_name] = compRankR[byScore[i-1].team_name];
+    } else {
+      compRankR[t.team_name] = i + 1;
+    }
+  });
+
+  container.innerHTML = `<div class="row">${teams.map(t => _buildRosterCard(t, compRankR[t.team_name])).join('')}</div>`;
 }
 
 function _buildFilterMenu(menuId, labelId, items, filterSet, onChange) {
