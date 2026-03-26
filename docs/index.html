@@ -105,8 +105,7 @@
     table { font-size: 0.82rem; white-space: nowrap; }
     th { background: var(--th-bg) !important; color: var(--th-color) !important;
          font-weight: 600; }
-    #tbl-players thead th,
-    #view-standings table thead th { position: sticky; top: var(--nav-h, 56px); z-index: 10; }
+
     tbody tr:hover td { background: var(--row-hover) !important; }
     .sum-row td { background: var(--sum-row) !important; font-weight: 700; }
 
@@ -659,7 +658,7 @@ async function loadPlayers() {
 // VIEW 2: Team Standings
 // ===================================================================
 let _standingsData = null;
-let _standingsSort = { col: 'team_name', dir: 'asc' };
+let _standingsSort = { col: 'total', dir: 'desc' };
 
 function _standingsSortVal(t, col) {
   const v = t[col];
@@ -678,7 +677,8 @@ function _renderStandingsTable() {
     if (typeof av === 'string') return av.localeCompare(bv) * mult;
     if (av < bv) return -1 * mult;
     if (av > bv) return  1 * mult;
-    return 0;
+    // Secondary sort: team name ascending
+    return a.team_name.localeCompare(b.team_name);
   });
 
   // Compute competition ranks from full dataset (before display sort)
@@ -1188,15 +1188,6 @@ function scrollToRoster(teamName) {
 // ===================================================================
 showView('players');
 
-// Set --nav-h CSS variable to actual navbar height so sticky headers align correctly
-(function() {
-  function setNavH() {
-    const nav = document.querySelector('.navbar');
-    if (nav) document.documentElement.style.setProperty('--nav-h', nav.offsetHeight + 'px');
-  }
-  setNavH();
-  window.addEventListener('resize', setNavH);
-})();
 </script>
 </body>
 </html>
