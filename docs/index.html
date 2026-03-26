@@ -917,7 +917,7 @@ async function loadPerfectTeam() {
           ? `<td rowspan="${g.leaders.length}">${groupBadge(group)}${g.is_tied ? ' <span class="text-muted small">tied</span>' : ''}</td>`
           : '';
         const rowCls = g.is_tied ? ' class="text-muted"' : '';
-        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}</td><td class="text-center fw-bold">${g.is_tied ? `<s>${p.total}</s>` : p.total}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td></tr>`);
+        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}</td><td class="text-center fw-bold">${p.total}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td></tr>`);
       });
     }
 
@@ -933,7 +933,7 @@ async function loadPerfectTeam() {
           ? `<td rowspan="${wc.players.length}">${groupBadge('Wildcard')}${wc.is_tied ? ' <span class="text-muted small">tied</span>' : ''}</td>`
           : '';
         const rowCls = !isCounted ? ' class="text-muted"' : '';
-        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}</td><td class="text-center fw-bold">${!isCounted ? `<s>${p.total}</s>` : p.total}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td></tr>`);
+        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}</td><td class="text-center fw-bold">${p.total}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td></tr>`);
       });
     }
 
