@@ -536,7 +536,7 @@ function _renderPlayersTable() {
   const tbody = document.getElementById('tbody-players');
   if (!_playersData) return;
 
-  let rows = _playersData.players || [];
+  let rows = (_playersData.players || []).filter(p => p.drafted !== false);
 
   // Apply group filter
   if (_playerGroupFilter.size > 0) {
@@ -553,8 +553,8 @@ function _renderPlayersTable() {
     return 0;
   });
 
-  // Compute competition ranks from sorted data
-  const byScore = [...(_playersData.players || [])].sort((a, b) =>
+  // Compute competition ranks from sorted data (drafted players only)
+  const byScore = [...(_playersData.players || [])].filter(p => p.drafted !== false).sort((a, b) =>
     b.total !== a.total ? b.total - a.total : b.doubles - a.doubles);
   const compRankP = {};
   byScore.forEach((p, i) => {
