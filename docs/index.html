@@ -577,7 +577,7 @@ function _renderPlayersTable() {
         <td class="text-center fw-bold">${p.total}</td>
         <td class="text-center">${p.doubles}</td>
         <td class="text-center">${p.homers}</td>
-        <td class="text-center">${statChgHtml(p.games_played)}</td>
+        <td class="text-center">${p.games_played > 0 ? p.games_played : '-'}</td>
         <td class="text-center">${p.games_played > 0 ? p.per_game.toFixed(3) : '-'}</td>
         <td class="text-center">${em(p.prev_rank)}</td>
         <td class="text-center">${statChgHtml(p.prev_doubles)}</td>
