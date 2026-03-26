@@ -106,7 +106,7 @@
     th { background: var(--th-bg) !important; color: var(--th-color) !important;
          font-weight: 600; }
     #tbl-players thead th,
-    #view-standings table thead th { position: sticky; top: 56px; z-index: 10; }
+    #view-standings table thead th { position: sticky; top: var(--nav-h, 56px); z-index: 10; }
     tbody tr:hover td { background: var(--row-hover) !important; }
     .sum-row td { background: var(--sum-row) !important; font-weight: 700; }
 
@@ -1187,6 +1187,16 @@ function scrollToRoster(teamName) {
 // Boot: show Player Stats on load
 // ===================================================================
 showView('players');
+
+// Set --nav-h CSS variable to actual navbar height so sticky headers align correctly
+(function() {
+  function setNavH() {
+    const nav = document.querySelector('.navbar');
+    if (nav) document.documentElement.style.setProperty('--nav-h', nav.offsetHeight + 'px');
+  }
+  setNavH();
+  window.addEventListener('resize', setNavH);
+})();
 </script>
 </body>
 </html>
