@@ -92,7 +92,7 @@
     .view.active { display: block; }
 
     /* ── Navbar ────────────────────────────────────────────────────── */
-    .navbar { background: var(--brand-nav) !important; }
+    .navbar { background: var(--brand-nav) !important; position: sticky; top: 0; z-index: 1050; }
     .navbar-brand { color: #fff !important; font-weight: 700; font-size: 1.1rem; letter-spacing: .02em; }
     .nav-link { color: rgba(255,255,255,.65) !important; }
     .nav-link.active, .nav-link:hover { color: #fff !important; }
@@ -233,7 +233,7 @@
             <th class="sortable" data-col="total_change">Total Chg</th>
           </tr>
         </thead>
-        <tbody id="tbody-players" class="d-none"><tr><td colspan="14" class="text-center" id="loading">Loading...</td></tr></tbody>
+        <tbody id="tbody-players"><tr><td colspan="14" class="text-center" id="loading">Loading...</td></tr></tbody>
       </table>
     </div>
   </div>
@@ -307,7 +307,7 @@
                 <th class="text-center fw-bold">2B+HR</th>
               </tr>
             </thead>
-            <tbody id="tbody-perfect-team" class="d-none">
+            <tbody id="tbody-perfect-team">
               <tr><td colspan="5" class="text-center">Loading...</td></tr>
             </tbody>
           </table>
@@ -649,7 +649,8 @@ async function loadStandings() {
       return;
     }
 
-    tbody.innerHTML = data.teams.map(t => `
+    const teams = [...data.teams].sort((a, b) => a.team_name.localeCompare(b.team_name));
+    tbody.innerHTML = teams.map(t => `
       <tr>
         <td class="text-center fw-bold">${t.rank}</td>
         <td><a href="#" class="text-decoration-none fw-semibold roster-link" data-team="${t.team_name.replace(/"/g,'&quot;')}">${t.team_name}</a></td>
@@ -712,7 +713,7 @@ function _buildRosterCard(t) {
     </tr>`;
 
   return `
-    <div class="col-md-6 col-xl-4 mb-3" id="roster-${slugify(t.team_name)}"
+    <div class="col-md-6 mb-3" id="roster-${slugify(t.team_name)}"
          data-owner="${t.owner}" data-team="${t.team_name}">
       <div class="table-wrap">
         <table class="table table-bordered table-hover align-middle mb-0">
