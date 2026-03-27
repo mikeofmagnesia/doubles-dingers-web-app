@@ -59,8 +59,11 @@ def assign_ranks_and_history(
     previous-day data from history. Returns the sorted lists.
     """
     sorted_players = sorted(players, key=lambda p: (p.total, p.doubles), reverse=True)
-    for i, player in enumerate(sorted_players):
-        player.rank = sorted_players[i - 1].rank if i > 0 and player.total == sorted_players[i-1].total else i + 1
+    # Competition rank: drafted players only (undrafted don't count toward rank gaps)
+    drafted_sorted = [p for p in sorted_players if p.drafted]
+    for i, player in enumerate(drafted_sorted):
+        player.rank = drafted_sorted[i - 1].rank if i > 0 and player.total == drafted_sorted[i-1].total else i + 1
+    for player in sorted_players:
         prev = prev_players.get(player.name)
         if prev:
             player.prev_rank = prev.get("rank")

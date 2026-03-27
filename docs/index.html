@@ -553,7 +553,7 @@ function _renderPlayersTable() {
     return 0;
   });
 
-  // Compute competition ranks from sorted data (drafted players only)
+  // Competition rank: drafted players only (matches backend p.rank)
   const byScore = [...(_playersData.players || [])].filter(p => p.drafted !== false).sort((a, b) =>
     b.total !== a.total ? b.total - a.total : b.doubles - a.doubles);
   const compRankP = {};
@@ -565,12 +565,20 @@ function _renderPlayersTable() {
     }
   });
 
+  // All-player rank: for undrafted leaderboard display only
+  const byScoreAll = [...(_playersData.players || [])].sort((a, b) =>
+    b.total !== a.total ? b.total - a.total : b.doubles - a.doubles);
+  const allRankP = {};
+  byScoreAll.forEach((p, i) => {
+    allRankP[p.name] = i > 0 && p.total === byScoreAll[i-1].total ? allRankP[byScoreAll[i-1].name] : i + 1;
+  });
+
   if (rows.length === 0) {
     tbody.innerHTML = '<tr><td colspan="14" class="text-center text-muted">No players match the selected filter.</td></tr>';
   } else {
     tbody.innerHTML = rows.map(p => `
       <tr${p.drafted === false ? ' class="undrafted"' : ''}>
-        <td class="text-center fw-bold">${compRankP[p.name] ?? p.rank}</td>
+        <td class="text-center fw-bold">${p.drafted !== false ? (compRankP[p.name] ?? p.rank) : (allRankP[p.name] ?? '-')}</td>
         <td>${p.name}</td>
         <td>${groupBadge(p.group)}</td>
         <td class="text-center fw-bold">${p.total}</td>
