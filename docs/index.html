@@ -558,7 +558,7 @@ function _renderPlayersTable() {
     b.total !== a.total ? b.total - a.total : b.doubles - a.doubles);
   const compRankP = {};
   byScore.forEach((p, i) => {
-    if (i > 0 && p.total === byScore[i-1].total && p.doubles === byScore[i-1].doubles) {
+    if (i > 0 && p.total === byScore[i-1].total) {
       compRankP[p.name] = compRankP[byScore[i-1].name];
     } else {
       compRankP[p.name] = i + 1;
@@ -684,7 +684,7 @@ function _renderStandingsTable() {
     b.total !== a.total ? b.total - a.total : b.doubles - a.doubles);
   const compRankT = {};
   byScoreT.forEach((t, i) => {
-    if (i > 0 && t.total === byScoreT[i-1].total && t.doubles === byScoreT[i-1].doubles) {
+    if (i > 0 && t.total === byScoreT[i-1].total) {
       compRankT[t.team_name] = compRankT[byScoreT[i-1].team_name];
     } else {
       compRankT[t.team_name] = i + 1;
