@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-26",
+  "updated": "2026-03-27",
   "groups": {
     "A": {
       "leaders": [
@@ -39,84 +39,48 @@
     "B": {
       "leaders": [
         {
-          "name": "Matt Olson",
-          "doubles": 0,
-          "homers": 0,
-          "total": 0
-        },
-        {
-          "name": "Bryce Harper",
-          "doubles": 0,
-          "homers": 0,
-          "total": 0
-        },
-        {
-          "name": "Fernando Tatis Jr.",
-          "doubles": 0,
-          "homers": 0,
-          "total": 0
-        },
-        {
-          "name": "Vladimir Guerrero Jr.",
-          "doubles": 0,
-          "homers": 0,
-          "total": 0
-        },
-        {
           "name": "Kyle Schwarber",
           "doubles": 0,
-          "homers": 0,
-          "total": 0
+          "homers": 1,
+          "total": 1
         }
       ],
-      "is_tied": true
+      "is_tied": false
     },
     "C": {
       "leaders": [
         {
-          "name": "Bobby Witt Jr.",
-          "doubles": 0,
-          "homers": 0,
-          "total": 0
-        },
-        {
           "name": "Jos\u00e9 Ram\u00edrez",
-          "doubles": 0,
+          "doubles": 1,
           "homers": 0,
-          "total": 0
-        },
-        {
-          "name": "Ronald Acu\u00f1a Jr.",
-          "doubles": 0,
-          "homers": 0,
-          "total": 0
-        },
-        {
-          "name": "Juan Soto",
-          "doubles": 0,
-          "homers": 0,
-          "total": 0
-        },
-        {
-          "name": "Rafael Devers",
-          "doubles": 0,
-          "homers": 0,
-          "total": 0
+          "total": 1
         }
       ],
-      "is_tied": true
+      "is_tied": false
     }
   },
   "wildcard": {
     "players": [
       {
-        "name": "Francisco Lindor",
-        "doubles": 0,
+        "name": "Michael Busch",
+        "doubles": 2,
         "homers": 0,
-        "total": 0
+        "total": 2
       },
       {
         "name": "Kyle Tucker",
+        "doubles": 1,
+        "homers": 0,
+        "total": 1
+      },
+      {
+        "name": "Geraldo Perdomo",
+        "doubles": 0,
+        "homers": 1,
+        "total": 1
+      },
+      {
+        "name": "Francisco Lindor",
         "doubles": 0,
         "homers": 0,
         "total": 0
@@ -344,12 +308,6 @@
         "total": 0
       },
       {
-        "name": "Geraldo Perdomo",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
         "name": "Matt McLain",
         "doubles": 0,
         "homers": 0,
@@ -393,12 +351,6 @@
       },
       {
         "name": "Seiya Suzuki",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Michael Busch",
         "doubles": 0,
         "homers": 0,
         "total": 0
@@ -449,6 +401,6 @@
     "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 0,
+  "grand_total": 6,
   "has_tied_groups": true
 }

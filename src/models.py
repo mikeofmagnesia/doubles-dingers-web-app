@@ -34,8 +34,6 @@ class PlayerStats:
         """Positive = moved up in rankings (better). Negative = moved down."""
         if self.prev_rank is None or self.rank is None:
             return None
-        if self.total == 0:
-            return None
         return self.prev_rank - self.rank
 
     @property
@@ -88,8 +86,6 @@ class Team:
     def rank_change(self) -> int | None:
         """Positive = moved up in rankings (better). Negative = moved down."""
         if self.prev_rank is None or self.rank is None:
-            return None
-        if self.total == 0:
             return None
         return self.prev_rank - self.rank
 

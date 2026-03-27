@@ -60,8 +60,7 @@ def assign_ranks_and_history(
     """
     sorted_players = sorted(players, key=lambda p: (p.total, p.doubles), reverse=True)
     for i, player in enumerate(sorted_players):
-        key = (player.total, player.doubles)
-        player.rank = sorted_players[i - 1].rank if i > 0 and key == (sorted_players[i-1].total, sorted_players[i-1].doubles) else i + 1
+        player.rank = sorted_players[i - 1].rank if i > 0 and player.total == sorted_players[i-1].total else i + 1
         prev = prev_players.get(player.name)
         if prev:
             player.prev_rank = prev.get("rank")
@@ -70,8 +69,7 @@ def assign_ranks_and_history(
 
     sorted_teams = sorted(teams, key=lambda t: (t.total, t.doubles), reverse=True)
     for i, team in enumerate(sorted_teams):
-        key = (team.total, team.doubles)
-        team.rank = sorted_teams[i - 1].rank if i > 0 and key == (sorted_teams[i-1].total, sorted_teams[i-1].doubles) else i + 1
+        team.rank = sorted_teams[i - 1].rank if i > 0 and team.total == sorted_teams[i-1].total else i + 1
         prev = prev_teams.get(team.team_name)
         if prev:
             team.prev_rank = prev.get("rank")

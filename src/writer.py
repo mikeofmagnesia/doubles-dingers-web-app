@@ -248,8 +248,6 @@ def write_team_rosters(teams: list[Team]) -> None:
     """Write View 3: Team Rosters JSON (sorted by team name per spec)."""
     team_rows = []
     for t in teams:
-        sorted_players = sorted(t.players, key=lambda p: (p.total, p.doubles), reverse=True)
-
         player_rows = [
             {
                 "name": p.name,
@@ -262,7 +260,7 @@ def write_team_rosters(teams: list[Team]) -> None:
                 "prev_total": _e(p.prev_total),
                 "total_change": _e(p.total_change),
             }
-            for p in sorted_players
+            for p in t.players
         ]
 
         has_prev = any(p.prev_doubles is not None for p in t.players)
