@@ -1,43 +1,25 @@
 {
-  "updated": "2026-03-27",
+  "updated": "2026-03-28",
   "groups": {
     "A": {
       "leaders": [
         {
-          "name": "Shohei Ohtani",
-          "doubles": 0,
-          "homers": 0,
-          "total": 0
-        },
-        {
           "name": "Aaron Judge",
           "doubles": 0,
-          "homers": 0,
-          "total": 0
-        },
-        {
-          "name": "Pete Alonso",
-          "doubles": 0,
-          "homers": 0,
-          "total": 0
-        },
-        {
-          "name": "Cal Raleigh",
-          "doubles": 0,
-          "homers": 0,
-          "total": 0
-        },
-        {
-          "name": "Freddie Freeman",
-          "doubles": 0,
-          "homers": 0,
-          "total": 0
+          "homers": 1,
+          "total": 1
         }
       ],
-      "is_tied": true
+      "is_tied": false
     },
     "B": {
       "leaders": [
+        {
+          "name": "Matt Olson",
+          "doubles": 1,
+          "homers": 0,
+          "total": 1
+        },
         {
           "name": "Kyle Schwarber",
           "doubles": 0,
@@ -45,7 +27,7 @@
           "total": 1
         }
       ],
-      "is_tied": false
+      "is_tied": true
     },
     "C": {
       "leaders": [
@@ -68,339 +50,27 @@
         "total": 2
       },
       {
-        "name": "Kyle Tucker",
-        "doubles": 1,
+        "name": "Ernie Clement",
+        "doubles": 2,
         "homers": 0,
-        "total": 1
-      },
-      {
-        "name": "Geraldo Perdomo",
-        "doubles": 0,
-        "homers": 1,
-        "total": 1
-      },
-      {
-        "name": "Francisco Lindor",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Austin Riley",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Gunnar Henderson",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Yordan Alvarez",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Corey Seager",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Adolis Garc\u00eda",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Manny Machado",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Royce Lewis",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Spencer Steer",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Alex Bregman",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Pete Crow-Armstrong",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "James Wood",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Roman Anthony",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Konnor Griffin",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Julio Rodr\u00edguez",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Junior Caminero",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Riley Greene",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Taylor Ward",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Brent Rooker",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Nick Kurtz",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
+        "total": 2
       },
       {
         "name": "Zach Neto",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
+        "doubles": 1,
+        "homers": 1,
+        "total": 2
       },
       {
-        "name": "Eugenio Su\u00e1rez",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Bo Bichette",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Mookie Betts",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Jackson Chourio",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Corbin Carroll",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Vinnie Pasquantino",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Elly De La Cruz",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Trea Turner",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Salvador P\u00e9rez",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Spencer Torkelson",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Jarren Duran",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Luis Arraez",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Steven Kwan",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Byron Buxton",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Ketel Marte",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Tyler Soderstrom",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Jordan Beck",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Matt McLain",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Addison Barger",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Ezequiel Tovar",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Wyatt Langford",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Angel Mart\u00ednez",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Max Muncy",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Ben Rice",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Seiya Suzuki",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Nico Hoerner",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Oneil Cruz",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Trent Grisham",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Ernie Clement",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Maikel Garcia",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Jo Adell",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
-      },
-      {
-        "name": "Braiden Ward",
-        "doubles": 0,
-        "homers": 0,
-        "total": 0
+        "name": "Geraldo Perdomo",
+        "doubles": 1,
+        "homers": 1,
+        "total": 2
       }
     ],
-    "is_tied": true,
+    "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 6,
+  "grand_total": 10,
   "has_tied_groups": true
 }
