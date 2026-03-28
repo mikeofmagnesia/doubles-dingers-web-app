@@ -135,8 +135,8 @@ def write_player_stats(players: list[PlayerStats], teams_config: dict) -> None:
             "games_played": p.games_played,
             "per_game": p.per_game,
             "prev_rank": _e(p.prev_rank),
-            "prev_doubles": _e(p.prev_doubles),
-            "prev_homers": _e(p.prev_homers),
+            "prev_doubles": _e(p.doubles - p.prev_doubles) if p.prev_doubles is not None else None,
+            "prev_homers": _e(p.homers - p.prev_homers) if p.prev_homers is not None else None,
             "prev_total": _e(p.prev_total),
             "rank_change": _e(p.rank_change),
             "total_change": _e(p.total_change),
@@ -160,8 +160,8 @@ def write_team_standings(teams: list[Team]) -> None:
             "homers": t.homers,
             "total": t.total,
             "prev_rank": _e(t.prev_rank),
-            "prev_doubles": _e(t.prev_doubles),
-            "prev_homers": _e(t.prev_homers),
+            "prev_doubles": _e(t.doubles - t.prev_doubles) if t.prev_doubles is not None else None,
+            "prev_homers": _e(t.homers - t.prev_homers) if t.prev_homers is not None else None,
             "prev_total": _e(t.prev_total),
             "rank_change": _e(t.rank_change),
             "total_change": _e(t.total_change),
@@ -255,8 +255,8 @@ def write_team_rosters(teams: list[Team]) -> None:
                 "doubles": p.doubles,
                 "homers": p.homers,
                 "total": p.total,
-                "prev_doubles": _e(p.prev_doubles),
-                "prev_homers": _e(p.prev_homers),
+                "prev_doubles": _e(p.doubles - p.prev_doubles) if p.prev_doubles is not None else None,
+                "prev_homers": _e(p.homers - p.prev_homers) if p.prev_homers is not None else None,
                 "prev_total": _e(p.prev_total),
                 "total_change": _e(p.total_change),
             }
@@ -264,9 +264,9 @@ def write_team_rosters(teams: list[Team]) -> None:
         ]
 
         has_prev = any(p.prev_doubles is not None for p in t.players)
-        prev_d = sum(p.prev_doubles or 0 for p in t.players)
-        prev_hr = sum(p.prev_homers or 0 for p in t.players)
-        prev_total = prev_d + prev_hr
+        prev_d_cumulative = sum(p.prev_doubles or 0 for p in t.players)
+        prev_hr_cumulative = sum(p.prev_homers or 0 for p in t.players)
+        prev_total = prev_d_cumulative + prev_hr_cumulative
 
         team_rows.append({
             "owner": t.owner,
@@ -278,8 +278,8 @@ def write_team_rosters(teams: list[Team]) -> None:
                 "doubles": t.doubles,
                 "homers": t.homers,
                 "total": t.total,
-                "prev_doubles": prev_d if has_prev else None,
-                "prev_homers": prev_hr if has_prev else None,
+                "prev_doubles": (t.doubles - prev_d_cumulative) if has_prev else None,
+                "prev_homers": (t.homers - prev_hr_cumulative) if has_prev else None,
                 "prev_total": prev_total if has_prev else None,
                 "total_change": (t.total - prev_total) if has_prev else None,
             },
