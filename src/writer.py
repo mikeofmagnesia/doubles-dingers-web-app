@@ -206,9 +206,8 @@ def write_perfect_team(players: list[PlayerStats]) -> None:
             "leaders": [_player_row(p) for p in leaders],
             "is_tied": is_tied,
         }
-        if not is_tied:
-            grand_total += max_total
-        else:
+        grand_total += max_total
+        if is_tied:
             has_tied_groups = True
 
     # Wildcard: top 4, with tie detection at the 4th-place cutoff

@@ -310,9 +310,9 @@
               <tr>
                 <th>Tier</th>
                 <th>Player</th>
-                <th class="text-center fw-bold">Total</th>
                 <th class="text-center">2B</th>
                 <th class="text-center">HR</th>
+                <th class="text-center fw-bold">Total</th>
               </tr>
             </thead>
             <tbody id="tbody-perfect-team">
@@ -918,14 +918,14 @@ async function loadPerfectTeam() {
         continue;
       }
       if (g.is_tied) {
-        notes.push(`Group ${group} has a tie — not counted in grand total.`);
+        notes.push(`Group ${group} has a tie — both players shown, minimum value counted.`);
       }
       g.leaders.forEach((p, i) => {
         const tierCell = i === 0
           ? `<td rowspan="${g.leaders.length}">${groupBadge(group)}${g.is_tied ? ' <span class="text-muted small">tied</span>' : ''}</td>`
           : '';
         const rowCls = g.is_tied ? ' class="text-muted"' : '';
-        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}</td><td class="text-center fw-bold">${p.total}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td></tr>`);
+        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td><td class="text-center fw-bold">${p.total}</td></tr>`);
       });
     }
 
@@ -941,14 +941,14 @@ async function loadPerfectTeam() {
           ? `<td rowspan="${wc.players.length}">${groupBadge('Wildcard')}${wc.is_tied ? ' <span class="text-muted small">tied</span>' : ''}</td>`
           : '';
         const rowCls = !isCounted ? ' class="text-muted"' : '';
-        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}</td><td class="text-center fw-bold">${p.total}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td></tr>`);
+        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td><td class="text-center fw-bold">${p.total}</td></tr>`);
       });
     }
 
     // Grand total row
     rows.push(`
       <tr class="sum-row">
-        <td colspan="4"><strong>Best Possible Total</strong>${data.has_tied_groups ? ' <span class="text-muted small">(tied groups excluded)</span>' : ''}</td>
+        <td colspan="4"><strong>Best Possible Total</strong>${data.has_tied_groups ? ' <span class="text-muted small">(ties noted below)</span>' : ''}</td>
         <td class="text-center fw-bold">${data.grand_total}</td>
       </tr>`);
 
