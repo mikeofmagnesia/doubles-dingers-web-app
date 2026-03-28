@@ -210,8 +210,10 @@ def write_perfect_team(players: list[PlayerStats]) -> None:
         if is_tied:
             has_tied_groups = True
 
-    # Wildcard: top 4, with tie detection at the 4th-place cutoff
-    wc = sorted(by_group.get("Wildcard", []), key=lambda x: (x.total, x.doubles), reverse=True)
+    # Wildcard: all players not in a lettered group (drafted WC + undrafted).
+    # The Perfect Team page shows the best possible WC picks regardless of draft status.
+    wc_pool = [p for p in players if p.group not in ("A", "B", "C")]
+    wc = sorted(wc_pool, key=lambda x: (x.total, x.doubles), reverse=True)
     if not wc:
         wildcard: dict = {"players": [], "is_tied": False, "counted_count": 0}
     elif len(wc) <= 4:
