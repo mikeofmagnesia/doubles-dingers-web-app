@@ -227,9 +227,9 @@
             <th class="sortable" data-col="games_played">GP</th>
             <th class="sortable" data-col="per_game">2Bs &amp; HRs per Game</th>
             <th class="sortable" data-col="prev_rank">Prev Rank</th>
-            <th class="sortable" data-col="prev_doubles">Prev 2B</th>
-            <th class="sortable" data-col="prev_homers">Prev HR</th>
             <th class="sortable" data-col="rank_change">Rank Chg</th>
+            <th class="sortable" data-col="prev_doubles">2B Chg</th>
+            <th class="sortable" data-col="prev_homers">HR Chg</th>
             <th class="sortable" data-col="total_change">Total Chg</th>
             <th class="sortable" data-col="times_selected" title="Number of fantasy teams that drafted this player">Times Selected</th>
           </tr>
@@ -256,8 +256,8 @@
             <th class="sortable" data-col="doubles">2B</th>
             <th class="sortable" data-col="homers">HR</th>
             <th class="sortable" data-col="rank_change">Rank Chg</th>
-            <th class="sortable" data-col="prev_doubles">Prev 2B</th>
-            <th class="sortable" data-col="prev_homers">Prev HR</th>
+            <th class="sortable" data-col="prev_doubles">2B Chg</th>
+            <th class="sortable" data-col="prev_homers">HR Chg</th>
             <th class="sortable" data-col="total_change">Total Chg</th>
           </tr>
         </thead>
@@ -587,9 +587,9 @@ function _renderPlayersTable() {
         <td class="text-center">${p.games_played > 0 ? p.games_played : '-'}</td>
         <td class="text-center">${p.games_played > 0 ? p.per_game.toFixed(3) : '-'}</td>
         <td class="text-center">${em(p.prev_rank)}</td>
+        <td class="text-center">${rankChgHtml(p.rank_change)}</td>
         <td class="text-center">${statChgHtml(p.prev_doubles)}</td>
         <td class="text-center">${statChgHtml(p.prev_homers)}</td>
-        <td class="text-center">${rankChgHtml(p.rank_change)}</td>
         <td class="text-center">${statChgHtml(p.total_change)}</td>
         <td class="text-center">${p.times_selected ?? '--'}</td>
       </tr>`).join('');
@@ -806,7 +806,7 @@ function _buildRosterCard(t, compRank) {
             <tr>
               <th>Player</th><th>Group</th>
               <th>Total</th><th>2B</th><th>HR</th>
-              <th>Prev 2B</th><th>Prev HR</th><th>Total Chg</th>
+              <th>2B Chg</th><th>HR Chg</th><th>Total Chg</th>
             </tr>
           </thead>
           <tbody>${playerRows}${sumRow}</tbody>
