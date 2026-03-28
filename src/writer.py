@@ -72,7 +72,7 @@ def read_latest_player_history() -> dict[str, dict]:
     latest_date = max(r["date"] for r in prior)
     return {
         r["player"]: {
-            "rank": 1 if (r.get("doubles", 0) + r.get("homers", 0)) == 0 else r.get("rank"),
+            "rank": r.get("rank"),
             "doubles": r.get("doubles", 0),
             "homers": r.get("homers", 0),
         }
@@ -99,7 +99,7 @@ def read_latest_team_history() -> dict[str, dict]:
     latest_date = max(r["date"] for r in prior)
     return {
         r["team"]: {
-            "rank": 1 if (r.get("doubles", 0) + r.get("homers", 0)) == 0 else r.get("rank"),
+            "rank": r.get("rank"),
             "doubles": r.get("doubles", 0),
             "homers": r.get("homers", 0),
         }
