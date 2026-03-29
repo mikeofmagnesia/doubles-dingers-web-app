@@ -1,13 +1,13 @@
 {
-  "updated": "2026-03-28",
+  "updated": "2026-03-29",
   "groups": {
     "A": {
       "leaders": [
         {
           "name": "Aaron Judge",
           "doubles": 0,
-          "homers": 1,
-          "total": 1
+          "homers": 2,
+          "total": 2
         }
       ],
       "is_tied": false
@@ -33,9 +33,9 @@
       "leaders": [
         {
           "name": "Jos\u00e9 Ram\u00edrez",
-          "doubles": 1,
+          "doubles": 2,
           "homers": 0,
-          "total": 1
+          "total": 2
         }
       ],
       "is_tied": false
@@ -44,33 +44,33 @@
   "wildcard": {
     "players": [
       {
-        "name": "Michael Busch",
-        "doubles": 2,
+        "name": "Chase DeLauter",
+        "doubles": 0,
+        "homers": 4,
+        "total": 4
+      },
+      {
+        "name": "Brice Turang",
+        "doubles": 3,
         "homers": 0,
-        "total": 2
+        "total": 3
       },
       {
-        "name": "Ernie Clement",
+        "name": "Sal Stewart",
         "doubles": 2,
-        "homers": 0,
-        "total": 2
+        "homers": 1,
+        "total": 3
       },
       {
-        "name": "Zach Neto",
-        "doubles": 1,
-        "homers": 1,
-        "total": 2
-      },
-      {
-        "name": "Geraldo Perdomo",
-        "doubles": 1,
-        "homers": 1,
-        "total": 2
+        "name": "Luke Raley",
+        "doubles": 0,
+        "homers": 3,
+        "total": 3
       }
     ],
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 11,
+  "grand_total": 18,
   "has_tied_groups": true
 }
