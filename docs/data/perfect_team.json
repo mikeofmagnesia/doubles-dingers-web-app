@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-29",
+  "updated": "2026-03-30",
   "groups": {
     "A": {
       "leaders": [
@@ -44,33 +44,33 @@
   "wildcard": {
     "players": [
       {
+        "name": "Sal Stewart",
+        "doubles": 3,
+        "homers": 1,
+        "total": 4
+      },
+      {
+        "name": "Wilyer Abreu",
+        "doubles": 2,
+        "homers": 2,
+        "total": 4
+      },
+      {
+        "name": "Brandon Lowe",
+        "doubles": 1,
+        "homers": 3,
+        "total": 4
+      },
+      {
         "name": "Chase DeLauter",
         "doubles": 0,
         "homers": 4,
         "total": 4
-      },
-      {
-        "name": "Brice Turang",
-        "doubles": 3,
-        "homers": 0,
-        "total": 3
-      },
-      {
-        "name": "Sal Stewart",
-        "doubles": 2,
-        "homers": 1,
-        "total": 3
-      },
-      {
-        "name": "Luke Raley",
-        "doubles": 0,
-        "homers": 3,
-        "total": 3
       }
     ],
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 18,
+  "grand_total": 21,
   "has_tied_groups": true
 }
