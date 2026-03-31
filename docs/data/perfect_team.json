@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-30",
+  "updated": "2026-03-31",
   "groups": {
     "A": {
       "leaders": [
@@ -16,18 +16,12 @@
       "leaders": [
         {
           "name": "Matt Olson",
-          "doubles": 1,
+          "doubles": 2,
           "homers": 0,
-          "total": 1
-        },
-        {
-          "name": "Kyle Schwarber",
-          "doubles": 0,
-          "homers": 1,
-          "total": 1
+          "total": 2
         }
       ],
-      "is_tied": true
+      "is_tied": false
     },
     "C": {
       "leaders": [
@@ -44,15 +38,27 @@
   "wildcard": {
     "players": [
       {
-        "name": "Sal Stewart",
+        "name": "Wilyer Abreu",
         "doubles": 3,
-        "homers": 1,
+        "homers": 2,
+        "total": 5
+      },
+      {
+        "name": "Brice Turang",
+        "doubles": 4,
+        "homers": 0,
         "total": 4
       },
       {
-        "name": "Wilyer Abreu",
-        "doubles": 2,
-        "homers": 2,
+        "name": "Christian Walker",
+        "doubles": 4,
+        "homers": 0,
+        "total": 4
+      },
+      {
+        "name": "Sal Stewart",
+        "doubles": 3,
+        "homers": 1,
         "total": 4
       },
       {
@@ -68,9 +74,9 @@
         "total": 4
       }
     ],
-    "is_tied": false,
+    "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 21,
-  "has_tied_groups": true
+  "grand_total": 23,
+  "has_tied_groups": false
 }
