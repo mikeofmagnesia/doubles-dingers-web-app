@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-31",
+  "updated": "2026-04-01",
   "groups": {
     "A": {
       "leaders": [
@@ -19,9 +19,15 @@
           "doubles": 2,
           "homers": 0,
           "total": 2
+        },
+        {
+          "name": "Kyle Schwarber",
+          "doubles": 0,
+          "homers": 2,
+          "total": 2
         }
       ],
-      "is_tied": false
+      "is_tied": true
     },
     "C": {
       "leaders": [
@@ -30,13 +36,25 @@
           "doubles": 2,
           "homers": 0,
           "total": 2
+        },
+        {
+          "name": "Juan Soto",
+          "doubles": 2,
+          "homers": 0,
+          "total": 2
         }
       ],
-      "is_tied": false
+      "is_tied": true
     }
   },
   "wildcard": {
     "players": [
+      {
+        "name": "Christian Walker",
+        "doubles": 5,
+        "homers": 0,
+        "total": 5
+      },
       {
         "name": "Wilyer Abreu",
         "doubles": 3,
@@ -44,39 +62,21 @@
         "total": 5
       },
       {
-        "name": "Brice Turang",
-        "doubles": 4,
-        "homers": 0,
-        "total": 4
-      },
-      {
-        "name": "Christian Walker",
-        "doubles": 4,
-        "homers": 0,
-        "total": 4
-      },
-      {
         "name": "Sal Stewart",
         "doubles": 3,
-        "homers": 1,
-        "total": 4
+        "homers": 2,
+        "total": 5
       },
       {
-        "name": "Brandon Lowe",
-        "doubles": 1,
+        "name": "Yordan Alvarez",
+        "doubles": 2,
         "homers": 3,
-        "total": 4
-      },
-      {
-        "name": "Chase DeLauter",
-        "doubles": 0,
-        "homers": 4,
-        "total": 4
+        "total": 5
       }
     ],
-    "is_tied": true,
+    "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 23,
-  "has_tied_groups": false
+  "grand_total": 26,
+  "has_tied_groups": true
 }
