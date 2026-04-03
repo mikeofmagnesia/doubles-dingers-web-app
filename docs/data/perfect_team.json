@@ -1,8 +1,14 @@
 {
-  "updated": "2026-04-01",
+  "updated": "2026-04-02",
   "groups": {
     "A": {
       "leaders": [
+        {
+          "name": "Freddie Freeman",
+          "doubles": 1,
+          "homers": 1,
+          "total": 2
+        },
         {
           "name": "Aaron Judge",
           "doubles": 0,
@@ -10,38 +16,32 @@
           "total": 2
         }
       ],
-      "is_tied": false
+      "is_tied": true
     },
     "B": {
       "leaders": [
         {
-          "name": "Matt Olson",
-          "doubles": 2,
-          "homers": 0,
-          "total": 2
-        },
-        {
           "name": "Kyle Schwarber",
-          "doubles": 0,
+          "doubles": 1,
           "homers": 2,
-          "total": 2
+          "total": 3
         }
       ],
-      "is_tied": true
+      "is_tied": false
     },
     "C": {
       "leaders": [
         {
           "name": "Jos\u00e9 Ram\u00edrez",
           "doubles": 2,
-          "homers": 0,
-          "total": 2
+          "homers": 1,
+          "total": 3
         },
         {
           "name": "Juan Soto",
           "doubles": 2,
-          "homers": 0,
-          "total": 2
+          "homers": 1,
+          "total": 3
         }
       ],
       "is_tied": true
@@ -50,15 +50,27 @@
   "wildcard": {
     "players": [
       {
+        "name": "Yordan Alvarez",
+        "doubles": 3,
+        "homers": 3,
+        "total": 6
+      },
+      {
+        "name": "Wilyer Abreu",
+        "doubles": 3,
+        "homers": 3,
+        "total": 6
+      },
+      {
         "name": "Christian Walker",
         "doubles": 5,
         "homers": 0,
         "total": 5
       },
       {
-        "name": "Wilyer Abreu",
-        "doubles": 3,
-        "homers": 2,
+        "name": "Brice Turang",
+        "doubles": 4,
+        "homers": 1,
         "total": 5
       },
       {
@@ -66,17 +78,11 @@
         "doubles": 3,
         "homers": 2,
         "total": 5
-      },
-      {
-        "name": "Yordan Alvarez",
-        "doubles": 2,
-        "homers": 3,
-        "total": 5
       }
     ],
-    "is_tied": false,
+    "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 26,
+  "grand_total": 30,
   "has_tied_groups": true
 }
