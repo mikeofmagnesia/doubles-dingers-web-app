@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-02",
+  "updated": "2026-04-03",
   "groups": {
     "A": {
       "leaders": [
@@ -21,10 +21,10 @@
     "B": {
       "leaders": [
         {
-          "name": "Kyle Schwarber",
-          "doubles": 1,
-          "homers": 2,
-          "total": 3
+          "name": "Matt Olson",
+          "doubles": 4,
+          "homers": 1,
+          "total": 5
         }
       ],
       "is_tied": false
@@ -83,6 +83,6 @@
     "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 30,
+  "grand_total": 32,
   "has_tied_groups": true
 }
