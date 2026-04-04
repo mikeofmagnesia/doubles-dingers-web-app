@@ -4,6 +4,7 @@
     {
       "rank": 1,
       "name": "Matt Olson",
+      "mlb_team": "ATL",
       "br_id": "olsonma02",
       "group": "B",
       "drafted": true,
@@ -23,6 +24,7 @@
     {
       "rank": 1,
       "name": "Ben Rice",
+      "mlb_team": "NYY",
       "br_id": "ricebe01",
       "group": "Wildcard",
       "drafted": true,
@@ -42,6 +44,7 @@
     {
       "rank": 1,
       "name": "Yordan Alvarez",
+      "mlb_team": "HOU",
       "br_id": "alvaryo01",
       "group": "Wildcard",
       "drafted": true,
@@ -61,6 +64,7 @@
     {
       "rank": null,
       "name": "Wilyer Abreu",
+      "mlb_team": "BOS",
       "br_id": "mlb_677800",
       "group": "Undrafted",
       "drafted": false,
@@ -80,6 +84,7 @@
     {
       "rank": null,
       "name": "Christian Walker",
+      "mlb_team": "HOU",
       "br_id": "mlb_572233",
       "group": "Undrafted",
       "drafted": false,
@@ -99,6 +104,7 @@
     {
       "rank": null,
       "name": "Brice Turang",
+      "mlb_team": "MIL",
       "br_id": "mlb_668930",
       "group": "Undrafted",
       "drafted": false,
@@ -106,8 +112,8 @@
       "doubles": 4,
       "homers": 1,
       "total": 5,
-      "games_played": 6,
-      "per_game": 0.833,
+      "games_played": 7,
+      "per_game": 0.714,
       "prev_rank": null,
       "prev_doubles": null,
       "prev_homers": null,
@@ -118,6 +124,7 @@
     {
       "rank": 4,
       "name": "Max Muncy",
+      "mlb_team": "ATH",
       "br_id": "muncyma02",
       "group": "Wildcard",
       "drafted": true,
@@ -137,6 +144,7 @@
     {
       "rank": null,
       "name": "Josh Bell",
+      "mlb_team": "MIN",
       "br_id": "mlb_605137",
       "group": "Undrafted",
       "drafted": false,
@@ -156,6 +164,7 @@
     {
       "rank": null,
       "name": "Sal Stewart",
+      "mlb_team": "CIN",
       "br_id": "mlb_701398",
       "group": "Undrafted",
       "drafted": false,
@@ -175,6 +184,7 @@
     {
       "rank": null,
       "name": "Brandon Lowe",
+      "mlb_team": "PIT",
       "br_id": "mlb_664040",
       "group": "Undrafted",
       "drafted": false,
@@ -194,6 +204,7 @@
     {
       "rank": null,
       "name": "Chase DeLauter",
+      "mlb_team": "CLE",
       "br_id": "mlb_800050",
       "group": "Undrafted",
       "drafted": false,
@@ -213,6 +224,7 @@
     {
       "rank": 5,
       "name": "Nico Hoerner",
+      "mlb_team": "CHC",
       "br_id": "hoernni01",
       "group": "Wildcard",
       "drafted": true,
@@ -232,6 +244,7 @@
     {
       "rank": null,
       "name": "Adley Rutschman",
+      "mlb_team": "BAL",
       "br_id": "mlb_668939",
       "group": "Undrafted",
       "drafted": false,
@@ -251,6 +264,7 @@
     {
       "rank": 5,
       "name": "James Wood",
+      "mlb_team": "WSH",
       "br_id": "woodja03",
       "group": "Wildcard",
       "drafted": true,
@@ -269,8 +283,9 @@
     },
     {
       "rank": null,
-      "name": "Marcelo Mayer",
-      "br_id": "mlb_691785",
+      "name": "William Contreras",
+      "mlb_team": "MIL",
+      "br_id": "mlb_661388",
       "group": "Undrafted",
       "drafted": false,
       "times_selected": 0,
@@ -289,6 +304,7 @@
     {
       "rank": 5,
       "name": "Gunnar Henderson",
+      "mlb_team": "BAL",
       "br_id": "hendegu01",
       "group": "Wildcard",
       "drafted": true,
@@ -308,6 +324,7 @@
     {
       "rank": 5,
       "name": "Royce Lewis",
+      "mlb_team": "MIN",
       "br_id": "lewisro02",
       "group": "Wildcard",
       "drafted": true,
@@ -327,6 +344,7 @@
     {
       "rank": null,
       "name": "Jake Burger",
+      "mlb_team": "TEX",
       "br_id": "mlb_669394",
       "group": "Undrafted",
       "drafted": false,
@@ -346,6 +364,7 @@
     {
       "rank": null,
       "name": "Owen Caissie",
+      "mlb_team": "MIA",
       "br_id": "mlb_683357",
       "group": "Undrafted",
       "drafted": false,
@@ -365,7 +384,28 @@
     {
       "rank": null,
       "name": "Brendan Donovan",
+      "mlb_team": "SEA",
       "br_id": "mlb_680977",
+      "group": "Undrafted",
+      "drafted": false,
+      "times_selected": 0,
+      "doubles": 2,
+      "homers": 2,
+      "total": 4,
+      "games_played": 8,
+      "per_game": 0.5,
+      "prev_rank": null,
+      "prev_doubles": null,
+      "prev_homers": null,
+      "prev_total": null,
+      "rank_change": null,
+      "total_change": null
+    },
+    {
+      "rank": null,
+      "name": "Jordan Walker",
+      "mlb_team": "STL",
+      "br_id": "mlb_691023",
       "group": "Undrafted",
       "drafted": false,
       "times_selected": 0,
@@ -384,6 +424,7 @@
     {
       "rank": 5,
       "name": "Kyle Schwarber",
+      "mlb_team": "PHI",
       "br_id": "schwaky01",
       "group": "B",
       "drafted": true,
@@ -403,6 +444,7 @@
     {
       "rank": null,
       "name": "Francisco Alvarez",
+      "mlb_team": "NYM",
       "br_id": "mlb_682626",
       "group": "Undrafted",
       "drafted": false,
@@ -422,6 +464,7 @@
     {
       "rank": null,
       "name": "Liam Hicks",
+      "mlb_team": "MIA",
       "br_id": "mlb_689414",
       "group": "Undrafted",
       "drafted": false,
@@ -441,6 +484,7 @@
     {
       "rank": null,
       "name": "Drake Baldwin",
+      "mlb_team": "ATL",
       "br_id": "mlb_686948",
       "group": "Undrafted",
       "drafted": false,
@@ -460,6 +504,7 @@
     {
       "rank": null,
       "name": "Ian Happ",
+      "mlb_team": "CHC",
       "br_id": "mlb_664023",
       "group": "Undrafted",
       "drafted": false,
@@ -479,6 +524,7 @@
     {
       "rank": 10,
       "name": "Riley Greene",
+      "mlb_team": "DET",
       "br_id": "greenri01",
       "group": "Wildcard",
       "drafted": true,
@@ -486,8 +532,8 @@
       "doubles": 3,
       "homers": 0,
       "total": 3,
-      "games_played": 7,
-      "per_game": 0.429,
+      "games_played": 8,
+      "per_game": 0.375,
       "prev_rank": 19,
       "prev_doubles": 1,
       "prev_homers": 0,
@@ -498,6 +544,7 @@
     {
       "rank": 10,
       "name": "Taylor Ward",
+      "mlb_team": "BAL",
       "br_id": "wardta01",
       "group": "Wildcard",
       "drafted": true,
@@ -517,6 +564,7 @@
     {
       "rank": 10,
       "name": "Ernie Clement",
+      "mlb_team": "TOR",
       "br_id": "clemeer01",
       "group": "Wildcard",
       "drafted": true,
@@ -524,8 +572,8 @@
       "doubles": 3,
       "homers": 0,
       "total": 3,
-      "games_played": 7,
-      "per_game": 0.429,
+      "games_played": 8,
+      "per_game": 0.375,
       "prev_rank": 6,
       "prev_doubles": 0,
       "prev_homers": 0,
@@ -536,6 +584,7 @@
     {
       "rank": null,
       "name": "Connor Wong",
+      "mlb_team": "BOS",
       "br_id": "mlb_657136",
       "group": "Undrafted",
       "drafted": false,
@@ -555,6 +604,7 @@
     {
       "rank": 10,
       "name": "Jos\u00e9 Ram\u00edrez",
+      "mlb_team": "CLE",
       "br_id": "ramirjo01",
       "group": "C",
       "drafted": true,
@@ -574,6 +624,7 @@
     {
       "rank": 10,
       "name": "Juan Soto",
+      "mlb_team": "NYM",
       "br_id": "sotoju01",
       "group": "C",
       "drafted": true,
@@ -593,6 +644,7 @@
     {
       "rank": 10,
       "name": "Adolis Garc\u00eda",
+      "mlb_team": "PHI",
       "br_id": "garciad02",
       "group": "Wildcard",
       "drafted": true,
@@ -612,6 +664,7 @@
     {
       "rank": 10,
       "name": "Geraldo Perdomo",
+      "mlb_team": "AZ",
       "br_id": "perdoge01",
       "group": "Wildcard",
       "drafted": true,
@@ -631,6 +684,7 @@
     {
       "rank": 10,
       "name": "Ezequiel Tovar",
+      "mlb_team": "COL",
       "br_id": "tovarez01",
       "group": "Wildcard",
       "drafted": true,
@@ -650,6 +704,7 @@
     {
       "rank": null,
       "name": "Nick Fortes",
+      "mlb_team": "TB",
       "br_id": "mlb_663743",
       "group": "Undrafted",
       "drafted": false,
@@ -668,26 +723,8 @@
     },
     {
       "rank": null,
-      "name": "William Contreras",
-      "br_id": "mlb_661388",
-      "group": "Undrafted",
-      "drafted": false,
-      "times_selected": 0,
-      "doubles": 2,
-      "homers": 1,
-      "total": 3,
-      "games_played": 6,
-      "per_game": 0.5,
-      "prev_rank": null,
-      "prev_doubles": null,
-      "prev_homers": null,
-      "prev_total": null,
-      "rank_change": null,
-      "total_change": null
-    },
-    {
-      "rank": null,
       "name": "Danny Jansen",
+      "mlb_team": "TEX",
       "br_id": "mlb_643376",
       "group": "Undrafted",
       "drafted": false,
@@ -707,6 +744,7 @@
     {
       "rank": 10,
       "name": "Freddie Freeman",
+      "mlb_team": "LAD",
       "br_id": "freemfr01",
       "group": "A",
       "drafted": true,
@@ -726,6 +764,7 @@
     {
       "rank": 10,
       "name": "Bryce Harper",
+      "mlb_team": "PHI",
       "br_id": "harpebr03",
       "group": "B",
       "drafted": true,
@@ -745,6 +784,7 @@
     {
       "rank": 10,
       "name": "Zach Neto",
+      "mlb_team": "LAA",
       "br_id": "netoza01",
       "group": "Wildcard",
       "drafted": true,
@@ -764,6 +804,7 @@
     {
       "rank": 10,
       "name": "Mookie Betts",
+      "mlb_team": "LAD",
       "br_id": "bettsmo01",
       "group": "Wildcard",
       "drafted": true,
@@ -783,6 +824,7 @@
     {
       "rank": 10,
       "name": "Corbin Carroll",
+      "mlb_team": "AZ",
       "br_id": "carroco01",
       "group": "Wildcard",
       "drafted": true,
@@ -802,6 +844,7 @@
     {
       "rank": null,
       "name": "Dillon Dingler",
+      "mlb_team": "DET",
       "br_id": "mlb_693307",
       "group": "Undrafted",
       "drafted": false,
@@ -809,8 +852,8 @@
       "doubles": 1,
       "homers": 2,
       "total": 3,
-      "games_played": 6,
-      "per_game": 0.5,
+      "games_played": 7,
+      "per_game": 0.429,
       "prev_rank": null,
       "prev_doubles": null,
       "prev_homers": null,
@@ -821,6 +864,7 @@
     {
       "rank": 10,
       "name": "Aaron Judge",
+      "mlb_team": "NYY",
       "br_id": "judgear01",
       "group": "A",
       "drafted": true,
@@ -840,6 +884,7 @@
     {
       "rank": 10,
       "name": "Corey Seager",
+      "mlb_team": "TEX",
       "br_id": "seageco01",
       "group": "Wildcard",
       "drafted": true,
@@ -859,6 +904,7 @@
     {
       "rank": 10,
       "name": "Elly De La Cruz",
+      "mlb_team": "CIN",
       "br_id": "delacel01",
       "group": "Wildcard",
       "drafted": true,
@@ -878,6 +924,7 @@
     {
       "rank": 10,
       "name": "Oneil Cruz",
+      "mlb_team": "PIT",
       "br_id": "cruzon01",
       "group": "Wildcard",
       "drafted": true,
@@ -897,6 +944,7 @@
     {
       "rank": 27,
       "name": "Manny Machado",
+      "mlb_team": "SD",
       "br_id": "machama01",
       "group": "Wildcard",
       "drafted": true,
@@ -916,6 +964,7 @@
     {
       "rank": 27,
       "name": "Bo Bichette",
+      "mlb_team": "NYM",
       "br_id": "bichebo01",
       "group": "Wildcard",
       "drafted": true,
@@ -935,6 +984,7 @@
     {
       "rank": 27,
       "name": "Trea Turner",
+      "mlb_team": "PHI",
       "br_id": "turnetr01",
       "group": "Wildcard",
       "drafted": true,
@@ -954,6 +1004,7 @@
     {
       "rank": 27,
       "name": "Tyler Soderstrom",
+      "mlb_team": "ATH",
       "br_id": "soderty01",
       "group": "Wildcard",
       "drafted": true,
@@ -973,6 +1024,7 @@
     {
       "rank": 27,
       "name": "Michael Busch",
+      "mlb_team": "CHC",
       "br_id": "buschmi01",
       "group": "Wildcard",
       "drafted": true,
@@ -992,6 +1044,7 @@
     {
       "rank": null,
       "name": "Gabriel Moreno",
+      "mlb_team": "AZ",
       "br_id": "mlb_672515",
       "group": "Undrafted",
       "drafted": false,
@@ -1011,6 +1064,7 @@
     {
       "rank": null,
       "name": "Henry Davis",
+      "mlb_team": "PIT",
       "br_id": "mlb_680779",
       "group": "Undrafted",
       "drafted": false,
@@ -1030,6 +1084,7 @@
     {
       "rank": 27,
       "name": "Rafael Devers",
+      "mlb_team": "SF",
       "br_id": "deverra01",
       "group": "C",
       "drafted": true,
@@ -1049,6 +1104,7 @@
     {
       "rank": 27,
       "name": "Kyle Tucker",
+      "mlb_team": "LAD",
       "br_id": "tuckeky01",
       "group": "Wildcard",
       "drafted": true,
@@ -1068,6 +1124,7 @@
     {
       "rank": 27,
       "name": "Spencer Steer",
+      "mlb_team": "CIN",
       "br_id": "steersp01",
       "group": "Wildcard",
       "drafted": true,
@@ -1087,6 +1144,7 @@
     {
       "rank": 27,
       "name": "Salvador P\u00e9rez",
+      "mlb_team": "KC",
       "br_id": "perezsa01",
       "group": "Wildcard",
       "drafted": true,
@@ -1094,8 +1152,8 @@
       "doubles": 1,
       "homers": 1,
       "total": 2,
-      "games_played": 6,
-      "per_game": 0.333,
+      "games_played": 7,
+      "per_game": 0.286,
       "prev_rank": 19,
       "prev_doubles": 0,
       "prev_homers": 0,
@@ -1106,6 +1164,7 @@
     {
       "rank": null,
       "name": "Keibert Ruiz",
+      "mlb_team": "WSH",
       "br_id": "mlb_660688",
       "group": "Undrafted",
       "drafted": false,
@@ -1125,6 +1184,7 @@
     {
       "rank": null,
       "name": "Hunter Goodman",
+      "mlb_team": "COL",
       "br_id": "mlb_696100",
       "group": "Undrafted",
       "drafted": false,
@@ -1144,6 +1204,7 @@
     {
       "rank": null,
       "name": "Alejandro Kirk",
+      "mlb_team": "TOR",
       "br_id": "mlb_672386",
       "group": "Undrafted",
       "drafted": false,
@@ -1163,6 +1224,7 @@
     {
       "rank": null,
       "name": "J.T. Realmuto",
+      "mlb_team": "PHI",
       "br_id": "mlb_592663",
       "group": "Undrafted",
       "drafted": false,
@@ -1182,6 +1244,7 @@
     {
       "rank": 27,
       "name": "Alex Bregman",
+      "mlb_team": "CHC",
       "br_id": "bregmal01",
       "group": "Wildcard",
       "drafted": true,
@@ -1201,6 +1264,7 @@
     {
       "rank": 27,
       "name": "Eugenio Su\u00e1rez",
+      "mlb_team": "CIN",
       "br_id": "suareeu01",
       "group": "Wildcard",
       "drafted": true,
@@ -1220,6 +1284,7 @@
     {
       "rank": null,
       "name": "Will Smith",
+      "mlb_team": "LAD",
       "br_id": "mlb_669257",
       "group": "Undrafted",
       "drafted": false,
@@ -1239,6 +1304,7 @@
     {
       "rank": 38,
       "name": "Cal Raleigh",
+      "mlb_team": "SEA",
       "br_id": "raleica01",
       "group": "A",
       "drafted": true,
@@ -1258,6 +1324,7 @@
     {
       "rank": 38,
       "name": "Fernando Tatis Jr.",
+      "mlb_team": "SD",
       "br_id": "tatisfe02",
       "group": "B",
       "drafted": true,
@@ -1277,6 +1344,7 @@
     {
       "rank": 38,
       "name": "Ronald Acu\u00f1a Jr.",
+      "mlb_team": "ATL",
       "br_id": "acunaro01",
       "group": "C",
       "drafted": true,
@@ -1296,6 +1364,7 @@
     {
       "rank": 38,
       "name": "Austin Riley",
+      "mlb_team": "ATL",
       "br_id": "rileyau01",
       "group": "Wildcard",
       "drafted": true,
@@ -1315,6 +1384,7 @@
     {
       "rank": 38,
       "name": "Pete Crow-Armstrong",
+      "mlb_team": "CHC",
       "br_id": "crowape01",
       "group": "Wildcard",
       "drafted": true,
@@ -1334,6 +1404,7 @@
     {
       "rank": 38,
       "name": "Konnor Griffin",
+      "mlb_team": "PIT",
       "br_id": "griffko01",
       "group": "Wildcard",
       "drafted": true,
@@ -1353,6 +1424,7 @@
     {
       "rank": 38,
       "name": "Junior Caminero",
+      "mlb_team": "TB",
       "br_id": "caminju01",
       "group": "Wildcard",
       "drafted": true,
@@ -1372,6 +1444,7 @@
     {
       "rank": 38,
       "name": "Vinnie Pasquantino",
+      "mlb_team": "KC",
       "br_id": "pasquvi01",
       "group": "Wildcard",
       "drafted": true,
@@ -1379,8 +1452,8 @@
       "doubles": 1,
       "homers": 0,
       "total": 1,
-      "games_played": 6,
-      "per_game": 0.167,
+      "games_played": 7,
+      "per_game": 0.143,
       "prev_rank": 32,
       "prev_doubles": 0,
       "prev_homers": 0,
@@ -1391,6 +1464,7 @@
     {
       "rank": 38,
       "name": "Spencer Torkelson",
+      "mlb_team": "DET",
       "br_id": "torkesp01",
       "group": "Wildcard",
       "drafted": true,
@@ -1398,8 +1472,8 @@
       "doubles": 1,
       "homers": 0,
       "total": 1,
-      "games_played": 6,
-      "per_game": 0.167,
+      "games_played": 7,
+      "per_game": 0.143,
       "prev_rank": 32,
       "prev_doubles": 0,
       "prev_homers": 0,
@@ -1410,6 +1484,7 @@
     {
       "rank": 38,
       "name": "Jarren Duran",
+      "mlb_team": "BOS",
       "br_id": "duranja01",
       "group": "Wildcard",
       "drafted": true,
@@ -1429,6 +1504,7 @@
     {
       "rank": 38,
       "name": "Luis Arraez",
+      "mlb_team": "SF",
       "br_id": "arraelu01",
       "group": "Wildcard",
       "drafted": true,
@@ -1448,6 +1524,7 @@
     {
       "rank": 38,
       "name": "Steven Kwan",
+      "mlb_team": "CLE",
       "br_id": "kwanst01",
       "group": "Wildcard",
       "drafted": true,
@@ -1467,6 +1544,7 @@
     {
       "rank": 38,
       "name": "Byron Buxton",
+      "mlb_team": "MIN",
       "br_id": "buxtoby01",
       "group": "Wildcard",
       "drafted": true,
@@ -1486,6 +1564,7 @@
     {
       "rank": 38,
       "name": "Jordan Beck",
+      "mlb_team": "COL",
       "br_id": "beckjo01",
       "group": "Wildcard",
       "drafted": true,
@@ -1505,6 +1584,7 @@
     {
       "rank": 38,
       "name": "Matt McLain",
+      "mlb_team": "CIN",
       "br_id": "mclaima01",
       "group": "Wildcard",
       "drafted": true,
@@ -1524,6 +1604,7 @@
     {
       "rank": 38,
       "name": "Addison Barger",
+      "mlb_team": "TOR",
       "br_id": "bargead01",
       "group": "Wildcard",
       "drafted": true,
@@ -1543,6 +1624,7 @@
     {
       "rank": 38,
       "name": "Wyatt Langford",
+      "mlb_team": "TEX",
       "br_id": "langfwy01",
       "group": "Wildcard",
       "drafted": true,
@@ -1562,6 +1644,7 @@
     {
       "rank": 38,
       "name": "Angel Mart\u00ednez",
+      "mlb_team": "CLE",
       "br_id": "martian04",
       "group": "Wildcard",
       "drafted": true,
@@ -1581,6 +1664,7 @@
     {
       "rank": 38,
       "name": "Trent Grisham",
+      "mlb_team": "NYY",
       "br_id": "grishtr01",
       "group": "Wildcard",
       "drafted": true,
@@ -1600,6 +1684,7 @@
     {
       "rank": 38,
       "name": "Maikel Garcia",
+      "mlb_team": "KC",
       "br_id": "garcima01",
       "group": "Wildcard",
       "drafted": true,
@@ -1607,8 +1692,8 @@
       "doubles": 1,
       "homers": 0,
       "total": 1,
-      "games_played": 6,
-      "per_game": 0.167,
+      "games_played": 7,
+      "per_game": 0.143,
       "prev_rank": 32,
       "prev_doubles": 0,
       "prev_homers": 0,
@@ -1619,6 +1704,7 @@
     {
       "rank": null,
       "name": "Yainer Diaz",
+      "mlb_team": "HOU",
       "br_id": "mlb_673237",
       "group": "Undrafted",
       "drafted": false,
@@ -1638,6 +1724,7 @@
     {
       "rank": null,
       "name": "Ryan Jeffers",
+      "mlb_team": "MIN",
       "br_id": "mlb_680777",
       "group": "Undrafted",
       "drafted": false,
@@ -1657,6 +1744,7 @@
     {
       "rank": 38,
       "name": "Shohei Ohtani",
+      "mlb_team": "LAD",
       "br_id": "ohtansh01",
       "group": "A",
       "drafted": true,
@@ -1676,6 +1764,7 @@
     {
       "rank": 38,
       "name": "Pete Alonso",
+      "mlb_team": "BAL",
       "br_id": "alonspe01",
       "group": "A",
       "drafted": true,
@@ -1695,6 +1784,7 @@
     {
       "rank": 38,
       "name": "Roman Anthony",
+      "mlb_team": "BOS",
       "br_id": "anthoro01",
       "group": "Wildcard",
       "drafted": true,
@@ -1714,6 +1804,7 @@
     {
       "rank": 38,
       "name": "Ketel Marte",
+      "mlb_team": "AZ",
       "br_id": "marteke01",
       "group": "Wildcard",
       "drafted": true,
@@ -1733,6 +1824,7 @@
     {
       "rank": null,
       "name": "Carter Jensen",
+      "mlb_team": "KC",
       "br_id": "mlb_695600",
       "group": "Undrafted",
       "drafted": false,
@@ -1752,10 +1844,31 @@
     {
       "rank": 62,
       "name": "Vladimir Guerrero Jr.",
+      "mlb_team": "TOR",
       "br_id": "guerrvl02",
       "group": "B",
       "drafted": true,
       "times_selected": 22,
+      "doubles": 0,
+      "homers": 0,
+      "total": 0,
+      "games_played": 8,
+      "per_game": 0.0,
+      "prev_rank": 54,
+      "prev_doubles": 0,
+      "prev_homers": 0,
+      "prev_total": 0,
+      "rank_change": -8,
+      "total_change": 0
+    },
+    {
+      "rank": 62,
+      "name": "Bobby Witt Jr.",
+      "mlb_team": "KC",
+      "br_id": "wittbo02",
+      "group": "C",
+      "drafted": true,
+      "times_selected": 59,
       "doubles": 0,
       "homers": 0,
       "total": 0,
@@ -1770,26 +1883,8 @@
     },
     {
       "rank": 62,
-      "name": "Bobby Witt Jr.",
-      "br_id": "wittbo02",
-      "group": "C",
-      "drafted": true,
-      "times_selected": 59,
-      "doubles": 0,
-      "homers": 0,
-      "total": 0,
-      "games_played": 6,
-      "per_game": 0.0,
-      "prev_rank": 54,
-      "prev_doubles": 0,
-      "prev_homers": 0,
-      "prev_total": 0,
-      "rank_change": -8,
-      "total_change": 0
-    },
-    {
-      "rank": 62,
       "name": "Francisco Lindor",
+      "mlb_team": "NYM",
       "br_id": "lindofr01",
       "group": "Wildcard",
       "drafted": true,
@@ -1809,6 +1904,7 @@
     {
       "rank": 62,
       "name": "Julio Rodr\u00edguez",
+      "mlb_team": "SEA",
       "br_id": "rodriju03",
       "group": "Wildcard",
       "drafted": true,
@@ -1828,6 +1924,7 @@
     {
       "rank": 62,
       "name": "Brent Rooker",
+      "mlb_team": "ATH",
       "br_id": "rookebr01",
       "group": "Wildcard",
       "drafted": true,
@@ -1847,6 +1944,7 @@
     {
       "rank": 62,
       "name": "Nick Kurtz",
+      "mlb_team": "ATH",
       "br_id": "kurtzni01",
       "group": "Wildcard",
       "drafted": true,
@@ -1866,6 +1964,7 @@
     {
       "rank": 62,
       "name": "Jackson Chourio",
+      "mlb_team": "MIL",
       "br_id": "chourja01",
       "group": "Wildcard",
       "drafted": true,
@@ -1885,6 +1984,7 @@
     {
       "rank": 62,
       "name": "Seiya Suzuki",
+      "mlb_team": "CHC",
       "br_id": "suzukse01",
       "group": "Wildcard",
       "drafted": true,
@@ -1904,6 +2004,7 @@
     {
       "rank": 62,
       "name": "Jo Adell",
+      "mlb_team": "LAA",
       "br_id": "adelljo01",
       "group": "Wildcard",
       "drafted": true,
@@ -1923,6 +2024,7 @@
     {
       "rank": 62,
       "name": "Braiden Ward",
+      "mlb_team": "BOS",
       "br_id": "wardbr01",
       "group": "Wildcard",
       "drafted": true,
@@ -1942,6 +2044,7 @@
     {
       "rank": null,
       "name": "Bo Naylor",
+      "mlb_team": "CLE",
       "br_id": "mlb_666310",
       "group": "Undrafted",
       "drafted": false,
@@ -1961,6 +2064,7 @@
     {
       "rank": null,
       "name": "Carson Kelly",
+      "mlb_team": "CHC",
       "br_id": "mlb_608348",
       "group": "Undrafted",
       "drafted": false,
@@ -1980,6 +2084,7 @@
     {
       "rank": null,
       "name": "Michael Lorenzen",
+      "mlb_team": "COL",
       "br_id": "mlb_547179",
       "group": "Undrafted",
       "drafted": false,
@@ -1999,6 +2104,7 @@
     {
       "rank": null,
       "name": "Patrick Bailey",
+      "mlb_team": "SF",
       "br_id": "mlb_672275",
       "group": "Undrafted",
       "drafted": false,
@@ -2018,6 +2124,7 @@
     {
       "rank": null,
       "name": "Edgar Quero",
+      "mlb_team": "CWS",
       "br_id": "mlb_700337",
       "group": "Undrafted",
       "drafted": false,
@@ -2037,6 +2144,7 @@
     {
       "rank": null,
       "name": "Miles Mikolas",
+      "mlb_team": "WSH",
       "br_id": "mlb_571945",
       "group": "Undrafted",
       "drafted": false,
@@ -2055,7 +2163,28 @@
     },
     {
       "rank": null,
+      "name": "Dustin May",
+      "mlb_team": "STL",
+      "br_id": "mlb_669160",
+      "group": "Undrafted",
+      "drafted": false,
+      "times_selected": 0,
+      "doubles": 0,
+      "homers": 0,
+      "total": 0,
+      "games_played": 0,
+      "per_game": 0.0,
+      "prev_rank": null,
+      "prev_doubles": null,
+      "prev_homers": null,
+      "prev_total": null,
+      "rank_change": null,
+      "total_change": null
+    },
+    {
+      "rank": null,
       "name": "Logan Gilbert",
+      "mlb_team": "SEA",
       "br_id": "mlb_669302",
       "group": "Undrafted",
       "drafted": false,
@@ -2075,6 +2204,7 @@
     {
       "rank": null,
       "name": "Carlos Narv\u00e1ez",
+      "mlb_team": "BOS",
       "br_id": "mlb_665966",
       "group": "Undrafted",
       "drafted": false,
@@ -2094,6 +2224,7 @@
     {
       "rank": null,
       "name": "Nathan Eovaldi",
+      "mlb_team": "TEX",
       "br_id": "mlb_543135",
       "group": "Undrafted",
       "drafted": false,
@@ -2113,6 +2244,7 @@
     {
       "rank": null,
       "name": "Emmet Sheehan",
+      "mlb_team": "LAD",
       "br_id": "mlb_686218",
       "group": "Undrafted",
       "drafted": false,
@@ -2132,6 +2264,7 @@
     {
       "rank": null,
       "name": "Drew Millas",
+      "mlb_team": "WSH",
       "br_id": "mlb_686452",
       "group": "Undrafted",
       "drafted": false,
@@ -2151,6 +2284,7 @@
     {
       "rank": null,
       "name": "Jose Trevino",
+      "mlb_team": "CIN",
       "br_id": "mlb_624431",
       "group": "Undrafted",
       "drafted": false,
@@ -2170,6 +2304,7 @@
     {
       "rank": null,
       "name": "Roddery Mu\u00f1oz",
+      "mlb_team": "HOU",
       "br_id": "mlb_682610",
       "group": "Undrafted",
       "drafted": false,
@@ -2189,6 +2324,7 @@
     {
       "rank": null,
       "name": "Eury P\u00e9rez",
+      "mlb_team": "MIA",
       "br_id": "mlb_691587",
       "group": "Undrafted",
       "drafted": false,
@@ -2208,6 +2344,7 @@
     {
       "rank": null,
       "name": "Mike Burrows",
+      "mlb_team": "HOU",
       "br_id": "mlb_681347",
       "group": "Undrafted",
       "drafted": false,
@@ -2227,6 +2364,7 @@
     {
       "rank": null,
       "name": "Bailey Ober",
+      "mlb_team": "MIN",
       "br_id": "mlb_641927",
       "group": "Undrafted",
       "drafted": false,
@@ -2246,6 +2384,7 @@
     {
       "rank": null,
       "name": "Brady Singer",
+      "mlb_team": "CIN",
       "br_id": "mlb_663903",
       "group": "Undrafted",
       "drafted": false,
@@ -2265,26 +2404,8 @@
     {
       "rank": null,
       "name": "Shane Smith",
+      "mlb_team": "CWS",
       "br_id": "mlb_681343",
-      "group": "Undrafted",
-      "drafted": false,
-      "times_selected": 0,
-      "doubles": 0,
-      "homers": 0,
-      "total": 0,
-      "games_played": 0,
-      "per_game": 0.0,
-      "prev_rank": null,
-      "prev_doubles": null,
-      "prev_homers": null,
-      "prev_total": null,
-      "rank_change": null,
-      "total_change": null
-    },
-    {
-      "rank": null,
-      "name": "Dustin May",
-      "br_id": "mlb_669160",
       "group": "Undrafted",
       "drafted": false,
       "times_selected": 0,

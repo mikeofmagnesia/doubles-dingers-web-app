@@ -4,6 +4,17 @@ from models import PlayerStats
 
 MLB_API = "https://statsapi.mlb.com/api/v1"
 
+# Static mapping of MLB team IDs to standard 2-3 letter abbreviations.
+# Team IDs are stable; update only if a franchise relocates or is added.
+_TEAM_ABBR: dict[int, str] = {
+    108: "LAA", 109: "AZ",  110: "BAL", 111: "BOS", 112: "CHC",
+    113: "CIN", 114: "CLE", 115: "COL", 116: "DET", 117: "HOU",
+    118: "KC",  119: "LAD", 120: "WSH", 121: "NYM", 133: "ATH",
+    134: "PIT", 135: "SD",  136: "SEA", 137: "SF",  138: "STL",
+    139: "TB",  140: "TEX", 141: "TOR", 142: "MIN", 143: "PHI",
+    144: "ATL", 145: "CWS", 146: "MIA", 147: "NYY", 158: "MIL",
+}
+
 
 def fetch_player_stats(mlb_id: int, name: str, br_id: str, group: str, season: int) -> PlayerStats:
     """Fetch a single player's hitting stats from the MLB Stats API."""
@@ -23,8 +34,19 @@ def fetch_player_stats(mlb_id: int, name: str, br_id: str, group: str, season: i
     stats_list = resp.json().get("stats", [])
     splits = stats_list[0].get("splits", []) if stats_list else []
     if not splits:
+        mlb_team = ""
+        try:
+            people_resp = requests.get(f"{MLB_API}/people/{mlb_id}", params={"hydrate": "currentTeam"}, timeout=15)
+            people_resp.raise_for_status()
+            current_team = people_resp.json().get("people", [{}])[0].get("currentTeam", {})
+            team_id = current_team.get("id")
+            # Fall back to parentOrgId for minor league / rehab assignments
+            parent_id = current_team.get("parentOrgId")
+            mlb_team = _TEAM_ABBR.get(team_id) or _TEAM_ABBR.get(parent_id, "")
+        except requests.RequestException:
+            pass
         print(f"  {name}: no {season} stats yet (0 2B, 0 HR, 0 G)")
-        return PlayerStats(name=name, br_id=br_id, group=group)
+        return PlayerStats(name=name, br_id=br_id, group=group, mlb_team=mlb_team)
 
     # Use the last split which is the season total (handles traded players)
     last_split = splits[-1]
@@ -32,7 +54,8 @@ def fetch_player_stats(mlb_id: int, name: str, br_id: str, group: str, season: i
     doubles = stat.get("doubles", 0) or 0
     homers  = stat.get("homeRuns", 0) or 0
     games   = stat.get("gamesPlayed", 0) or 0
-    mlb_team = last_split.get("team", {}).get("abbreviation", "")
+    team_id = last_split.get("team", {}).get("id")
+    mlb_team = _TEAM_ABBR.get(team_id, "") if team_id else ""
 
     print(f"  {name} ({group}): {games}G  {doubles}2B  {homers}HR  ({doubles + homers} total)")
     return PlayerStats(name=name, br_id=br_id, group=group, mlb_team=mlb_team, doubles=doubles, homers=homers, games_played=games)

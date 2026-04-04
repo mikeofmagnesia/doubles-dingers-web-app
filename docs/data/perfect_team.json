@@ -5,12 +5,14 @@
       "leaders": [
         {
           "name": "Freddie Freeman",
+          "mlb_team": "LAD",
           "doubles": 1,
           "homers": 2,
           "total": 3
         },
         {
           "name": "Aaron Judge",
+          "mlb_team": "NYY",
           "doubles": 0,
           "homers": 3,
           "total": 3
@@ -22,6 +24,7 @@
       "leaders": [
         {
           "name": "Matt Olson",
+          "mlb_team": "ATL",
           "doubles": 4,
           "homers": 2,
           "total": 6
@@ -33,12 +36,14 @@
       "leaders": [
         {
           "name": "Jos\u00e9 Ram\u00edrez",
+          "mlb_team": "CLE",
           "doubles": 2,
           "homers": 1,
           "total": 3
         },
         {
           "name": "Juan Soto",
+          "mlb_team": "NYM",
           "doubles": 2,
           "homers": 1,
           "total": 3
@@ -51,60 +56,70 @@
     "players": [
       {
         "name": "Ben Rice",
+        "mlb_team": "NYY",
         "doubles": 4,
         "homers": 2,
         "total": 6
       },
       {
         "name": "Yordan Alvarez",
+        "mlb_team": "HOU",
         "doubles": 3,
         "homers": 3,
         "total": 6
       },
       {
         "name": "Wilyer Abreu",
+        "mlb_team": "BOS",
         "doubles": 3,
         "homers": 3,
         "total": 6
       },
       {
         "name": "Christian Walker",
+        "mlb_team": "HOU",
         "doubles": 5,
         "homers": 0,
         "total": 5
       },
       {
         "name": "Brice Turang",
+        "mlb_team": "MIL",
         "doubles": 4,
         "homers": 1,
         "total": 5
       },
       {
         "name": "Max Muncy",
+        "mlb_team": "ATH",
         "doubles": 3,
         "homers": 2,
         "total": 5
       },
       {
         "name": "Josh Bell",
+        "mlb_team": "MIN",
         "doubles": 3,
         "homers": 2,
         "total": 5
       },
       {
         "name": "Sal Stewart",
+        "mlb_team": "CIN",
         "doubles": 3,
         "homers": 2,
         "total": 5
       },
       {
         "name": "Brandon Lowe",
+        "mlb_team": "PIT",
         "doubles": 2,
         "homers": 3,
         "total": 5
       },
       {
         "name": "Chase DeLauter",
+        "mlb_team": "CLE",
         "doubles": 0,
         "homers": 5,
         "total": 5

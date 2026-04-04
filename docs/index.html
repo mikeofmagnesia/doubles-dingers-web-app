@@ -138,6 +138,12 @@
     .group-WC { background: var(--bw-bg); color: var(--bw-fg); }
     .group-UD { background: transparent; color: var(--bs-secondary-color);
                 border: 1px solid currentColor; }
+    .team-badge {
+      display: inline-block; padding: 1px 3px;
+      border-radius: 10px; font-size: 0.5rem; font-weight: 600;
+      background: transparent; color: var(--bs-secondary-color);
+      opacity: 0.6; border: 1px solid currentColor; margin-left: 11px;
+    }
 
     /* ── Undrafted player rows ─────────────────────────────────────── */
     tr.undrafted td { opacity: 0.55; font-style: italic; }
@@ -467,6 +473,10 @@ function statChgHtml(chg) {
   if (chg < 0)  return `<span class="down">${chg}</span>`;
 }
 
+function teamBadge(t) {
+  return t ? `<span class="team-badge">${t}</span>` : '';
+}
+
 function groupBadge(g) {
   const cls = g === 'A' ? 'group-A'
             : g === 'B' ? 'group-B'
@@ -579,7 +589,7 @@ function _renderPlayersTable() {
     tbody.innerHTML = rows.map(p => `
       <tr${p.drafted === false ? ' class="undrafted"' : ''}>
         <td class="text-center fw-bold">${p.drafted !== false ? (compRankP[p.name] ?? p.rank) : (allRankP[p.name] ?? '-')}</td>
-        <td>${p.name}${p.mlb_team ? ` <span class="text-muted small">${p.mlb_team}</span>` : ''}</td>
+        <td>${p.name}${teamBadge(p.mlb_team)}</td>
         <td>${groupBadge(p.group)}</td>
         <td class="text-center fw-bold">${p.total}</td>
         <td class="text-center">${p.doubles}</td>
@@ -925,7 +935,7 @@ async function loadPerfectTeam() {
           ? `<td rowspan="${g.leaders.length}">${groupBadge(group)}${g.is_tied ? ' <span class="text-muted small">tied</span>' : ''}</td>`
           : '';
         const rowCls = g.is_tied ? ' class="text-muted"' : '';
-        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}${p.mlb_team ? ` <span class="text-muted small">${p.mlb_team}</span>` : ''}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td><td class="text-center fw-bold">${p.total}</td></tr>`);
+        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}${teamBadge(p.mlb_team)}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td><td class="text-center fw-bold">${p.total}</td></tr>`);
       });
     }
 
@@ -941,7 +951,7 @@ async function loadPerfectTeam() {
           ? `<td rowspan="${wc.players.length}">${groupBadge('Wildcard')}${wc.is_tied ? ' <span class="text-muted small">tied</span>' : ''}</td>`
           : '';
         const rowCls = !isCounted ? ' class="text-muted"' : '';
-        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}${p.mlb_team ? ` <span class="text-muted small">${p.mlb_team}</span>` : ''}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td><td class="text-center fw-bold">${p.total}</td></tr>`);
+        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}${teamBadge(p.mlb_team)}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td><td class="text-center fw-bold">${p.total}</td></tr>`);
       });
     }
 
