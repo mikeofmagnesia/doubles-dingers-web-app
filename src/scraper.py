@@ -27,13 +27,15 @@ def fetch_player_stats(mlb_id: int, name: str, br_id: str, group: str, season: i
         return PlayerStats(name=name, br_id=br_id, group=group)
 
     # Use the last split which is the season total (handles traded players)
-    stat = splits[-1].get("stat", {})
+    last_split = splits[-1]
+    stat = last_split.get("stat", {})
     doubles = stat.get("doubles", 0) or 0
     homers  = stat.get("homeRuns", 0) or 0
     games   = stat.get("gamesPlayed", 0) or 0
+    mlb_team = last_split.get("team", {}).get("abbreviation", "")
 
     print(f"  {name} ({group}): {games}G  {doubles}2B  {homers}HR  ({doubles + homers} total)")
-    return PlayerStats(name=name, br_id=br_id, group=group, doubles=doubles, homers=homers, games_played=games)
+    return PlayerStats(name=name, br_id=br_id, group=group, mlb_team=mlb_team, doubles=doubles, homers=homers, games_played=games)
 
 
 def fetch_top_combined_leaders(season: int, limit: int = 100) -> dict[int, dict]:

@@ -579,7 +579,7 @@ function _renderPlayersTable() {
     tbody.innerHTML = rows.map(p => `
       <tr${p.drafted === false ? ' class="undrafted"' : ''}>
         <td class="text-center fw-bold">${p.drafted !== false ? (compRankP[p.name] ?? p.rank) : (allRankP[p.name] ?? '-')}</td>
-        <td>${p.name}</td>
+        <td>${p.name}${p.mlb_team ? ` <span class="text-muted small">${p.mlb_team}</span>` : ''}</td>
         <td>${groupBadge(p.group)}</td>
         <td class="text-center fw-bold">${p.total}</td>
         <td class="text-center">${p.doubles}</td>
@@ -925,7 +925,7 @@ async function loadPerfectTeam() {
           ? `<td rowspan="${g.leaders.length}">${groupBadge(group)}${g.is_tied ? ' <span class="text-muted small">tied</span>' : ''}</td>`
           : '';
         const rowCls = g.is_tied ? ' class="text-muted"' : '';
-        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td><td class="text-center fw-bold">${p.total}</td></tr>`);
+        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}${p.mlb_team ? ` <span class="text-muted small">${p.mlb_team}</span>` : ''}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td><td class="text-center fw-bold">${p.total}</td></tr>`);
       });
     }
 
@@ -941,7 +941,7 @@ async function loadPerfectTeam() {
           ? `<td rowspan="${wc.players.length}">${groupBadge('Wildcard')}${wc.is_tied ? ' <span class="text-muted small">tied</span>' : ''}</td>`
           : '';
         const rowCls = !isCounted ? ' class="text-muted"' : '';
-        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td><td class="text-center fw-bold">${p.total}</td></tr>`);
+        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}${p.mlb_team ? ` <span class="text-muted small">${p.mlb_team}</span>` : ''}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td><td class="text-center fw-bold">${p.total}</td></tr>`);
       });
     }
 

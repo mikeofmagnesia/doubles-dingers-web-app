@@ -6,6 +6,7 @@ class PlayerStats:
     name: str
     br_id: str
     group: str = "Wildcard"
+    mlb_team: str = ""
     doubles: int = 0
     homers: int = 0
     games_played: int = 0

@@ -47,7 +47,7 @@ def _e(value):
 
 
 def _player_row(p: PlayerStats) -> dict:
-    return {"name": p.name, "doubles": p.doubles, "homers": p.homers, "total": p.total}
+    return {"name": p.name, "mlb_team": p.mlb_team, "doubles": p.doubles, "homers": p.homers, "total": p.total}
 
 
 # ---------------------------------------------------------------------------
@@ -125,6 +125,7 @@ def write_player_stats(players: list[PlayerStats], teams_config: dict) -> None:
         rows.append({
             "rank": p.rank,
             "name": p.name,
+            "mlb_team": p.mlb_team,
             "br_id": p.br_id,
             "group": p.group,
             "drafted": p.drafted,
