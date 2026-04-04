@@ -1,19 +1,19 @@
 {
-  "updated": "2026-04-03",
+  "updated": "2026-04-04",
   "groups": {
     "A": {
       "leaders": [
         {
           "name": "Freddie Freeman",
           "doubles": 1,
-          "homers": 1,
-          "total": 2
+          "homers": 2,
+          "total": 3
         },
         {
           "name": "Aaron Judge",
           "doubles": 0,
-          "homers": 2,
-          "total": 2
+          "homers": 3,
+          "total": 3
         }
       ],
       "is_tied": true
@@ -23,8 +23,8 @@
         {
           "name": "Matt Olson",
           "doubles": 4,
-          "homers": 1,
-          "total": 5
+          "homers": 2,
+          "total": 6
         }
       ],
       "is_tied": false
@@ -50,6 +50,12 @@
   "wildcard": {
     "players": [
       {
+        "name": "Ben Rice",
+        "doubles": 4,
+        "homers": 2,
+        "total": 6
+      },
+      {
         "name": "Yordan Alvarez",
         "doubles": 3,
         "homers": 3,
@@ -74,15 +80,39 @@
         "total": 5
       },
       {
+        "name": "Max Muncy",
+        "doubles": 3,
+        "homers": 2,
+        "total": 5
+      },
+      {
+        "name": "Josh Bell",
+        "doubles": 3,
+        "homers": 2,
+        "total": 5
+      },
+      {
         "name": "Sal Stewart",
         "doubles": 3,
         "homers": 2,
+        "total": 5
+      },
+      {
+        "name": "Brandon Lowe",
+        "doubles": 2,
+        "homers": 3,
+        "total": 5
+      },
+      {
+        "name": "Chase DeLauter",
+        "doubles": 0,
+        "homers": 5,
         "total": 5
       }
     ],
     "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 32,
+  "grand_total": 35,
   "has_tied_groups": true
 }
