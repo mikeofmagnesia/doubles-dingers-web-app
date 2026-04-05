@@ -1,33 +1,26 @@
 {
-  "updated": "2026-04-04",
+  "updated": "2026-04-05",
   "groups": {
     "A": {
       "leaders": [
         {
           "name": "Freddie Freeman",
           "mlb_team": "LAD",
-          "doubles": 1,
+          "doubles": 3,
           "homers": 2,
-          "total": 3
-        },
-        {
-          "name": "Aaron Judge",
-          "mlb_team": "NYY",
-          "doubles": 0,
-          "homers": 3,
-          "total": 3
+          "total": 5
         }
       ],
-      "is_tied": true
+      "is_tied": false
     },
     "B": {
       "leaders": [
         {
           "name": "Matt Olson",
           "mlb_team": "ATL",
-          "doubles": 4,
+          "doubles": 5,
           "homers": 2,
-          "total": 6
+          "total": 7
         }
       ],
       "is_tied": false
@@ -55,6 +48,13 @@
   "wildcard": {
     "players": [
       {
+        "name": "Christian Walker",
+        "mlb_team": "HOU",
+        "doubles": 6,
+        "homers": 1,
+        "total": 7
+      },
+      {
         "name": "Ben Rice",
         "mlb_team": "NYY",
         "doubles": 4,
@@ -74,60 +74,11 @@
         "doubles": 3,
         "homers": 3,
         "total": 6
-      },
-      {
-        "name": "Christian Walker",
-        "mlb_team": "HOU",
-        "doubles": 5,
-        "homers": 0,
-        "total": 5
-      },
-      {
-        "name": "Brice Turang",
-        "mlb_team": "MIL",
-        "doubles": 4,
-        "homers": 1,
-        "total": 5
-      },
-      {
-        "name": "Max Muncy",
-        "mlb_team": "ATH",
-        "doubles": 3,
-        "homers": 2,
-        "total": 5
-      },
-      {
-        "name": "Josh Bell",
-        "mlb_team": "MIN",
-        "doubles": 3,
-        "homers": 2,
-        "total": 5
-      },
-      {
-        "name": "Sal Stewart",
-        "mlb_team": "CIN",
-        "doubles": 3,
-        "homers": 2,
-        "total": 5
-      },
-      {
-        "name": "Brandon Lowe",
-        "mlb_team": "PIT",
-        "doubles": 2,
-        "homers": 3,
-        "total": 5
-      },
-      {
-        "name": "Chase DeLauter",
-        "mlb_team": "CLE",
-        "doubles": 0,
-        "homers": 5,
-        "total": 5
       }
     ],
-    "is_tied": true,
+    "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 35,
+  "grand_total": 40,
   "has_tied_groups": true
 }
