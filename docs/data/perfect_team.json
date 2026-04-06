@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-05",
+  "updated": "2026-04-06",
   "groups": {
     "A": {
       "leaders": [
@@ -51,34 +51,34 @@
         "name": "Christian Walker",
         "mlb_team": "HOU",
         "doubles": 6,
-        "homers": 1,
-        "total": 7
+        "homers": 2,
+        "total": 8
       },
       {
         "name": "Ben Rice",
         "mlb_team": "NYY",
         "doubles": 4,
-        "homers": 2,
-        "total": 6
+        "homers": 3,
+        "total": 7
+      },
+      {
+        "name": "Wilyer Abreu",
+        "mlb_team": "BOS",
+        "doubles": 4,
+        "homers": 3,
+        "total": 7
       },
       {
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
         "doubles": 3,
-        "homers": 3,
-        "total": 6
-      },
-      {
-        "name": "Wilyer Abreu",
-        "mlb_team": "BOS",
-        "doubles": 3,
-        "homers": 3,
-        "total": 6
+        "homers": 4,
+        "total": 7
       }
     ],
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 40,
+  "grand_total": 44,
   "has_tied_groups": true
 }
