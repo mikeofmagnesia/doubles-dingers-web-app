@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-07",
+  "updated": "2026-04-08",
   "groups": {
     "A": {
       "leaders": [
@@ -18,9 +18,9 @@
         {
           "name": "Matt Olson",
           "mlb_team": "ATL",
-          "doubles": 5,
+          "doubles": 6,
           "homers": 2,
-          "total": 7
+          "total": 8
         }
       ],
       "is_tied": false
@@ -51,8 +51,15 @@
         "name": "Christian Walker",
         "mlb_team": "HOU",
         "doubles": 6,
-        "homers": 2,
-        "total": 8
+        "homers": 3,
+        "total": 9
+      },
+      {
+        "name": "Willy Adames",
+        "mlb_team": "SF",
+        "doubles": 6,
+        "homers": 1,
+        "total": 7
       },
       {
         "name": "Ben Rice",
@@ -74,11 +81,18 @@
         "doubles": 3,
         "homers": 4,
         "total": 7
+      },
+      {
+        "name": "James Wood",
+        "mlb_team": "WSH",
+        "doubles": 3,
+        "homers": 4,
+        "total": 7
       }
     ],
-    "is_tied": false,
+    "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 46,
+  "grand_total": 48,
   "has_tied_groups": true
 }
