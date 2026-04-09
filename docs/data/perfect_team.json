@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08",
+  "updated": "2026-04-09",
   "groups": {
     "A": {
       "leaders": [
@@ -19,8 +19,8 @@
           "name": "Matt Olson",
           "mlb_team": "ATL",
           "doubles": 6,
-          "homers": 2,
-          "total": 8
+          "homers": 3,
+          "total": 9
         }
       ],
       "is_tied": false
@@ -30,23 +30,23 @@
         {
           "name": "Jos\u00e9 Ram\u00edrez",
           "mlb_team": "CLE",
-          "doubles": 2,
+          "doubles": 3,
           "homers": 1,
-          "total": 3
-        },
-        {
-          "name": "Juan Soto",
-          "mlb_team": "NYM",
-          "doubles": 2,
-          "homers": 1,
-          "total": 3
+          "total": 4
         }
       ],
-      "is_tied": true
+      "is_tied": false
     }
   },
   "wildcard": {
     "players": [
+      {
+        "name": "Taylor Ward",
+        "mlb_team": "BAL",
+        "doubles": 9,
+        "homers": 0,
+        "total": 9
+      },
       {
         "name": "Christian Walker",
         "mlb_team": "HOU",
@@ -57,6 +57,13 @@
       {
         "name": "Willy Adames",
         "mlb_team": "SF",
+        "doubles": 7,
+        "homers": 1,
+        "total": 8
+      },
+      {
+        "name": "Nico Hoerner",
+        "mlb_team": "CHC",
         "doubles": 6,
         "homers": 1,
         "total": 7
@@ -76,6 +83,20 @@
         "total": 7
       },
       {
+        "name": "Sal Stewart",
+        "mlb_team": "CIN",
+        "doubles": 4,
+        "homers": 3,
+        "total": 7
+      },
+      {
+        "name": "Gunnar Henderson",
+        "mlb_team": "BAL",
+        "doubles": 3,
+        "homers": 4,
+        "total": 7
+      },
+      {
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
         "doubles": 3,
@@ -88,11 +109,18 @@
         "doubles": 3,
         "homers": 4,
         "total": 7
+      },
+      {
+        "name": "Jordan Walker",
+        "mlb_team": "STL",
+        "doubles": 2,
+        "homers": 5,
+        "total": 7
       }
     ],
     "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 48,
-  "has_tied_groups": true
+  "grand_total": 53,
+  "has_tied_groups": false
 }
