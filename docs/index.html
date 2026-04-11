@@ -182,7 +182,7 @@
 <!-- ===== NAVBAR ===== -->
 <nav class="navbar navbar-expand-lg">
   <div class="container-xl">
-    <a class="navbar-brand" href="#" data-view="players">Doubles &amp; Dingers</a>
+    <a class="navbar-brand" href="#standings" data-view="standings">Doubles &amp; Dingers</a>
     <button class="navbar-toggler border-secondary" type="button"
             data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
@@ -503,7 +503,7 @@ const LOADERS = {
 };
 const loaded = {};
 
-function showView(name) {
+function showView(name, pushState = true) {
   VIEWS.forEach(v => {
     document.getElementById(`view-${v}`).classList.toggle('active', v === name);
   });
@@ -513,6 +513,9 @@ function showView(name) {
   if (!loaded[name]) {
     loaded[name] = true;
     LOADERS[name]();
+  }
+  if (pushState && location.hash !== `#${name}`) {
+    history.pushState({ view: name }, '', `#${name}`);
   }
 }
 
@@ -527,6 +530,11 @@ document.querySelectorAll('[data-view]').forEach(el => {
     }
     showView(v);
   });
+});
+
+window.addEventListener('popstate', e => {
+  const v = e.state?.view || location.hash.slice(1);
+  if (v && VIEWS.includes(v)) showView(v, false);
 });
 
 // ===================================================================
@@ -1213,9 +1221,10 @@ function scrollToRoster(teamName) {
 }
 
 // ===================================================================
-// Boot: show Player Stats on load
+// Boot: restore from URL hash, default to Standings
 // ===================================================================
-showView('players');
+const _bootView = location.hash.slice(1);
+showView(VIEWS.includes(_bootView) ? _bootView : 'standings', !_bootView || !VIEWS.includes(_bootView));
 
 </script>
 </body>
