@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-10",
+  "updated": "2026-04-11",
   "groups": {
     "A": {
       "leaders": [
@@ -19,8 +19,8 @@
           "name": "Matt Olson",
           "mlb_team": "ATL",
           "doubles": 6,
-          "homers": 3,
-          "total": 9
+          "homers": 4,
+          "total": 10
         }
       ],
       "is_tied": false
@@ -33,9 +33,16 @@
           "doubles": 3,
           "homers": 1,
           "total": 4
+        },
+        {
+          "name": "Ronald Acu\u00f1a Jr.",
+          "mlb_team": "ATL",
+          "doubles": 3,
+          "homers": 1,
+          "total": 4
         }
       ],
-      "is_tied": false
+      "is_tied": true
     }
   },
   "wildcard": {
@@ -43,9 +50,16 @@
       {
         "name": "Taylor Ward",
         "mlb_team": "BAL",
-        "doubles": 9,
+        "doubles": 10,
         "homers": 0,
-        "total": 9
+        "total": 10
+      },
+      {
+        "name": "Willy Adames",
+        "mlb_team": "SF",
+        "doubles": 8,
+        "homers": 2,
+        "total": 10
       },
       {
         "name": "Christian Walker",
@@ -55,23 +69,16 @@
         "total": 9
       },
       {
-        "name": "Willy Adames",
-        "mlb_team": "SF",
-        "doubles": 7,
-        "homers": 1,
-        "total": 8
-      },
-      {
-        "name": "Sal Stewart",
-        "mlb_team": "CIN",
-        "doubles": 4,
+        "name": "James Wood",
+        "mlb_team": "WSH",
+        "doubles": 5,
         "homers": 4,
-        "total": 8
+        "total": 9
       }
     ],
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 54,
-  "has_tied_groups": false
+  "grand_total": 59,
+  "has_tied_groups": true
 }
