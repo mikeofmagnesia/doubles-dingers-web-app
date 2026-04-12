@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-11",
+  "updated": "2026-04-12",
   "groups": {
     "A": {
       "leaders": [
@@ -18,9 +18,9 @@
         {
           "name": "Matt Olson",
           "mlb_team": "ATL",
-          "doubles": 6,
+          "doubles": 7,
           "homers": 4,
-          "total": 10
+          "total": 11
         }
       ],
       "is_tied": false
@@ -31,18 +31,11 @@
           "name": "Jos\u00e9 Ram\u00edrez",
           "mlb_team": "CLE",
           "doubles": 3,
-          "homers": 1,
-          "total": 4
-        },
-        {
-          "name": "Ronald Acu\u00f1a Jr.",
-          "mlb_team": "ATL",
-          "doubles": 3,
-          "homers": 1,
-          "total": 4
+          "homers": 2,
+          "total": 5
         }
       ],
-      "is_tied": true
+      "is_tied": false
     }
   },
   "wildcard": {
@@ -62,23 +55,23 @@
         "total": 10
       },
       {
-        "name": "Christian Walker",
-        "mlb_team": "HOU",
-        "doubles": 6,
-        "homers": 3,
-        "total": 9
-      },
-      {
         "name": "James Wood",
         "mlb_team": "WSH",
-        "doubles": 5,
+        "doubles": 6,
         "homers": 4,
-        "total": 9
+        "total": 10
+      },
+      {
+        "name": "Yordan Alvarez",
+        "mlb_team": "HOU",
+        "doubles": 4,
+        "homers": 6,
+        "total": 10
       }
     ],
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 59,
-  "has_tied_groups": true
+  "grand_total": 63,
+  "has_tied_groups": false
 }
