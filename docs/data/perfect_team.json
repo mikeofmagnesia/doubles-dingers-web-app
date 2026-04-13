@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-12",
+  "updated": "2026-04-13",
   "groups": {
     "A": {
       "leaders": [
@@ -18,15 +18,22 @@
         {
           "name": "Matt Olson",
           "mlb_team": "ATL",
-          "doubles": 7,
+          "doubles": 8,
           "homers": 4,
-          "total": 11
+          "total": 12
         }
       ],
       "is_tied": false
     },
     "C": {
       "leaders": [
+        {
+          "name": "Ronald Acu\u00f1a Jr.",
+          "mlb_team": "ATL",
+          "doubles": 4,
+          "homers": 1,
+          "total": 5
+        },
         {
           "name": "Jos\u00e9 Ram\u00edrez",
           "mlb_team": "CLE",
@@ -35,11 +42,25 @@
           "total": 5
         }
       ],
-      "is_tied": false
+      "is_tied": true
     }
   },
   "wildcard": {
     "players": [
+      {
+        "name": "Willy Adames",
+        "mlb_team": "SF",
+        "doubles": 9,
+        "homers": 2,
+        "total": 11
+      },
+      {
+        "name": "James Wood",
+        "mlb_team": "WSH",
+        "doubles": 6,
+        "homers": 5,
+        "total": 11
+      },
       {
         "name": "Taylor Ward",
         "mlb_team": "BAL",
@@ -48,15 +69,8 @@
         "total": 10
       },
       {
-        "name": "Willy Adames",
-        "mlb_team": "SF",
-        "doubles": 8,
-        "homers": 2,
-        "total": 10
-      },
-      {
-        "name": "James Wood",
-        "mlb_team": "WSH",
+        "name": "Ben Rice",
+        "mlb_team": "NYY",
         "doubles": 6,
         "homers": 4,
         "total": 10
@@ -69,9 +83,9 @@
         "total": 10
       }
     ],
-    "is_tied": false,
+    "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 63,
-  "has_tied_groups": false
+  "grand_total": 66,
+  "has_tied_groups": true
 }
