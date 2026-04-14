@@ -1,14 +1,14 @@
 {
-  "updated": "2026-04-13",
+  "updated": "2026-04-14",
   "groups": {
     "A": {
       "leaders": [
         {
           "name": "Freddie Freeman",
           "mlb_team": "LAD",
-          "doubles": 4,
+          "doubles": 5,
           "homers": 3,
-          "total": 7
+          "total": 8
         }
       ],
       "is_tied": false
@@ -28,21 +28,14 @@
     "C": {
       "leaders": [
         {
-          "name": "Ronald Acu\u00f1a Jr.",
-          "mlb_team": "ATL",
-          "doubles": 4,
-          "homers": 1,
-          "total": 5
-        },
-        {
           "name": "Jos\u00e9 Ram\u00edrez",
           "mlb_team": "CLE",
-          "doubles": 3,
+          "doubles": 4,
           "homers": 2,
-          "total": 5
+          "total": 6
         }
       ],
-      "is_tied": true
+      "is_tied": false
     }
   },
   "wildcard": {
@@ -81,11 +74,18 @@
         "doubles": 4,
         "homers": 6,
         "total": 10
+      },
+      {
+        "name": "Jordan Walker",
+        "mlb_team": "STL",
+        "doubles": 2,
+        "homers": 8,
+        "total": 10
       }
     ],
     "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 66,
-  "has_tied_groups": true
+  "grand_total": 68,
+  "has_tied_groups": false
 }
