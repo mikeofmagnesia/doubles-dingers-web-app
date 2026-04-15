@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-14",
+  "updated": "2026-04-15",
   "groups": {
     "A": {
       "leaders": [
@@ -9,18 +9,25 @@
           "doubles": 5,
           "homers": 3,
           "total": 8
+        },
+        {
+          "name": "Aaron Judge",
+          "mlb_team": "NYY",
+          "doubles": 2,
+          "homers": 6,
+          "total": 8
         }
       ],
-      "is_tied": false
+      "is_tied": true
     },
     "B": {
       "leaders": [
         {
           "name": "Matt Olson",
           "mlb_team": "ATL",
-          "doubles": 8,
+          "doubles": 9,
           "homers": 4,
-          "total": 12
+          "total": 13
         }
       ],
       "is_tied": false
@@ -31,8 +38,8 @@
           "name": "Jos\u00e9 Ram\u00edrez",
           "mlb_team": "CLE",
           "doubles": 4,
-          "homers": 2,
-          "total": 6
+          "homers": 3,
+          "total": 7
         }
       ],
       "is_tied": false
@@ -44,14 +51,21 @@
         "name": "Willy Adames",
         "mlb_team": "SF",
         "doubles": 9,
-        "homers": 2,
-        "total": 11
+        "homers": 3,
+        "total": 12
       },
       {
         "name": "James Wood",
         "mlb_team": "WSH",
         "doubles": 6,
         "homers": 5,
+        "total": 11
+      },
+      {
+        "name": "Yordan Alvarez",
+        "mlb_team": "HOU",
+        "doubles": 5,
+        "homers": 6,
         "total": 11
       },
       {
@@ -69,23 +83,16 @@
         "total": 10
       },
       {
-        "name": "Yordan Alvarez",
+        "name": "Christian Walker",
         "mlb_team": "HOU",
-        "doubles": 4,
-        "homers": 6,
-        "total": 10
-      },
-      {
-        "name": "Jordan Walker",
-        "mlb_team": "STL",
-        "doubles": 2,
-        "homers": 8,
+        "doubles": 6,
+        "homers": 4,
         "total": 10
       }
     ],
     "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 68,
-  "has_tied_groups": false
+  "grand_total": 72,
+  "has_tied_groups": true
 }
