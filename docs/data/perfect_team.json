@@ -1,21 +1,21 @@
 {
-  "updated": "2026-04-15",
+  "updated": "2026-04-16",
   "groups": {
     "A": {
       "leaders": [
         {
           "name": "Freddie Freeman",
           "mlb_team": "LAD",
-          "doubles": 5,
+          "doubles": 6,
           "homers": 3,
-          "total": 8
+          "total": 9
         },
         {
           "name": "Aaron Judge",
           "mlb_team": "NYY",
           "doubles": 2,
-          "homers": 6,
-          "total": 8
+          "homers": 7,
+          "total": 9
         }
       ],
       "is_tied": true
@@ -26,8 +26,8 @@
           "name": "Matt Olson",
           "mlb_team": "ATL",
           "doubles": 9,
-          "homers": 4,
-          "total": 13
+          "homers": 5,
+          "total": 14
         }
       ],
       "is_tied": false
@@ -48,6 +48,13 @@
   "wildcard": {
     "players": [
       {
+        "name": "Yordan Alvarez",
+        "mlb_team": "HOU",
+        "doubles": 6,
+        "homers": 7,
+        "total": 13
+      },
+      {
         "name": "Willy Adames",
         "mlb_team": "SF",
         "doubles": 9,
@@ -62,37 +69,23 @@
         "total": 11
       },
       {
-        "name": "Yordan Alvarez",
-        "mlb_team": "HOU",
-        "doubles": 5,
-        "homers": 6,
+        "name": "Sal Stewart",
+        "mlb_team": "CIN",
+        "doubles": 4,
+        "homers": 7,
         "total": 11
       },
       {
-        "name": "Taylor Ward",
-        "mlb_team": "BAL",
-        "doubles": 10,
-        "homers": 0,
-        "total": 10
-      },
-      {
-        "name": "Ben Rice",
-        "mlb_team": "NYY",
-        "doubles": 6,
-        "homers": 4,
-        "total": 10
-      },
-      {
-        "name": "Christian Walker",
-        "mlb_team": "HOU",
-        "doubles": 6,
-        "homers": 4,
-        "total": 10
+        "name": "Jordan Walker",
+        "mlb_team": "STL",
+        "doubles": 3,
+        "homers": 8,
+        "total": 11
       }
     ],
     "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 72,
+  "grand_total": 77,
   "has_tied_groups": true
 }
