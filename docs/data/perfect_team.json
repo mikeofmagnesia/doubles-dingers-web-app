@@ -1,14 +1,14 @@
 {
-  "updated": "2026-04-17",
+  "updated": "2026-04-18",
   "groups": {
     "A": {
       "leaders": [
         {
           "name": "Aaron Judge",
           "mlb_team": "NYY",
-          "doubles": 2,
+          "doubles": 3,
           "homers": 8,
-          "total": 10
+          "total": 11
         }
       ],
       "is_tied": false
@@ -44,48 +44,34 @@
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
         "doubles": 6,
-        "homers": 7,
-        "total": 13
+        "homers": 8,
+        "total": 14
       },
       {
         "name": "Willy Adames",
         "mlb_team": "SF",
-        "doubles": 9,
+        "doubles": 10,
         "homers": 3,
-        "total": 12
+        "total": 13
       },
       {
         "name": "James Wood",
         "mlb_team": "WSH",
         "doubles": 6,
-        "homers": 5,
-        "total": 11
+        "homers": 6,
+        "total": 12
       },
       {
         "name": "Ben Rice",
         "mlb_team": "NYY",
         "doubles": 6,
-        "homers": 5,
-        "total": 11
-      },
-      {
-        "name": "Sal Stewart",
-        "mlb_team": "CIN",
-        "doubles": 4,
-        "homers": 7,
-        "total": 11
-      },
-      {
-        "name": "Jordan Walker",
-        "mlb_team": "STL",
-        "doubles": 3,
-        "homers": 8,
-        "total": 11
+        "homers": 6,
+        "total": 12
       }
     ],
-    "is_tied": true,
+    "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 79,
+  "grand_total": 84,
   "has_tied_groups": false
 }
