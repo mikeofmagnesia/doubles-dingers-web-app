@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-19",
+  "updated": "2026-04-20",
   "groups": {
     "A": {
       "leaders": [
@@ -7,8 +7,8 @@
           "name": "Aaron Judge",
           "mlb_team": "NYY",
           "doubles": 3,
-          "homers": 8,
-          "total": 11
+          "homers": 9,
+          "total": 12
         }
       ],
       "is_tied": false
@@ -31,8 +31,8 @@
           "name": "Jos\u00e9 Ram\u00edrez",
           "mlb_team": "CLE",
           "doubles": 4,
-          "homers": 4,
-          "total": 8
+          "homers": 6,
+          "total": 10
         }
       ],
       "is_tied": false
@@ -44,8 +44,15 @@
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
         "doubles": 7,
-        "homers": 9,
-        "total": 16
+        "homers": 10,
+        "total": 17
+      },
+      {
+        "name": "Ben Rice",
+        "mlb_team": "NYY",
+        "doubles": 6,
+        "homers": 8,
+        "total": 14
       },
       {
         "name": "Willy Adames",
@@ -60,18 +67,11 @@
         "doubles": 6,
         "homers": 7,
         "total": 13
-      },
-      {
-        "name": "Ben Rice",
-        "mlb_team": "NYY",
-        "doubles": 6,
-        "homers": 7,
-        "total": 13
       }
     ],
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 89,
+  "grand_total": 94,
   "has_tied_groups": false
 }
