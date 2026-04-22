@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-21",
+  "updated": "2026-04-22",
   "groups": {
     "A": {
       "leaders": [
@@ -43,9 +43,16 @@
       {
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
-        "doubles": 7,
+        "doubles": 8,
         "homers": 10,
-        "total": 17
+        "total": 18
+      },
+      {
+        "name": "James Wood",
+        "mlb_team": "WSH",
+        "doubles": 6,
+        "homers": 8,
+        "total": 14
       },
       {
         "name": "Ben Rice",
@@ -69,10 +76,10 @@
         "total": 13
       },
       {
-        "name": "James Wood",
-        "mlb_team": "WSH",
-        "doubles": 6,
-        "homers": 7,
+        "name": "Elly De La Cruz",
+        "mlb_team": "CIN",
+        "doubles": 5,
+        "homers": 8,
         "total": 13
       },
       {
@@ -86,6 +93,6 @@
     "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 96,
+  "grand_total": 98,
   "has_tied_groups": false
 }
