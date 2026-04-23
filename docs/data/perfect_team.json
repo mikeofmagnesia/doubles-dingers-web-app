@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-22",
+  "updated": "2026-04-23",
   "groups": {
     "A": {
       "leaders": [
@@ -19,8 +19,8 @@
           "name": "Matt Olson",
           "mlb_team": "ATL",
           "doubles": 10,
-          "homers": 6,
-          "total": 16
+          "homers": 7,
+          "total": 17
         }
       ],
       "is_tied": false
@@ -44,14 +44,21 @@
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
         "doubles": 8,
-        "homers": 10,
-        "total": 18
+        "homers": 11,
+        "total": 19
       },
       {
         "name": "James Wood",
         "mlb_team": "WSH",
         "doubles": 6,
-        "homers": 8,
+        "homers": 9,
+        "total": 15
+      },
+      {
+        "name": "Taylor Ward",
+        "mlb_team": "BAL",
+        "doubles": 13,
+        "homers": 1,
         "total": 14
       },
       {
@@ -60,39 +67,11 @@
         "doubles": 6,
         "homers": 8,
         "total": 14
-      },
-      {
-        "name": "Taylor Ward",
-        "mlb_team": "BAL",
-        "doubles": 12,
-        "homers": 1,
-        "total": 13
-      },
-      {
-        "name": "Willy Adames",
-        "mlb_team": "SF",
-        "doubles": 10,
-        "homers": 3,
-        "total": 13
-      },
-      {
-        "name": "Elly De La Cruz",
-        "mlb_team": "CIN",
-        "doubles": 5,
-        "homers": 8,
-        "total": 13
-      },
-      {
-        "name": "Sal Stewart",
-        "mlb_team": "CIN",
-        "doubles": 5,
-        "homers": 8,
-        "total": 13
       }
     ],
-    "is_tied": true,
+    "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 98,
+  "grand_total": 102,
   "has_tied_groups": false
 }
