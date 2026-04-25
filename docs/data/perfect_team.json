@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-24",
+  "updated": "2026-04-25",
   "groups": {
     "A": {
       "leaders": [
@@ -48,6 +48,13 @@
         "total": 19
       },
       {
+        "name": "Ben Rice",
+        "mlb_team": "NYY",
+        "doubles": 7,
+        "homers": 9,
+        "total": 16
+      },
+      {
         "name": "James Wood",
         "mlb_team": "WSH",
         "doubles": 6,
@@ -60,18 +67,11 @@
         "doubles": 13,
         "homers": 1,
         "total": 14
-      },
-      {
-        "name": "Ben Rice",
-        "mlb_team": "NYY",
-        "doubles": 6,
-        "homers": 8,
-        "total": 14
       }
     ],
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 104,
+  "grand_total": 106,
   "has_tied_groups": false
 }
