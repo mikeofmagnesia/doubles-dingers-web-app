@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-25",
+  "updated": "2026-04-26",
   "groups": {
     "A": {
       "leaders": [
@@ -18,9 +18,9 @@
         {
           "name": "Matt Olson",
           "mlb_team": "ATL",
-          "doubles": 11,
+          "doubles": 12,
           "homers": 7,
-          "total": 18
+          "total": 19
         }
       ],
       "is_tied": false
@@ -30,9 +30,9 @@
         {
           "name": "Jos\u00e9 Ram\u00edrez",
           "mlb_team": "CLE",
-          "doubles": 5,
+          "doubles": 6,
           "homers": 6,
-          "total": 11
+          "total": 12
         }
       ],
       "is_tied": false
@@ -50,9 +50,9 @@
       {
         "name": "Ben Rice",
         "mlb_team": "NYY",
-        "doubles": 7,
+        "doubles": 8,
         "homers": 9,
-        "total": 16
+        "total": 17
       },
       {
         "name": "James Wood",
@@ -67,11 +67,25 @@
         "doubles": 13,
         "homers": 1,
         "total": 14
+      },
+      {
+        "name": "Elly De La Cruz",
+        "mlb_team": "CIN",
+        "doubles": 5,
+        "homers": 9,
+        "total": 14
+      },
+      {
+        "name": "Sal Stewart",
+        "mlb_team": "CIN",
+        "doubles": 5,
+        "homers": 9,
+        "total": 14
       }
     ],
-    "is_tied": false,
+    "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 106,
+  "grand_total": 109,
   "has_tied_groups": false
 }
