@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-26",
+  "updated": "2026-04-27",
   "groups": {
     "A": {
       "leaders": [
@@ -7,8 +7,8 @@
           "name": "Aaron Judge",
           "mlb_team": "NYY",
           "doubles": 3,
-          "homers": 9,
-          "total": 12
+          "homers": 10,
+          "total": 13
         }
       ],
       "is_tied": false
@@ -19,8 +19,8 @@
           "name": "Matt Olson",
           "mlb_team": "ATL",
           "doubles": 12,
-          "homers": 7,
-          "total": 19
+          "homers": 8,
+          "total": 20
         }
       ],
       "is_tied": false
@@ -43,9 +43,9 @@
       {
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
-        "doubles": 8,
+        "doubles": 9,
         "homers": 11,
-        "total": 19
+        "total": 20
       },
       {
         "name": "Ben Rice",
@@ -62,30 +62,23 @@
         "total": 16
       },
       {
-        "name": "Taylor Ward",
-        "mlb_team": "BAL",
-        "doubles": 13,
-        "homers": 1,
-        "total": 14
+        "name": "Josh Jung",
+        "mlb_team": "TEX",
+        "doubles": 11,
+        "homers": 4,
+        "total": 15
       },
       {
-        "name": "Elly De La Cruz",
-        "mlb_team": "CIN",
-        "doubles": 5,
-        "homers": 9,
-        "total": 14
-      },
-      {
-        "name": "Sal Stewart",
-        "mlb_team": "CIN",
-        "doubles": 5,
-        "homers": 9,
-        "total": 14
+        "name": "Christian Walker",
+        "mlb_team": "HOU",
+        "doubles": 8,
+        "homers": 7,
+        "total": 15
       }
     ],
     "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 109,
+  "grand_total": 113,
   "has_tied_groups": false
 }
