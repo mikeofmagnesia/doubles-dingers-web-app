@@ -1,14 +1,14 @@
 {
-  "updated": "2026-04-27",
+  "updated": "2026-04-28",
   "groups": {
     "A": {
       "leaders": [
         {
           "name": "Aaron Judge",
           "mlb_team": "NYY",
-          "doubles": 3,
-          "homers": 10,
-          "total": 13
+          "doubles": 5,
+          "homers": 11,
+          "total": 16
         }
       ],
       "is_tied": false
@@ -51,8 +51,8 @@
         "name": "Ben Rice",
         "mlb_team": "NYY",
         "doubles": 8,
-        "homers": 9,
-        "total": 17
+        "homers": 10,
+        "total": 18
       },
       {
         "name": "James Wood",
@@ -79,6 +79,6 @@
     "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 113,
+  "grand_total": 117,
   "has_tied_groups": false
 }
