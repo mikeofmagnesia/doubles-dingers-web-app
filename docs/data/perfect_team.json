@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-30",
+  "updated": "2026-05-01",
   "groups": {
     "A": {
       "leaders": [
@@ -44,8 +44,8 @@
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
         "doubles": 9,
-        "homers": 11,
-        "total": 20
+        "homers": 12,
+        "total": 21
       },
       {
         "name": "Ben Rice",
@@ -55,23 +55,23 @@
         "total": 18
       },
       {
+        "name": "Shea Langeliers",
+        "mlb_team": "ATH",
+        "doubles": 9,
+        "homers": 8,
+        "total": 17
+      },
+      {
         "name": "James Wood",
         "mlb_team": "WSH",
         "doubles": 7,
         "homers": 10,
         "total": 17
-      },
-      {
-        "name": "Christian Walker",
-        "mlb_team": "HOU",
-        "doubles": 9,
-        "homers": 7,
-        "total": 16
       }
     ],
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 123,
+  "grand_total": 125,
   "has_tied_groups": false
 }
