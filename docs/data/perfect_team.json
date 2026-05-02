@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-01",
+  "updated": "2026-05-02",
   "groups": {
     "A": {
       "leaders": [
@@ -19,8 +19,8 @@
           "name": "Matt Olson",
           "mlb_team": "ATL",
           "doubles": 13,
-          "homers": 9,
-          "total": 22
+          "homers": 10,
+          "total": 23
         }
       ],
       "is_tied": false
@@ -51,8 +51,8 @@
         "name": "Ben Rice",
         "mlb_team": "NYY",
         "doubles": 8,
-        "homers": 10,
-        "total": 18
+        "homers": 11,
+        "total": 19
       },
       {
         "name": "Shea Langeliers",
@@ -72,6 +72,6 @@
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 125,
+  "grand_total": 127,
   "has_tied_groups": false
 }
