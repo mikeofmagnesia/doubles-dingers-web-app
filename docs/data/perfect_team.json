@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-03",
+  "updated": "2026-05-04",
   "groups": {
     "A": {
       "leaders": [
@@ -7,8 +7,8 @@
           "name": "Aaron Judge",
           "mlb_team": "NYY",
           "doubles": 5,
-          "homers": 12,
-          "total": 17
+          "homers": 13,
+          "total": 18
         }
       ],
       "is_tied": false
@@ -18,9 +18,9 @@
         {
           "name": "Matt Olson",
           "mlb_team": "ATL",
-          "doubles": 13,
+          "doubles": 15,
           "homers": 11,
-          "total": 24
+          "total": 26
         }
       ],
       "is_tied": false
@@ -48,17 +48,17 @@
         "total": 21
       },
       {
+        "name": "Ben Rice",
+        "mlb_team": "NYY",
+        "doubles": 9,
+        "homers": 12,
+        "total": 21
+      },
+      {
         "name": "Shea Langeliers",
         "mlb_team": "ATH",
         "doubles": 9,
         "homers": 10,
-        "total": 19
-      },
-      {
-        "name": "Ben Rice",
-        "mlb_team": "NYY",
-        "doubles": 8,
-        "homers": 11,
         "total": 19
       },
       {
@@ -74,11 +74,18 @@
         "doubles": 7,
         "homers": 10,
         "total": 17
+      },
+      {
+        "name": "Mickey Moniak",
+        "mlb_team": "COL",
+        "doubles": 6,
+        "homers": 11,
+        "total": 17
       }
     ],
     "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 131,
+  "grand_total": 136,
   "has_tied_groups": false
 }
