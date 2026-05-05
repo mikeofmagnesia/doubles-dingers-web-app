@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-04",
+  "updated": "2026-05-05",
   "groups": {
     "A": {
       "leaders": [
@@ -7,8 +7,8 @@
           "name": "Aaron Judge",
           "mlb_team": "NYY",
           "doubles": 5,
-          "homers": 13,
-          "total": 18
+          "homers": 14,
+          "total": 19
         }
       ],
       "is_tied": false
@@ -19,8 +19,8 @@
           "name": "Matt Olson",
           "mlb_team": "ATL",
           "doubles": 15,
-          "homers": 11,
-          "total": 26
+          "homers": 12,
+          "total": 27
         }
       ],
       "is_tied": false
@@ -62,30 +62,16 @@
         "total": 19
       },
       {
-        "name": "Christian Walker",
-        "mlb_team": "HOU",
-        "doubles": 9,
-        "homers": 8,
-        "total": 17
-      },
-      {
-        "name": "James Wood",
-        "mlb_team": "WSH",
-        "doubles": 7,
-        "homers": 10,
-        "total": 17
-      },
-      {
         "name": "Mickey Moniak",
         "mlb_team": "COL",
-        "doubles": 6,
+        "doubles": 7,
         "homers": 11,
-        "total": 17
+        "total": 18
       }
     ],
-    "is_tied": true,
+    "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 136,
+  "grand_total": 139,
   "has_tied_groups": false
 }
