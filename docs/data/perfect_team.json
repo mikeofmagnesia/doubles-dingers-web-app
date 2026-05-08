@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-07",
+  "updated": "2026-05-08",
   "groups": {
     "A": {
       "leaders": [
@@ -28,6 +28,13 @@
     "C": {
       "leaders": [
         {
+          "name": "Bobby Witt Jr.",
+          "mlb_team": "KC",
+          "doubles": 10,
+          "homers": 4,
+          "total": 14
+        },
+        {
           "name": "Jos\u00e9 Ram\u00edrez",
           "mlb_team": "CLE",
           "doubles": 8,
@@ -35,7 +42,7 @@
           "total": 14
         }
       ],
-      "is_tied": false
+      "is_tied": true
     }
   },
   "wildcard": {
@@ -58,34 +65,20 @@
         "name": "Shea Langeliers",
         "mlb_team": "ATH",
         "doubles": 9,
-        "homers": 10,
-        "total": 19
-      },
-      {
-        "name": "Christian Walker",
-        "mlb_team": "HOU",
-        "doubles": 9,
-        "homers": 9,
-        "total": 18
+        "homers": 11,
+        "total": 20
       },
       {
         "name": "James Wood",
         "mlb_team": "WSH",
-        "doubles": 8,
+        "doubles": 9,
         "homers": 10,
-        "total": 18
-      },
-      {
-        "name": "Mickey Moniak",
-        "mlb_team": "COL",
-        "doubles": 7,
-        "homers": 11,
-        "total": 18
+        "total": 19
       }
     ],
-    "is_tied": true,
+    "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 142,
-  "has_tied_groups": false
+  "grand_total": 144,
+  "has_tied_groups": true
 }
