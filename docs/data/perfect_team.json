@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-08",
+  "updated": "2026-05-09",
   "groups": {
     "A": {
       "leaders": [
@@ -30,19 +30,12 @@
         {
           "name": "Bobby Witt Jr.",
           "mlb_team": "KC",
-          "doubles": 10,
+          "doubles": 11,
           "homers": 4,
-          "total": 14
-        },
-        {
-          "name": "Jos\u00e9 Ram\u00edrez",
-          "mlb_team": "CLE",
-          "doubles": 8,
-          "homers": 6,
-          "total": 14
+          "total": 15
         }
       ],
-      "is_tied": true
+      "is_tied": false
     }
   },
   "wildcard": {
@@ -51,8 +44,8 @@
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
         "doubles": 9,
-        "homers": 12,
-        "total": 21
+        "homers": 13,
+        "total": 22
       },
       {
         "name": "Ben Rice",
@@ -79,6 +72,6 @@
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 144,
-  "has_tied_groups": true
+  "grand_total": 146,
+  "has_tied_groups": false
 }
