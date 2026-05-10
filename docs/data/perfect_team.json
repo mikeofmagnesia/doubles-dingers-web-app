@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-09",
+  "updated": "2026-05-10",
   "groups": {
     "A": {
       "leaders": [
@@ -31,8 +31,8 @@
           "name": "Bobby Witt Jr.",
           "mlb_team": "KC",
           "doubles": 11,
-          "homers": 4,
-          "total": 15
+          "homers": 5,
+          "total": 16
         }
       ],
       "is_tied": false
@@ -43,9 +43,16 @@
       {
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
-        "doubles": 9,
+        "doubles": 10,
         "homers": 13,
-        "total": 22
+        "total": 23
+      },
+      {
+        "name": "James Wood",
+        "mlb_team": "WSH",
+        "doubles": 10,
+        "homers": 11,
+        "total": 21
       },
       {
         "name": "Ben Rice",
@@ -62,16 +69,16 @@
         "total": 20
       },
       {
-        "name": "James Wood",
-        "mlb_team": "WSH",
-        "doubles": 9,
-        "homers": 10,
-        "total": 19
+        "name": "Byron Buxton",
+        "mlb_team": "MIN",
+        "doubles": 7,
+        "homers": 13,
+        "total": 20
       }
     ],
-    "is_tied": false,
+    "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 146,
+  "grand_total": 150,
   "has_tied_groups": false
 }
