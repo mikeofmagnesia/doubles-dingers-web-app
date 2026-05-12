@@ -1,14 +1,14 @@
 {
-  "updated": "2026-05-11",
+  "updated": "2026-05-12",
   "groups": {
     "A": {
       "leaders": [
         {
           "name": "Aaron Judge",
           "mlb_team": "NYY",
-          "doubles": 6,
+          "doubles": 7,
           "homers": 16,
-          "total": 22
+          "total": 23
         }
       ],
       "is_tied": false
@@ -58,8 +58,8 @@
         "name": "Ben Rice",
         "mlb_team": "NYY",
         "doubles": 9,
-        "homers": 12,
-        "total": 21
+        "homers": 13,
+        "total": 22
       },
       {
         "name": "Shea Langeliers",
@@ -79,6 +79,6 @@
     "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 153,
+  "grand_total": 155,
   "has_tied_groups": false
 }
