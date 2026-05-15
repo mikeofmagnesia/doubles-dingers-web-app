@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-14",
+  "updated": "2026-05-15",
   "groups": {
     "A": {
       "leaders": [
@@ -41,17 +41,17 @@
   "wildcard": {
     "players": [
       {
+        "name": "Yordan Alvarez",
+        "mlb_team": "HOU",
+        "doubles": 11,
+        "homers": 14,
+        "total": 25
+      },
+      {
         "name": "James Wood",
         "mlb_team": "WSH",
         "doubles": 11,
         "homers": 12,
-        "total": 23
-      },
-      {
-        "name": "Yordan Alvarez",
-        "mlb_team": "HOU",
-        "doubles": 10,
-        "homers": 13,
         "total": 23
       },
       {
@@ -79,6 +79,6 @@
     "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 160,
+  "grand_total": 162,
   "has_tied_groups": false
 }
