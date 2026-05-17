@@ -1,14 +1,14 @@
 {
-  "updated": "2026-05-16",
+  "updated": "2026-05-17",
   "groups": {
     "A": {
       "leaders": [
         {
           "name": "Aaron Judge",
           "mlb_team": "NYY",
-          "doubles": 7,
+          "doubles": 8,
           "homers": 16,
-          "total": 23
+          "total": 24
         }
       ],
       "is_tied": false
@@ -44,15 +44,15 @@
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
         "doubles": 11,
-        "homers": 14,
-        "total": 25
+        "homers": 15,
+        "total": 26
       },
       {
         "name": "James Wood",
         "mlb_team": "WSH",
-        "doubles": 11,
+        "doubles": 12,
         "homers": 12,
-        "total": 23
+        "total": 24
       },
       {
         "name": "Jordan Walker",
@@ -72,6 +72,6 @@
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 165,
+  "grand_total": 168,
   "has_tied_groups": false
 }
