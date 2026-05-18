@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-17",
+  "updated": "2026-05-18",
   "groups": {
     "A": {
       "leaders": [
@@ -55,23 +55,30 @@
         "total": 24
       },
       {
+        "name": "Ben Rice",
+        "mlb_team": "NYY",
+        "doubles": 9,
+        "homers": 15,
+        "total": 24
+      },
+      {
+        "name": "Elly De La Cruz",
+        "mlb_team": "CIN",
+        "doubles": 12,
+        "homers": 11,
+        "total": 23
+      },
+      {
         "name": "Jordan Walker",
         "mlb_team": "STL",
         "doubles": 10,
         "homers": 13,
         "total": 23
-      },
-      {
-        "name": "Ben Rice",
-        "mlb_team": "NYY",
-        "doubles": 9,
-        "homers": 14,
-        "total": 23
       }
     ],
-    "is_tied": false,
+    "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 168,
+  "grand_total": 169,
   "has_tied_groups": false
 }
