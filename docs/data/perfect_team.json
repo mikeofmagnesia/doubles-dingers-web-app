@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-19",
+  "updated": "2026-05-20",
   "groups": {
     "A": {
       "leaders": [
@@ -18,9 +18,9 @@
         {
           "name": "Matt Olson",
           "mlb_team": "ATL",
-          "doubles": 15,
+          "doubles": 16,
           "homers": 14,
-          "total": 29
+          "total": 30
         }
       ],
       "is_tied": false
@@ -41,6 +41,13 @@
   "wildcard": {
     "players": [
       {
+        "name": "James Wood",
+        "mlb_team": "WSH",
+        "doubles": 13,
+        "homers": 13,
+        "total": 26
+      },
+      {
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
         "doubles": 11,
@@ -48,37 +55,23 @@
         "total": 26
       },
       {
-        "name": "James Wood",
-        "mlb_team": "WSH",
-        "doubles": 13,
-        "homers": 12,
-        "total": 25
-      },
-      {
         "name": "Ben Rice",
         "mlb_team": "NYY",
         "doubles": 10,
+        "homers": 16,
+        "total": 26
+      },
+      {
+        "name": "Byron Buxton",
+        "mlb_team": "MIN",
+        "doubles": 9,
         "homers": 15,
-        "total": 25
-      },
-      {
-        "name": "Elly De La Cruz",
-        "mlb_team": "CIN",
-        "doubles": 12,
-        "homers": 11,
-        "total": 23
-      },
-      {
-        "name": "Jordan Walker",
-        "mlb_team": "STL",
-        "doubles": 10,
-        "homers": 13,
-        "total": 23
+        "total": 24
       }
     ],
-    "is_tied": true,
+    "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 171,
+  "grand_total": 175,
   "has_tied_groups": false
 }
