@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-22",
+  "updated": "2026-05-23",
   "groups": {
     "A": {
       "leaders": [
@@ -62,23 +62,16 @@
         "total": 26
       },
       {
-        "name": "Brandon Lowe",
-        "mlb_team": "PIT",
-        "doubles": 11,
-        "homers": 13,
-        "total": 24
-      },
-      {
         "name": "Byron Buxton",
         "mlb_team": "MIN",
         "doubles": 9,
-        "homers": 15,
-        "total": 24
+        "homers": 16,
+        "total": 25
       }
     ],
-    "is_tied": true,
+    "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 177,
+  "grand_total": 178,
   "has_tied_groups": false
 }
