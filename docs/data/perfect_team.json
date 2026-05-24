@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-23",
+  "updated": "2026-05-24",
   "groups": {
     "A": {
       "leaders": [
@@ -55,23 +55,23 @@
         "total": 26
       },
       {
+        "name": "Jordan Walker",
+        "mlb_team": "STL",
+        "doubles": 11,
+        "homers": 15,
+        "total": 26
+      },
+      {
         "name": "Ben Rice",
         "mlb_team": "NYY",
         "doubles": 10,
         "homers": 16,
         "total": 26
-      },
-      {
-        "name": "Byron Buxton",
-        "mlb_team": "MIN",
-        "doubles": 9,
-        "homers": 16,
-        "total": 25
       }
     ],
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 178,
+  "grand_total": 179,
   "has_tied_groups": false
 }
