@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-24",
+  "updated": "2026-05-25",
   "groups": {
     "A": {
       "leaders": [
@@ -7,8 +7,8 @@
           "name": "Aaron Judge",
           "mlb_team": "NYY",
           "doubles": 8,
-          "homers": 16,
-          "total": 24
+          "homers": 17,
+          "total": 25
         }
       ],
       "is_tied": false
@@ -18,9 +18,9 @@
         {
           "name": "Matt Olson",
           "mlb_team": "ATL",
-          "doubles": 16,
+          "doubles": 17,
           "homers": 14,
-          "total": 30
+          "total": 31
         }
       ],
       "is_tied": false
@@ -30,9 +30,9 @@
         {
           "name": "Bobby Witt Jr.",
           "mlb_team": "KC",
-          "doubles": 13,
+          "doubles": 14,
           "homers": 7,
-          "total": 20
+          "total": 21
         }
       ],
       "is_tied": false
@@ -72,6 +72,6 @@
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 179,
+  "grand_total": 182,
   "has_tied_groups": false
 }
