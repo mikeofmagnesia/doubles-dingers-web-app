@@ -1,14 +1,14 @@
 {
-  "updated": "2026-05-25",
+  "updated": "2026-05-26",
   "groups": {
     "A": {
       "leaders": [
         {
           "name": "Aaron Judge",
           "mlb_team": "NYY",
-          "doubles": 8,
+          "doubles": 9,
           "homers": 17,
-          "total": 25
+          "total": 26
         }
       ],
       "is_tied": false
@@ -31,8 +31,8 @@
           "name": "Bobby Witt Jr.",
           "mlb_team": "KC",
           "doubles": 14,
-          "homers": 7,
-          "total": 21
+          "homers": 8,
+          "total": 22
         }
       ],
       "is_tied": false
@@ -44,21 +44,28 @@
         "name": "James Wood",
         "mlb_team": "WSH",
         "doubles": 14,
-        "homers": 13,
-        "total": 27
+        "homers": 14,
+        "total": 28
       },
       {
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
         "doubles": 11,
-        "homers": 15,
-        "total": 26
+        "homers": 16,
+        "total": 27
       },
       {
         "name": "Jordan Walker",
         "mlb_team": "STL",
         "doubles": 11,
         "homers": 15,
+        "total": 26
+      },
+      {
+        "name": "Byron Buxton",
+        "mlb_team": "MIN",
+        "doubles": 10,
+        "homers": 16,
         "total": 26
       },
       {
@@ -69,9 +76,9 @@
         "total": 26
       }
     ],
-    "is_tied": false,
+    "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 182,
+  "grand_total": 186,
   "has_tied_groups": false
 }
