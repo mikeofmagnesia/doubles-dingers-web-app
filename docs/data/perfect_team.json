@@ -1,14 +1,14 @@
 {
-  "updated": "2026-05-26",
+  "updated": "2026-05-27",
   "groups": {
     "A": {
       "leaders": [
         {
           "name": "Aaron Judge",
           "mlb_team": "NYY",
-          "doubles": 9,
+          "doubles": 10,
           "homers": 17,
-          "total": 26
+          "total": 27
         }
       ],
       "is_tied": false
@@ -19,8 +19,8 @@
           "name": "Matt Olson",
           "mlb_team": "ATL",
           "doubles": 17,
-          "homers": 14,
-          "total": 31
+          "homers": 15,
+          "total": 32
         }
       ],
       "is_tied": false
@@ -31,8 +31,8 @@
           "name": "Bobby Witt Jr.",
           "mlb_team": "KC",
           "doubles": 14,
-          "homers": 8,
-          "total": 22
+          "homers": 9,
+          "total": 23
         }
       ],
       "is_tied": false
@@ -44,12 +44,19 @@
         "name": "James Wood",
         "mlb_team": "WSH",
         "doubles": 14,
-        "homers": 14,
-        "total": 28
+        "homers": 15,
+        "total": 29
       },
       {
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
+        "doubles": 11,
+        "homers": 18,
+        "total": 29
+      },
+      {
+        "name": "Ben Rice",
+        "mlb_team": "NYY",
         "doubles": 11,
         "homers": 16,
         "total": 27
@@ -67,18 +74,11 @@
         "doubles": 10,
         "homers": 16,
         "total": 26
-      },
-      {
-        "name": "Ben Rice",
-        "mlb_team": "NYY",
-        "doubles": 10,
-        "homers": 16,
-        "total": 26
       }
     ],
     "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 186,
+  "grand_total": 193,
   "has_tied_groups": false
 }
