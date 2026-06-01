@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-31",
+  "updated": "2026-06-01",
   "groups": {
     "A": {
       "leaders": [
@@ -28,11 +28,11 @@
     "C": {
       "leaders": [
         {
-          "name": "Bobby Witt Jr.",
-          "mlb_team": "KC",
-          "doubles": 14,
-          "homers": 9,
-          "total": 23
+          "name": "Rafael Devers",
+          "mlb_team": "SF",
+          "doubles": 18,
+          "homers": 7,
+          "total": 25
         }
       ],
       "is_tied": false
@@ -51,15 +51,15 @@
         "name": "James Wood",
         "mlb_team": "WSH",
         "doubles": 15,
-        "homers": 15,
-        "total": 30
+        "homers": 16,
+        "total": 31
       },
       {
         "name": "Ben Rice",
         "mlb_team": "NYY",
-        "doubles": 13,
+        "doubles": 14,
         "homers": 17,
-        "total": 30
+        "total": 31
       },
       {
         "name": "Byron Buxton",
@@ -72,6 +72,6 @@
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 203,
+  "grand_total": 207,
   "has_tied_groups": false
 }
