@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-03",
+  "updated": "2026-06-04",
   "groups": {
     "A": {
       "leaders": [
@@ -28,28 +28,14 @@
     "C": {
       "leaders": [
         {
-          "name": "Rafael Devers",
-          "mlb_team": "SF",
-          "doubles": 18,
-          "homers": 7,
-          "total": 25
-        },
-        {
           "name": "Jos\u00e9 Ram\u00edrez",
           "mlb_team": "CLE",
           "doubles": 17,
-          "homers": 8,
-          "total": 25
-        },
-        {
-          "name": "Bobby Witt Jr.",
-          "mlb_team": "KC",
-          "doubles": 16,
           "homers": 9,
-          "total": 25
+          "total": 26
         }
       ],
-      "is_tied": true
+      "is_tied": false
     }
   },
   "wildcard": {
@@ -62,6 +48,13 @@
         "total": 33
       },
       {
+        "name": "Ben Rice",
+        "mlb_team": "NYY",
+        "doubles": 15,
+        "homers": 17,
+        "total": 32
+      },
+      {
         "name": "James Wood",
         "mlb_team": "WSH",
         "doubles": 15,
@@ -69,37 +62,16 @@
         "total": 31
       },
       {
-        "name": "Ben Rice",
-        "mlb_team": "NYY",
-        "doubles": 14,
-        "homers": 17,
-        "total": 31
-      },
-      {
         "name": "Andy Pages",
         "mlb_team": "LAD",
-        "doubles": 14,
+        "doubles": 15,
         "homers": 13,
-        "total": 27
-      },
-      {
-        "name": "Brandon Lowe",
-        "mlb_team": "PIT",
-        "doubles": 12,
-        "homers": 15,
-        "total": 27
-      },
-      {
-        "name": "Byron Buxton",
-        "mlb_team": "MIN",
-        "doubles": 10,
-        "homers": 17,
-        "total": 27
+        "total": 28
       }
     ],
-    "is_tied": true,
+    "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 210,
-  "has_tied_groups": true
+  "grand_total": 213,
+  "has_tied_groups": false
 }
