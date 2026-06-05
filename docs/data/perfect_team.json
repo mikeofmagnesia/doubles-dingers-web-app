@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-04",
+  "updated": "2026-06-05",
   "groups": {
     "A": {
       "leaders": [
@@ -28,6 +28,13 @@
     "C": {
       "leaders": [
         {
+          "name": "Rafael Devers",
+          "mlb_team": "SF",
+          "doubles": 19,
+          "homers": 7,
+          "total": 26
+        },
+        {
           "name": "Jos\u00e9 Ram\u00edrez",
           "mlb_team": "CLE",
           "doubles": 17,
@@ -35,7 +42,7 @@
           "total": 26
         }
       ],
-      "is_tied": false
+      "is_tied": true
     }
   },
   "wildcard": {
@@ -43,9 +50,9 @@
       {
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
-        "doubles": 12,
+        "doubles": 13,
         "homers": 21,
-        "total": 33
+        "total": 34
       },
       {
         "name": "Ben Rice",
@@ -62,16 +69,23 @@
         "total": 31
       },
       {
-        "name": "Andy Pages",
-        "mlb_team": "LAD",
-        "doubles": 15,
-        "homers": 13,
-        "total": 28
+        "name": "Brandon Lowe",
+        "mlb_team": "PIT",
+        "doubles": 14,
+        "homers": 15,
+        "total": 29
+      },
+      {
+        "name": "Shea Langeliers",
+        "mlb_team": "ATH",
+        "doubles": 13,
+        "homers": 16,
+        "total": 29
       }
     ],
-    "is_tied": false,
+    "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 213,
-  "has_tied_groups": false
+  "grand_total": 215,
+  "has_tied_groups": true
 }
