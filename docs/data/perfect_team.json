@@ -1,8 +1,22 @@
 {
-  "updated": "2026-06-10",
+  "updated": "2026-06-11",
   "groups": {
     "A": {
       "leaders": [
+        {
+          "name": "Freddie Freeman",
+          "mlb_team": "LAD",
+          "doubles": 17,
+          "homers": 10,
+          "total": 27
+        },
+        {
+          "name": "Shohei Ohtani",
+          "mlb_team": "LAD",
+          "doubles": 15,
+          "homers": 12,
+          "total": 27
+        },
         {
           "name": "Aaron Judge",
           "mlb_team": "NYY",
@@ -11,7 +25,7 @@
           "total": 27
         }
       ],
-      "is_tied": false
+      "is_tied": true
     },
     "B": {
       "leaders": [
@@ -31,8 +45,8 @@
           "name": "Rafael Devers",
           "mlb_team": "SF",
           "doubles": 20,
-          "homers": 8,
-          "total": 28
+          "homers": 9,
+          "total": 29
         }
       ],
       "is_tied": false
@@ -48,6 +62,13 @@
         "total": 35
       },
       {
+        "name": "James Wood",
+        "mlb_team": "WSH",
+        "doubles": 15,
+        "homers": 18,
+        "total": 33
+      },
+      {
         "name": "Ben Rice",
         "mlb_team": "NYY",
         "doubles": 15,
@@ -55,23 +76,16 @@
         "total": 33
       },
       {
-        "name": "James Wood",
-        "mlb_team": "WSH",
-        "doubles": 15,
-        "homers": 17,
-        "total": 32
-      },
-      {
         "name": "Jordan Walker",
         "mlb_team": "STL",
         "doubles": 15,
-        "homers": 16,
-        "total": 31
+        "homers": 17,
+        "total": 32
       }
     ],
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 224,
-  "has_tied_groups": false
+  "grand_total": 227,
+  "has_tied_groups": true
 }
