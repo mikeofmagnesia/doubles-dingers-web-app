@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13",
+  "updated": "2026-06-14",
   "groups": {
     "A": {
       "leaders": [
@@ -7,11 +7,18 @@
           "name": "Shohei Ohtani",
           "mlb_team": "LAD",
           "doubles": 15,
-          "homers": 13,
-          "total": 28
+          "homers": 14,
+          "total": 29
+        },
+        {
+          "name": "Pete Alonso",
+          "mlb_team": "BAL",
+          "doubles": 13,
+          "homers": 16,
+          "total": 29
         }
       ],
-      "is_tied": false
+      "is_tied": true
     },
     "B": {
       "leaders": [
@@ -30,9 +37,9 @@
         {
           "name": "Rafael Devers",
           "mlb_team": "SF",
-          "doubles": 20,
+          "doubles": 21,
           "homers": 9,
-          "total": 29
+          "total": 30
         }
       ],
       "is_tied": false
@@ -48,6 +55,13 @@
         "total": 37
       },
       {
+        "name": "Jordan Walker",
+        "mlb_team": "STL",
+        "doubles": 16,
+        "homers": 18,
+        "total": 34
+      },
+      {
         "name": "James Wood",
         "mlb_team": "WSH",
         "doubles": 15,
@@ -55,37 +69,16 @@
         "total": 34
       },
       {
-        "name": "Brandon Lowe",
-        "mlb_team": "PIT",
-        "doubles": 16,
-        "homers": 17,
-        "total": 33
-      },
-      {
-        "name": "Jordan Walker",
-        "mlb_team": "STL",
-        "doubles": 16,
-        "homers": 17,
-        "total": 33
-      },
-      {
-        "name": "Ben Rice",
-        "mlb_team": "NYY",
-        "doubles": 15,
-        "homers": 18,
-        "total": 33
-      },
-      {
         "name": "Byron Buxton",
         "mlb_team": "MIN",
         "doubles": 12,
-        "homers": 21,
-        "total": 33
+        "homers": 22,
+        "total": 34
       }
     ],
-    "is_tied": true,
+    "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 233,
-  "has_tied_groups": false
+  "grand_total": 237,
+  "has_tied_groups": true
 }
