@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14",
+  "updated": "2026-06-15",
   "groups": {
     "A": {
       "leaders": [
@@ -55,6 +55,20 @@
         "total": 37
       },
       {
+        "name": "James Wood",
+        "mlb_team": "WSH",
+        "doubles": 16,
+        "homers": 20,
+        "total": 36
+      },
+      {
+        "name": "Byron Buxton",
+        "mlb_team": "MIN",
+        "doubles": 13,
+        "homers": 22,
+        "total": 35
+      },
+      {
         "name": "Jordan Walker",
         "mlb_team": "STL",
         "doubles": 16,
@@ -62,23 +76,16 @@
         "total": 34
       },
       {
-        "name": "James Wood",
-        "mlb_team": "WSH",
+        "name": "Ben Rice",
+        "mlb_team": "NYY",
         "doubles": 15,
         "homers": 19,
         "total": 34
-      },
-      {
-        "name": "Byron Buxton",
-        "mlb_team": "MIN",
-        "doubles": 12,
-        "homers": 22,
-        "total": 34
       }
     ],
-    "is_tied": false,
+    "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 237,
+  "grand_total": 240,
   "has_tied_groups": true
 }
