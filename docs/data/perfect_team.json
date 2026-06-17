@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16",
+  "updated": "2026-06-17",
   "groups": {
     "A": {
       "leaders": [
@@ -7,18 +7,11 @@
           "name": "Shohei Ohtani",
           "mlb_team": "LAD",
           "doubles": 15,
-          "homers": 14,
-          "total": 29
-        },
-        {
-          "name": "Pete Alonso",
-          "mlb_team": "BAL",
-          "doubles": 13,
-          "homers": 16,
-          "total": 29
+          "homers": 15,
+          "total": 30
         }
       ],
-      "is_tied": true
+      "is_tied": false
     },
     "B": {
       "leaders": [
@@ -69,23 +62,16 @@
         "total": 36
       },
       {
-        "name": "Jordan Walker",
-        "mlb_team": "STL",
-        "doubles": 16,
-        "homers": 18,
-        "total": 34
-      },
-      {
         "name": "Ben Rice",
         "mlb_team": "NYY",
         "doubles": 15,
-        "homers": 19,
-        "total": 34
+        "homers": 20,
+        "total": 35
       }
     ],
-    "is_tied": true,
+    "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 243,
-  "has_tied_groups": true
+  "grand_total": 245,
+  "has_tied_groups": false
 }
