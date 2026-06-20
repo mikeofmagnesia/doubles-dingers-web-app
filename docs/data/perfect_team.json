@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-19",
+  "updated": "2026-06-20",
   "groups": {
     "A": {
       "leaders": [
@@ -9,9 +9,16 @@
           "doubles": 15,
           "homers": 15,
           "total": 30
+        },
+        {
+          "name": "Pete Alonso",
+          "mlb_team": "BAL",
+          "doubles": 13,
+          "homers": 17,
+          "total": 30
         }
       ],
-      "is_tied": false
+      "is_tied": true
     },
     "B": {
       "leaders": [
@@ -31,8 +38,8 @@
           "name": "Rafael Devers",
           "mlb_team": "SF",
           "doubles": 23,
-          "homers": 10,
-          "total": 33
+          "homers": 11,
+          "total": 34
         }
       ],
       "is_tied": false
@@ -55,23 +62,23 @@
         "total": 37
       },
       {
+        "name": "Ben Rice",
+        "mlb_team": "NYY",
+        "doubles": 15,
+        "homers": 21,
+        "total": 36
+      },
+      {
         "name": "Byron Buxton",
         "mlb_team": "MIN",
         "doubles": 13,
         "homers": 23,
         "total": 36
-      },
-      {
-        "name": "Ben Rice",
-        "mlb_team": "NYY",
-        "doubles": 15,
-        "homers": 20,
-        "total": 35
       }
     ],
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 249,
-  "has_tied_groups": false
+  "grand_total": 251,
+  "has_tied_groups": true
 }
