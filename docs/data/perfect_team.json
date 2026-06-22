@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21",
+  "updated": "2026-06-22",
   "groups": {
     "A": {
       "leaders": [
@@ -9,9 +9,16 @@
           "doubles": 15,
           "homers": 16,
           "total": 31
+        },
+        {
+          "name": "Pete Alonso",
+          "mlb_team": "BAL",
+          "doubles": 13,
+          "homers": 18,
+          "total": 31
         }
       ],
-      "is_tied": false
+      "is_tied": true
     },
     "B": {
       "leaders": [
@@ -44,8 +51,8 @@
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
         "doubles": 15,
-        "homers": 24,
-        "total": 39
+        "homers": 25,
+        "total": 40
       },
       {
         "name": "James Wood",
@@ -55,30 +62,23 @@
         "total": 38
       },
       {
+        "name": "Ben Rice",
+        "mlb_team": "NYY",
+        "doubles": 15,
+        "homers": 22,
+        "total": 37
+      },
+      {
         "name": "Byron Buxton",
         "mlb_team": "MIN",
         "doubles": 13,
         "homers": 24,
         "total": 37
-      },
-      {
-        "name": "Brandon Lowe",
-        "mlb_team": "PIT",
-        "doubles": 18,
-        "homers": 18,
-        "total": 36
-      },
-      {
-        "name": "Ben Rice",
-        "mlb_team": "NYY",
-        "doubles": 15,
-        "homers": 21,
-        "total": 36
       }
     ],
-    "is_tied": true,
+    "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 254,
-  "has_tied_groups": false
+  "grand_total": 256,
+  "has_tied_groups": true
 }
