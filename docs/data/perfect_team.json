@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-22",
+  "updated": "2026-06-23",
   "groups": {
     "A": {
       "leaders": [
@@ -7,18 +7,11 @@
           "name": "Shohei Ohtani",
           "mlb_team": "LAD",
           "doubles": 15,
-          "homers": 16,
-          "total": 31
-        },
-        {
-          "name": "Pete Alonso",
-          "mlb_team": "BAL",
-          "doubles": 13,
-          "homers": 18,
-          "total": 31
+          "homers": 17,
+          "total": 32
         }
       ],
-      "is_tied": true
+      "is_tied": false
     },
     "B": {
       "leaders": [
@@ -57,8 +50,15 @@
       {
         "name": "James Wood",
         "mlb_team": "WSH",
-        "doubles": 18,
+        "doubles": 19,
         "homers": 20,
+        "total": 39
+      },
+      {
+        "name": "Byron Buxton",
+        "mlb_team": "MIN",
+        "doubles": 13,
+        "homers": 25,
         "total": 38
       },
       {
@@ -67,18 +67,11 @@
         "doubles": 15,
         "homers": 22,
         "total": 37
-      },
-      {
-        "name": "Byron Buxton",
-        "mlb_team": "MIN",
-        "doubles": 13,
-        "homers": 24,
-        "total": 37
       }
     ],
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 256,
-  "has_tied_groups": true
+  "grand_total": 259,
+  "has_tied_groups": false
 }
