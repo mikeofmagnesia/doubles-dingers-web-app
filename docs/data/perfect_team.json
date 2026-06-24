@@ -1,8 +1,15 @@
 {
-  "updated": "2026-06-23",
+  "updated": "2026-06-24",
   "groups": {
     "A": {
       "leaders": [
+        {
+          "name": "Freddie Freeman",
+          "mlb_team": "LAD",
+          "doubles": 19,
+          "homers": 13,
+          "total": 32
+        },
         {
           "name": "Shohei Ohtani",
           "mlb_team": "LAD",
@@ -11,7 +18,7 @@
           "total": 32
         }
       ],
-      "is_tied": false
+      "is_tied": true
     },
     "B": {
       "leaders": [
@@ -43,9 +50,9 @@
       {
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
-        "doubles": 15,
+        "doubles": 16,
         "homers": 25,
-        "total": 40
+        "total": 41
       },
       {
         "name": "James Wood",
@@ -57,9 +64,16 @@
       {
         "name": "Byron Buxton",
         "mlb_team": "MIN",
-        "doubles": 13,
+        "doubles": 14,
         "homers": 25,
-        "total": 38
+        "total": 39
+      },
+      {
+        "name": "Brandon Lowe",
+        "mlb_team": "PIT",
+        "doubles": 19,
+        "homers": 18,
+        "total": 37
       },
       {
         "name": "Ben Rice",
@@ -69,9 +83,9 @@
         "total": 37
       }
     ],
-    "is_tied": false,
+    "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 259,
-  "has_tied_groups": false
+  "grand_total": 261,
+  "has_tied_groups": true
 }
