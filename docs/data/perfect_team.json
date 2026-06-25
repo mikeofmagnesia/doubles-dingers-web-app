@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24",
+  "updated": "2026-06-25",
   "groups": {
     "A": {
       "leaders": [
@@ -15,6 +15,13 @@
           "mlb_team": "LAD",
           "doubles": 15,
           "homers": 17,
+          "total": 32
+        },
+        {
+          "name": "Pete Alonso",
+          "mlb_team": "BAL",
+          "doubles": 14,
+          "homers": 18,
           "total": 32
         }
       ],
@@ -38,8 +45,8 @@
           "name": "Rafael Devers",
           "mlb_team": "SF",
           "doubles": 23,
-          "homers": 11,
-          "total": 34
+          "homers": 12,
+          "total": 35
         }
       ],
       "is_tied": false
@@ -86,6 +93,6 @@
     "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 261,
+  "grand_total": 262,
   "has_tied_groups": true
 }
