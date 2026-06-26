@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25",
+  "updated": "2026-06-26",
   "groups": {
     "A": {
       "leaders": [
@@ -79,20 +79,13 @@
         "name": "Brandon Lowe",
         "mlb_team": "PIT",
         "doubles": 19,
-        "homers": 18,
-        "total": 37
-      },
-      {
-        "name": "Ben Rice",
-        "mlb_team": "NYY",
-        "doubles": 15,
-        "homers": 22,
-        "total": 37
+        "homers": 19,
+        "total": 38
       }
     ],
-    "is_tied": true,
+    "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 262,
+  "grand_total": 263,
   "has_tied_groups": true
 }
