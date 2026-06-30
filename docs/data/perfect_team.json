@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-29",
+  "updated": "2026-06-30",
   "groups": {
     "A": {
       "leaders": [
@@ -48,18 +48,18 @@
   "wildcard": {
     "players": [
       {
+        "name": "James Wood",
+        "mlb_team": "WSH",
+        "doubles": 20,
+        "homers": 21,
+        "total": 41
+      },
+      {
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
         "doubles": 16,
         "homers": 25,
         "total": 41
-      },
-      {
-        "name": "James Wood",
-        "mlb_team": "WSH",
-        "doubles": 20,
-        "homers": 20,
-        "total": 40
       },
       {
         "name": "Byron Buxton",
@@ -74,11 +74,18 @@
         "doubles": 19,
         "homers": 20,
         "total": 39
+      },
+      {
+        "name": "Hunter Goodman",
+        "mlb_team": "COL",
+        "doubles": 13,
+        "homers": 26,
+        "total": 39
       }
     ],
-    "is_tied": false,
+    "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 273,
+  "grand_total": 274,
   "has_tied_groups": true
 }
