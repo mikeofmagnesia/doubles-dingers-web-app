@@ -1,33 +1,26 @@
 {
-  "updated": "2026-06-30",
+  "updated": "2026-07-01",
   "groups": {
     "A": {
       "leaders": [
         {
           "name": "Freddie Freeman",
           "mlb_team": "LAD",
-          "doubles": 21,
+          "doubles": 22,
           "homers": 13,
-          "total": 34
-        },
-        {
-          "name": "Pete Alonso",
-          "mlb_team": "BAL",
-          "doubles": 15,
-          "homers": 19,
-          "total": 34
+          "total": 35
         }
       ],
-      "is_tied": true
+      "is_tied": false
     },
     "B": {
       "leaders": [
         {
           "name": "Matt Olson",
           "mlb_team": "ATL",
-          "doubles": 21,
+          "doubles": 22,
           "homers": 20,
-          "total": 41
+          "total": 42
         }
       ],
       "is_tied": false
@@ -38,8 +31,8 @@
           "name": "Rafael Devers",
           "mlb_team": "SF",
           "doubles": 24,
-          "homers": 14,
-          "total": 38
+          "homers": 15,
+          "total": 39
         }
       ],
       "is_tied": false
@@ -50,16 +43,16 @@
       {
         "name": "James Wood",
         "mlb_team": "WSH",
-        "doubles": 20,
+        "doubles": 21,
         "homers": 21,
-        "total": 41
+        "total": 42
       },
       {
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
         "doubles": 16,
-        "homers": 25,
-        "total": 41
+        "homers": 26,
+        "total": 42
       },
       {
         "name": "Byron Buxton",
@@ -86,6 +79,6 @@
     "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 274,
-  "has_tied_groups": true
+  "grand_total": 279,
+  "has_tied_groups": false
 }
