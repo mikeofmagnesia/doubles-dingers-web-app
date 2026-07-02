@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01",
+  "updated": "2026-07-02",
   "groups": {
     "A": {
       "leaders": [
@@ -7,8 +7,8 @@
           "name": "Freddie Freeman",
           "mlb_team": "LAD",
           "doubles": 22,
-          "homers": 13,
-          "total": 35
+          "homers": 14,
+          "total": 36
         }
       ],
       "is_tied": false
@@ -44,8 +44,8 @@
         "name": "James Wood",
         "mlb_team": "WSH",
         "doubles": 21,
-        "homers": 21,
-        "total": 42
+        "homers": 22,
+        "total": 43
       },
       {
         "name": "Yordan Alvarez",
@@ -62,23 +62,16 @@
         "total": 40
       },
       {
-        "name": "Brandon Lowe",
-        "mlb_team": "PIT",
-        "doubles": 19,
-        "homers": 20,
-        "total": 39
-      },
-      {
         "name": "Hunter Goodman",
         "mlb_team": "COL",
         "doubles": 13,
-        "homers": 26,
-        "total": 39
+        "homers": 27,
+        "total": 40
       }
     ],
-    "is_tied": true,
+    "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 279,
+  "grand_total": 282,
   "has_tied_groups": false
 }
