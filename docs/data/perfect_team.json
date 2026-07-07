@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06",
+  "updated": "2026-07-07",
   "groups": {
     "A": {
       "leaders": [
@@ -19,8 +19,8 @@
           "name": "Matt Olson",
           "mlb_team": "ATL",
           "doubles": 23,
-          "homers": 22,
-          "total": 45
+          "homers": 24,
+          "total": 47
         }
       ],
       "is_tied": false
@@ -44,8 +44,8 @@
         "name": "James Wood",
         "mlb_team": "WSH",
         "doubles": 22,
-        "homers": 23,
-        "total": 45
+        "homers": 24,
+        "total": 46
       },
       {
         "name": "Yordan Alvarez",
@@ -79,6 +79,6 @@
     "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 296,
+  "grand_total": 299,
   "has_tied_groups": false
 }
