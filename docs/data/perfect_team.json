@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-09",
+  "updated": "2026-07-10",
   "groups": {
     "A": {
       "leaders": [
@@ -19,8 +19,8 @@
           "name": "Matt Olson",
           "mlb_team": "ATL",
           "doubles": 24,
-          "homers": 24,
-          "total": 48
+          "homers": 25,
+          "total": 49
         }
       ],
       "is_tied": false
@@ -30,9 +30,9 @@
         {
           "name": "Rafael Devers",
           "mlb_team": "SF",
-          "doubles": 24,
+          "doubles": 25,
           "homers": 18,
-          "total": 42
+          "total": 43
         }
       ],
       "is_tied": false
@@ -55,6 +55,13 @@
         "total": 45
       },
       {
+        "name": "Ben Rice",
+        "mlb_team": "NYY",
+        "doubles": 15,
+        "homers": 28,
+        "total": 43
+      },
+      {
         "name": "Brandon Lowe",
         "mlb_team": "PIT",
         "doubles": 20,
@@ -62,17 +69,17 @@
         "total": 41
       },
       {
+        "name": "Jordan Walker",
+        "mlb_team": "STL",
+        "doubles": 19,
+        "homers": 22,
+        "total": 41
+      },
+      {
         "name": "Byron Buxton",
         "mlb_team": "MIN",
         "doubles": 16,
         "homers": 25,
-        "total": 41
-      },
-      {
-        "name": "Ben Rice",
-        "mlb_team": "NYY",
-        "doubles": 15,
-        "homers": 26,
         "total": 41
       },
       {
@@ -86,6 +93,6 @@
     "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 302,
+  "grand_total": 306,
   "has_tied_groups": false
 }
