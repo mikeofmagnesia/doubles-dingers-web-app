@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-12",
+  "updated": "2026-07-13",
   "groups": {
     "A": {
       "leaders": [
@@ -15,6 +15,13 @@
           "mlb_team": "BAL",
           "doubles": 17,
           "homers": 21,
+          "total": 38
+        },
+        {
+          "name": "Shohei Ohtani",
+          "mlb_team": "LAD",
+          "doubles": 16,
+          "homers": 22,
           "total": 38
         }
       ],
@@ -51,8 +58,8 @@
         "name": "James Wood",
         "mlb_team": "WSH",
         "doubles": 23,
-        "homers": 27,
-        "total": 50
+        "homers": 28,
+        "total": 51
       },
       {
         "name": "Yordan Alvarez",
@@ -93,6 +100,6 @@
     "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 315,
+  "grand_total": 316,
   "has_tied_groups": true
 }
