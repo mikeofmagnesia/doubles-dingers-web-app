@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-21",
+  "updated": "2026-07-22",
   "groups": {
     "A": {
       "leaders": [
@@ -41,6 +41,13 @@
   "wildcard": {
     "players": [
       {
+        "name": "James Wood",
+        "mlb_team": "WSH",
+        "doubles": 25,
+        "homers": 28,
+        "total": 53
+      },
+      {
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
         "doubles": 20,
@@ -48,11 +55,11 @@
         "total": 53
       },
       {
-        "name": "James Wood",
-        "mlb_team": "WSH",
-        "doubles": 23,
-        "homers": 28,
-        "total": 51
+        "name": "Hunter Goodman",
+        "mlb_team": "COL",
+        "doubles": 16,
+        "homers": 31,
+        "total": 47
       },
       {
         "name": "Ben Rice",
@@ -60,25 +67,11 @@
         "doubles": 17,
         "homers": 29,
         "total": 46
-      },
-      {
-        "name": "Junior Caminero",
-        "mlb_team": "TB",
-        "doubles": 16,
-        "homers": 29,
-        "total": 45
-      },
-      {
-        "name": "Hunter Goodman",
-        "mlb_team": "COL",
-        "doubles": 15,
-        "homers": 30,
-        "total": 45
       }
     ],
-    "is_tied": true,
+    "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 330,
+  "grand_total": 334,
   "has_tied_groups": false
 }
