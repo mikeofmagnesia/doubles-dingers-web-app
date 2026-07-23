@@ -1,17 +1,24 @@
 {
-  "updated": "2026-07-22",
+  "updated": "2026-07-23",
   "groups": {
     "A": {
       "leaders": [
         {
-          "name": "Shohei Ohtani",
+          "name": "Freddie Freeman",
           "mlb_team": "LAD",
-          "doubles": 17,
-          "homers": 22,
-          "total": 39
+          "doubles": 25,
+          "homers": 15,
+          "total": 40
+        },
+        {
+          "name": "Pete Alonso",
+          "mlb_team": "BAL",
+          "doubles": 19,
+          "homers": 21,
+          "total": 40
         }
       ],
-      "is_tied": false
+      "is_tied": true
     },
     "B": {
       "leaders": [
@@ -30,9 +37,9 @@
         {
           "name": "Rafael Devers",
           "mlb_team": "SF",
-          "doubles": 25,
+          "doubles": 26,
           "homers": 20,
-          "total": 45
+          "total": 46
         }
       ],
       "is_tied": false
@@ -41,6 +48,13 @@
   "wildcard": {
     "players": [
       {
+        "name": "Yordan Alvarez",
+        "mlb_team": "HOU",
+        "doubles": 20,
+        "homers": 34,
+        "total": 54
+      },
+      {
         "name": "James Wood",
         "mlb_team": "WSH",
         "doubles": 25,
@@ -48,11 +62,11 @@
         "total": 53
       },
       {
-        "name": "Yordan Alvarez",
-        "mlb_team": "HOU",
-        "doubles": 20,
-        "homers": 33,
-        "total": 53
+        "name": "Ben Rice",
+        "mlb_team": "NYY",
+        "doubles": 17,
+        "homers": 30,
+        "total": 47
       },
       {
         "name": "Hunter Goodman",
@@ -60,18 +74,11 @@
         "doubles": 16,
         "homers": 31,
         "total": 47
-      },
-      {
-        "name": "Ben Rice",
-        "mlb_team": "NYY",
-        "doubles": 17,
-        "homers": 29,
-        "total": 46
       }
     ],
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 334,
-  "has_tied_groups": false
+  "grand_total": 338,
+  "has_tied_groups": true
 }
