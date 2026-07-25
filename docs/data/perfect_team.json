@@ -1,21 +1,21 @@
 {
-  "updated": "2026-07-24",
+  "updated": "2026-07-25",
   "groups": {
     "A": {
       "leaders": [
         {
           "name": "Freddie Freeman",
           "mlb_team": "LAD",
-          "doubles": 25,
+          "doubles": 26,
           "homers": 15,
-          "total": 40
+          "total": 41
         },
         {
           "name": "Pete Alonso",
           "mlb_team": "BAL",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 21,
-          "total": 40
+          "total": 41
         }
       ],
       "is_tied": true
@@ -26,8 +26,8 @@
           "name": "Matt Olson",
           "mlb_team": "ATL",
           "doubles": 25,
-          "homers": 26,
-          "total": 51
+          "homers": 27,
+          "total": 52
         }
       ],
       "is_tied": false
@@ -38,8 +38,8 @@
           "name": "Rafael Devers",
           "mlb_team": "SF",
           "doubles": 26,
-          "homers": 20,
-          "total": 46
+          "homers": 21,
+          "total": 47
         }
       ],
       "is_tied": false
@@ -79,6 +79,6 @@
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 338,
+  "grand_total": 341,
   "has_tied_groups": true
 }
