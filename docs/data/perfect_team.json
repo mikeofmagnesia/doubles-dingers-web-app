@@ -1,21 +1,21 @@
 {
-  "updated": "2026-07-26",
+  "updated": "2026-07-27",
   "groups": {
     "A": {
       "leaders": [
         {
           "name": "Freddie Freeman",
           "mlb_team": "LAD",
-          "doubles": 26,
+          "doubles": 27,
           "homers": 15,
-          "total": 41
+          "total": 42
         },
         {
           "name": "Pete Alonso",
           "mlb_team": "BAL",
           "doubles": 20,
-          "homers": 21,
-          "total": 41
+          "homers": 22,
+          "total": 42
         }
       ],
       "is_tied": true
@@ -25,9 +25,9 @@
         {
           "name": "Matt Olson",
           "mlb_team": "ATL",
-          "doubles": 25,
+          "doubles": 26,
           "homers": 27,
-          "total": 52
+          "total": 53
         }
       ],
       "is_tied": false
@@ -48,6 +48,13 @@
   "wildcard": {
     "players": [
       {
+        "name": "James Wood",
+        "mlb_team": "WSH",
+        "doubles": 25,
+        "homers": 30,
+        "total": 55
+      },
+      {
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
         "doubles": 20,
@@ -55,30 +62,23 @@
         "total": 54
       },
       {
-        "name": "James Wood",
-        "mlb_team": "WSH",
-        "doubles": 25,
-        "homers": 28,
-        "total": 53
-      },
-      {
         "name": "Ben Rice",
         "mlb_team": "NYY",
-        "doubles": 17,
-        "homers": 30,
-        "total": 47
+        "doubles": 18,
+        "homers": 31,
+        "total": 49
       },
       {
-        "name": "Hunter Goodman",
-        "mlb_team": "COL",
-        "doubles": 16,
-        "homers": 31,
-        "total": 47
+        "name": "CJ Abrams",
+        "mlb_team": "WSH",
+        "doubles": 21,
+        "homers": 27,
+        "total": 48
       }
     ],
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 343,
+  "grand_total": 350,
   "has_tied_groups": true
 }
