@@ -1,24 +1,17 @@
 {
-  "updated": "2026-07-27",
+  "updated": "2026-07-28",
   "groups": {
     "A": {
       "leaders": [
         {
-          "name": "Freddie Freeman",
-          "mlb_team": "LAD",
-          "doubles": 27,
-          "homers": 15,
-          "total": 42
-        },
-        {
           "name": "Pete Alonso",
           "mlb_team": "BAL",
-          "doubles": 20,
+          "doubles": 21,
           "homers": 22,
-          "total": 42
+          "total": 43
         }
       ],
-      "is_tied": true
+      "is_tied": false
     },
     "B": {
       "leaders": [
@@ -79,6 +72,6 @@
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 350,
-  "has_tied_groups": true
+  "grand_total": 351,
+  "has_tied_groups": false
 }
