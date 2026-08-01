@@ -1,14 +1,14 @@
 {
-  "updated": "2026-07-31",
+  "updated": "2026-08-01",
   "groups": {
     "A": {
       "leaders": [
         {
           "name": "Shohei Ohtani",
           "mlb_team": "LAD",
-          "doubles": 21,
-          "homers": 23,
-          "total": 44
+          "doubles": 22,
+          "homers": 24,
+          "total": 46
         }
       ],
       "is_tied": false
@@ -18,9 +18,9 @@
         {
           "name": "Matt Olson",
           "mlb_team": "ATL",
-          "doubles": 26,
-          "homers": 28,
-          "total": 54
+          "doubles": 27,
+          "homers": 29,
+          "total": 56
         }
       ],
       "is_tied": false
@@ -65,13 +65,13 @@
         "name": "CJ Abrams",
         "mlb_team": "WSH",
         "doubles": 21,
-        "homers": 27,
-        "total": 48
+        "homers": 28,
+        "total": 49
       }
     ],
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 356,
+  "grand_total": 361,
   "has_tied_groups": false
 }
