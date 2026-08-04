@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-03",
+  "updated": "2026-08-04",
   "groups": {
     "A": {
       "leaders": [
@@ -62,30 +62,16 @@
         "total": 50
       },
       {
-        "name": "Miguel Vargas",
-        "mlb_team": "CWS",
-        "doubles": 25,
-        "homers": 24,
-        "total": 49
-      },
-      {
-        "name": "CJ Abrams",
-        "mlb_team": "WSH",
-        "doubles": 21,
-        "homers": 28,
-        "total": 49
-      },
-      {
-        "name": "Hunter Goodman",
-        "mlb_team": "COL",
-        "doubles": 16,
-        "homers": 33,
-        "total": 49
+        "name": "Junior Caminero",
+        "mlb_team": "TB",
+        "doubles": 18,
+        "homers": 32,
+        "total": 50
       }
     ],
-    "is_tied": true,
+    "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 368,
+  "grand_total": 369,
   "has_tied_groups": false
 }
