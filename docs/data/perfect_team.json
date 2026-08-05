@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-04",
+  "updated": "2026-08-05",
   "groups": {
     "A": {
       "leaders": [
@@ -18,9 +18,9 @@
         {
           "name": "Matt Olson",
           "mlb_team": "ATL",
-          "doubles": 27,
+          "doubles": 28,
           "homers": 31,
-          "total": 58
+          "total": 59
         }
       ],
       "is_tied": false
@@ -55,6 +55,13 @@
         "total": 56
       },
       {
+        "name": "CJ Abrams",
+        "mlb_team": "WSH",
+        "doubles": 22,
+        "homers": 28,
+        "total": 50
+      },
+      {
         "name": "Ben Rice",
         "mlb_team": "NYY",
         "doubles": 19,
@@ -69,9 +76,9 @@
         "total": 50
       }
     ],
-    "is_tied": false,
+    "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 369,
+  "grand_total": 370,
   "has_tied_groups": false
 }
