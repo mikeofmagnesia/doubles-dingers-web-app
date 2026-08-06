@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-05",
+  "updated": "2026-08-06",
   "groups": {
     "A": {
       "leaders": [
@@ -7,8 +7,8 @@
           "name": "Shohei Ohtani",
           "mlb_team": "LAD",
           "doubles": 22,
-          "homers": 24,
-          "total": 46
+          "homers": 26,
+          "total": 48
         }
       ],
       "is_tied": false
@@ -55,6 +55,13 @@
         "total": 56
       },
       {
+        "name": "Junior Caminero",
+        "mlb_team": "TB",
+        "doubles": 18,
+        "homers": 33,
+        "total": 51
+      },
+      {
         "name": "CJ Abrams",
         "mlb_team": "WSH",
         "doubles": 22,
@@ -67,18 +74,11 @@
         "doubles": 19,
         "homers": 31,
         "total": 50
-      },
-      {
-        "name": "Junior Caminero",
-        "mlb_team": "TB",
-        "doubles": 18,
-        "homers": 32,
-        "total": 50
       }
     ],
     "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 370,
+  "grand_total": 373,
   "has_tied_groups": false
 }
