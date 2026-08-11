@@ -1,14 +1,14 @@
 {
-  "updated": "2026-08-10",
+  "updated": "2026-08-11",
   "groups": {
     "A": {
       "leaders": [
         {
           "name": "Shohei Ohtani",
           "mlb_team": "LAD",
-          "doubles": 22,
+          "doubles": 23,
           "homers": 26,
-          "total": 48
+          "total": 49
         }
       ],
       "is_tied": false
@@ -43,9 +43,9 @@
       {
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
-        "doubles": 24,
+        "doubles": 25,
         "homers": 35,
-        "total": 59
+        "total": 60
       },
       {
         "name": "James Wood",
@@ -53,6 +53,13 @@
         "doubles": 26,
         "homers": 30,
         "total": 56
+      },
+      {
+        "name": "Junior Caminero",
+        "mlb_team": "TB",
+        "doubles": 18,
+        "homers": 34,
+        "total": 52
       },
       {
         "name": "CJ Abrams",
@@ -67,18 +74,11 @@
         "doubles": 19,
         "homers": 32,
         "total": 51
-      },
-      {
-        "name": "Junior Caminero",
-        "mlb_team": "TB",
-        "doubles": 18,
-        "homers": 33,
-        "total": 51
       }
     ],
     "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 379,
+  "grand_total": 382,
   "has_tied_groups": false
 }
