@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12",
+  "updated": "2026-08-13",
   "groups": {
     "A": {
       "leaders": [
@@ -7,8 +7,8 @@
           "name": "Shohei Ohtani",
           "mlb_team": "LAD",
           "doubles": 23,
-          "homers": 26,
-          "total": 49
+          "homers": 27,
+          "total": 50
         }
       ],
       "is_tied": false
@@ -67,11 +67,18 @@
         "doubles": 23,
         "homers": 29,
         "total": 52
+      },
+      {
+        "name": "Ben Rice",
+        "mlb_team": "NYY",
+        "doubles": 20,
+        "homers": 32,
+        "total": 52
       }
     ],
-    "is_tied": false,
+    "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 385,
+  "grand_total": 386,
   "has_tied_groups": false
 }
