@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-17",
+  "updated": "2026-08-18",
   "groups": {
     "A": {
       "leaders": [
@@ -7,8 +7,8 @@
           "name": "Shohei Ohtani",
           "mlb_team": "LAD",
           "doubles": 24,
-          "homers": 27,
-          "total": 51
+          "homers": 29,
+          "total": 53
         }
       ],
       "is_tied": false
@@ -18,9 +18,9 @@
         {
           "name": "Matt Olson",
           "mlb_team": "ATL",
-          "doubles": 30,
+          "doubles": 31,
           "homers": 36,
-          "total": 66
+          "total": 67
         }
       ],
       "is_tied": false
@@ -62,23 +62,16 @@
         "total": 56
       },
       {
-        "name": "Ben Rice",
-        "mlb_team": "NYY",
-        "doubles": 20,
-        "homers": 33,
-        "total": 53
-      },
-      {
-        "name": "Junior Caminero",
-        "mlb_team": "TB",
-        "doubles": 18,
-        "homers": 35,
-        "total": 53
+        "name": "Pete Crow-Armstrong",
+        "mlb_team": "CHC",
+        "doubles": 25,
+        "homers": 30,
+        "total": 55
       }
     ],
-    "is_tied": true,
+    "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 398,
+  "grand_total": 403,
   "has_tied_groups": false
 }
