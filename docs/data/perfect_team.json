@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21",
+  "updated": "2026-08-22",
   "groups": {
     "A": {
       "leaders": [
@@ -31,8 +31,8 @@
           "name": "Rafael Devers",
           "mlb_team": "SF",
           "doubles": 31,
-          "homers": 25,
-          "total": 56
+          "homers": 26,
+          "total": 57
         }
       ],
       "is_tied": false
@@ -43,15 +43,22 @@
       {
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
-        "doubles": 26,
+        "doubles": 28,
         "homers": 36,
-        "total": 62
+        "total": 64
       },
       {
         "name": "Miguel Vargas",
         "mlb_team": "CWS",
-        "doubles": 29,
-        "homers": 28,
+        "doubles": 30,
+        "homers": 29,
+        "total": 59
+      },
+      {
+        "name": "Pete Crow-Armstrong",
+        "mlb_team": "CHC",
+        "doubles": 25,
+        "homers": 32,
         "total": 57
       },
       {
@@ -60,18 +67,11 @@
         "doubles": 26,
         "homers": 30,
         "total": 56
-      },
-      {
-        "name": "Pete Crow-Armstrong",
-        "mlb_team": "CHC",
-        "doubles": 25,
-        "homers": 31,
-        "total": 56
       }
     ],
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 408,
+  "grand_total": 414,
   "has_tied_groups": false
 }

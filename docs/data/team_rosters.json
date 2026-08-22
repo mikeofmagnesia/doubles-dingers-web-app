@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21",
+  "updated": "2026-08-22",
   "teams": [
     {
       "owner": "Bill Schuldt",
@@ -66,51 +66,51 @@
           "name": "Pete Crow-Armstrong",
           "group": "Wildcard",
           "doubles": 25,
-          "homers": 31,
-          "total": 56,
+          "homers": 32,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Wyatt Langford",
           "group": "Wildcard",
-          "doubles": 14,
+          "doubles": 15,
           "homers": 14,
-          "total": 28,
-          "prev_doubles": 0,
+          "total": 29,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 28,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
-        "doubles": 117,
-        "homers": 149,
-        "total": 266,
-        "prev_doubles": 0,
-        "prev_homers": 0,
+        "doubles": 118,
+        "homers": 150,
+        "total": 268,
+        "prev_doubles": 1,
+        "prev_homers": 1,
         "prev_total": 266,
-        "total_change": 0
+        "total_change": 2
       }
     },
     {
       "owner": "Mike Ammann",
       "team_name": "Ammann",
-      "rank": 66,
-      "rank_change": 0,
+      "rank": 65,
+      "rank_change": 1,
       "players": [
         {
           "name": "Cal Raleigh",
           "group": "A",
           "doubles": 8,
-          "homers": 13,
-          "total": 21,
+          "homers": 14,
+          "total": 22,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 21,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Kyle Schwarber",
@@ -130,9 +130,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Taylor Ward",
@@ -148,52 +148,52 @@
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Bo Bichette",
           "group": "Wildcard",
           "doubles": 21,
-          "homers": 12,
-          "total": 33,
+          "homers": 13,
+          "total": 34,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 33,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Pete Crow-Armstrong",
           "group": "Wildcard",
           "doubles": 25,
-          "homers": 31,
-          "total": 56,
+          "homers": 32,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
-        "doubles": 114,
-        "homers": 144,
-        "total": 258,
-        "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 257,
-        "total_change": 1
+        "doubles": 115,
+        "homers": 147,
+        "total": 262,
+        "prev_doubles": 1,
+        "prev_homers": 3,
+        "prev_total": 258,
+        "total_change": 4
       }
     },
     {
       "owner": "Adan Pachon",
       "team_name": "APM 1",
-      "rank": 51,
-      "rank_change": 0,
+      "rank": 53,
+      "rank_change": -2,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -231,13 +231,13 @@
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Brent Rooker",
@@ -274,20 +274,20 @@
         }
       ],
       "totals": {
-        "doubles": 112,
+        "doubles": 113,
         "homers": 154,
-        "total": 266,
-        "prev_doubles": 0,
+        "total": 267,
+        "prev_doubles": 1,
         "prev_homers": 0,
         "prev_total": 266,
-        "total_change": 0
+        "total_change": 1
       }
     },
     {
       "owner": "Adan Pachon",
       "team_name": "APM 2",
-      "rank": 58,
-      "rank_change": -1,
+      "rank": 55,
+      "rank_change": 3,
       "players": [
         {
           "name": "Aaron Judge",
@@ -347,34 +347,34 @@
         {
           "name": "Vinnie Pasquantino",
           "group": "Wildcard",
-          "doubles": 13,
-          "homers": 7,
-          "total": 20,
-          "prev_doubles": 0,
-          "prev_homers": 0,
+          "doubles": 14,
+          "homers": 8,
+          "total": 22,
+          "prev_doubles": 1,
+          "prev_homers": 1,
           "prev_total": 20,
-          "total_change": 0
+          "total_change": 2
         },
         {
           "name": "Wyatt Langford",
           "group": "Wildcard",
-          "doubles": 14,
+          "doubles": 15,
           "homers": 14,
-          "total": 28,
-          "prev_doubles": 0,
+          "total": 29,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 28,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
-        "doubles": 117,
-        "homers": 146,
-        "total": 263,
-        "prev_doubles": 0,
-        "prev_homers": 0,
+        "doubles": 119,
+        "homers": 147,
+        "total": 266,
+        "prev_doubles": 2,
+        "prev_homers": 1,
         "prev_total": 263,
-        "total_change": 0
+        "total_change": 3
       }
     },
     {
@@ -442,12 +442,12 @@
           "name": "Alex Bregman",
           "group": "Wildcard",
           "doubles": 24,
-          "homers": 16,
-          "total": 40,
+          "homers": 18,
+          "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 2,
           "prev_total": 40,
-          "total_change": 0
+          "total_change": 2
         },
         {
           "name": "Jo Adell",
@@ -463,19 +463,19 @@
       ],
       "totals": {
         "doubles": 106,
-        "homers": 103,
-        "total": 209,
+        "homers": 105,
+        "total": 211,
         "prev_doubles": 0,
-        "prev_homers": 0,
+        "prev_homers": 2,
         "prev_total": 209,
-        "total_change": 0
+        "total_change": 2
       }
     },
     {
       "owner": "Dustin Dupont",
       "team_name": "BangBang2",
-      "rank": 20,
-      "rank_change": 5,
+      "rank": 21,
+      "rank_change": -1,
       "players": [
         {
           "name": "Freddie Freeman",
@@ -513,13 +513,13 @@
         {
           "name": "Yordan Alvarez",
           "group": "Wildcard",
-          "doubles": 26,
+          "doubles": 28,
           "homers": 36,
-          "total": 62,
-          "prev_doubles": 1,
+          "total": 64,
+          "prev_doubles": 2,
           "prev_homers": 0,
-          "prev_total": 61,
-          "total_change": 1
+          "prev_total": 62,
+          "total_change": 2
         },
         {
           "name": "Corey Seager",
@@ -527,10 +527,10 @@
           "doubles": 10,
           "homers": 13,
           "total": 23,
-          "prev_doubles": 1,
-          "prev_homers": 1,
-          "prev_total": 21,
-          "total_change": 2
+          "prev_doubles": 0,
+          "prev_homers": 0,
+          "prev_total": 23,
+          "total_change": 0
         },
         {
           "name": "Gunnar Henderson",
@@ -556,20 +556,20 @@
         }
       ],
       "totals": {
-        "doubles": 151,
+        "doubles": 153,
         "homers": 144,
-        "total": 295,
+        "total": 297,
         "prev_doubles": 2,
-        "prev_homers": 1,
-        "prev_total": 292,
-        "total_change": 3
+        "prev_homers": 0,
+        "prev_total": 295,
+        "total_change": 2
       }
     },
     {
       "owner": "Bill Sarafolean",
       "team_name": "Bill Sarafolean",
-      "rank": 27,
-      "rank_change": -2,
+      "rank": 26,
+      "rank_change": 1,
       "players": [
         {
           "name": "Aaron Judge",
@@ -600,20 +600,20 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Elly De La Cruz",
@@ -650,12 +650,12 @@
         }
       ],
       "totals": {
-        "doubles": 127,
+        "doubles": 128,
         "homers": 166,
-        "total": 293,
-        "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 292,
+        "total": 294,
+        "prev_doubles": 1,
+        "prev_homers": 0,
+        "prev_total": 293,
         "total_change": 1
       }
     },
@@ -694,31 +694,31 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Alex Bregman",
           "group": "Wildcard",
           "doubles": 24,
-          "homers": 16,
-          "total": 40,
+          "homers": 18,
+          "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 2,
           "prev_total": 40,
-          "total_change": 0
+          "total_change": 2
         },
         {
           "name": "Pete Crow-Armstrong",
           "group": "Wildcard",
           "doubles": 25,
-          "homers": 31,
-          "total": 56,
+          "homers": 32,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Eugenio Su\u00e1rez",
@@ -745,30 +745,30 @@
       ],
       "totals": {
         "doubles": 165,
-        "homers": 158,
-        "total": 323,
+        "homers": 161,
+        "total": 326,
         "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 322,
-        "total_change": 1
+        "prev_homers": 3,
+        "prev_total": 323,
+        "total_change": 3
       }
     },
     {
       "owner": "Brett Morrison \ud83c\udfc6 ('25)",
       "team_name": "Brett Morrison #1",
       "rank": 18,
-      "rank_change": 4,
+      "rank_change": 0,
       "players": [
         {
           "name": "Pete Alonso",
           "group": "A",
           "doubles": 23,
-          "homers": 29,
-          "total": 52,
+          "homers": 30,
+          "total": 53,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 52,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Kyle Schwarber",
@@ -788,9 +788,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Brent Rooker",
@@ -806,13 +806,13 @@
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Nick Kurtz",
@@ -831,20 +831,20 @@
           "doubles": 25,
           "homers": 21,
           "total": 46,
-          "prev_doubles": 1,
-          "prev_homers": 1,
-          "prev_total": 44,
-          "total_change": 2
+          "prev_doubles": 0,
+          "prev_homers": 0,
+          "prev_total": 46,
+          "total_change": 0
         }
       ],
       "totals": {
-        "doubles": 127,
-        "homers": 169,
-        "total": 296,
+        "doubles": 128,
+        "homers": 170,
+        "total": 298,
         "prev_doubles": 1,
-        "prev_homers": 2,
-        "prev_total": 293,
-        "total_change": 3
+        "prev_homers": 1,
+        "prev_total": 296,
+        "total_change": 2
       }
     },
     {
@@ -882,9 +882,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Nick Kurtz",
@@ -900,13 +900,13 @@
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Brent Rooker",
@@ -923,29 +923,29 @@
           "name": "Bo Bichette",
           "group": "Wildcard",
           "doubles": 21,
-          "homers": 12,
-          "total": 33,
+          "homers": 13,
+          "total": 34,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 33,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
-        "doubles": 110,
-        "homers": 148,
-        "total": 258,
-        "prev_doubles": 0,
+        "doubles": 111,
+        "homers": 149,
+        "total": 260,
+        "prev_doubles": 1,
         "prev_homers": 1,
-        "prev_total": 257,
-        "total_change": 1
+        "prev_total": 258,
+        "total_change": 2
       }
     },
     {
       "owner": "Brett Walters & Eric Miras",
       "team_name": "Brett Walters & Eric Miras",
-      "rank": 69,
-      "rank_change": 1,
+      "rank": 70,
+      "rank_change": -1,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -976,20 +976,20 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Riley Greene",
@@ -1026,20 +1026,20 @@
         }
       ],
       "totals": {
-        "doubles": 133,
+        "doubles": 134,
         "homers": 124,
-        "total": 257,
-        "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 256,
+        "total": 258,
+        "prev_doubles": 1,
+        "prev_homers": 0,
+        "prev_total": 257,
         "total_change": 1
       }
     },
     {
       "owner": "Brian Larson",
       "team_name": "Brian Larson #1",
-      "rank": 38,
-      "rank_change": -1,
+      "rank": 40,
+      "rank_change": -2,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -1055,13 +1055,13 @@
         {
           "name": "Fernando Tatis Jr.",
           "group": "B",
-          "doubles": 26,
+          "doubles": 27,
           "homers": 15,
-          "total": 41,
-          "prev_doubles": 0,
+          "total": 42,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 41,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Bobby Witt Jr.",
@@ -1070,9 +1070,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Francisco Lindor",
@@ -1120,31 +1120,31 @@
         }
       ],
       "totals": {
-        "doubles": 145,
+        "doubles": 146,
         "homers": 137,
-        "total": 282,
-        "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 281,
+        "total": 283,
+        "prev_doubles": 1,
+        "prev_homers": 0,
+        "prev_total": 282,
         "total_change": 1
       }
     },
     {
       "owner": "Brian Larson",
       "team_name": "Brian Larson #2",
-      "rank": 58,
-      "rank_change": -1,
+      "rank": 51,
+      "rank_change": 7,
       "players": [
         {
           "name": "Pete Alonso",
           "group": "A",
           "doubles": 23,
-          "homers": 29,
-          "total": 52,
+          "homers": 30,
+          "total": 53,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 52,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Kyle Schwarber",
@@ -1171,35 +1171,35 @@
         {
           "name": "Corbin Carroll",
           "group": "Wildcard",
-          "doubles": 26,
+          "doubles": 27,
           "homers": 18,
-          "total": 44,
-          "prev_doubles": 0,
+          "total": 45,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 44,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Vinnie Pasquantino",
           "group": "Wildcard",
-          "doubles": 13,
-          "homers": 7,
-          "total": 20,
-          "prev_doubles": 0,
-          "prev_homers": 0,
+          "doubles": 14,
+          "homers": 8,
+          "total": 22,
+          "prev_doubles": 1,
+          "prev_homers": 1,
           "prev_total": 20,
-          "total_change": 0
+          "total_change": 2
         },
         {
           "name": "Bo Bichette",
           "group": "Wildcard",
           "doubles": 21,
-          "homers": 12,
-          "total": 33,
+          "homers": 13,
+          "total": 34,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 33,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Julio Rodr\u00edguez",
@@ -1214,20 +1214,20 @@
         }
       ],
       "totals": {
-        "doubles": 128,
-        "homers": 135,
-        "total": 263,
-        "prev_doubles": 0,
-        "prev_homers": 0,
+        "doubles": 130,
+        "homers": 138,
+        "total": 268,
+        "prev_doubles": 2,
+        "prev_homers": 3,
         "prev_total": 263,
-        "total_change": 0
+        "total_change": 5
       }
     },
     {
       "owner": "Brian McBride",
       "team_name": "Brian McBride  #2",
-      "rank": 69,
-      "rank_change": -3,
+      "rank": 68,
+      "rank_change": 1,
       "players": [
         {
           "name": "Aaron Judge",
@@ -1243,13 +1243,13 @@
         {
           "name": "Fernando Tatis Jr.",
           "group": "B",
-          "doubles": 26,
+          "doubles": 27,
           "homers": 15,
-          "total": 41,
-          "prev_doubles": 0,
+          "total": 42,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 41,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Juan Soto",
@@ -1287,13 +1287,13 @@
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Ketel Marte",
@@ -1308,20 +1308,20 @@
         }
       ],
       "totals": {
-        "doubles": 116,
+        "doubles": 118,
         "homers": 141,
-        "total": 257,
-        "prev_doubles": 0,
+        "total": 259,
+        "prev_doubles": 2,
         "prev_homers": 0,
         "prev_total": 257,
-        "total_change": 0
+        "total_change": 2
       }
     },
     {
       "owner": "Brian McBride",
       "team_name": "Brian McBride #1",
-      "rank": 54,
-      "rank_change": 3,
+      "rank": 58,
+      "rank_change": -4,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -1352,9 +1352,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Julio Rodr\u00edguez",
@@ -1406,9 +1406,9 @@
         "homers": 124,
         "total": 264,
         "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 263,
-        "total_change": 1
+        "prev_homers": 0,
+        "prev_total": 264,
+        "total_change": 0
       }
     },
     {
@@ -1446,9 +1446,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Brent Rooker",
@@ -1465,23 +1465,23 @@
           "name": "Pete Crow-Armstrong",
           "group": "Wildcard",
           "doubles": 25,
-          "homers": 31,
-          "total": 56,
+          "homers": 32,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Bo Bichette",
           "group": "Wildcard",
           "doubles": 21,
-          "homers": 12,
-          "total": 33,
+          "homers": 13,
+          "total": 34,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 33,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "James Wood",
@@ -1497,19 +1497,19 @@
       ],
       "totals": {
         "doubles": 141,
-        "homers": 166,
-        "total": 307,
+        "homers": 168,
+        "total": 309,
         "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 306,
-        "total_change": 1
+        "prev_homers": 2,
+        "prev_total": 307,
+        "total_change": 2
       }
     },
     {
       "owner": "Justin Bridge",
       "team_name": "Bridge 2",
-      "rank": 91,
-      "rank_change": -1,
+      "rank": 90,
+      "rank_change": 1,
       "players": [
         {
           "name": "Aaron Judge",
@@ -1558,13 +1558,13 @@
         {
           "name": "Vinnie Pasquantino",
           "group": "Wildcard",
-          "doubles": 13,
-          "homers": 7,
-          "total": 20,
-          "prev_doubles": 0,
-          "prev_homers": 0,
+          "doubles": 14,
+          "homers": 8,
+          "total": 22,
+          "prev_doubles": 1,
+          "prev_homers": 1,
           "prev_total": 20,
-          "total_change": 0
+          "total_change": 2
         },
         {
           "name": "Eugenio Su\u00e1rez",
@@ -1580,30 +1580,30 @@
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
-        "doubles": 107,
-        "homers": 116,
-        "total": 223,
-        "prev_doubles": 0,
-        "prev_homers": 0,
+        "doubles": 109,
+        "homers": 117,
+        "total": 226,
+        "prev_doubles": 2,
+        "prev_homers": 1,
         "prev_total": 223,
-        "total_change": 0
+        "total_change": 3
       }
     },
     {
       "owner": "Tom Ramy",
       "team_name": "C'mon Rick!",
-      "rank": 65,
-      "rank_change": 0,
+      "rank": 66,
+      "rank_change": -1,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -1634,9 +1634,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Eugenio Su\u00e1rez",
@@ -1653,12 +1653,12 @@
           "name": "Bo Bichette",
           "group": "Wildcard",
           "doubles": 21,
-          "homers": 12,
-          "total": 33,
+          "homers": 13,
+          "total": 34,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 33,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Brent Rooker",
@@ -1685,11 +1685,11 @@
       ],
       "totals": {
         "doubles": 136,
-        "homers": 123,
-        "total": 259,
+        "homers": 124,
+        "total": 260,
         "prev_doubles": 0,
         "prev_homers": 1,
-        "prev_total": 258,
+        "prev_total": 259,
         "total_change": 1
       }
     },
@@ -1697,7 +1697,7 @@
       "owner": "Jim Macdonald",
       "team_name": "California Penal League",
       "rank": 35,
-      "rank_change": -1,
+      "rank_change": 0,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -1713,13 +1713,13 @@
         {
           "name": "Fernando Tatis Jr.",
           "group": "B",
-          "doubles": 26,
+          "doubles": 27,
           "homers": 15,
-          "total": 41,
-          "prev_doubles": 0,
+          "total": 42,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 41,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Bobby Witt Jr.",
@@ -1728,9 +1728,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Gunnar Henderson",
@@ -1769,40 +1769,40 @@
           "name": "Alex Bregman",
           "group": "Wildcard",
           "doubles": 24,
-          "homers": 16,
-          "total": 40,
+          "homers": 18,
+          "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 2,
           "prev_total": 40,
-          "total_change": 0
+          "total_change": 2
         }
       ],
       "totals": {
-        "doubles": 157,
-        "homers": 126,
-        "total": 283,
-        "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 282,
-        "total_change": 1
+        "doubles": 158,
+        "homers": 128,
+        "total": 286,
+        "prev_doubles": 1,
+        "prev_homers": 2,
+        "prev_total": 283,
+        "total_change": 3
       }
     },
     {
       "owner": "Joe Epple",
       "team_name": "Chasing Dahl",
-      "rank": 35,
-      "rank_change": -1,
+      "rank": 31,
+      "rank_change": 4,
       "players": [
         {
           "name": "Cal Raleigh",
           "group": "A",
           "doubles": 8,
-          "homers": 13,
-          "total": 21,
+          "homers": 14,
+          "total": 22,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 21,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Kyle Schwarber",
@@ -1830,34 +1830,34 @@
           "name": "Bo Bichette",
           "group": "Wildcard",
           "doubles": 21,
-          "homers": 12,
-          "total": 33,
+          "homers": 13,
+          "total": 34,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 33,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Yordan Alvarez",
           "group": "Wildcard",
-          "doubles": 26,
+          "doubles": 28,
           "homers": 36,
-          "total": 62,
-          "prev_doubles": 1,
+          "total": 64,
+          "prev_doubles": 2,
           "prev_homers": 0,
-          "prev_total": 61,
-          "total_change": 1
+          "prev_total": 62,
+          "total_change": 2
         },
         {
           "name": "Nick Kurtz",
@@ -1872,20 +1872,20 @@
         }
       ],
       "totals": {
-        "doubles": 116,
-        "homers": 167,
-        "total": 283,
-        "prev_doubles": 1,
-        "prev_homers": 0,
-        "prev_total": 282,
-        "total_change": 1
+        "doubles": 119,
+        "homers": 169,
+        "total": 288,
+        "prev_doubles": 3,
+        "prev_homers": 2,
+        "prev_total": 283,
+        "total_change": 5
       }
     },
     {
       "owner": "Conner Tokheim",
       "team_name": "Conner Tokheim #1",
-      "rank": 38,
-      "rank_change": 4,
+      "rank": 39,
+      "rank_change": -1,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -1937,10 +1937,10 @@
           "doubles": 10,
           "homers": 13,
           "total": 23,
-          "prev_doubles": 1,
-          "prev_homers": 1,
-          "prev_total": 21,
-          "total_change": 2
+          "prev_doubles": 0,
+          "prev_homers": 0,
+          "prev_total": 23,
+          "total_change": 0
         },
         {
           "name": "Austin Riley",
@@ -1948,38 +1948,38 @@
           "doubles": 20,
           "homers": 15,
           "total": 35,
-          "prev_doubles": 1,
+          "prev_doubles": 0,
           "prev_homers": 0,
-          "prev_total": 34,
-          "total_change": 1
+          "prev_total": 35,
+          "total_change": 0
         },
         {
           "name": "Yordan Alvarez",
           "group": "Wildcard",
-          "doubles": 26,
+          "doubles": 28,
           "homers": 36,
-          "total": 62,
-          "prev_doubles": 1,
+          "total": 64,
+          "prev_doubles": 2,
           "prev_homers": 0,
-          "prev_total": 61,
-          "total_change": 1
+          "prev_total": 62,
+          "total_change": 2
         }
       ],
       "totals": {
-        "doubles": 142,
+        "doubles": 144,
         "homers": 140,
-        "total": 282,
-        "prev_doubles": 3,
-        "prev_homers": 1,
-        "prev_total": 278,
-        "total_change": 4
+        "total": 284,
+        "prev_doubles": 2,
+        "prev_homers": 0,
+        "prev_total": 282,
+        "total_change": 2
       }
     },
     {
       "owner": "Conner Tokheim",
       "team_name": "Conner Tokheim #2",
       "rank": 80,
-      "rank_change": -1,
+      "rank_change": 0,
       "players": [
         {
           "name": "Freddie Freeman",
@@ -2010,9 +2010,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Gunnar Henderson",
@@ -2051,21 +2051,21 @@
           "name": "Bo Bichette",
           "group": "Wildcard",
           "doubles": 21,
-          "homers": 12,
-          "total": 33,
+          "homers": 13,
+          "total": 34,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 33,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
         "doubles": 144,
-        "homers": 101,
-        "total": 245,
+        "homers": 102,
+        "total": 246,
         "prev_doubles": 0,
         "prev_homers": 1,
-        "prev_total": 244,
+        "prev_total": 245,
         "total_change": 1
       }
     },
@@ -2101,23 +2101,23 @@
           "name": "Rafael Devers",
           "group": "C",
           "doubles": 31,
-          "homers": 25,
-          "total": 56,
+          "homers": 26,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Pete Crow-Armstrong",
           "group": "Wildcard",
           "doubles": 25,
-          "homers": 31,
-          "total": 56,
+          "homers": 32,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Kyle Tucker",
@@ -2136,10 +2136,10 @@
           "doubles": 10,
           "homers": 13,
           "total": 23,
-          "prev_doubles": 1,
-          "prev_homers": 1,
-          "prev_total": 21,
-          "total_change": 2
+          "prev_doubles": 0,
+          "prev_homers": 0,
+          "prev_total": 23,
+          "total_change": 0
         },
         {
           "name": "James Wood",
@@ -2155,11 +2155,11 @@
       ],
       "totals": {
         "doubles": 152,
-        "homers": 163,
-        "total": 315,
-        "prev_doubles": 1,
-        "prev_homers": 1,
-        "prev_total": 313,
+        "homers": 165,
+        "total": 317,
+        "prev_doubles": 0,
+        "prev_homers": 2,
+        "prev_total": 315,
         "total_change": 2
       }
     },
@@ -2167,7 +2167,7 @@
       "owner": "Dan Barfknecht",
       "team_name": "Dan Barfknecht #1",
       "rank": 3,
-      "rank_change": 1,
+      "rank_change": 0,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -2198,9 +2198,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Eugenio Su\u00e1rez",
@@ -2216,13 +2216,13 @@
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Brent Rooker",
@@ -2239,29 +2239,29 @@
           "name": "Pete Crow-Armstrong",
           "group": "Wildcard",
           "doubles": 25,
-          "homers": 31,
-          "total": 56,
+          "homers": 32,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
-        "doubles": 145,
-        "homers": 176,
-        "total": 321,
-        "prev_doubles": 0,
+        "doubles": 146,
+        "homers": 177,
+        "total": 323,
+        "prev_doubles": 1,
         "prev_homers": 1,
-        "prev_total": 320,
-        "total_change": 1
+        "prev_total": 321,
+        "total_change": 2
       }
     },
     {
       "owner": "Dan Barfknecht",
       "team_name": "Dan Barfknecht #2",
-      "rank": 75,
-      "rank_change": -1,
+      "rank": 73,
+      "rank_change": 2,
       "players": [
         {
           "name": "Aaron Judge",
@@ -2289,12 +2289,12 @@
           "name": "Rafael Devers",
           "group": "C",
           "doubles": 31,
-          "homers": 25,
-          "total": 56,
+          "homers": 26,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "James Wood",
@@ -2332,30 +2332,30 @@
         {
           "name": "Vinnie Pasquantino",
           "group": "Wildcard",
-          "doubles": 13,
-          "homers": 7,
-          "total": 20,
-          "prev_doubles": 0,
-          "prev_homers": 0,
+          "doubles": 14,
+          "homers": 8,
+          "total": 22,
+          "prev_doubles": 1,
+          "prev_homers": 1,
           "prev_total": 20,
-          "total_change": 0
+          "total_change": 2
         }
       ],
       "totals": {
-        "doubles": 120,
-        "homers": 132,
-        "total": 252,
-        "prev_doubles": 0,
-        "prev_homers": 0,
+        "doubles": 121,
+        "homers": 134,
+        "total": 255,
+        "prev_doubles": 1,
+        "prev_homers": 2,
         "prev_total": 252,
-        "total_change": 0
+        "total_change": 3
       }
     },
     {
       "owner": "Debbie Hins",
       "team_name": "Debbie #1",
-      "rank": 46,
-      "rank_change": 0,
+      "rank": 47,
+      "rank_change": -1,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -2386,9 +2386,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Jarren Duran",
@@ -2415,13 +2415,13 @@
         {
           "name": "Corbin Carroll",
           "group": "Wildcard",
-          "doubles": 26,
+          "doubles": 27,
           "homers": 18,
-          "total": 44,
-          "prev_doubles": 0,
+          "total": 45,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 44,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Elly De La Cruz",
@@ -2436,19 +2436,19 @@
         }
       ],
       "totals": {
-        "doubles": 127,
+        "doubles": 128,
         "homers": 148,
-        "total": 275,
-        "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 274,
+        "total": 276,
+        "prev_doubles": 1,
+        "prev_homers": 0,
+        "prev_total": 275,
         "total_change": 1
       }
     },
     {
       "owner": "Debbie Hins",
       "team_name": "Debbie #2",
-      "rank": 71,
+      "rank": 72,
       "rank_change": -1,
       "players": [
         {
@@ -2574,9 +2574,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Gunnar Henderson",
@@ -2604,40 +2604,40 @@
           "name": "Pete Crow-Armstrong",
           "group": "Wildcard",
           "doubles": 25,
-          "homers": 31,
-          "total": 56,
+          "homers": 32,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Bo Bichette",
           "group": "Wildcard",
           "doubles": 21,
-          "homers": 12,
-          "total": 33,
+          "homers": 13,
+          "total": 34,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 33,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
         "doubles": 163,
-        "homers": 162,
-        "total": 325,
+        "homers": 164,
+        "total": 327,
         "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 324,
-        "total_change": 1
+        "prev_homers": 2,
+        "prev_total": 325,
+        "total_change": 2
       }
     },
     {
       "owner": "Mike Erickson",
       "team_name": "Deez Dongers",
-      "rank": 87,
-      "rank_change": 0,
+      "rank": 88,
+      "rank_change": -1,
       "players": [
         {
           "name": "Aaron Judge",
@@ -2731,7 +2731,7 @@
       "owner": "Teresa Demma",
       "team_name": "Demma-lition",
       "rank": 6,
-      "rank_change": -2,
+      "rank_change": 0,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -2791,13 +2791,13 @@
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "James Wood",
@@ -2812,20 +2812,20 @@
         }
       ],
       "totals": {
-        "doubles": 133,
+        "doubles": 134,
         "homers": 187,
-        "total": 320,
-        "prev_doubles": 0,
+        "total": 321,
+        "prev_doubles": 1,
         "prev_homers": 0,
         "prev_total": 320,
-        "total_change": 0
+        "total_change": 1
       }
     },
     {
       "owner": "Denny Graves",
       "team_name": "Denny Graves",
-      "rank": 7,
-      "rank_change": 0,
+      "rank": 8,
+      "rank_change": -1,
       "players": [
         {
           "name": "Aaron Judge",
@@ -2856,31 +2856,31 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Pete Crow-Armstrong",
           "group": "Wildcard",
           "doubles": 25,
-          "homers": 31,
-          "total": 56,
+          "homers": 32,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Brent Rooker",
@@ -2906,13 +2906,13 @@
         }
       ],
       "totals": {
-        "doubles": 141,
-        "homers": 175,
-        "total": 316,
-        "prev_doubles": 0,
+        "doubles": 142,
+        "homers": 176,
+        "total": 318,
+        "prev_doubles": 1,
         "prev_homers": 1,
-        "prev_total": 315,
-        "total_change": 1
+        "prev_total": 316,
+        "total_change": 2
       }
     },
     {
@@ -2950,20 +2950,20 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Nick Kurtz",
@@ -3000,20 +3000,20 @@
         }
       ],
       "totals": {
-        "doubles": 141,
+        "doubles": 142,
         "homers": 137,
-        "total": 278,
-        "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 277,
+        "total": 279,
+        "prev_doubles": 1,
+        "prev_homers": 0,
+        "prev_total": 278,
         "total_change": 1
       }
     },
     {
       "owner": "Eric Dobervich",
       "team_name": "Doby Two",
-      "rank": 83,
-      "rank_change": 0,
+      "rank": 82,
+      "rank_change": 1,
       "players": [
         {
           "name": "Aaron Judge",
@@ -3051,13 +3051,13 @@
         {
           "name": "Vinnie Pasquantino",
           "group": "Wildcard",
-          "doubles": 13,
-          "homers": 7,
-          "total": 20,
-          "prev_doubles": 0,
-          "prev_homers": 0,
+          "doubles": 14,
+          "homers": 8,
+          "total": 22,
+          "prev_doubles": 1,
+          "prev_homers": 1,
           "prev_total": 20,
-          "total_change": 0
+          "total_change": 2
         },
         {
           "name": "Elly De La Cruz",
@@ -3073,13 +3073,13 @@
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Nick Kurtz",
@@ -3094,13 +3094,13 @@
         }
       ],
       "totals": {
-        "doubles": 115,
-        "homers": 117,
-        "total": 232,
-        "prev_doubles": 0,
-        "prev_homers": 0,
+        "doubles": 117,
+        "homers": 118,
+        "total": 235,
+        "prev_doubles": 2,
+        "prev_homers": 1,
         "prev_total": 232,
-        "total_change": 0
+        "total_change": 3
       }
     },
     {
@@ -3138,9 +3138,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Brent Rooker",
@@ -3156,13 +3156,13 @@
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Nick Kurtz",
@@ -3178,30 +3178,30 @@
         {
           "name": "Corbin Carroll",
           "group": "Wildcard",
-          "doubles": 26,
+          "doubles": 27,
           "homers": 18,
-          "total": 44,
-          "prev_doubles": 0,
+          "total": 45,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 44,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
-        "doubles": 129,
+        "doubles": 131,
         "homers": 167,
-        "total": 296,
-        "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 295,
-        "total_change": 1
+        "total": 298,
+        "prev_doubles": 2,
+        "prev_homers": 0,
+        "prev_total": 296,
+        "total_change": 2
       }
     },
     {
       "owner": "Thomas Olson",
       "team_name": "Double Down",
       "rank": 30,
-      "rank_change": 1,
+      "rank_change": 0,
       "players": [
         {
           "name": "Aaron Judge",
@@ -3232,9 +3232,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Jarren Duran",
@@ -3250,13 +3250,13 @@
         {
           "name": "Yordan Alvarez",
           "group": "Wildcard",
-          "doubles": 26,
+          "doubles": 28,
           "homers": 36,
-          "total": 62,
-          "prev_doubles": 1,
+          "total": 64,
+          "prev_doubles": 2,
           "prev_homers": 0,
-          "prev_total": 61,
-          "total_change": 1
+          "prev_total": 62,
+          "total_change": 2
         },
         {
           "name": "Byron Buxton",
@@ -3273,29 +3273,29 @@
           "name": "Bo Bichette",
           "group": "Wildcard",
           "doubles": 21,
-          "homers": 12,
-          "total": 33,
+          "homers": 13,
+          "total": 34,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 33,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
-        "doubles": 128,
-        "homers": 160,
-        "total": 288,
-        "prev_doubles": 1,
+        "doubles": 130,
+        "homers": 161,
+        "total": 291,
+        "prev_doubles": 2,
         "prev_homers": 1,
-        "prev_total": 286,
-        "total_change": 2
+        "prev_total": 288,
+        "total_change": 3
       }
     },
     {
       "owner": "Thomas Murray",
       "team_name": "Eric Walters & Tom Murray #1",
-      "rank": 17,
-      "rank_change": 0,
+      "rank": 16,
+      "rank_change": 1,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -3311,13 +3311,13 @@
         {
           "name": "Fernando Tatis Jr.",
           "group": "B",
-          "doubles": 26,
+          "doubles": 27,
           "homers": 15,
-          "total": 41,
-          "prev_doubles": 0,
+          "total": 42,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 41,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Bobby Witt Jr.",
@@ -3326,20 +3326,20 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Nick Kurtz",
@@ -3376,20 +3376,20 @@
         }
       ],
       "totals": {
-        "doubles": 140,
+        "doubles": 142,
         "homers": 157,
-        "total": 297,
-        "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 296,
-        "total_change": 1
+        "total": 299,
+        "prev_doubles": 2,
+        "prev_homers": 0,
+        "prev_total": 297,
+        "total_change": 2
       }
     },
     {
       "owner": "Thomas Murray",
       "team_name": "Eric Walters & Tom Murray #2",
       "rank": 93,
-      "rank_change": -1,
+      "rank_change": 0,
       "players": [
         {
           "name": "Aaron Judge",
@@ -3460,30 +3460,30 @@
         {
           "name": "Vinnie Pasquantino",
           "group": "Wildcard",
-          "doubles": 13,
-          "homers": 7,
-          "total": 20,
-          "prev_doubles": 0,
-          "prev_homers": 0,
+          "doubles": 14,
+          "homers": 8,
+          "total": 22,
+          "prev_doubles": 1,
+          "prev_homers": 1,
           "prev_total": 20,
-          "total_change": 0
+          "total_change": 2
         }
       ],
       "totals": {
-        "doubles": 110,
-        "homers": 111,
-        "total": 221,
-        "prev_doubles": 0,
-        "prev_homers": 0,
+        "doubles": 111,
+        "homers": 112,
+        "total": 223,
+        "prev_doubles": 1,
+        "prev_homers": 1,
         "prev_total": 221,
-        "total_change": 0
+        "total_change": 2
       }
     },
     {
       "owner": "Dennis L. Graves",
       "team_name": "Florida 2",
-      "rank": 66,
-      "rank_change": 0,
+      "rank": 70,
+      "rank_change": -4,
       "players": [
         {
           "name": "Freddie Freeman",
@@ -3514,9 +3514,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Brent Rooker",
@@ -3568,27 +3568,27 @@
         "homers": 122,
         "total": 258,
         "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 257,
-        "total_change": 1
+        "prev_homers": 0,
+        "prev_total": 258,
+        "total_change": 0
       }
     },
     {
       "owner": "Dennis L. Graves",
       "team_name": "Florida Burn",
-      "rank": 88,
-      "rank_change": 0,
+      "rank": 87,
+      "rank_change": 1,
       "players": [
         {
           "name": "Cal Raleigh",
           "group": "A",
           "doubles": 8,
-          "homers": 13,
-          "total": 21,
+          "homers": 14,
+          "total": 22,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 21,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Matt Olson",
@@ -3649,40 +3649,40 @@
           "name": "Bo Bichette",
           "group": "Wildcard",
           "doubles": 21,
-          "homers": 12,
-          "total": 33,
+          "homers": 13,
+          "total": 34,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 33,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
         "doubles": 113,
-        "homers": 116,
-        "total": 229,
+        "homers": 118,
+        "total": 231,
         "prev_doubles": 0,
-        "prev_homers": 0,
+        "prev_homers": 2,
         "prev_total": 229,
-        "total_change": 0
+        "total_change": 2
       }
     },
     {
       "owner": "Justin Fryklund",
       "team_name": "Fryklund",
-      "rank": 20,
-      "rank_change": 0,
+      "rank": 18,
+      "rank_change": 2,
       "players": [
         {
           "name": "Pete Alonso",
           "group": "A",
           "doubles": 23,
-          "homers": 29,
-          "total": 52,
+          "homers": 30,
+          "total": 53,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 52,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Kyle Schwarber",
@@ -3702,20 +3702,20 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Julio Rodr\u00edguez",
@@ -3731,13 +3731,13 @@
         {
           "name": "Corbin Carroll",
           "group": "Wildcard",
-          "doubles": 26,
+          "doubles": 27,
           "homers": 18,
-          "total": 44,
-          "prev_doubles": 0,
+          "total": 45,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 44,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Brent Rooker",
@@ -3752,13 +3752,13 @@
         }
       ],
       "totals": {
-        "doubles": 131,
-        "homers": 164,
-        "total": 295,
-        "prev_doubles": 0,
+        "doubles": 133,
+        "homers": 165,
+        "total": 298,
+        "prev_doubles": 2,
         "prev_homers": 1,
-        "prev_total": 294,
-        "total_change": 1
+        "prev_total": 295,
+        "total_change": 3
       }
     },
     {
@@ -3858,8 +3858,8 @@
     {
       "owner": "Becky Friedrich",
       "team_name": "Gold Dingers",
-      "rank": 83,
-      "rank_change": 1,
+      "rank": 84,
+      "rank_change": -1,
       "players": [
         {
           "name": "Aaron Judge",
@@ -3890,9 +3890,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Eugenio Su\u00e1rez",
@@ -3919,13 +3919,13 @@
         {
           "name": "Vinnie Pasquantino",
           "group": "Wildcard",
-          "doubles": 13,
-          "homers": 7,
-          "total": 20,
-          "prev_doubles": 0,
-          "prev_homers": 0,
+          "doubles": 14,
+          "homers": 8,
+          "total": 22,
+          "prev_doubles": 1,
+          "prev_homers": 1,
           "prev_total": 20,
-          "total_change": 0
+          "total_change": 2
         },
         {
           "name": "Gunnar Henderson",
@@ -3940,13 +3940,13 @@
         }
       ],
       "totals": {
-        "doubles": 107,
-        "homers": 125,
-        "total": 232,
-        "prev_doubles": 0,
+        "doubles": 108,
+        "homers": 126,
+        "total": 234,
+        "prev_doubles": 1,
         "prev_homers": 1,
-        "prev_total": 231,
-        "total_change": 1
+        "prev_total": 232,
+        "total_change": 2
       }
     },
     {
@@ -3984,31 +3984,31 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Pete Crow-Armstrong",
           "group": "Wildcard",
           "doubles": 25,
-          "homers": 31,
-          "total": 56,
+          "homers": 32,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Roman Anthony",
@@ -4034,20 +4034,20 @@
         }
       ],
       "totals": {
-        "doubles": 108,
-        "homers": 117,
-        "total": 225,
-        "prev_doubles": 0,
+        "doubles": 109,
+        "homers": 118,
+        "total": 227,
+        "prev_doubles": 1,
         "prev_homers": 1,
-        "prev_total": 224,
-        "total_change": 1
+        "prev_total": 225,
+        "total_change": 2
       }
     },
     {
       "owner": "Mike Erickson",
       "team_name": "Hallucinated Homers",
-      "rank": 34,
-      "rank_change": -1,
+      "rank": 37,
+      "rank_change": -3,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -4096,13 +4096,13 @@
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Riley Greene",
@@ -4128,20 +4128,20 @@
         }
       ],
       "totals": {
-        "doubles": 145,
+        "doubles": 146,
         "homers": 139,
-        "total": 284,
-        "prev_doubles": 0,
+        "total": 285,
+        "prev_doubles": 1,
         "prev_homers": 0,
         "prev_total": 284,
-        "total_change": 0
+        "total_change": 1
       }
     },
     {
       "owner": "Jim Macdonald",
       "team_name": "Hats For Bats",
-      "rank": 33,
-      "rank_change": 4,
+      "rank": 31,
+      "rank_change": 2,
       "players": [
         {
           "name": "Aaron Judge",
@@ -4169,23 +4169,23 @@
           "name": "Rafael Devers",
           "group": "C",
           "doubles": 31,
-          "homers": 25,
-          "total": 56,
+          "homers": 26,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Yordan Alvarez",
           "group": "Wildcard",
-          "doubles": 26,
+          "doubles": 28,
           "homers": 36,
-          "total": 62,
-          "prev_doubles": 1,
+          "total": 64,
+          "prev_doubles": 2,
           "prev_homers": 0,
-          "prev_total": 61,
-          "total_change": 1
+          "prev_total": 62,
+          "total_change": 2
         },
         {
           "name": "Austin Riley",
@@ -4193,10 +4193,10 @@
           "doubles": 20,
           "homers": 15,
           "total": 35,
-          "prev_doubles": 1,
+          "prev_doubles": 0,
           "prev_homers": 0,
-          "prev_total": 34,
-          "total_change": 1
+          "prev_total": 35,
+          "total_change": 0
         },
         {
           "name": "Corey Seager",
@@ -4204,10 +4204,10 @@
           "doubles": 10,
           "homers": 13,
           "total": 23,
-          "prev_doubles": 1,
-          "prev_homers": 1,
-          "prev_total": 21,
-          "total_change": 2
+          "prev_doubles": 0,
+          "prev_homers": 0,
+          "prev_total": 23,
+          "total_change": 0
         },
         {
           "name": "Adolis Garc\u00eda",
@@ -4222,20 +4222,20 @@
         }
       ],
       "totals": {
-        "doubles": 136,
-        "homers": 149,
-        "total": 285,
-        "prev_doubles": 3,
+        "doubles": 138,
+        "homers": 150,
+        "total": 288,
+        "prev_doubles": 2,
         "prev_homers": 1,
-        "prev_total": 281,
-        "total_change": 4
+        "prev_total": 285,
+        "total_change": 3
       }
     },
     {
       "owner": "Shane Hoeft \ud83c\udfc6 ('20)",
       "team_name": "Hoffa1",
-      "rank": 64,
-      "rank_change": -1,
+      "rank": 58,
+      "rank_change": 6,
       "players": [
         {
           "name": "Aaron Judge",
@@ -4266,9 +4266,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Nick Kurtz",
@@ -4284,13 +4284,13 @@
         {
           "name": "Vinnie Pasquantino",
           "group": "Wildcard",
-          "doubles": 13,
-          "homers": 7,
-          "total": 20,
-          "prev_doubles": 0,
-          "prev_homers": 0,
+          "doubles": 14,
+          "homers": 8,
+          "total": 22,
+          "prev_doubles": 1,
+          "prev_homers": 1,
           "prev_total": 20,
-          "total_change": 0
+          "total_change": 2
         },
         {
           "name": "James Wood",
@@ -4306,41 +4306,41 @@
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
-        "doubles": 128,
-        "homers": 133,
-        "total": 261,
-        "prev_doubles": 0,
+        "doubles": 130,
+        "homers": 134,
+        "total": 264,
+        "prev_doubles": 2,
         "prev_homers": 1,
-        "prev_total": 260,
-        "total_change": 1
+        "prev_total": 261,
+        "total_change": 3
       }
     },
     {
       "owner": "Shane Hoeft \ud83c\udfc6 ('20)",
       "team_name": "Hoffa2",
-      "rank": 35,
-      "rank_change": -1,
+      "rank": 37,
+      "rank_change": -2,
       "players": [
         {
           "name": "Cal Raleigh",
           "group": "A",
           "doubles": 8,
-          "homers": 13,
-          "total": 21,
+          "homers": 14,
+          "total": 22,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 21,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Kyle Schwarber",
@@ -4360,9 +4360,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Nick Kurtz",
@@ -4378,13 +4378,13 @@
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Spencer Torkelson",
@@ -4410,13 +4410,13 @@
         }
       ],
       "totals": {
-        "doubles": 122,
-        "homers": 161,
-        "total": 283,
-        "prev_doubles": 0,
+        "doubles": 123,
+        "homers": 162,
+        "total": 285,
+        "prev_doubles": 1,
         "prev_homers": 1,
-        "prev_total": 282,
-        "total_change": 1
+        "prev_total": 283,
+        "total_change": 2
       }
     },
     {
@@ -4454,9 +4454,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Nick Kurtz",
@@ -4472,13 +4472,13 @@
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Byron Buxton",
@@ -4494,23 +4494,23 @@
         {
           "name": "Corbin Carroll",
           "group": "Wildcard",
-          "doubles": 26,
+          "doubles": 27,
           "homers": 18,
-          "total": 44,
-          "prev_doubles": 0,
+          "total": 45,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 44,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
-        "doubles": 144,
+        "doubles": 146,
         "homers": 168,
-        "total": 312,
-        "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 311,
-        "total_change": 1
+        "total": 314,
+        "prev_doubles": 2,
+        "prev_homers": 0,
+        "prev_total": 312,
+        "total_change": 2
       }
     },
     {
@@ -4548,9 +4548,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Eugenio Su\u00e1rez",
@@ -4566,13 +4566,13 @@
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Brent Rooker",
@@ -4598,12 +4598,12 @@
         }
       ],
       "totals": {
-        "doubles": 130,
+        "doubles": 131,
         "homers": 176,
-        "total": 306,
-        "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 305,
+        "total": 307,
+        "prev_doubles": 1,
+        "prev_homers": 0,
+        "prev_total": 306,
         "total_change": 1
       }
     },
@@ -4611,7 +4611,7 @@
       "owner": "Tim Brumm",
       "team_name": "Honey Badger #2",
       "rank": 73,
-      "rank_change": -1,
+      "rank_change": 0,
       "players": [
         {
           "name": "Aaron Judge",
@@ -4639,12 +4639,12 @@
           "name": "Rafael Devers",
           "group": "C",
           "doubles": 31,
-          "homers": 25,
-          "total": 56,
+          "homers": 26,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Eugenio Su\u00e1rez",
@@ -4693,30 +4693,30 @@
       ],
       "totals": {
         "doubles": 118,
-        "homers": 136,
-        "total": 254,
+        "homers": 137,
+        "total": 255,
         "prev_doubles": 0,
-        "prev_homers": 0,
+        "prev_homers": 1,
         "prev_total": 254,
-        "total_change": 0
+        "total_change": 1
       }
     },
     {
       "owner": "Tim Brumm",
       "team_name": "Honey Badger #3",
-      "rank": 48,
-      "rank_change": 0,
+      "rank": 45,
+      "rank_change": 3,
       "players": [
         {
           "name": "Cal Raleigh",
           "group": "A",
           "doubles": 8,
-          "homers": 13,
-          "total": 21,
+          "homers": 14,
+          "total": 22,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 21,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Kyle Schwarber",
@@ -4736,42 +4736,42 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Bo Bichette",
           "group": "Wildcard",
           "doubles": 21,
-          "homers": 12,
-          "total": 33,
+          "homers": 13,
+          "total": 34,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 33,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Michael Busch",
           "group": "Wildcard",
-          "doubles": 20,
+          "doubles": 22,
           "homers": 15,
-          "total": 35,
-          "prev_doubles": 0,
+          "total": 37,
+          "prev_doubles": 2,
           "prev_homers": 0,
           "prev_total": 35,
-          "total_change": 0
+          "total_change": 2
         },
         {
           "name": "Nick Kurtz",
@@ -4786,20 +4786,20 @@
         }
       ],
       "totals": {
-        "doubles": 124,
-        "homers": 149,
-        "total": 273,
-        "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 272,
-        "total_change": 1
+        "doubles": 127,
+        "homers": 151,
+        "total": 278,
+        "prev_doubles": 3,
+        "prev_homers": 2,
+        "prev_total": 273,
+        "total_change": 5
       }
     },
     {
       "owner": "Ian Sullivan",
       "team_name": "Ian Sullivan 1",
-      "rank": 79,
-      "rank_change": 0,
+      "rank": 78,
+      "rank_change": 1,
       "players": [
         {
           "name": "Aaron Judge",
@@ -4830,9 +4830,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Maikel Garcia",
@@ -4840,10 +4840,10 @@
           "doubles": 18,
           "homers": 3,
           "total": 21,
-          "prev_doubles": 1,
+          "prev_doubles": 0,
           "prev_homers": 0,
-          "prev_total": 20,
-          "total_change": 1
+          "prev_total": 21,
+          "total_change": 0
         },
         {
           "name": "Francisco Lindor",
@@ -4860,12 +4860,12 @@
           "name": "Bo Bichette",
           "group": "Wildcard",
           "doubles": 21,
-          "homers": 12,
-          "total": 33,
+          "homers": 13,
+          "total": 34,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 33,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Ernie Clement",
@@ -4881,12 +4881,12 @@
       ],
       "totals": {
         "doubles": 141,
-        "homers": 105,
-        "total": 246,
-        "prev_doubles": 1,
+        "homers": 106,
+        "total": 247,
+        "prev_doubles": 0,
         "prev_homers": 1,
-        "prev_total": 244,
-        "total_change": 2
+        "prev_total": 246,
+        "total_change": 1
       }
     },
     {
@@ -4924,9 +4924,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Jarren Duran",
@@ -4942,24 +4942,24 @@
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Bo Bichette",
           "group": "Wildcard",
           "doubles": 21,
-          "homers": 12,
-          "total": 33,
+          "homers": 13,
+          "total": 34,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 33,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Ernie Clement",
@@ -4974,20 +4974,20 @@
         }
       ],
       "totals": {
-        "doubles": 146,
-        "homers": 156,
-        "total": 302,
-        "prev_doubles": 0,
+        "doubles": 147,
+        "homers": 157,
+        "total": 304,
+        "prev_doubles": 1,
         "prev_homers": 1,
-        "prev_total": 301,
-        "total_change": 1
+        "prev_total": 302,
+        "total_change": 2
       }
     },
     {
       "owner": "Mort Mortensen",
       "team_name": "Insert Team Name Here",
       "rank": 43,
-      "rank_change": -1,
+      "rank_change": 0,
       "players": [
         {
           "name": "Aaron Judge",
@@ -5018,20 +5018,20 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Eugenio Su\u00e1rez",
@@ -5068,12 +5068,12 @@
         }
       ],
       "totals": {
-        "doubles": 131,
+        "doubles": 132,
         "homers": 148,
-        "total": 279,
-        "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 278,
+        "total": 280,
+        "prev_doubles": 1,
+        "prev_homers": 0,
+        "prev_total": 279,
         "total_change": 1
       }
     },
@@ -5081,18 +5081,18 @@
       "owner": "Jake Luedtke",
       "team_name": "JD's AL Sluggers",
       "rank": 47,
-      "rank_change": -1,
+      "rank_change": 0,
       "players": [
         {
           "name": "Pete Alonso",
           "group": "A",
           "doubles": 23,
-          "homers": 29,
-          "total": 52,
+          "homers": 30,
+          "total": 53,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 52,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Matt Olson",
@@ -5109,12 +5109,12 @@
           "name": "Rafael Devers",
           "group": "C",
           "doubles": 31,
-          "homers": 25,
-          "total": 56,
+          "homers": 26,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Max Muncy",
@@ -5163,19 +5163,19 @@
       ],
       "totals": {
         "doubles": 132,
-        "homers": 142,
-        "total": 274,
+        "homers": 144,
+        "total": 276,
         "prev_doubles": 0,
-        "prev_homers": 0,
+        "prev_homers": 2,
         "prev_total": 274,
-        "total_change": 0
+        "total_change": 2
       }
     },
     {
       "owner": "Jake Luedtke",
       "team_name": "JD's NL Burners",
-      "rank": 71,
-      "rank_change": 1,
+      "rank": 68,
+      "rank_change": 3,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -5191,13 +5191,13 @@
         {
           "name": "Fernando Tatis Jr.",
           "group": "B",
-          "doubles": 26,
+          "doubles": 27,
           "homers": 15,
-          "total": 41,
-          "prev_doubles": 0,
+          "total": 42,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 41,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Bobby Witt Jr.",
@@ -5206,9 +5206,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Matt McLain",
@@ -5217,20 +5217,20 @@
           "homers": 12,
           "total": 29,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 28,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 29,
+          "total_change": 0
         },
         {
           "name": "Pete Crow-Armstrong",
           "group": "Wildcard",
           "doubles": 25,
-          "homers": 31,
-          "total": 56,
+          "homers": 32,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Jordan Beck",
@@ -5246,30 +5246,30 @@
         {
           "name": "Geraldo Perdomo",
           "group": "Wildcard",
-          "doubles": 17,
+          "doubles": 18,
           "homers": 9,
-          "total": 26,
-          "prev_doubles": 0,
+          "total": 27,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 26,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
-        "doubles": 142,
-        "homers": 114,
-        "total": 256,
-        "prev_doubles": 0,
-        "prev_homers": 2,
-        "prev_total": 254,
-        "total_change": 2
+        "doubles": 144,
+        "homers": 115,
+        "total": 259,
+        "prev_doubles": 2,
+        "prev_homers": 1,
+        "prev_total": 256,
+        "total_change": 3
       }
     },
     {
       "owner": "Jim Murray",
       "team_name": "Jim and Mark 2",
-      "rank": 54,
-      "rank_change": 0,
+      "rank": 55,
+      "rank_change": -1,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -5318,13 +5318,13 @@
         {
           "name": "Vinnie Pasquantino",
           "group": "Wildcard",
-          "doubles": 13,
-          "homers": 7,
-          "total": 20,
-          "prev_doubles": 0,
-          "prev_homers": 0,
+          "doubles": 14,
+          "homers": 8,
+          "total": 22,
+          "prev_doubles": 1,
+          "prev_homers": 1,
           "prev_total": 20,
-          "total_change": 0
+          "total_change": 2
         },
         {
           "name": "James Wood",
@@ -5350,20 +5350,20 @@
         }
       ],
       "totals": {
-        "doubles": 145,
-        "homers": 119,
-        "total": 264,
-        "prev_doubles": 0,
-        "prev_homers": 0,
+        "doubles": 146,
+        "homers": 120,
+        "total": 266,
+        "prev_doubles": 1,
+        "prev_homers": 1,
         "prev_total": 264,
-        "total_change": 0
+        "total_change": 2
       }
     },
     {
       "owner": "Jim Macdonald",
       "team_name": "Jobu's Rum",
-      "rank": 58,
-      "rank_change": 3,
+      "rank": 63,
+      "rank_change": -5,
       "players": [
         {
           "name": "Freddie Freeman",
@@ -5415,10 +5415,10 @@
           "doubles": 10,
           "homers": 13,
           "total": 23,
-          "prev_doubles": 1,
-          "prev_homers": 1,
-          "prev_total": 21,
-          "total_change": 2
+          "prev_doubles": 0,
+          "prev_homers": 0,
+          "prev_total": 23,
+          "total_change": 0
         },
         {
           "name": "Gunnar Henderson",
@@ -5447,10 +5447,10 @@
         "doubles": 145,
         "homers": 118,
         "total": 263,
-        "prev_doubles": 1,
-        "prev_homers": 1,
-        "prev_total": 261,
-        "total_change": 2
+        "prev_doubles": 0,
+        "prev_homers": 0,
+        "prev_total": 263,
+        "total_change": 0
       }
     },
     {
@@ -5488,9 +5488,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Riley Greene",
@@ -5528,41 +5528,41 @@
         {
           "name": "Yordan Alvarez",
           "group": "Wildcard",
-          "doubles": 26,
+          "doubles": 28,
           "homers": 36,
-          "total": 62,
-          "prev_doubles": 1,
+          "total": 64,
+          "prev_doubles": 2,
           "prev_homers": 0,
-          "prev_total": 61,
-          "total_change": 1
+          "prev_total": 62,
+          "total_change": 2
         }
       ],
       "totals": {
-        "doubles": 140,
+        "doubles": 142,
         "homers": 150,
-        "total": 290,
-        "prev_doubles": 1,
-        "prev_homers": 1,
-        "prev_total": 288,
+        "total": 292,
+        "prev_doubles": 2,
+        "prev_homers": 0,
+        "prev_total": 290,
         "total_change": 2
       }
     },
     {
       "owner": "Joe Priestley",
       "team_name": "Joe Priestley #2",
-      "rank": 40,
-      "rank_change": -3,
+      "rank": 35,
+      "rank_change": 5,
       "players": [
         {
           "name": "Pete Alonso",
           "group": "A",
           "doubles": 23,
-          "homers": 29,
-          "total": 52,
+          "homers": 30,
+          "total": 53,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 52,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Kyle Schwarber",
@@ -5589,13 +5589,13 @@
         {
           "name": "Corbin Carroll",
           "group": "Wildcard",
-          "doubles": 26,
+          "doubles": 27,
           "homers": 18,
-          "total": 44,
-          "prev_doubles": 0,
+          "total": 45,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 44,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Kyle Tucker",
@@ -5611,41 +5611,41 @@
         {
           "name": "Vinnie Pasquantino",
           "group": "Wildcard",
-          "doubles": 13,
-          "homers": 7,
-          "total": 20,
-          "prev_doubles": 0,
-          "prev_homers": 0,
+          "doubles": 14,
+          "homers": 8,
+          "total": 22,
+          "prev_doubles": 1,
+          "prev_homers": 1,
           "prev_total": 20,
-          "total_change": 0
+          "total_change": 2
         },
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
-        "doubles": 123,
-        "homers": 158,
-        "total": 281,
-        "prev_doubles": 0,
-        "prev_homers": 0,
+        "doubles": 126,
+        "homers": 160,
+        "total": 286,
+        "prev_doubles": 3,
+        "prev_homers": 2,
         "prev_total": 281,
-        "total_change": 0
+        "total_change": 5
       }
     },
     {
       "owner": "Joe Priestley",
       "team_name": "Joe Priestley #3",
-      "rank": 54,
-      "rank_change": 0,
+      "rank": 58,
+      "rank_change": -4,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -5770,9 +5770,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Roman Anthony",
@@ -5800,12 +5800,12 @@
           "name": "Pete Crow-Armstrong",
           "group": "Wildcard",
           "doubles": 25,
-          "homers": 31,
-          "total": 56,
+          "homers": 32,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Gunnar Henderson",
@@ -5821,11 +5821,11 @@
       ],
       "totals": {
         "doubles": 153,
-        "homers": 145,
-        "total": 298,
+        "homers": 146,
+        "total": 299,
         "prev_doubles": 0,
         "prev_homers": 1,
-        "prev_total": 297,
+        "prev_total": 298,
         "total_change": 1
       }
     },
@@ -5926,19 +5926,19 @@
     {
       "owner": "Jon James",
       "team_name": "Jon James #3",
-      "rank": 58,
-      "rank_change": 2,
+      "rank": 57,
+      "rank_change": 1,
       "players": [
         {
           "name": "Pete Alonso",
           "group": "A",
           "doubles": 23,
-          "homers": 29,
-          "total": 52,
+          "homers": 30,
+          "total": 53,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 52,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Kyle Schwarber",
@@ -5958,9 +5958,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Roman Anthony",
@@ -5998,23 +5998,23 @@
         {
           "name": "Corbin Carroll",
           "group": "Wildcard",
-          "doubles": 26,
+          "doubles": 27,
           "homers": 18,
-          "total": 44,
-          "prev_doubles": 0,
+          "total": 45,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 44,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
-        "doubles": 132,
-        "homers": 131,
-        "total": 263,
-        "prev_doubles": 0,
+        "doubles": 133,
+        "homers": 132,
+        "total": 265,
+        "prev_doubles": 1,
         "prev_homers": 1,
-        "prev_total": 262,
-        "total_change": 1
+        "prev_total": 263,
+        "total_change": 2
       }
     },
     {
@@ -6052,9 +6052,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Julio Rodr\u00edguez",
@@ -6095,27 +6095,27 @@
           "doubles": 25,
           "homers": 21,
           "total": 46,
-          "prev_doubles": 1,
-          "prev_homers": 1,
-          "prev_total": 44,
-          "total_change": 2
+          "prev_doubles": 0,
+          "prev_homers": 0,
+          "prev_total": 46,
+          "total_change": 0
         }
       ],
       "totals": {
         "doubles": 139,
         "homers": 131,
         "total": 270,
-        "prev_doubles": 1,
-        "prev_homers": 2,
-        "prev_total": 267,
-        "total_change": 3
+        "prev_doubles": 0,
+        "prev_homers": 0,
+        "prev_total": 270,
+        "total_change": 0
       }
     },
     {
       "owner": "Jim Macdonald",
       "team_name": "Juuuust A Bit Outside",
       "rank": 63,
-      "rank_change": -2,
+      "rank_change": 0,
       "players": [
         {
           "name": "Aaron Judge",
@@ -6143,12 +6143,12 @@
           "name": "Rafael Devers",
           "group": "C",
           "doubles": 31,
-          "homers": 25,
-          "total": 56,
+          "homers": 26,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Francisco Lindor",
@@ -6178,10 +6178,10 @@
           "doubles": 20,
           "homers": 15,
           "total": 35,
-          "prev_doubles": 1,
+          "prev_doubles": 0,
           "prev_homers": 0,
-          "prev_total": 34,
-          "total_change": 1
+          "prev_total": 35,
+          "total_change": 0
         },
         {
           "name": "Gunnar Henderson",
@@ -6197,19 +6197,19 @@
       ],
       "totals": {
         "doubles": 125,
-        "homers": 137,
-        "total": 262,
-        "prev_doubles": 1,
-        "prev_homers": 0,
-        "prev_total": 261,
+        "homers": 138,
+        "total": 263,
+        "prev_doubles": 0,
+        "prev_homers": 1,
+        "prev_total": 262,
         "total_change": 1
       }
     },
     {
       "owner": "Jason Elasky",
       "team_name": "Kandiyohi Pheasant Chasers",
-      "rank": 93,
-      "rank_change": 1,
+      "rank": 94,
+      "rank_change": -1,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -6240,20 +6240,20 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Luis Arraez",
           "group": "Wildcard",
-          "doubles": 4,
+          "doubles": 5,
           "homers": 2,
-          "total": 6,
-          "prev_doubles": 0,
+          "total": 7,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 6,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Julio Rodr\u00edguez",
@@ -6290,12 +6290,12 @@
         }
       ],
       "totals": {
-        "doubles": 128,
+        "doubles": 129,
         "homers": 93,
-        "total": 221,
-        "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 220,
+        "total": 222,
+        "prev_doubles": 1,
+        "prev_homers": 0,
+        "prev_total": 221,
         "total_change": 1
       }
     },
@@ -6334,31 +6334,31 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Bo Bichette",
           "group": "Wildcard",
           "doubles": 21,
-          "homers": 12,
-          "total": 33,
+          "homers": 13,
+          "total": 34,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 33,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Pete Crow-Armstrong",
           "group": "Wildcard",
           "doubles": 25,
-          "homers": 31,
-          "total": 56,
+          "homers": 32,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Brent Rooker",
@@ -6385,12 +6385,12 @@
       ],
       "totals": {
         "doubles": 135,
-        "homers": 141,
-        "total": 276,
+        "homers": 143,
+        "total": 278,
         "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 275,
-        "total_change": 1
+        "prev_homers": 2,
+        "prev_total": 276,
+        "total_change": 2
       }
     },
     {
@@ -6403,12 +6403,12 @@
           "name": "Pete Alonso",
           "group": "A",
           "doubles": 23,
-          "homers": 29,
-          "total": 52,
+          "homers": 30,
+          "total": 53,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 52,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Matt Olson",
@@ -6428,9 +6428,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Riley Greene",
@@ -6469,22 +6469,22 @@
           "name": "Pete Crow-Armstrong",
           "group": "Wildcard",
           "doubles": 25,
-          "homers": 31,
-          "total": 56,
+          "homers": 32,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
         "doubles": 134,
-        "homers": 138,
-        "total": 272,
+        "homers": 140,
+        "total": 274,
         "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 271,
-        "total_change": 1
+        "prev_homers": 2,
+        "prev_total": 272,
+        "total_change": 2
       }
     },
     {
@@ -6522,9 +6522,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Nick Kurtz",
@@ -6552,33 +6552,33 @@
           "name": "Pete Crow-Armstrong",
           "group": "Wildcard",
           "doubles": 25,
-          "homers": 31,
-          "total": 56,
+          "homers": 32,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
-        "doubles": 114,
-        "homers": 167,
-        "total": 281,
-        "prev_doubles": 0,
+        "doubles": 115,
+        "homers": 168,
+        "total": 283,
+        "prev_doubles": 1,
         "prev_homers": 1,
-        "prev_total": 280,
-        "total_change": 1
+        "prev_total": 281,
+        "total_change": 2
       }
     },
     {
@@ -6616,9 +6616,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Mookie Betts",
@@ -6656,30 +6656,30 @@
         {
           "name": "Yordan Alvarez",
           "group": "Wildcard",
-          "doubles": 26,
+          "doubles": 28,
           "homers": 36,
-          "total": 62,
-          "prev_doubles": 1,
+          "total": 64,
+          "prev_doubles": 2,
           "prev_homers": 0,
-          "prev_total": 61,
-          "total_change": 1
+          "prev_total": 62,
+          "total_change": 2
         }
       ],
       "totals": {
-        "doubles": 122,
+        "doubles": 124,
         "homers": 128,
-        "total": 250,
-        "prev_doubles": 1,
-        "prev_homers": 1,
-        "prev_total": 248,
+        "total": 252,
+        "prev_doubles": 2,
+        "prev_homers": 0,
+        "prev_total": 250,
         "total_change": 2
       }
     },
     {
       "owner": "Nicholas Waletich",
       "team_name": "Nashville Twins",
-      "rank": 27,
-      "rank_change": -2,
+      "rank": 26,
+      "rank_change": 1,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -6710,9 +6710,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Eugenio Su\u00e1rez",
@@ -6740,12 +6740,12 @@
           "name": "Bo Bichette",
           "group": "Wildcard",
           "doubles": 21,
-          "homers": 12,
-          "total": 33,
+          "homers": 13,
+          "total": 34,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 33,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Byron Buxton",
@@ -6761,11 +6761,11 @@
       ],
       "totals": {
         "doubles": 134,
-        "homers": 159,
-        "total": 293,
+        "homers": 160,
+        "total": 294,
         "prev_doubles": 0,
         "prev_homers": 1,
-        "prev_total": 292,
+        "prev_total": 293,
         "total_change": 1
       }
     },
@@ -6804,9 +6804,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Nick Kurtz",
@@ -6822,24 +6822,24 @@
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Pete Crow-Armstrong",
           "group": "Wildcard",
           "doubles": 25,
-          "homers": 31,
-          "total": 56,
+          "homers": 32,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Francisco Lindor",
@@ -6854,20 +6854,20 @@
         }
       ],
       "totals": {
-        "doubles": 133,
-        "homers": 168,
-        "total": 301,
-        "prev_doubles": 0,
+        "doubles": 134,
+        "homers": 169,
+        "total": 303,
+        "prev_doubles": 1,
         "prev_homers": 1,
-        "prev_total": 300,
-        "total_change": 1
+        "prev_total": 301,
+        "total_change": 2
       }
     },
     {
       "owner": "Nick Hutchens",
       "team_name": "NickHutchens2",
-      "rank": 54,
-      "rank_change": 0,
+      "rank": 58,
+      "rank_change": -4,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -6960,8 +6960,8 @@
     {
       "owner": "Cory Abrahamson",
       "team_name": "NoDak",
-      "rank": 74,
-      "rank_change": 0,
+      "rank": 75,
+      "rank_change": -1,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -6992,20 +6992,20 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Brent Rooker",
@@ -7042,12 +7042,12 @@
         }
       ],
       "totals": {
-        "doubles": 106,
+        "doubles": 107,
         "homers": 147,
-        "total": 253,
-        "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 252,
+        "total": 254,
+        "prev_doubles": 1,
+        "prev_homers": 0,
+        "prev_total": 253,
         "total_change": 1
       }
     },
@@ -7105,12 +7105,12 @@
           "name": "Pete Crow-Armstrong",
           "group": "Wildcard",
           "doubles": 25,
-          "homers": 31,
-          "total": 56,
+          "homers": 32,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Riley Greene",
@@ -7126,41 +7126,41 @@
         {
           "name": "Corbin Carroll",
           "group": "Wildcard",
-          "doubles": 26,
+          "doubles": 27,
           "homers": 18,
-          "total": 44,
-          "prev_doubles": 0,
+          "total": 45,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 44,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
-        "doubles": 163,
-        "homers": 158,
-        "total": 321,
-        "prev_doubles": 0,
-        "prev_homers": 0,
+        "doubles": 164,
+        "homers": 159,
+        "total": 323,
+        "prev_doubles": 1,
+        "prev_homers": 1,
         "prev_total": 321,
-        "total_change": 0
+        "total_change": 2
       }
     },
     {
       "owner": "Cory Abrahamson",
       "team_name": "Nodak 3",
-      "rank": 83,
-      "rank_change": 1,
+      "rank": 84,
+      "rank_change": -1,
       "players": [
         {
           "name": "Cal Raleigh",
           "group": "A",
           "doubles": 8,
-          "homers": 13,
-          "total": 21,
+          "homers": 14,
+          "total": 22,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 21,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Vladimir Guerrero Jr.",
@@ -7180,9 +7180,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Eugenio Su\u00e1rez",
@@ -7210,12 +7210,12 @@
           "name": "Bo Bichette",
           "group": "Wildcard",
           "doubles": 21,
-          "homers": 12,
-          "total": 33,
+          "homers": 13,
+          "total": 34,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 33,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Seiya Suzuki",
@@ -7231,12 +7231,12 @@
       ],
       "totals": {
         "doubles": 128,
-        "homers": 104,
-        "total": 232,
+        "homers": 106,
+        "total": 234,
         "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 231,
-        "total_change": 1
+        "prev_homers": 2,
+        "prev_total": 232,
+        "total_change": 2
       }
     },
     {
@@ -7249,12 +7249,12 @@
           "name": "Cal Raleigh",
           "group": "A",
           "doubles": 8,
-          "homers": 13,
-          "total": 21,
+          "homers": 14,
+          "total": 22,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 21,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Vladimir Guerrero Jr.",
@@ -7274,9 +7274,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Jarren Duran",
@@ -7293,12 +7293,12 @@
           "name": "Bo Bichette",
           "group": "Wildcard",
           "doubles": 21,
-          "homers": 12,
-          "total": 33,
+          "homers": 13,
+          "total": 34,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 33,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Nico Hoerner",
@@ -7325,19 +7325,19 @@
       ],
       "totals": {
         "doubles": 135,
-        "homers": 89,
-        "total": 224,
+        "homers": 91,
+        "total": 226,
         "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 223,
-        "total_change": 1
+        "prev_homers": 2,
+        "prev_total": 224,
+        "total_change": 2
       }
     },
     {
       "owner": "Joel Obermeyer",
       "team_name": "Pipe City",
       "rank": 42,
-      "rank_change": -1,
+      "rank_change": 0,
       "players": [
         {
           "name": "Aaron Judge",
@@ -7368,9 +7368,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Nick Kurtz",
@@ -7398,40 +7398,40 @@
           "name": "Pete Crow-Armstrong",
           "group": "Wildcard",
           "doubles": 25,
-          "homers": 31,
-          "total": 56,
+          "homers": 32,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
-        "doubles": 136,
-        "homers": 144,
-        "total": 280,
-        "prev_doubles": 0,
+        "doubles": 137,
+        "homers": 145,
+        "total": 282,
+        "prev_doubles": 1,
         "prev_homers": 1,
-        "prev_total": 279,
-        "total_change": 1
+        "prev_total": 280,
+        "total_change": 2
       }
     },
     {
       "owner": "Karl Pohl",
       "team_name": "Pohlcat",
-      "rank": 20,
-      "rank_change": 0,
+      "rank": 24,
+      "rank_change": -4,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -7462,20 +7462,20 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Gunnar Henderson",
@@ -7512,20 +7512,20 @@
         }
       ],
       "totals": {
-        "doubles": 126,
+        "doubles": 127,
         "homers": 169,
-        "total": 295,
-        "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 294,
+        "total": 296,
+        "prev_doubles": 1,
+        "prev_homers": 0,
+        "prev_total": 295,
         "total_change": 1
       }
     },
     {
       "owner": "Ryan Priestley",
       "team_name": "Ryan Priestley",
-      "rank": 24,
-      "rank_change": 4,
+      "rank": 21,
+      "rank_change": 3,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -7574,13 +7574,13 @@
         {
           "name": "Yordan Alvarez",
           "group": "Wildcard",
-          "doubles": 26,
+          "doubles": 28,
           "homers": 36,
-          "total": 62,
-          "prev_doubles": 1,
+          "total": 64,
+          "prev_doubles": 2,
           "prev_homers": 0,
-          "prev_total": 61,
-          "total_change": 1
+          "prev_total": 62,
+          "total_change": 2
         },
         {
           "name": "Corey Seager",
@@ -7588,38 +7588,38 @@
           "doubles": 10,
           "homers": 13,
           "total": 23,
-          "prev_doubles": 1,
-          "prev_homers": 1,
-          "prev_total": 21,
-          "total_change": 2
+          "prev_doubles": 0,
+          "prev_homers": 0,
+          "prev_total": 23,
+          "total_change": 0
         },
         {
           "name": "Bo Bichette",
           "group": "Wildcard",
           "doubles": 21,
-          "homers": 12,
-          "total": 33,
+          "homers": 13,
+          "total": 34,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 33,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
-        "doubles": 138,
-        "homers": 156,
-        "total": 294,
+        "doubles": 140,
+        "homers": 157,
+        "total": 297,
         "prev_doubles": 2,
         "prev_homers": 1,
-        "prev_total": 291,
+        "prev_total": 294,
         "total_change": 3
       }
     },
     {
       "owner": "Ryan Dahl \ud83c\udfc6\ud83c\udfc6\ud83c\udfc6 ('19,'23,'24)",
       "team_name": "Ryan \u201cOpie\u201d Dahl #1",
-      "rank": 24,
-      "rank_change": -2,
+      "rank": 21,
+      "rank_change": 3,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -7650,9 +7650,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Brent Rooker",
@@ -7668,24 +7668,24 @@
         {
           "name": "Vinnie Pasquantino",
           "group": "Wildcard",
-          "doubles": 13,
-          "homers": 7,
-          "total": 20,
-          "prev_doubles": 0,
-          "prev_homers": 0,
+          "doubles": 14,
+          "homers": 8,
+          "total": 22,
+          "prev_doubles": 1,
+          "prev_homers": 1,
           "prev_total": 20,
-          "total_change": 0
+          "total_change": 2
         },
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Gunnar Henderson",
@@ -7700,31 +7700,31 @@
         }
       ],
       "totals": {
-        "doubles": 140,
-        "homers": 154,
-        "total": 294,
-        "prev_doubles": 0,
+        "doubles": 142,
+        "homers": 155,
+        "total": 297,
+        "prev_doubles": 2,
         "prev_homers": 1,
-        "prev_total": 293,
-        "total_change": 1
+        "prev_total": 294,
+        "total_change": 3
       }
     },
     {
       "owner": "Ryan Dahl \ud83c\udfc6\ud83c\udfc6\ud83c\udfc6 ('19,'23,'24)",
       "team_name": "Ryan \u201cOpie\u201d Dahl #2",
       "rank": 31,
-      "rank_change": -1,
+      "rank_change": 0,
       "players": [
         {
           "name": "Pete Alonso",
           "group": "A",
           "doubles": 23,
-          "homers": 29,
-          "total": 52,
+          "homers": 30,
+          "total": 53,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 52,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Matt Olson",
@@ -7795,19 +7795,19 @@
       ],
       "totals": {
         "doubles": 139,
-        "homers": 148,
-        "total": 287,
+        "homers": 149,
+        "total": 288,
         "prev_doubles": 0,
-        "prev_homers": 0,
+        "prev_homers": 1,
         "prev_total": 287,
-        "total_change": 0
+        "total_change": 1
       }
     },
     {
       "owner": "Ryan Dahl \ud83c\udfc6\ud83c\udfc6\ud83c\udfc6 ('19,'23,'24)",
       "team_name": "Ryan \u201cOpie\u201d Dahl #3",
-      "rank": 76,
-      "rank_change": 0,
+      "rank": 75,
+      "rank_change": 1,
       "players": [
         {
           "name": "Aaron Judge",
@@ -7838,20 +7838,20 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Wyatt Langford",
           "group": "Wildcard",
-          "doubles": 14,
+          "doubles": 15,
           "homers": 14,
-          "total": 28,
-          "prev_doubles": 0,
+          "total": 29,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 28,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Nick Kurtz",
@@ -7867,13 +7867,13 @@
         {
           "name": "Vinnie Pasquantino",
           "group": "Wildcard",
-          "doubles": 13,
-          "homers": 7,
-          "total": 20,
-          "prev_doubles": 0,
-          "prev_homers": 0,
+          "doubles": 14,
+          "homers": 8,
+          "total": 22,
+          "prev_doubles": 1,
+          "prev_homers": 1,
           "prev_total": 20,
-          "total_change": 0
+          "total_change": 2
         },
         {
           "name": "Tyler Soderstrom",
@@ -7888,20 +7888,20 @@
         }
       ],
       "totals": {
-        "doubles": 120,
-        "homers": 131,
-        "total": 251,
-        "prev_doubles": 0,
+        "doubles": 122,
+        "homers": 132,
+        "total": 254,
+        "prev_doubles": 2,
         "prev_homers": 1,
-        "prev_total": 250,
-        "total_change": 1
+        "prev_total": 251,
+        "total_change": 3
       }
     },
     {
       "owner": "Tyler Harbin",
       "team_name": "Save Me Mr. Anthony",
-      "rank": 81,
-      "rank_change": -2,
+      "rank": 80,
+      "rank_change": 1,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -7951,23 +7951,23 @@
           "name": "Bo Bichette",
           "group": "Wildcard",
           "doubles": 21,
-          "homers": 12,
-          "total": 33,
+          "homers": 13,
+          "total": 34,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 33,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Riley Greene",
@@ -7982,20 +7982,20 @@
         }
       ],
       "totals": {
-        "doubles": 133,
-        "homers": 111,
-        "total": 244,
-        "prev_doubles": 0,
-        "prev_homers": 0,
+        "doubles": 134,
+        "homers": 112,
+        "total": 246,
+        "prev_doubles": 1,
+        "prev_homers": 1,
         "prev_total": 244,
-        "total_change": 0
+        "total_change": 2
       }
     },
     {
       "owner": "Clinton Shepherd",
       "team_name": "SHEP",
-      "rank": 13,
-      "rank_change": -1,
+      "rank": 12,
+      "rank_change": 1,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -8033,13 +8033,13 @@
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Elly De La Cruz",
@@ -8066,30 +8066,30 @@
         {
           "name": "Corbin Carroll",
           "group": "Wildcard",
-          "doubles": 26,
+          "doubles": 27,
           "homers": 18,
-          "total": 44,
-          "prev_doubles": 0,
+          "total": 45,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 44,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
-        "doubles": 148,
+        "doubles": 150,
         "homers": 157,
-        "total": 305,
-        "prev_doubles": 0,
+        "total": 307,
+        "prev_doubles": 2,
         "prev_homers": 0,
         "prev_total": 305,
-        "total_change": 0
+        "total_change": 2
       }
     },
     {
       "owner": "Kim Hackett",
       "team_name": "Shotime Sluggers",
-      "rank": 20,
-      "rank_change": -2,
+      "rank": 24,
+      "rank_change": -4,
       "players": [
         {
           "name": "Shohei Ohtani",
@@ -8161,22 +8161,22 @@
           "name": "Pete Crow-Armstrong",
           "group": "Wildcard",
           "doubles": 25,
-          "homers": 31,
-          "total": 56,
+          "homers": 32,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
         "doubles": 120,
-        "homers": 175,
-        "total": 295,
+        "homers": 176,
+        "total": 296,
         "prev_doubles": 0,
-        "prev_homers": 0,
+        "prev_homers": 1,
         "prev_total": 295,
-        "total_change": 0
+        "total_change": 1
       }
     },
     {
@@ -8221,13 +8221,13 @@
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Nick Kurtz",
@@ -8243,13 +8243,13 @@
         {
           "name": "Yordan Alvarez",
           "group": "Wildcard",
-          "doubles": 26,
+          "doubles": 28,
           "homers": 36,
-          "total": 62,
-          "prev_doubles": 1,
+          "total": 64,
+          "prev_doubles": 2,
           "prev_homers": 0,
-          "prev_total": 61,
-          "total_change": 1
+          "prev_total": 62,
+          "total_change": 2
         },
         {
           "name": "Brent Rooker",
@@ -8264,13 +8264,13 @@
         }
       ],
       "totals": {
-        "doubles": 127,
+        "doubles": 130,
         "homers": 189,
-        "total": 316,
-        "prev_doubles": 1,
+        "total": 319,
+        "prev_doubles": 3,
         "prev_homers": 0,
-        "prev_total": 315,
-        "total_change": 1
+        "prev_total": 316,
+        "total_change": 3
       }
     },
     {
@@ -8308,20 +8308,20 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Julio Rodr\u00edguez",
@@ -8358,12 +8358,12 @@
         }
       ],
       "totals": {
-        "doubles": 122,
+        "doubles": 123,
         "homers": 165,
-        "total": 287,
-        "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 286,
+        "total": 288,
+        "prev_doubles": 1,
+        "prev_homers": 0,
+        "prev_total": 287,
         "total_change": 1
       }
     },
@@ -8371,7 +8371,7 @@
       "owner": "Cody Eichmeier",
       "team_name": "Thanks for Judge!",
       "rank": 3,
-      "rank_change": 1,
+      "rank_change": 0,
       "players": [
         {
           "name": "Aaron Judge",
@@ -8402,20 +8402,20 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Eugenio Su\u00e1rez",
@@ -8443,29 +8443,29 @@
           "name": "Pete Crow-Armstrong",
           "group": "Wildcard",
           "doubles": 25,
-          "homers": 31,
-          "total": 56,
+          "homers": 32,
+          "total": 57,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 56,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
-        "doubles": 137,
-        "homers": 184,
-        "total": 321,
-        "prev_doubles": 0,
+        "doubles": 138,
+        "homers": 185,
+        "total": 323,
+        "prev_doubles": 1,
         "prev_homers": 1,
-        "prev_total": 320,
-        "total_change": 1
+        "prev_total": 321,
+        "total_change": 2
       }
     },
     {
       "owner": "Danielle Macdonald \ud83c\udfc6 ('21)",
       "team_name": "The Queen of Diamonds",
       "rank": 58,
-      "rank_change": 6,
+      "rank_change": 0,
       "players": [
         {
           "name": "Aaron Judge",
@@ -8496,20 +8496,20 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Kyle Tucker",
@@ -8528,10 +8528,10 @@
           "doubles": 10,
           "homers": 13,
           "total": 23,
-          "prev_doubles": 1,
-          "prev_homers": 1,
-          "prev_total": 21,
-          "total_change": 2
+          "prev_doubles": 0,
+          "prev_homers": 0,
+          "prev_total": 23,
+          "total_change": 0
         },
         {
           "name": "Austin Riley",
@@ -8539,20 +8539,20 @@
           "doubles": 20,
           "homers": 15,
           "total": 35,
-          "prev_doubles": 1,
+          "prev_doubles": 0,
           "prev_homers": 0,
-          "prev_total": 34,
-          "total_change": 1
+          "prev_total": 35,
+          "total_change": 0
         }
       ],
       "totals": {
-        "doubles": 119,
+        "doubles": 120,
         "homers": 144,
-        "total": 263,
-        "prev_doubles": 2,
-        "prev_homers": 2,
-        "prev_total": 259,
-        "total_change": 4
+        "total": 264,
+        "prev_doubles": 1,
+        "prev_homers": 0,
+        "prev_total": 263,
+        "total_change": 1
       }
     },
     {
@@ -8590,20 +8590,20 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Corbin Carroll",
           "group": "Wildcard",
-          "doubles": 26,
+          "doubles": 27,
           "homers": 18,
-          "total": 44,
-          "prev_doubles": 0,
+          "total": 45,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 44,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Kyle Tucker",
@@ -8631,28 +8631,28 @@
           "name": "Oneil Cruz",
           "group": "Wildcard",
           "doubles": 10,
-          "homers": 15,
-          "total": 25,
+          "homers": 16,
+          "total": 26,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 25,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
-        "doubles": 114,
-        "homers": 94,
-        "total": 208,
-        "prev_doubles": 0,
+        "doubles": 115,
+        "homers": 95,
+        "total": 210,
+        "prev_doubles": 1,
         "prev_homers": 1,
-        "prev_total": 207,
-        "total_change": 1
+        "prev_total": 208,
+        "total_change": 2
       }
     },
     {
       "owner": "Chris Tollefson",
       "team_name": "Tolly Llamas",
-      "rank": 24,
+      "rank": 26,
       "rank_change": -2,
       "players": [
         {
@@ -8684,9 +8684,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Nick Kurtz",
@@ -8738,16 +8738,16 @@
         "homers": 154,
         "total": 294,
         "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 293,
-        "total_change": 1
+        "prev_homers": 0,
+        "prev_total": 294,
+        "total_change": 0
       }
     },
     {
       "owner": "Kyle Vickerman",
       "team_name": "Vicks0",
-      "rank": 83,
-      "rank_change": 1,
+      "rank": 86,
+      "rank_change": -3,
       "players": [
         {
           "name": "Aaron Judge",
@@ -8778,9 +8778,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Brent Rooker",
@@ -8797,12 +8797,12 @@
           "name": "Bo Bichette",
           "group": "Wildcard",
           "doubles": 21,
-          "homers": 12,
-          "total": 33,
+          "homers": 13,
+          "total": 34,
           "prev_doubles": 0,
-          "prev_homers": 0,
+          "prev_homers": 1,
           "prev_total": 33,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Jarren Duran",
@@ -8829,11 +8829,11 @@
       ],
       "totals": {
         "doubles": 112,
-        "homers": 120,
-        "total": 232,
+        "homers": 121,
+        "total": 233,
         "prev_doubles": 0,
         "prev_homers": 1,
-        "prev_total": 231,
+        "prev_total": 232,
         "total_change": 1
       }
     },
@@ -8872,9 +8872,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Gunnar Henderson",
@@ -8912,22 +8912,22 @@
         {
           "name": "Wyatt Langford",
           "group": "Wildcard",
-          "doubles": 14,
+          "doubles": 15,
           "homers": 14,
-          "total": 28,
-          "prev_doubles": 0,
+          "total": 29,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 28,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
-        "doubles": 108,
+        "doubles": 109,
         "homers": 126,
-        "total": 234,
-        "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 233,
+        "total": 235,
+        "prev_doubles": 1,
+        "prev_homers": 0,
+        "prev_total": 234,
         "total_change": 1
       }
     },
@@ -8951,13 +8951,13 @@
         {
           "name": "Fernando Tatis Jr.",
           "group": "B",
-          "doubles": 26,
+          "doubles": 27,
           "homers": 15,
-          "total": 41,
-          "prev_doubles": 0,
+          "total": 42,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 41,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Bobby Witt Jr.",
@@ -8966,9 +8966,9 @@
           "homers": 16,
           "total": 42,
           "prev_doubles": 0,
-          "prev_homers": 1,
-          "prev_total": 41,
-          "total_change": 1
+          "prev_homers": 0,
+          "prev_total": 42,
+          "total_change": 0
         },
         {
           "name": "Roman Anthony",
@@ -9006,30 +9006,30 @@
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         }
       ],
       "totals": {
-        "doubles": 114,
+        "doubles": 116,
         "homers": 108,
-        "total": 222,
-        "prev_doubles": 0,
-        "prev_homers": 1,
-        "prev_total": 221,
-        "total_change": 1
+        "total": 224,
+        "prev_doubles": 2,
+        "prev_homers": 0,
+        "prev_total": 222,
+        "total_change": 2
       }
     },
     {
       "owner": "Wendy Sheridan",
       "team_name": "Wendy\u2019s Sluggers",
-      "rank": 51,
-      "rank_change": 0,
+      "rank": 53,
+      "rank_change": -2,
       "players": [
         {
           "name": "Aaron Judge",
@@ -9078,13 +9078,13 @@
         {
           "name": "Junior Caminero",
           "group": "Wildcard",
-          "doubles": 19,
+          "doubles": 20,
           "homers": 35,
-          "total": 54,
-          "prev_doubles": 0,
+          "total": 55,
+          "prev_doubles": 1,
           "prev_homers": 0,
           "prev_total": 54,
-          "total_change": 0
+          "total_change": 1
         },
         {
           "name": "Brent Rooker",
@@ -9110,13 +9110,13 @@
         }
       ],
       "totals": {
-        "doubles": 98,
+        "doubles": 99,
         "homers": 168,
-        "total": 266,
-        "prev_doubles": 0,
+        "total": 267,
+        "prev_doubles": 1,
         "prev_homers": 0,
         "prev_total": 266,
-        "total_change": 0
+        "total_change": 1
       }
     }
   ]
