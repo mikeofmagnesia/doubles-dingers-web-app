@@ -1,14 +1,14 @@
 {
-  "updated": "2026-08-25",
+  "updated": "2026-08-26",
   "groups": {
     "A": {
       "leaders": [
         {
-          "name": "Shohei Ohtani",
-          "mlb_team": "LAD",
+          "name": "Pete Alonso",
+          "mlb_team": "BAL",
           "doubles": 24,
-          "homers": 30,
-          "total": 54
+          "homers": 31,
+          "total": 55
         }
       ],
       "is_tied": false
@@ -18,9 +18,9 @@
         {
           "name": "Matt Olson",
           "mlb_team": "ATL",
-          "doubles": 31,
+          "doubles": 32,
           "homers": 36,
-          "total": 67
+          "total": 68
         }
       ],
       "is_tied": false
@@ -31,8 +31,8 @@
           "name": "Rafael Devers",
           "mlb_team": "SF",
           "doubles": 31,
-          "homers": 27,
-          "total": 58
+          "homers": 28,
+          "total": 59
         }
       ],
       "is_tied": false
@@ -72,6 +72,6 @@
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 417,
+  "grand_total": 420,
   "has_tied_groups": false
 }
