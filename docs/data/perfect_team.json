@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-28",
+  "updated": "2026-08-29",
   "groups": {
     "A": {
       "leaders": [
@@ -62,30 +62,16 @@
         "total": 59
       },
       {
-        "name": "Jordan Walker",
-        "mlb_team": "STL",
-        "doubles": 29,
-        "homers": 27,
-        "total": 56
-      },
-      {
-        "name": "James Wood",
-        "mlb_team": "WSH",
-        "doubles": 26,
-        "homers": 30,
-        "total": 56
-      },
-      {
         "name": "Ben Rice",
         "mlb_team": "NYY",
-        "doubles": 21,
+        "doubles": 22,
         "homers": 35,
-        "total": 56
+        "total": 57
       }
     ],
-    "is_tied": true,
+    "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 424,
+  "grand_total": 425,
   "has_tied_groups": false
 }
