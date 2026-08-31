@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-30",
+  "updated": "2026-08-31",
   "groups": {
     "A": {
       "leaders": [
@@ -51,8 +51,8 @@
         "name": "Pete Crow-Armstrong",
         "mlb_team": "CHC",
         "doubles": 27,
-        "homers": 36,
-        "total": 63
+        "homers": 38,
+        "total": 65
       },
       {
         "name": "Miguel Vargas",
@@ -67,11 +67,18 @@
         "doubles": 22,
         "homers": 35,
         "total": 57
+      },
+      {
+        "name": "Junior Caminero",
+        "mlb_team": "TB",
+        "doubles": 20,
+        "homers": 37,
+        "total": 57
       }
     ],
-    "is_tied": false,
+    "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 430,
+  "grand_total": 432,
   "has_tied_groups": false
 }
