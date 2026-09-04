@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-03",
+  "updated": "2026-09-04",
   "groups": {
     "A": {
       "leaders": [
@@ -7,8 +7,8 @@
           "name": "Pete Alonso",
           "mlb_team": "BAL",
           "doubles": 24,
-          "homers": 32,
-          "total": 56
+          "homers": 33,
+          "total": 57
         }
       ],
       "is_tied": false
@@ -51,15 +51,15 @@
         "name": "Pete Crow-Armstrong",
         "mlb_team": "CHC",
         "doubles": 27,
-        "homers": 38,
-        "total": 65
+        "homers": 39,
+        "total": 66
       },
       {
         "name": "Jordan Walker",
         "mlb_team": "STL",
-        "doubles": 31,
+        "doubles": 32,
         "homers": 28,
-        "total": 59
+        "total": 60
       },
       {
         "name": "Miguel Vargas",
@@ -72,6 +72,6 @@
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 439,
+  "grand_total": 442,
   "has_tied_groups": false
 }
