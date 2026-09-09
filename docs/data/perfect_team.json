@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-08",
+  "updated": "2026-09-09",
   "groups": {
     "A": {
       "leaders": [
@@ -7,8 +7,8 @@
           "name": "Pete Alonso",
           "mlb_team": "BAL",
           "doubles": 24,
-          "homers": 33,
-          "total": 57
+          "homers": 34,
+          "total": 58
         }
       ],
       "is_tied": false
@@ -67,11 +67,18 @@
         "doubles": 30,
         "homers": 30,
         "total": 60
+      },
+      {
+        "name": "Junior Caminero",
+        "mlb_team": "TB",
+        "doubles": 21,
+        "homers": 39,
+        "total": 60
       }
     ],
-    "is_tied": false,
+    "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 454,
+  "grand_total": 455,
   "has_tied_groups": false
 }
