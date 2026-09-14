@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13",
+  "updated": "2026-09-14",
   "groups": {
     "A": {
       "leaders": [
@@ -19,8 +19,8 @@
           "name": "Matt Olson",
           "mlb_team": "ATL",
           "doubles": 33,
-          "homers": 38,
-          "total": 71
+          "homers": 39,
+          "total": 72
         }
       ],
       "is_tied": false
@@ -55,23 +55,23 @@
         "total": 68
       },
       {
+        "name": "Junior Caminero",
+        "mlb_team": "TB",
+        "doubles": 22,
+        "homers": 40,
+        "total": 62
+      },
+      {
         "name": "Jordan Walker",
         "mlb_team": "STL",
         "doubles": 33,
         "homers": 28,
-        "total": 61
-      },
-      {
-        "name": "Junior Caminero",
-        "mlb_team": "TB",
-        "doubles": 21,
-        "homers": 40,
         "total": 61
       }
     ],
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 462,
+  "grand_total": 464,
   "has_tied_groups": false
 }
