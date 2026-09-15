@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-14",
+  "updated": "2026-09-15",
   "groups": {
     "A": {
       "leaders": [
@@ -43,9 +43,9 @@
       {
         "name": "Pete Crow-Armstrong",
         "mlb_team": "CHC",
-        "doubles": 28,
-        "homers": 41,
-        "total": 69
+        "doubles": 29,
+        "homers": 42,
+        "total": 71
       },
       {
         "name": "Yordan Alvarez",
@@ -67,11 +67,18 @@
         "doubles": 33,
         "homers": 28,
         "total": 61
+      },
+      {
+        "name": "Miguel Vargas",
+        "mlb_team": "CWS",
+        "doubles": 30,
+        "homers": 31,
+        "total": 61
       }
     ],
-    "is_tied": false,
+    "is_tied": true,
     "counted_count": 4
   },
-  "grand_total": 464,
+  "grand_total": 466,
   "has_tied_groups": false
 }
