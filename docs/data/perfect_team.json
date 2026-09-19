@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-18",
+  "updated": "2026-09-19",
   "groups": {
     "A": {
       "leaders": [
@@ -7,8 +7,8 @@
           "name": "Pete Alonso",
           "mlb_team": "BAL",
           "doubles": 24,
-          "homers": 37,
-          "total": 61
+          "homers": 38,
+          "total": 62
         }
       ],
       "is_tied": false
@@ -19,8 +19,8 @@
           "name": "Matt Olson",
           "mlb_team": "ATL",
           "doubles": 33,
-          "homers": 39,
-          "total": 72
+          "homers": 40,
+          "total": 73
         }
       ],
       "is_tied": false
@@ -50,35 +50,28 @@
       {
         "name": "Yordan Alvarez",
         "mlb_team": "HOU",
-        "doubles": 31,
+        "doubles": 32,
         "homers": 40,
-        "total": 71
+        "total": 72
       },
       {
         "name": "Junior Caminero",
         "mlb_team": "TB",
-        "doubles": 23,
+        "doubles": 24,
         "homers": 41,
-        "total": 64
-      },
-      {
-        "name": "Jordan Walker",
-        "mlb_team": "STL",
-        "doubles": 33,
-        "homers": 28,
-        "total": 61
+        "total": 65
       },
       {
         "name": "Miguel Vargas",
         "mlb_team": "CWS",
-        "doubles": 30,
-        "homers": 31,
-        "total": 61
+        "doubles": 31,
+        "homers": 32,
+        "total": 63
       }
     ],
-    "is_tied": true,
+    "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 475,
+  "grand_total": 481,
   "has_tied_groups": false
 }
