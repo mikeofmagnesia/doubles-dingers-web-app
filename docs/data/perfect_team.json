@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-25",
+  "updated": "2026-09-26",
   "groups": {
     "A": {
       "leaders": [
@@ -7,8 +7,8 @@
           "name": "Pete Alonso",
           "mlb_team": "BAL",
           "doubles": 24,
-          "homers": 41,
-          "total": 65
+          "homers": 43,
+          "total": 67
         }
       ],
       "is_tied": false
@@ -62,23 +62,16 @@
         "total": 66
       },
       {
-        "name": "Miguel Vargas",
-        "mlb_team": "CWS",
-        "doubles": 31,
-        "homers": 33,
-        "total": 64
-      },
-      {
         "name": "Ben Rice",
         "mlb_team": "NYY",
-        "doubles": 23,
+        "doubles": 24,
         "homers": 41,
-        "total": 64
+        "total": 65
       }
     ],
-    "is_tied": true,
+    "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 493,
+  "grand_total": 496,
   "has_tied_groups": false
 }
