@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-26",
+  "updated": "2026-09-27",
   "groups": {
     "A": {
       "leaders": [
@@ -41,6 +41,13 @@
   "wildcard": {
     "players": [
       {
+        "name": "Yordan Alvarez",
+        "mlb_team": "HOU",
+        "doubles": 34,
+        "homers": 42,
+        "total": 76
+      },
+      {
         "name": "Pete Crow-Armstrong",
         "mlb_team": "CHC",
         "doubles": 31,
@@ -48,18 +55,11 @@
         "total": 76
       },
       {
-        "name": "Yordan Alvarez",
-        "mlb_team": "HOU",
-        "doubles": 33,
-        "homers": 41,
-        "total": 74
-      },
-      {
         "name": "Junior Caminero",
         "mlb_team": "TB",
         "doubles": 25,
-        "homers": 41,
-        "total": 66
+        "homers": 42,
+        "total": 67
       },
       {
         "name": "Ben Rice",
@@ -72,6 +72,6 @@
     "is_tied": false,
     "counted_count": 4
   },
-  "grand_total": 496,
+  "grand_total": 499,
   "has_tied_groups": false
 }
