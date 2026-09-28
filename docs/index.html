@@ -258,6 +258,7 @@
             <th class="sortable" data-col="rank">Rank</th>
             <th class="sortable" data-col="team_name">Team</th>
             <th class="sortable" data-col="owner">Owner</th>
+            <th class="sortable" data-col="winnings">Winnings</th>
             <th class="sortable" data-col="total">Total</th>
             <th class="sortable" data-col="doubles">2B</th>
             <th class="sortable" data-col="homers">HR</th>
@@ -267,7 +268,7 @@
             <th class="sortable" data-col="total_change">Total Chg</th>
           </tr>
         </thead>
-        <tbody id="tbody-standings"><tr><td colspan="10" class="text-center">Loading...</td></tr></tbody>
+        <tbody id="tbody-standings"><tr><td colspan="11" class="text-center">Loading...</td></tr></tbody>
       </table>
     </div>
   </div>
@@ -376,6 +377,7 @@
     <ul class="nav nav-tabs mb-3" id="archive-subtabs">
       <li class="nav-item"><a class="nav-link active text-dark" href="#" data-archive-tab="teams">Teams</a></li>
       <li class="nav-item"><a class="nav-link text-dark"        href="#" data-archive-tab="players">Players</a></li>
+      <li class="nav-item d-none" id="archive-tab-perfect-team-li"><a class="nav-link text-dark" href="#" data-archive-tab="perfect-team">Perfect Team</a></li>
     </ul>
 
     <!-- Teams sub-view (default) -->
@@ -386,6 +388,7 @@
           <tr>
             <th class="archive-sort" data-col="rank"    data-type="num">#</th>
             <th class="archive-sort" data-col="team_name" data-type="str">Team</th>
+            <th class="archive-sort" data-col="owner"    data-type="str">Owner</th>
             <th class="archive-sort text-end" data-col="total"   data-type="num">Total</th>
             <th class="archive-sort text-end" data-col="doubles" data-type="num">2B</th>
             <th class="archive-sort text-end" data-col="homers"  data-type="num">HR</th>
@@ -416,6 +419,29 @@
         </thead>
         <tbody id="archive-players-body"></tbody>
       </table>
+      </div>
+    </div>
+
+    <!-- Perfect Team sub-view -->
+    <div id="archive-pane-perfect-team" class="d-none">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="table-wrap">
+            <table class="table table-bordered align-middle mb-0" id="archive-perfect-team-table">
+              <thead>
+                <tr>
+                  <th>Tier</th>
+                  <th>Player</th>
+                  <th class="text-center">2B</th>
+                  <th class="text-center">HR</th>
+                  <th class="text-center fw-bold">Total</th>
+                </tr>
+              </thead>
+              <tbody id="archive-perfect-team-body"></tbody>
+            </table>
+          </div>
+          <p class="text-muted small mt-2" id="archive-perfect-team-note" style="display:none"></p>
+        </div>
       </div>
     </div>
   </div>
@@ -722,6 +748,7 @@ function _renderStandingsTable() {
       <td class="text-center fw-bold">${compRankT[t.team_name] ?? t.rank}</td>
       <td><a href="#" class="text-decoration-none fw-semibold roster-link" data-team="${t.team_name.replace(/"/g,'&quot;')}">${t.team_name}</a></td>
       <td>${t.owner}</td>
+      <td class="text-center">${t.winnings != null ? '$' + t.winnings : '-'}</td>
       <td class="text-center fw-bold">${t.total}</td>
       <td class="text-center">${t.doubles}</td>
       <td class="text-center">${t.homers}</td>
@@ -749,7 +776,7 @@ async function loadStandings() {
       data.updated ? `Updated ${data.updated}` : '';
 
     if (!data.teams || data.teams.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="10" class="text-center text-muted">No data yet.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="11" class="text-center text-muted">No data yet.</td></tr>';
       return;
     }
 
@@ -767,7 +794,7 @@ async function loadStandings() {
 
     _renderStandingsTable();
   } catch (err) {
-    tbody.innerHTML = `<tr><td colspan="10" class="text-center text-danger">${err.message}</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="11" class="text-center text-danger">${err.message}</td></tr>`;
   }
 }
 
@@ -917,6 +944,55 @@ async function loadRosters() {
 // ===================================================================
 // VIEW: Perfect Team
 // ===================================================================
+function _buildPerfectTeamRows(data) {
+  const rows = [];
+  const notes = [];
+
+  // Lettered groups A, B, C
+  for (const group of ['A', 'B', 'C']) {
+    const g = data.groups?.[group];
+    if (!g || g.leaders.length === 0) {
+      rows.push(`<tr><td>${groupBadge(group)}</td><td colspan="4" class="text-muted">No data</td></tr>`);
+      continue;
+    }
+    if (g.is_tied) {
+      notes.push(`Group ${group} has a tie — both players shown, minimum value counted.`);
+    }
+    g.leaders.forEach((p, i) => {
+      const tierCell = i === 0
+        ? `<td rowspan="${g.leaders.length}">${groupBadge(group)}${g.is_tied ? ' <span class="text-muted small">tied</span>' : ''}</td>`
+        : '';
+      const rowCls = g.is_tied ? ' class="text-muted"' : '';
+      rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}${teamBadge(p.mlb_team)}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td><td class="text-center fw-bold">${p.total}</td></tr>`);
+    });
+  }
+
+  // Wildcard
+  const wc = data.wildcard;
+  if (wc && wc.players.length > 0) {
+    if (wc.is_tied) {
+      notes.push(`Wildcard has ${wc.players.length} players tied — showing all, counting top ${wc.counted_count}.`);
+    }
+    wc.players.forEach((p, i) => {
+      const isCounted = i < wc.counted_count;
+      const tierCell = i === 0
+        ? `<td rowspan="${wc.players.length}">${groupBadge('Wildcard')}${wc.is_tied ? ' <span class="text-muted small">tied</span>' : ''}</td>`
+        : '';
+      const rowCls = !isCounted ? ' class="text-muted"' : '';
+      rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}${teamBadge(p.mlb_team)}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td><td class="text-center fw-bold">${p.total}</td></tr>`);
+    });
+  }
+
+  // Grand total row
+  rows.push(`
+    <tr class="sum-row">
+      <td colspan="4"><strong>Best Possible Total</strong>${data.has_tied_groups ? ' <span class="text-muted small">(ties noted below)</span>' : ''}</td>
+      <td class="text-center fw-bold">${data.grand_total}</td>
+    </tr>`);
+
+  return { rows, notes };
+}
+
 async function loadPerfectTeam() {
   const tbody = document.getElementById('tbody-perfect-team');
   const note  = document.getElementById('perfect-team-note');
@@ -925,51 +1001,7 @@ async function loadPerfectTeam() {
     document.getElementById('perfect-team-updated').textContent =
       data.updated ? `Updated ${data.updated}` : '';
 
-    const rows = [];
-    const notes = [];
-
-    // Lettered groups A, B, C
-    for (const group of ['A', 'B', 'C']) {
-      const g = data.groups?.[group];
-      if (!g || g.leaders.length === 0) {
-        rows.push(`<tr><td>${groupBadge(group)}</td><td colspan="4" class="text-muted">No data</td></tr>`);
-        continue;
-      }
-      if (g.is_tied) {
-        notes.push(`Group ${group} has a tie — both players shown, minimum value counted.`);
-      }
-      g.leaders.forEach((p, i) => {
-        const tierCell = i === 0
-          ? `<td rowspan="${g.leaders.length}">${groupBadge(group)}${g.is_tied ? ' <span class="text-muted small">tied</span>' : ''}</td>`
-          : '';
-        const rowCls = g.is_tied ? ' class="text-muted"' : '';
-        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}${teamBadge(p.mlb_team)}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td><td class="text-center fw-bold">${p.total}</td></tr>`);
-      });
-    }
-
-    // Wildcard
-    const wc = data.wildcard;
-    if (wc && wc.players.length > 0) {
-      if (wc.is_tied) {
-        notes.push(`Wildcard has ${wc.players.length} players tied — showing all, counting top ${wc.counted_count}.`);
-      }
-      wc.players.forEach((p, i) => {
-        const isCounted = i < wc.counted_count;
-        const tierCell = i === 0
-          ? `<td rowspan="${wc.players.length}">${groupBadge('Wildcard')}${wc.is_tied ? ' <span class="text-muted small">tied</span>' : ''}</td>`
-          : '';
-        const rowCls = !isCounted ? ' class="text-muted"' : '';
-        rows.push(`<tr${rowCls}>${tierCell}<td>${p.name}${teamBadge(p.mlb_team)}</td><td class="text-center">${p.doubles}</td><td class="text-center">${p.homers}</td><td class="text-center fw-bold">${p.total}</td></tr>`);
-      });
-    }
-
-    // Grand total row
-    rows.push(`
-      <tr class="sum-row">
-        <td colspan="4"><strong>Best Possible Total</strong>${data.has_tied_groups ? ' <span class="text-muted small">(ties noted below)</span>' : ''}</td>
-        <td class="text-center fw-bold">${data.grand_total}</td>
-      </tr>`);
-
+    const { rows, notes } = _buildPerfectTeamRows(data);
     tbody.innerHTML = rows.join('');
 
     if (notes.length > 0) {
@@ -1132,6 +1164,7 @@ async function loadArchive() {
         });
         document.getElementById('archive-pane-teams').classList.toggle('d-none',    archiveCurrentTab !== 'teams');
         document.getElementById('archive-pane-players').classList.toggle('d-none',  archiveCurrentTab !== 'players');
+        document.getElementById('archive-pane-perfect-team').classList.toggle('d-none', archiveCurrentTab !== 'perfect-team');
       });
     });
 
@@ -1189,11 +1222,39 @@ async function renderArchiveSeason(season) {
     <tr>
       <td data-col="rank"      data-val="${t.rank}"      class="text-muted">${t.rank}</td>
       <td data-col="team_name" data-val="${t.team_name}" >${t.team_name}</td>
+      <td data-col="owner"     data-val="${t.owner ?? ''}" >${t.owner ?? '-'}</td>
       <td data-col="total"     data-val="${t.total}"     class="text-end fw-bold">${t.total}</td>
       <td data-col="doubles"   data-val="${t.doubles}"   class="text-end">${t.doubles}</td>
       <td data-col="homers"    data-val="${t.homers}"    class="text-end">${t.homers}</td>
     </tr>`).join('');
   applyArchiveSort('archive-teams-table');
+
+  // Perfect Team sub-tab: only shown for seasons that have this data
+  const ptTabLi = document.getElementById('archive-tab-perfect-team-li');
+  try {
+    const ptData = await fetchData(`archive/${season}/perfect_team.json`);
+    const { rows, notes } = _buildPerfectTeamRows(ptData);
+    document.getElementById('archive-perfect-team-body').innerHTML = rows.join('');
+    const note = document.getElementById('archive-perfect-team-note');
+    if (notes.length > 0) {
+      note.textContent = notes.join(' ');
+      note.style.display = '';
+    } else {
+      note.style.display = 'none';
+    }
+    ptTabLi.classList.remove('d-none');
+  } catch (e) {
+    ptTabLi.classList.add('d-none');
+    if (archiveCurrentTab === 'perfect-team') {
+      archiveCurrentTab = 'teams';
+      document.querySelectorAll('[data-archive-tab]').forEach(t => {
+        t.classList.toggle('active', t.dataset.archiveTab === archiveCurrentTab);
+      });
+      document.getElementById('archive-pane-teams').classList.remove('d-none');
+      document.getElementById('archive-pane-players').classList.add('d-none');
+      document.getElementById('archive-pane-perfect-team').classList.add('d-none');
+    }
+  }
 }
 
 // ===================================================================

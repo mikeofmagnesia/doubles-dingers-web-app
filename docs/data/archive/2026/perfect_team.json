@@ -1,0 +1,77 @@
+{
+  "updated": "2026-09-28",
+  "groups": {
+    "A": {
+      "leaders": [
+        {
+          "name": "Pete Alonso",
+          "mlb_team": "BAL",
+          "doubles": 24,
+          "homers": 43,
+          "total": 67
+        }
+      ],
+      "is_tied": false
+    },
+    "B": {
+      "leaders": [
+        {
+          "name": "Matt Olson",
+          "mlb_team": "ATL",
+          "doubles": 34,
+          "homers": 41,
+          "total": 75
+        }
+      ],
+      "is_tied": false
+    },
+    "C": {
+      "leaders": [
+        {
+          "name": "Rafael Devers",
+          "mlb_team": "SF",
+          "doubles": 36,
+          "homers": 37,
+          "total": 73
+        }
+      ],
+      "is_tied": false
+    }
+  },
+  "wildcard": {
+    "players": [
+      {
+        "name": "Yordan Alvarez",
+        "mlb_team": "HOU",
+        "doubles": 34,
+        "homers": 42,
+        "total": 76
+      },
+      {
+        "name": "Pete Crow-Armstrong",
+        "mlb_team": "CHC",
+        "doubles": 31,
+        "homers": 45,
+        "total": 76
+      },
+      {
+        "name": "Junior Caminero",
+        "mlb_team": "TB",
+        "doubles": 25,
+        "homers": 42,
+        "total": 67
+      },
+      {
+        "name": "Ben Rice",
+        "mlb_team": "NYY",
+        "doubles": 24,
+        "homers": 41,
+        "total": 65
+      }
+    ],
+    "is_tied": false,
+    "counted_count": 4
+  },
+  "grand_total": 499,
+  "has_tied_groups": false
+}

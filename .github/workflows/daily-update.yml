@@ -1,9 +1,11 @@
 name: Daily Stats Update
 
 on:
-  schedule:
-    # 9:00 AM CDT = 14:00 UTC (CDT = UTC-5, in effect April-November during baseball season)
-    - cron: '0 14 * * *'
+  # Season ended 2026-09-27. Scheduled runs paused; trigger manually via
+  # the Actions tab (workflow_dispatch) if a stat correction is needed.
+  # schedule:
+  #   # 9:00 AM CDT = 14:00 UTC (CDT = UTC-5, in effect April-November during baseball season)
+  #   - cron: '0 14 * * *'
   workflow_dispatch: # Allow manual trigger from the Actions tab
 
 jobs:
