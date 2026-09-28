@@ -56,6 +56,7 @@ class Team:
     team_name: str
     player_ids: list[str]
     players: list[PlayerStats] = field(default_factory=list)
+    winnings: int | None = None
 
     # Set after sorting all teams by total (descending)
     rank: int | None = None

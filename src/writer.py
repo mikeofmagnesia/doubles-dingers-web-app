@@ -157,6 +157,7 @@ def write_team_standings(teams: list[Team]) -> None:
             "rank": t.rank,
             "owner": t.owner,
             "team_name": t.team_name,
+            "winnings": t.winnings,
             "doubles": t.doubles,
             "homers": t.homers,
             "total": t.total,

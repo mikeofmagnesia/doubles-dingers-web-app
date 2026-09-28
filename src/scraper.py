@@ -48,13 +48,19 @@ def fetch_player_stats(mlb_id: int, name: str, br_id: str, group: str, season: i
         print(f"  {name}: no {season} stats yet (0 2B, 0 HR, 0 G)")
         return PlayerStats(name=name, br_id=br_id, group=group, mlb_team=mlb_team)
 
-    # Use the last split which is the season total (handles traded players)
-    last_split = splits[-1]
-    stat = last_split.get("stat", {})
+    # Players traded mid-season get one split per team, prefixed with an
+    # aggregate split (no team) holding the season total. Use that aggregate
+    # when present; otherwise there's only one team and one split.
+    aggregate_split = next((s for s in splits if not s.get("team", {}).get("id")), None)
+    stat_split = aggregate_split if aggregate_split else splits[-1]
+    stat = stat_split.get("stat", {})
     doubles = stat.get("doubles", 0) or 0
     homers  = stat.get("homeRuns", 0) or 0
     games   = stat.get("gamesPlayed", 0) or 0
-    team_id = last_split.get("team", {}).get("id")
+
+    # Display the most recent team, not the (team-less) aggregate split.
+    last_team_split = next((s for s in reversed(splits) if s.get("team", {}).get("id")), stat_split)
+    team_id = last_team_split.get("team", {}).get("id")
     mlb_team = _TEAM_ABBR.get(team_id, "") if team_id else ""
 
     print(f"  {name} ({group}): {games}G  {doubles}2B  {homers}HR  ({doubles + homers} total)")
@@ -76,6 +82,7 @@ def fetch_top_combined_leaders(season: int, limit: int = 100) -> dict[int, dict]
             "season": season,
             "limit": limit,
             "sportId": 1,
+            "statGroup": "hitting",
         }
         try:
             resp = requests.get(url, params=params, timeout=15)

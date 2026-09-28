@@ -44,6 +44,7 @@ def build_teams(config: dict, player_stats: dict[str, PlayerStats]) -> list[Team
             team_name=team_data["team_name"],
             player_ids=team_data["players"],
             players=players,
+            winnings=team_data.get("winnings"),
         ))
     return teams
 
